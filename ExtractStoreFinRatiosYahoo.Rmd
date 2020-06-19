@@ -1,0 +1,51 @@
+---
+title: "Donwload Financial Ratios from Yahoo Finance"
+author: "Gabriel Foix"
+output:
+  html_document:
+    df_print: paged
+---
+
+Process to extract an store all the Financial ratios from Yahoo Finance at the moment of execution.
+
+Set of libraries to use
+```{r message = FALSE, warning = FALSE}
+library(magrittr)
+library(jsonlite)
+library(lubridate)
+library(dplyr)
+library(quantmod)
+library(XML)
+
+```
+
+
+Source underlying utilities
+```{r }
+source('StockResearchUtils.R')
+```
+
+Read Companies List
+```{r}
+CompaniesList <- read.csv("CompanyList.csv", sep = ";")
+
+```
+
+Read the Financial Ratios as of `r today()`
+
+```{r message = FALSE, warning = FALSE}
+FinRatios <- getFinRatios(as.character(CompaniesList$tickers))
+```
+
+Adding Timestamp, country and Industry
+```{r}
+FinRatios <- FinRatios %>% 
+  mutate(Date = gsub("-", "", today()))
+
+```
+
+Writing out rds
+```{r}
+saveRDS(FinRatios, paste0("FinRatiosYahoo", gsub("-", "", today()), ".rds"))
+```
+
