@@ -31,14 +31,17 @@ scrapeFinRatiosYahoo <- function(ticker) {
 #'
 #' @examples getFinRatios(c("MA.PA", "VOW.DE"))
 getFinRatios <- function(tickers) {
-
   lapply(tickers, function(one.ticker) {
+    message(one.ticker)
+    one.ticker <- trimws(one.ticker)
     FinRat <- scrapeFinRatiosYahoo(one.ticker) %>% 
       dplyr::mutate(Ticker = one.ticker)
     FinRat
   }) %>% 
     dplyr::bind_rows()
 }
+
+
 
 .cleanNAs  <- function(x, replace = 0) { 
   x[is.na(x)] <- replace
