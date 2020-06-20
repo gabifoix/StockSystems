@@ -29,16 +29,26 @@ scrapeFinRatiosYahoo <- function(ticker) {
 #' @return `data.frame` with 3 columns, Variable, Value, Ticker
 #' @export
 #'
-#' @examples getFinRatios(c("MA.PA", "VOW.DE"))
+#' @examples res <- getFinRatios(c("MC.PA", "MC.PP", "VOW.DE", "VIV.PA", "wrong.ticker", "SAN.MC"))
 getFinRatios <- function(tickers) {
-  lapply(tickers, function(one.ticker) {
-    message(one.ticker)
+  message(paste("Getting financial ratios from Yahoo Finance for ", length(tickers), "tickers", sep = " "))
+  # Define default df
+  default.df <- data.frame(Variable = as.character(),
+                           Value = as.character())
+  FinRat <- default.df
+  for (one.ticker in tickers) {
     one.ticker <- trimws(one.ticker)
-    FinRat <- scrapeFinRatiosYahoo(one.ticker) %>% 
-      dplyr::mutate(Ticker = one.ticker)
-    FinRat
-  }) %>% 
-    dplyr::bind_rows()
+    dfextract <- scrapeFinRatiosYahoo(one.ticker)
+    if (nrow(dfextract) == 0 || any(is.na(colnames(dfextract)))) {
+      message(paste0("Wrong ticker: ", one.ticker))
+      df <- default.df
+    } else {
+      df <- dfextract %>% 
+        dplyr::mutate(Ticker = one.ticker)
+    }
+    FinRat <- rbind(FinRat, df)
+  }
+  FinRat
 }
 
 
