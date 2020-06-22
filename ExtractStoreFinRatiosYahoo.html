@@ -141,8 +141,12 @@ library(XML)</code></pre>
 <pre class="r"><code>source('StockResearchUtils.R')</code></pre>
 <p>Read Companies List</p>
 <pre class="r"><code>CompaniesList &lt;- read.csv(&quot;CompanyList.csv&quot;, sep = &quot;;&quot;)</code></pre>
-<p>Read the Financial Ratios as of ‘r today()’</p>
-<pre class="r"><code>FinRatios &lt;- getFinRatios(as.character(CompaniesList$tickers))</code></pre>
+<p>Read the Financial Ratios as of 2020-06-20</p>
+<pre class="r"><code>FinRatios &lt;- getFinRatios(as.character(unique(CompaniesList$tickers)))</code></pre>
+<pre><code>## Getting financial ratios from Yahoo Finance for 240 tickers</code></pre>
+<pre><code>## Wrong ticker: LUX.MI</code></pre>
+<pre><code>## Wrong ticker: ZUMV.VI</code></pre>
+<pre><code>## Wrong ticker: PLT.MI</code></pre>
 <p>Adding Timestamp, country and Industry</p>
 <pre class="r"><code>FinRatios &lt;- FinRatios %&gt;% 
   mutate(Date = gsub(&quot;-&quot;, &quot;&quot;, today()))</code></pre>

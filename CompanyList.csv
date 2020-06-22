@@ -1,7 +1,10 @@
 CompanyName;tickers;Gtickers;country;industry
+Exor;EXO.MI;;IT;
+Moncler;MONC.MI ;;IT;
+Luxottica Group S.p.A.;LUX.MI;;IT;
 SCOR;SCR.PA;SZCRF;FR;INS
 INDRA;IDR.MC;;ES;TECH
-ZUMTOBEL;ZUMV.VI;;AT;IND
+ZUMTOBEL;ZAG.VI ;;AT;IND
 SAFRAN;SAF.PA;;FR;IND
 BancoComercialPortugies;BCP.LS;;PO;BAS
 TUBOSREUNIDORS;TRG.MC;;ES;IND
@@ -29,7 +32,7 @@ ENDESA;ELE.MC;;ES;SUM
 GASNATURAL;GAS.MC;;ES;SUM
 MITTAL;MTS.MC;;ES;IND
 ACS;ACS.MC;;ES;CIV
-BBVA;BBVA;;ES;BAN
+BBVA;BBVA.MC;;ES;BAN
 ABERTIS;ABE.MC;;ES;CIV
 TOTAL;FP.PA;TTFNF;FR;OIL
 VOLKSWAGEN;VOW.DE;VLKAF;DE;AUT
@@ -169,3 +172,72 @@ TENARIS;TEN.MI;;IT;
 ;TGYM.MI;;IT;
 Brembo ;BRE.MI;;IT;
 De'Longhi S.p.A ;DLG.MI;;IT;
+Parmalat S.p.A.;PLT.MI;;IT;
+Gambero Rosso SpA;GAMB.MI;;IT;
+Sacyr, S.A.;SCYR.MC;;ES;
+Siemens Gamesa Renewable Energy, S.A.;GAM.MC;;ES;
+Tubacex, S.A.;TUB.MC;;ES;
+Red Eléctrica Corporación, S.A.;REE.MC;;ES;
+Pharma Mar, S.A.;PHM.MC;;ES;
+Compañía de Distribución Integral Logista Holdings, S.A.;LOG.MC;;ES;
+Almirall, S.A.;ALM.MC;;ES;
+Zardoya Otis, S.A.;ZOT.MC;;ES;
+;NTGY.MC;;ES;
+;GRF.MC;;ES;
+;IAG.MC;;ES;
+;ENC.MC;;ES;
+;TL5.MC;;ES;
+;CLNX.MC;;ES;
+;VIS.MC;;ES;
+MAPFRE;MAP.MC;;ES;INS
+;ROVI.MC;;ES;
+DEUTSCHE WOHNEN;DWNI.DE ;;DE;INM
+PORSCHE ;PAH3.DE ;;DE;
+EURONAV;EURN.BR ;;BE;OIL
+Tarkett S.A;TKTT.PA;;FR;
+IMMOFINANZ AG;IIA.VI;;AT;INS
+Osterreichische Post AG;POST.VI;;AT;
+OMV Aktiengesellschaft;OMV.VI;;AT;
+Lenzing Aktiengesellschaft;LNZ.VI;;AT;
+AT & S Austria Technologie & Systemtechnik Aktiengesellschaft;ATS.VI;;AT;
+CA Immobilien Anlagen AG;CAI.VI;;AT;
+VERBUND AG;VER.VI;;AT;
+Telekom Austria AG;TKA.VI;;AT;
+Voestalpine AG;VOE.VI;;AT;
+Mayr-Melnhof Karton AG;MMK.VI;;AT;
+Erste Group Bank AG;EBS.VI;;AT;
+Schoeller-Bleckmann Oilfield Equipment Aktiengesellschaft;SBO.VI;;AT;
+Wienerberger AG;WIE.VI;;AT;
+Raiffeisen Bank International AG;RBI.VI;;AT;
+UNIQA Insurance Group AG;UQA.VI;;AT;
+Andritz AG;ANDR.VI;;AT;
+Vienna Insurance Group AG;VIG.VI;;AT;
+BAWAG Group AG;BG.VI;;AT;
+DO & CO Aktiengesellschaft;DOC.VI;;AT;
+S IMMO AG;SPI.VI;;AT;
+PUMA;PUM.DE ;;DE;
+KION GROUP AG;KGX.DE;;DE;
+Fielmann Aktiengesellschaft;FIE.DE;;DE;
+Zalando SE;ZAL.DE;;DE;
+RTL Group S.A.;RRTL.DE;;DE;
+Schaeffler AG;SHA.DE;;DE;
+OSRAM Licht AG;OSR.DE;;DE;
+HOCHTIEF Aktiengesellschaft;HOT.DE;;DE;
+Evonik Industries AG;EVK.DE;;DE;
+LANXESS Aktiengesellschaft;LXS.DE;;DE;
+LEG Immobilien AG;LEG.DE;;DE;
+TAG Immobilien AG;TEG.DE;;DE;
+Fuchs Petrolub SE;FPE3.DE;;DE;
+Sudzucker AG;SZU.DE;;DE;
+Covestro AG;1COV.DE;;DE;
+Durr Aktiengesellschaft;DUE.DE;;DE;
+Hannover Ruck SE;HNR1.DE;;DE;
+Hugo Boss AG;BOSS.DE;;DE;
+Steinhoff International Holdings N.V.;SNH.DE;;DE;
+Gerresheimer AG;GXI.DE;;DE;
+CTS Eventim AG & Co. KGaA;EVD.DE;;DE;
+Jungheinrich Aktiengesellschaft;JUN3.DE;;DE;
+Fraport AG;FRA.DE;;DE;
+Deutsche EuroShop AG;DEQ.DE;;DE;
+Aareal Bank AG;ARL.DE;;DE;
+Savencia;SAVE.PA ;;FR;

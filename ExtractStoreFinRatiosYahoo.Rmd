@@ -27,6 +27,8 @@ source('StockResearchUtils.R')
 
 Read Companies List
 ```{r}
+date <- gsub("-", "", today())
+outputname <- paste0("FinRatiosYahoo", date, ".rds")
 CompaniesList <- read.csv("CompanyList.csv", sep = ";")
 
 ```
@@ -40,12 +42,12 @@ FinRatios <- getFinRatios(as.character(unique(CompaniesList$tickers)))
 Adding Timestamp, country and Industry
 ```{r}
 FinRatios <- FinRatios %>% 
-  mutate(Date = gsub("-", "", today()))
+  mutate(Date = date)
 
 ```
 
-Writing out rds
+Writing out rds `r outputname`
 ```{r}
-saveRDS(FinRatios, paste0("FinRatiosYahoo", gsub("-", "", today()), ".rds"))
+saveRDS(FinRatios, paste0("FinRatiosYahoo", date, ".rds"))
 ```
 
