@@ -22,7 +22,7 @@ library(XML)
 
 Source underlying utilities
 ```{r }
-source('StockResearchUtils.R')
+source('YahooFinanceUtils.R')
 ```
 
 Read Companies List
