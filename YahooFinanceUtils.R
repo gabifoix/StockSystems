@@ -23,7 +23,8 @@ scrapeIndexComp <- function(ticker) {
   res
 }
 
-ticker = "MC.PA"
+# ticker = "MC.PA"
+# scrapeProfile(ticker)
 scrapeProfile <- function(ticker){
   url <- sprintf("https://finance.yahoo.com/lookup?s=%s", ticker)
   res <- scrapeYahooFinance(url) %>% 
@@ -86,9 +87,23 @@ getFinRatios <- function(tickers) {
   FinRat
 }
 
+# renameFinRatio(FinRat.df, "200-Day Moving Average", "MA200")
+renameFinRatios <- function(Object, fromYahooName, toFinalName, VariableName = "Variable") {
+  stopifnot(length(fromYahooName) == length(toFinalName))
+  for(i in 1:length(fromYahooName)) {
+    Object[grep(fromYahooName[i], Object[,VariableName]), VariableName] <- toFinalName[i]
+  }
+  Object
+}
+
 
 
 .cleanNAs  <- function(x, replace = 0) { 
   x[is.na(x)] <- replace
   x
 } 
+
+convertPer2num <- function(Val) {
+  as.numeric(gsub("%", "", Val))/100
+}
+
