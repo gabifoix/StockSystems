@@ -2,7 +2,7 @@ CompanyName;tickers;country;industry;euroidx
 Unibail-Rodamco ;URW.AS ;FR;INM;1
 Exor;EXO.MI;IT;;
 Moncler;MONC.MI ;IT;;
-Elsior Luxottica Group S.p.A.;EL.PA;FR;;1
+Elsior Luxottica Group S.p.A.;EL.PA;FR;LUX;1
 SCOR;SCR.PA;FR;INS;
 INDRA;IDR.MC;ES;TECH;
 ZUMTOBEL;ZAG.VI ;AT;IND;
@@ -15,8 +15,8 @@ CIEAutomotive;CIE.MC;ES;AUT;
 GESTAMP;GEST.MC;ES;AUT;
 BaronDeLey;BDL.MC;ES;FOOD;
 DeutscheTelekom;DTE.DE;DE;COM;1
-BASF;BAS.DE;DE;OIL;1
-RWE;RWE.DE;DE;UTL;
+BASF;BAS.DE;DE;CHE;1
+RWE;RWE.DE;DE;SUP;
 ThyssenKrupp;TKA.DE;DE;IND;
 AIRBUS;AIR.PA;FR;IND;1
 FERROVIAL;FER.MC;ES;CIV;
