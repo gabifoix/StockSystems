@@ -1,25 +1,62 @@
 VarCols = c("ROE", "OpMar")
 FinRat.df <- getFinRatios(c("UNA.AS", "TGYM.MI", "VOW3.DE","PUM.DE",  "MC.PA", "CS.PA", "REE.MC"))
 FinRat.df <-  FinRat.df %>% 
-  renameFinRatios(c("Return on Equity", "Operating Margin"), c("ROE", "OpMar"))
+  renameFinRatios(c("Return on Equity", "Operating Margin"), c("ROE", "OpMar")) %>% 
+  renameFinRatios(c("Total Cash Per Share", "Total Debt/Equity", "Current Ratio", "50-Day Moving Average"), c("CashSH", "D2E", "CR", "MA50"))
                   
-df <- FinRat.df %>% 
-  subset(Variable %in% VarCols) %>% 
-  dplyr::mutate(Value = convertPer2num(Value))
 
-rankVariables(df, VarCols)
-rankVariables <- function(df, VarCols){
+rankProfitability <- function(FinRat.df, VarCols = c("ROE", "OpMar")) {
   
-  Variables.df <- reshape::cast(df, Ticker ~ Variable, mean, value = 'Value')
-  Variables.df[,VarCols] <- .cleanNAs(Variables.df[,VarCols])
+  df <- FinRat.df %>% 
+    subset(Variable %in% VarCols) %>% 
+    dplyr::mutate(Value = convertPer2num(Value)) %>% 
+    .castnclean(VarCols) %>% 
+    rankVariables("Profit", VarCols)
+  df
+}
+
+rankBS <- function(FinRat.df, VarCols = c("CashSH", "D2E", "CR", "MA50")) {
+  df <- FinRat.df %>% 
+    subset(Variable %in% VarCols) %>% 
+    dplyr::mutate(Value = as.numeric(Value)) %>% 
+    .castnclean(VarCols) %>% 
+    mutate(CastR = CashSH / MA50) %>% 
+    rankVariables("BS", c("CastR", "D2E", "CR"))
+  df
+}
+
+rankProfitability(FinRat.df) %>% 
+  left_join(rankBS(FinRat.df), by = "Ticker") %>% 
+  rankVariables("Total", c("Profit", "BS"))
   
-  rank.df <- Variables.df %>%
+
+#' Rank a df considering all variables defined in VarCols
+#'
+#' @param df 
+#' @param VarCols 
+#'
+#' @return `data.frame` with the same dim as df
+#'
+#' @examples
+#'df <- data.frame(Ticker = letters[1:10],
+#'                 aa = seq(1:10),
+#'                 bb = c(0.23, 0.45, 0.56, 1.1, 0.032, 0.8, 0.7, 0.1, 0.9, 1.5))
+#'rankVariables(df, VarCols = c("aa", "bb"))
+rankVariables <- function(df, Rank.Name = "Final_rank", VarCols){
+  
+  rank.df <- df %>%
     dplyr::mutate_at(VarCols, rank) %>% 
     dplyr::mutate(Final_rank = rank(rowSums(.[, VarCols]))) %>% 
     dplyr::select(Ticker, Final_rank)
+  colnames(rank.df) <- c("Ticker", Rank.Name)
   
   rank.df
 }
+
+VarCols <- c("CashSH", "D2E", "CR", "MA50")
+df <- FinRat.df %>% 
+  subset(Variable %in% VarCols) %>% 
+  reshape::cast(Ticker ~ Variable, mean, value = 'Value')
 
 
 
@@ -27,6 +64,11 @@ rankVariables <- function(df, VarCols){
 
 # Utils ----
 
+.castnclean <- function(df, VarCols) {
+  res <- reshape::cast(df, Ticker ~ Variable, mean, value = 'Value')
+  res[,VarCols] <- .cleanNAs(res[,VarCols])
+  res
+}
 
 
 
