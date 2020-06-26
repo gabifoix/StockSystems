@@ -6,7 +6,6 @@ FinRat.df <-  FinRat.df %>%
                   
 
 rankProfitability <- function(FinRat.df, VarCols = c("ROE", "OpMar")) {
-  
   df <- FinRat.df %>% 
     subset(Variable %in% VarCols) %>% 
     dplyr::mutate(Value = convertPer2num(Value)) %>% 
@@ -52,13 +51,6 @@ rankVariables <- function(df, Rank.Name = "Final_rank", VarCols){
   
   rank.df
 }
-
-VarCols <- c("CashSH", "D2E", "CR", "MA50")
-df <- FinRat.df %>% 
-  subset(Variable %in% VarCols) %>% 
-  reshape::cast(Ticker ~ Variable, mean, value = 'Value')
-
-
 
 
 

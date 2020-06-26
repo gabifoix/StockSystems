@@ -138,20 +138,19 @@ library(dplyr)
 library(quantmod)
 library(XML)</code></pre>
 <p>Source underlying utilities</p>
-<pre class="r"><code>source('StockResearchUtils.R')</code></pre>
+<pre class="r"><code>source('YahooFinanceUtils.R')</code></pre>
 <p>Read Companies List</p>
-<pre class="r"><code>CompaniesList &lt;- read.csv(&quot;CompanyList.csv&quot;, sep = &quot;;&quot;)</code></pre>
-<p>Read the Financial Ratios as of 2020-06-20</p>
+<pre class="r"><code>date &lt;- gsub(&quot;-&quot;, &quot;&quot;, today())
+outputname &lt;- paste0(&quot;FinRatiosYahoo&quot;, date, &quot;.rds&quot;)
+CompaniesList &lt;- read.csv(&quot;CompanyList.csv&quot;, sep = &quot;;&quot;)</code></pre>
+<p>Read the Financial Ratios as of 2020-06-26</p>
 <pre class="r"><code>FinRatios &lt;- getFinRatios(as.character(unique(CompaniesList$tickers)))</code></pre>
-<pre><code>## Getting financial ratios from Yahoo Finance for 240 tickers</code></pre>
-<pre><code>## Wrong ticker: LUX.MI</code></pre>
-<pre><code>## Wrong ticker: ZUMV.VI</code></pre>
-<pre><code>## Wrong ticker: PLT.MI</code></pre>
+<pre><code>## Getting financial ratios from Yahoo Finance for 0 tickers</code></pre>
 <p>Adding Timestamp, country and Industry</p>
 <pre class="r"><code>FinRatios &lt;- FinRatios %&gt;% 
-  mutate(Date = gsub(&quot;-&quot;, &quot;&quot;, today()))</code></pre>
-<p>Writing out rds</p>
-<pre class="r"><code>saveRDS(FinRatios, paste0(&quot;FinRatiosYahoo&quot;, gsub(&quot;-&quot;, &quot;&quot;, today()), &quot;.rds&quot;))</code></pre>
+  mutate(Date = date)</code></pre>
+<p>Writing out rds FinRatiosYahoo20200626.rds</p>
+<pre class="r"><code>saveRDS(FinRatios, paste0(&quot;FinRatiosYahoo&quot;, date, &quot;.rds&quot;))</code></pre>
 
 
 

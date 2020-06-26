@@ -36,7 +36,7 @@ CompaniesList <- read.csv("CompanyList.csv", sep = ";")
 Read the Financial Ratios as of `r today()`
 
 ```{r message = TRUE, warning = FALSE}
-FinRatios <- getFinRatios(as.character(unique(CompaniesList$tickers)))
+FinRatios <- getFinRatios(as.character(unique(CompaniesList$ticker)))
 ```
 
 Adding Timestamp, country and Industry
