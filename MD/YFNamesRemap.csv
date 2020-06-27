@@ -1,0 +1,60 @@
+YFName;FinRatio
+Market Cap;MarketCap
+Enterprise Value;EV
+Trailing P/E;PER
+Forward P/E 1;
+PEG Ratio (5 yr expected) 1;
+Price/Sales;PrSale
+Price/Book (mrq);PrBk
+Enterprise Value/Revenue 3;EV2Revenue
+Enterprise Value/EBITDA 6;EV2EBITDA
+Beta (5Y Monthly);
+52-Week Change 3;52wChange
+S&P500 52-Week Change 3;SP500AnnChange
+52 Week High 3;52wHigh
+52 Week Low 3;52wLow
+50-Day Moving Average 3;MA50
+200-Day Moving Average 3;MA200
+Avg Vol (3 month) 3;
+Avg Vol (10 day) 3;
+Shares Outstanding 5;
+Float;
+% Held by Insiders 1;
+% Held by Institutions 1;
+Shares Short  4;
+Short Ratio  4;
+Short % of Float  4;
+Short % of Shares Outstanding  4;
+Shares Short (prior month ) 4;
+Forward Annual Dividend Rate 4;
+Forward Annual Dividend Yield 4;
+Trailing Annual Dividend Rate 3;DivAmount
+Trailing Annual Dividend Yield 3;DivYield
+5 Year Average Dividend Yield 4;DivYield5Y
+Payout Ratio 4;PayoutRatio
+Dividend Date 3;
+Ex-Dividend Date 4;
+Last Split Factor 2;
+Last Split Date 3;
+Fiscal Year Ends;
+Most Recent Quarter (mrq);
+Profit Margin;ProfitMar
+Operating Margin (ttm);OpMar
+Return on Assets (ttm);ROA
+Return on Equity (ttm);ROE
+Revenue (ttm);Revenue
+Revenue Per Share (ttm);RevenueSh
+Quarterly Revenue Growth (yoy);QREVGrowth
+Gross Profit (ttm);GrossProfit
+EBITDA;EBITDA
+Net Income Avi to Common (ttm);
+Diluted EPS (ttm);
+Quarterly Earnings Growth (yoy);QEarGrowth
+Total Cash (mrq);
+Total Cash Per Share (mrq);CashSh
+Total Debt (mrq);TotalDebt
+Total Debt/Equity (mrq);D2E
+Current Ratio (mrq);CR
+Book Value Per Share (mrq);BookValueSh
+Operating Cash Flow (ttm);
+Levered Free Cash Flow (ttm);
