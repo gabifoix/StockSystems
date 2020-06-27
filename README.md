@@ -1,2 +1,4 @@
 # StockSystems
-Asses systems to trade stock in the markets
+The goal of the **StockSystems project** is to build a set of systematics rules to trade stocks.
+
+
