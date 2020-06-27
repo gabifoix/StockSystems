@@ -1,3 +1,20 @@
+
+PFtickers <- c("UNA.AS", "TGYM.MI", "VOW3.DE", "PUM.DE",  "MC.PA", "CS.PA", "REE.MC")
+
+YFNamesRemap <- read.csv("MD/YFNamesRemap.csv", sep = ";") %>% 
+  subset(FinRatio != "")
+
+FinRatios.df <- readRDS("FinRatiosYahoo/FinRatiosYahoo20200626.rds") %>% 
+  subset(Ticker %in% PFtickers) %>%
+  subset(Variable %in% YFNamesRemap$YFName) %>% 
+  renameFinRatios(as.character(YFNamesRemap$YFName), as.character(YFNamesRemap$FinRatio)) %>% 
+  reshape2::dcast(Date + Ticker ~ Variable, value.var = 'Value')
+  .castnclean(as.character(YFNamesRemap$FinRatio))
+
+
+
+
+
 VarCols = c("ROE", "OpMar")
 FinRat.df <- getFinRatios(c("UNA.AS", "TGYM.MI", "VOW3.DE","PUM.DE",  "MC.PA", "CS.PA", "REE.MC"))
 FinRat.df <-  FinRat.df %>% 

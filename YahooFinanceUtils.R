@@ -91,7 +91,11 @@ getFinRatios <- function(tickers) {
 renameFinRatios <- function(Object, fromYahooName, toFinalName, VariableName = "Variable") {
   stopifnot(length(fromYahooName) == length(toFinalName))
   for(i in 1:length(fromYahooName)) {
-    Object[grep(fromYahooName[i], Object[,VariableName]), VariableName] <- toFinalName[i]
+    idx <- which(Object[,VariableName] %in% fromYahooName[i])
+    Object[idx, VariableName] <- toFinalName[i]
+    if (length(idx) == 0) {
+      Object[grep(fromYahooName[i], Object[,VariableName]), VariableName] <- toFinalName[i]
+    }
   }
   Object
 }
