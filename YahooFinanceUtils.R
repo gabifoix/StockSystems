@@ -45,13 +45,14 @@ buildYahooFinanceURL <- function(ticker, urlsection) {
 
 
 # scrapeYahooFinance(buildYahooFinanceURL("MC.PA", "key-statistics"))
-scrapeYahooFinance <- function(url) {
+scrapeYahooFinance <- function(url, time_in_seconds = 1) {
   webpage <- readLines(url)
   html <- XML::htmlTreeParse(webpage, useInternalNodes = TRUE, asText = TRUE)
   tableNodes <- XML::getNodeSet(html, "//table")
   res <- lapply(tableNodes, function(x) readHTMLTable(x)) %>% 
-      dplyr::bind_rows() 
-    res
+    dplyr::bind_rows() 
+  Sys.sleep(time_in_seconds)
+  res
 }
 
 
@@ -87,7 +88,8 @@ getFinRatios <- function(tickers) {
   FinRat
 }
 
-# renameFinRatio(FinRat.df, "200-Day Moving Average", "MA200")
+# FinRatios.df <- readRDS("FinRatiosYahoo/FinRatiosYahoo20200627.rds")
+# renameFinRatios(FinRatios.df, "Enterprise Value 3", "EV")
 renameFinRatios <- function(Object, fromYahooName, toFinalName, VariableName = "Variable") {
   stopifnot(length(fromYahooName) == length(toFinalName))
   for(i in 1:length(fromYahooName)) {
@@ -100,14 +102,36 @@ renameFinRatios <- function(Object, fromYahooName, toFinalName, VariableName = "
   Object
 }
 
+# getHistPriceYF(c("MC.PA", "AI.PA", "CS.PA"), "w", "2017-07-02")
+getHistPriceYF <- function(tickers, periodicity, from, to = Sys.Date()) {
+  HistPrices.yahoo.list <- lapply(tickers, 
+                                  function(ticker) {
+                                    quantmod::getSymbols(ticker,
+                                                         from = from,
+                                                         to = to,
+                                                         periodicity = periodicity,
+                                                         auto.assign = FALSE,
+                                                         warnings = FALSE) %>%
+                                      .[, grep("Adjusted", colnames(.))]
+                                  }) %>%
+    setNames(tickers)
+  HistPrices.yahoo.list
+}
 
-
-.cleanNAs  <- function(x, replace = 0) { 
-  x[is.na(x)] <- replace
-  x
-} 
 
 convertPer2num <- function(Val) {
   as.numeric(gsub("%", "", Val))/100
+}
+
+
+# val = c("100B", "87000", "300.5M" , "5.25M")
+# convertLetterAmount2num(val)
+convertLetterAmount2num <- function(Val) {
+  res <- sapply(Val, function(x) { # x = val[1]
+    ifelse(grepl("B$", x), as.numeric(gsub("B", "", x)) * 1000000,
+           ifelse(grepl("M$", x), as.numeric(gsub("M", "", x)) * 1000, 
+                  as.numeric(x)))
+  })
+  res
 }
 

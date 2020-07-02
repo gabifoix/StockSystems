@@ -1,5 +1,5 @@
 CompanyName;ticker;country;industry;euroidx
-Acciona;ANA.MC;ES;CON;1
+Acciona;ANA.MC;ES;CON;
 Acerinox;ACX.MC;ES;MAT;
 ACS Group;ACS.MC;ES;CON;
 Aena;AENA.MC;ES;AIR;1
@@ -14,20 +14,20 @@ CaixaBank;CABK.MC;ES;BAN;
 Cellnex Telecom;CLNX.MC;ES;TECH;
 CIE Automotive;CIE.MC;ES;AUT;
 Enagás;ENG.MC;ES;UTL;
-ENCE;ENC.MC;ES;IND;1
+ENCE;ENC.MC;ES;IND;
 Endesa;ELE.MC;ES;UTL;1
 Ferrovial;FER.MC;ES;CON;
 Grifols;GRF.MC;ES;PHA;
 IAG;IAG.MC;ES;FLI;1
-Iberdrola;IBE.MC;ES;UTL;
-Inditex;ITX.MC;ES;RET;
+Iberdrola;IBE.MC;ES;UTL;1
+Inditex;ITX.MC;ES;RET;1
 Indra;IDR.MC;ES;TECH;
 Inmobiliaria Colonial;COL.MC;ES;INM;
 Mapfre;MAP.MC;ES;INS;
-Mediaset España;TL5.MC;ES;MED;1
+Mediaset España;TL5.MC;ES;MED;
 Meliá Hotels;MEL.MC;ES;HOT;1
 Merlin Properties;MRL.MC;ES;INM;
-Naturgy;NTGY.MC;ES;UTL;1
+Naturgy;NTGY.MC;ES;UTL;
 Red Eléctrica de España;REE.MC;ES;UTL;
 Repsol;REP.MC;ES;OIL;1
 Siemens Gamesa;SGRE.MC;ES;IND;1
@@ -53,17 +53,17 @@ Hermès;RMS.PA;FR;RET;
 Kering;KER.PA;FR;RET;
 L'Oréal;OR.PA;FR;RET;1
 Legrand;LR.PA;FR;IND;1
-LVMH;MC.PA;FR;RET;
+LVMH;MC.PA;FR;RET;1
 Michelin;ML.PA;FR;AUT;
-Orange;ORA.PA;FR;COM;
+Orange;ORA.PA;FR;COM;1
 Pernod Ricard;RI.PA;FR;FOOD;
 PSA;UG.PA;FR;AUT;
 Publicis;PUB.PA;FR;MED;1
 Renault;RNO.PA;FR;AUT;
 Safran;SAF.PA;FR;AIR;
-Saint-Gobain;SGO.PA;FR;IND;
+Saint-Gobain;SGO.PA;FR;IND;1
 Sanofi;SAN.PA;FR;PHA;1
-Schneider Electric;SU.PA;FR;IND;
+Schneider Electric;SU.PA;FR;IND;1
 Société Générale;GLE.PA;FR;BAN;
 Sodexo;SW.PA;FR;FOOD;1
 STMicroelectronics;STM.PA;FR;IND;1
@@ -111,16 +111,15 @@ Dürr AG;DUE.DE;DE;AUT;
 Evonik Industries;EVK.DE;DE;CHE;
 Evotec;EVT.DE;DE;HEALTH;
 Fielmann;FIE.DE;DE;MAT;1
-Fraport;FRA.DE;DE;AIR;1
 Freenet AG;FNTN.DE;DE;COM;
 Fuchs Petrolub SE;FPE.DE;DE;CHE;
 GEA Group;G1A.DE;DE;IND;
 Gerresheimer;GXI.DE;DE;HEALTH;
 Grand City Properties;GYC.DE;DE;INM;
 Hannover Rück SE;HNR1.DE;DE;INS;
-Hella KGaA Hueck & Co.;HLE.DE;DE;AUT;1
+Hella KGaA Hueck & Co.;HLE.DE;DE;AUT;
 Hochtief;HOT.DE;DE;CON;1
-Hugo Boss;BOSS.DE;DE;RET;1
+Hugo Boss;BOSS.DE;DE;RET;
 Innogy SE;IGY.DE;DE;UTL;1
 K+S AG;SDF.DE;DE;MAT;
 KION Group;KGX.DE;DE;MAT;
@@ -135,13 +134,13 @@ Osram;OSR.DE;DE;IND;
 ProSiebenSat.1 Media;PSM.DE;DE;MED;
 Puma SE;PUM.DE;DE;RET;
 Qiagen;QIA.DE;DE;HEALTH;
-Rheinmetall;RHM.DE;DE;#N/A;
-Rocket Internet;RKET.DE;DE;#N/A;
+Rheinmetall;RHM.DE;DE;MAT;
+Rocket Internet;RKET.DE;DE;TECH;
 RTL Group;RRTL.DE;DE;MED;
 Salzgitter AG;SZG.DE;DE;MAT;
 Sartorius AG;SRT.DE;DE;#N/A;
 Schaeffler Technologies AG & Co. KG;SHA.DE;DE;#N/A;
-Scout24 AG;G24.DE;DE;#N/A;
+Scout24 AG;G24.DE;DE;SER;
 Siemens Healthineers;SHL.DE;DE;#N/A;
 Siltronic;WAF.DE;DE;#N/A;
 Software AG;SOW.DE;DE;TECH;
@@ -155,18 +154,15 @@ Zalando SE;ZAL.DE;DE;RET;
 Adidas;ADS.DE;DE;RET;
 Allianz;ALV.DE;DE;INS;
 BASF;BAS.DE;DE;CHE;
-Bayer;BAYN.DE;DE;PHA;
+Bayer;BAYN.DE;DE;PHA;1
 Beiersdorf;BEI.DE;DE;#N/A;
-BMW;BMW.DE;DE;#N/A;
 Continental;CON.DE;DE;#N/A;
 Covestro;1COV.DE;DE;CHE;
 Daimler;DAI.DE;DE;#N/A;
-Deutsche Bank;DBK.DE;DE;#N/A;
 Deutsche Börse;DB1.DE;DE;#N/A;
-Deutsche Post;DPW.DE;DE;TRANS;
-Deutsche Telekom;DTE.DE;DE;COM;
+Deutsche Post;DPW.DE;DE;TRANS;1
 E.ON;EOAN.DE;DE;UTL;
-Fresenius;FRE.DE;DE;HEALTH;
+Fresenius;FRE.DE;DE;HEALTH;1
 Fresenius Medical Care;FME.DE;DE;HEALTH;
 HeidelbergCement;HEI.DE;DE;CON;
 Henkel;HEN3.DE;DE;IND;
@@ -178,7 +174,7 @@ Munich Re;MUV2.DE;DE;INS;
 RWE;RWE.DE;DE;UTL;
 SAP;SAP.DE;DE;TECH;
 Siemens;SIE.DE;DE;IND;
-Volkswagen Group;VOW3.DE;DE;AUT;
+Volkswagen Group;VOW3.DE;DE;AUT;1
 Vonovia;VNA.DE;DE;INM;
 Wirecard;WDI.DE;DE;TECH;
 A2A;A2A.MI;IT;;
@@ -193,13 +189,12 @@ Buzzi Unicem;BZU.MI;IT;CON;
 Campari;CPR.MI;IT;FOOD;
 CNH Industrial;CNHI.MI;IT;IND;
 Diasorin;DIA.MI;IT;SUP;
-Enel;ENEL.MI;IT;UTL;
+Enel;ENEL.MI;IT;UTL;1
 Eni;ENI.MI;IT;OIL;
 Exor;EXO.MI;IT;BAN;
 Ferrari;RACE.MI;IT;AUT;
 Fiat Chrysler Automobiles;FCA.MI;IT;AUT;
 FinecoBank;FBK.MI;IT;BAN;
-Generali;G.MI;IT;INS;
 Intesa Sanpaolo;ISP.MI;IT;BAN;
 Italgas;IG.MI;IT;UTL;
 Juventus Football Club;JUVE.MI;IT;;
@@ -253,7 +248,7 @@ Aegon;AGN.AS;HO;INS;
 Ahold Delhaize;AD.AS;HO;FOOD;
 AkzoNobel;AKZA.AS;HO;CHE;
 ArcelorMittal;MT.AS;HO;MAT;
-ASML Holding;ASML.AS;HO;IND;
+ASML Holding;ASML.AS;HO;IND;1
 ASR Nederland;ASRNL.AS;HO;INS;
 DSM;DSM.AS;HO;CHE;
 Galapagos;GLPG.AS;HO;HEALTH;
@@ -263,12 +258,10 @@ ING Group;INGA.AS;HO;BAN;
 Just Eat Takeaway;TKWY.AS;HO;SER;
 KPN;KPN.AS;HO;COM;
 NN Group;NN.AS;HO;INS;
-Philips;PHIA.AS;HO;HEALTH;
 Randstad;RAND.AS;HO;SER;
 RELX;REN.AS;HO;MED;
 Royal Dutch Shell;RDSA.AS;HO;OIL;
 Unibail-Rodamco-Westfield;URW.AS;HO;RET;
-Unilever;UNA.AS;HO;RET;
 Vopak;VPK.AS;HO;TRANS;
 Wolters Kluwer;WKL.AS;HO;MED;
 Ackermans & van Haaren;ACKB.BR;BE;BAN;
@@ -294,7 +287,7 @@ WDP;WDP.BR;BE;INM;
 Altri;ALTR.LS;PO;IND;
 Banco Comercial Português;BCP.LS;PO;BAN;
 Corticeira Amorim;COR.LS;PO;FOOD;
-CTT Correios de Portugal;CTT.LS;PO;IND;
+CTT Correios de Portugal;CTT.LS;PO;TRANS;
 EDP Renováveis;EDPR.LS;PO;UTL;
 Energias de Portugal;EDP.LS;PO;UTL;
 Galp Energia;GALP.LS;PO;OIL;
@@ -309,9 +302,8 @@ Semapa;SEM.LS;PO;MAT;
 Sonae;SON.LS;PO;RET;
 Sonae Capital;SONC.LS;PO;BAN;
 The Navigator Company;NVG.LS;PO;MAT;
-Unibail-Rodamco ;URW.AS ;FR;INM;
+Unibail-Rodamco ;URW.AS;FR;INM;
 Exor;EXO.MI;IT;;
-Moncler;MONC.MI ;IT;;
 Elsior Luxottica Group S.p.A.;EL.PA;FR;LUX;
 ZUMTOBEL;ZAG.VI ;AT;IND;
 SAFRAN;SAF.PA;FR;IND;
@@ -322,45 +314,36 @@ REALIA;RLIA.MC;ES;INM;
 CIEAutomotive;CIE.MC;ES;AUT;
 GESTAMP;GEST.MC;ES;AUT;
 BaronDeLey;BDL.MC;ES;FOOD;
-DeutscheTelekom;DTE.DE;DE;COM;
+DeutscheTelekom;DTE.DE;DE;COM;1
 RWE;RWE.DE;DE;SUP;
 ThyssenKrupp;TKA.DE;DE;IND;
 FERROVIAL;FER.MC;ES;CIV;
 MERLIN;MRL.MC;ES;INM;
 COLONIAL;COL.MC;ES;INM;
-ENAGAS;ENG.MC;ES;UTL;
 SANTANDER;SAN.MC;ES;BAN;
 TELEFONICA;TEF.MC;ES;COM;
 GASNATURAL;GAS.MC;ES;UTL;
 MITTAL;MTS.MC;ES;IND;
-ACS;ACS.MC;ES;CIV;
-ABERTIS;ABE.MC;ES;CIV;
-VOLKSWAGEN;VOW.DE;DE;AUT;
-BMW;BMW.DE;DE;AUT;
+BMW;BMW.DE;DE;AUT;1
 DAIMLER;DAI.DE;DE;AUT;
-BAYER;BAYN.DE;DE;FAR;
 PEUGEOT-CITROEN;UG.PA;FR;AUT;
 CARREFOUR;CA.PA;FR;SUP;
-SCHNEIDERELECTRIC;SU.PA;FR;IND;
 ING;INGA.AS;HO;BAN;
 SABADELL;SAB.MC;ES;BAN;
-ASML;ASML.AS;HO;TECH;
 SIEMENS;SIE.DE;DE;TECH;
 MELIA;MEL.MC;ES;HOT;
 UNICAJA;UNI.MC;ES;BAN;
 AMADEUS;AMS.MC;ES;TECH;
-DEUTSCHEBANK;DBK.DE;DE;BAN;
-PHILIPS;PHIA.AS;HO;TECH;
-GENERALLI;G.MI;IT;INS;
+DEUTSCHEBANK;DBK.DE;DE;BAN;1
+PHILIPS;PHIA.AS;HO;TECH;1
+GENERALLI;G.MI;IT;INS;1
 Anheuser-Busch;ABI.BR;BE;FOOD;
 ROYALDUTCH;RDSA.AS;HO;OIL;
 UNILEVER;UNA.AS;HO;FOOD;
 WolkersKluwer;WKL.AS;HO;PUB;
 RELX PLC ;REN.AS;HO;PUB;
 AholdDelhaize;AD.AS;HO;SUP;
-L'Air Liquide;AI.PA;FR;INS;
-L'Oreal S.A.;OR.PA;FR;LUX;
-Essilor nternational ;EI.PA;FR;LUX;
+Essilor International ;EI.PA;FR;LUX;
 Allianz;ALV.DE ;DE;INS;
 ENGI;ENGI.PA ;FR;OIL;
 MunichRe;MUV2.DE ;DE;INS;
@@ -368,8 +351,6 @@ Merk;MRK.DE ;DE;PHA;
 InfineonTechnologies;IFX.DE;DE;TECH;
 Fresenius Medical Care  ;FME.DE ;DE;HEALTH;
 Lindle;LIN.DE ;DE;INS;
-Deutsche Post AG ;DPW.DE;DE;;
-Deutsche Telekom AG ;DTE.DE ;DE;TEL;
 Continental;CON.DE ;DE;AUT;
 Henkel AG & Co. KGaA ;HEN3.DE ;DE;;
 Beiersdorf ;BEI.DE ;DE;;
@@ -381,7 +362,6 @@ BASF;BAS.DE;DE;;
 Wirecard;WDI.DE;DE;;
 KBC Group NV ;KBC.BR ;BE;;
 Edenred SA ;EDEN.PA ;FR;;
-LVMH;MC.PA ;FR;LUX;
 Thales;HO.PA;FR;;
 Ubisoft Entertainment SA ;UBI.PA;FR;;
 Electricite de France S.A. ;EDF.PA;FR;;
@@ -397,19 +377,13 @@ Groupe Bruxelles Lambert SA ;GBLB.BR;BE;;
 Worldline S.A ;WLN.PA;FR;;
 Ipsen;IPN.PA;FR;;
 Credit Agricola;ACA.PA;FR;BAN;
-Orange;ORA.PA;FR;TEL;
 Societe Generale ;GLE.PA;FR;BAN;
-BNP;BNP.PA;FR;BAN;
-Saint-Gobain;SGO.PA;FR;;
 Bouygues;EN.PA;FR;;
 Pernod Ricard;RI.PA;FR;;
 Capgemini;CAP.PA;FR;;
 Vinci;DG.PA;FR;;
 Vivendi;VIV.PA;FR;INM;
-Sanofi;SAN.PA;FR;;
-Kering;KER.PA;FR;LUX;
 Veolia;VIE.PA;FR;;
-Randstad;RAND.AS;HO;;
 MITTAL;MT.AS;HO;;
 JustEat;TKWY.AS;HO;;
 ABN AMRO Bank;ABN.AS;HO;;
@@ -419,17 +393,10 @@ KPN;KPN.AS;HO;TEL;
 Pharol;PHR.LS;PO;;
 ;RENE.LS;PO;;
 Sonae;SON.LS;PO;;
-Galp;GALP.LS;PO;OIL;
-Correios;CTT.LS;PO;;
-Jeronimo Martins;JMT.LS;PO;;
-EDP;EDP.LS;PO;UTL;
 Navigator;NVG.LS;PO;;
 NOS;NOS.LS;PO;;
 Salvatore Fergamo;SFER.MI;IT;;
 Terna;TRN.MI;IT;;
-;REC.MI;IT;;
-;SRG.MI;IT;;
-;MB.MI;IT;;
 ;PST.MI;IT;;
 ;UBI.MI;IT;BAN;
 ;AZM.MI;IT;;
@@ -439,17 +406,15 @@ ATLANTIA;ATL.MI;IT;;
 DAVIDE CAMPARI;CPR.MI;IT;;
 ;FBK.MI;IT;BAN;
 ;IG.MI;IT;UTL;
-FIAT;FCA.MI;IT;AUT;
 ;UNI.MI;IT;;
 ;ENI.MI;IT;UTL;
 ;BMED.MI;IT;BAN;
 ;BPE.MI;IT;BAN;
 TENARIS;TEN.MI;IT;;
-;MONC.MI;IT;;
 ;BZU.MI;IT;;
 ;SPM.MI;IT;;
 ;DIA.MI;IT;SUP;
-;TGYM.MI;IT;;
+Technogym;TGYM.MI;IT;RET;
 Brembo ;BRE.MI;IT;;
 De'Longhi S.p.A ;DLG.MI;IT;;
 Parmalat S.p.A.;PLT.MI;IT;;
@@ -468,8 +433,8 @@ Zardoya Otis;ZOT.MC;ES;;
 ;CLNX.MC;ES;;
 ;VIS.MC;ES;;
 ;ROVI.MC;ES;;
-DEUTSCHE WOHNEN;DWNI.DE ;DE;INM;
-PORSCHE ;PAH3.DE ;DE;AUT;
+DEUTSCHE WOHNEN;DWNI.DE;DE;INM;
+PORSCHE ;PAH3.DE;DE;AUT;
 EURONAV;EURN.BR ;BE;OIL;
 Tarkett S.A;TKTT.PA;FR;;
 IMMOFINANZ AG;IIA.VI;AT;INS;
@@ -506,7 +471,6 @@ Fuchs Petrolub SE;FPE3.DE;DE;CHE;
 Sudzucker AG;SZU.DE;DE;;
 Durr Aktiengesellschaft;DUE.DE;DE;;
 Hannover Ruck SE;HNR1.DE;DE;;
-Hugo Boss AG;BOSS.DE;DE;;
 Steinhoff International Holdings N.V.;SNH.DE;DE;;
 Gerresheimer AG;GXI.DE;DE;;
 CTS Eventim AG & Co. KGaA;EVD.DE;DE;;
@@ -521,3 +485,9 @@ Renault;RNA.PA;FR;AUT;
 Valeo SA;FR.PA;FR;AUT;
 Compagnie Plastic Omnium SA ;POM.PA;FR;AUT;
 Rubis;RUI.PA;FR;UTL;
+CRH;CRG.IR;IR;CONS;1
+Kerry Group;KRZ.IR;IR;FOOD
+Kingspan Group;KRX.IR;IR;CONS;
+Kapsch TrafficCom;KTCG.VI;AT;TECH;
+Metro AG;MEO.VI;AT;SUP;
+Dragerwerk;DRW3.DE;DE;HEALTH
