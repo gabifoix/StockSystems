@@ -14,9 +14,52 @@ rankValue <- function(FinRat.df, VarCols = c("EV", "EBITDA", "PER", "PrBk")) {
     rankVariables("VAL", c("PER", "PrBk", "EBITDA2EV"))
   df
 }
+
+# getFinRatios(c("UNA.AS" ,"VOW3.DE", "MC.PA", "REE.MC")) %>% 
+#   getMarketCap()
+getMarketCap <- function(FinRat.df, MCapCol = "MarketCap") {
+  res <-  FinRat.df %>%
+    renameFinRatios(c("Market Cap"), MCapCol) %>% 
+    subset(Variable %in% MCapCol) %>% 
+    .castnclean(MCapCol) %>% 
+    dplyr::mutate(MarketCap = convertLetterAmount2num(MarketCap))
+  res
+}
+
+
+# PF.df <- data.frame(Ticker = c("UNA.AS" ,"VOW3.DE", "MC.PA", "REE.MC"),
+#                     MarketCap = c(100, 200, 85, 1500),
+#                     stringsAsFactors = FALSE)
+# weight.df <- data.frame(Ticker = c("UNA.AS" ,"VOW3.DE", "MC.PA", "REE.MC"),
+#                         weight = c(0.1, 0.5, 0.3, 0.1),
+#                         stringsAsFactors = FALSE)
+# addPFavgFactor(PF.df, weight.df)
+addPFavgFactor <- function(PF.df, weight.df = NULL) {
+  
+  NumCols <- colnames(PF.df)[sapply(PF.df, is.numeric)]
+  keyCol <- setdiff(colnames(PF.df), NumCols)
+  # Empty data.frame
+  PF <- setNames(data.frame(matrix(ncol = ncol(PF.df), nrow = 1)), colnames(PF.df))
+  PF[,keyCol] <- "PF"
+  if(is.null(weight.df)) {
+    # Equally weighted
+    PF[1, NumCols] <- colMeans(PF.df[,NumCols, drop = FALSE], na.rm = TRUE)
+  } else {
+    # Weighted Portfolio
+    stopifnot(nrow(PF.df) == nrow(weight.df))
+    tmp <- merge(PF.df, weight.df) 
+    PF[1, NumCols] <- colSums(tmp[, NumCols, drop = FALSE] * tmp$weight, na.rm = TRUE)
+  }
+  res <- rbind(PF.df, PF)
+  res
+}
+
+
+
+
      
-x = as.numeric(df$PER )
-uniformize(x, thehigherthebetter = FALSE)
+# x = as.numeric(df$PER )
+# uniformize(x, thehigherthebetter = FALSE)
 uniformize <- function(x, thehigherthebetter = TRUE) {
    res <-  sapply(x, function(i) 
       (i - min(x)) / (max(x) - min(x)))
