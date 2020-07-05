@@ -128,8 +128,8 @@ convertPer2num <- function(Val) {
 # convertLetterAmount2num(val)
 convertLetterAmount2num <- function(Val) {
   res <- sapply(Val, function(x) { # x = val[1]
-    ifelse(grepl("B$", x), as.numeric(gsub("B", "", x)) * 1000000,
-           ifelse(grepl("M$", x), as.numeric(gsub("M", "", x)) * 1000, 
+    ifelse(grepl("B$", x), as.numeric(gsub("B", "", x)) * 1000,
+           ifelse(grepl("M$", x), as.numeric(gsub("M", "", x)) * 1, 
                   as.numeric(x)))
   })
   res
