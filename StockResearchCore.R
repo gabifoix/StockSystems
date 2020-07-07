@@ -92,10 +92,7 @@ rankBS <- function(FinRat.df, VarCols = c("CashSH", "D2E", "CR", "MA50")) {
   df
 }
 
-rankProfitability(FinRat.df) %>% 
-  left_join(rankBS(FinRat.df), by = "Ticker") %>% 
-  rankVariables("Total", c("Profit", "BS"))
-  
+
 
 #' Rank a df considering all variables defined in VarCols
 #'
@@ -120,6 +117,38 @@ rankVariables <- function(df, Rank.Name = "Final_rank", VarCols){
   rank.df
 }
 
+
+#' Calculates the Stop Loss of all elements of the portfoio given a global threshold
+#'
+#' @param PF 
+#' @param LossThreshold 
+#' @param ProfitDropThreshold 
+#'
+#' @return
+#' @export
+#'
+#' @examples 
+#' PF <- data.frame(Ticker = letters[1:8],
+#' nShares = c(100, 200, 100, 10, 15, 500, 1200, 86),
+#' CP = c(50, 40, 43, 598, 256, 8, 3.656, 95),
+#' AP = c(48, 25, 38, 254, 100, 9, 4.26, 42))
+#' calcStopLoss(PF, LossThreshold = 0.15, ProfitDropThreshold = 0.25)
+calcStopLoss <- function(PF, LossThreshold = 0.2, ProfitDropThreshold = 0.3) {
+  CVPF <- sum(PF$nShares * PF$CP)
+  MaxLoss <- LossThreshold / nrow(PF)
+  MaxProfitDrop <- ProfitDropThreshold / nrow(PF)
+  
+  PF %>% 
+    mutate(CV = nShares * CP,
+           PnL = nShares * (CP - AP),
+           StopLossDefAmount = CVPF * MaxLoss,
+           StopLoss = ifelse(PnL <= 0, AP - (StopLossDefAmount / nShares), 
+                             ifelse(PnL > 0 & PnL > StopLossDefAmount, 
+                                    CP- (CVPF * MaxProfitDrop / nShares),
+                                    CP- (StopLossDefAmount / nShares))),
+           LossMargin = 1- StopLoss/CP)
+  
+}
 
 
 # Utils ----
@@ -150,9 +179,6 @@ xts2df = function(x) {
 }
 
 
-
-
-a <- xml2::read_xml(url)
 
 
 

@@ -1,0 +1,130 @@
+---
+title: "Adding an extra stock into a portfolio"
+output:
+  html_document:
+    df_print: paged
+---
+
+Equity research based on the following preconditions and factors.
+* European stocks: DE, FR, BE, NL, ES, IT, PO
+* Market capitalization > 1000MM
+* At least 5 years of history
+
+**Factor 1: Value**
+PER, priceToBook, EBITDA / Enterprise Value
+
+**Factor 2: Profitability**
+Return on Equity, Operating Margin
+
+**Factor 3: Balance Sheet**
+Current Ratio, Total Cash Per Share / Price
+
+**Factor 6: Dividend**
+Trailing Annual Dividend Yield * (1 - Payout Ratio)
+
+**Factor 4: Growth**
+Quarterly Revenue Growth
+Quarterly Earnings Growth
+
+**Factor 5: Momentum**
+52-Week Change
+52-Week Change - S&P500 52-Week Change
+PerOver50MA
+PerOver200MA
+PerOverAnMin
+PerOverAnMax
+
+
+Set of libraries to use
+```{r message = FALSE, warning = FALSE}
+library(magrittr)
+library(jsonlite)
+library(lubridate)
+library(dplyr)
+library(quantmod)
+library(XML)
+library(ggplot2)
+
+source('~/GitHub/StockSystems/YahooFinanceUtils.R')
+source('~/GitHub/StockSystems/Plots.R')
+source('~/GitHub/StockSystems/StockResearchCore.R')
+
+```
+
+
+Defining our portfolio
+```{r}
+Portfolio.df <- data.frame(Tickers = c("UNA.AS", "TGYM.MI", "VOW3.DE","PUM.DE",  "MC.PA", "CS.PA", "REE.MC"),
+                        nShares = c(100, 650, 50, 80, 14, 300, 425),
+                        AP = c(46, 7, 93, 55.40, 350, 16.10, 17.20),
+                        stringsAsFactors = FALSE)
+```
+
+```{r echo = FALSE}
+nyearsback <- 10
+```
+
+Download daily historical data from today back to `r nyearsback` years. 
+We take price adjusted by splits.
+
+```{r message = FALSE, warning = FALSE}
+start_date = Sys.Date() - lubridate::years(nyearsback)
+HistPrices.yahoo.list <- getHistPriceYF(Portfolio.df$Tickers, "w", start_date)
+```
+
+HistPrices.yahoo.list is a list of `r ncol(Portfolio.df)` elements, one per each component of the portfolio.
+
+WE calculate first the StopLoss given a "Loss Threshold"" of 15% and "ProfitDropThreshold" of 20%.
+rom here, we get the value and allocation of the current portfolio. 
+
+```{r echo=FALSE}
+Portfolio.df <- Portfolio.df %>% 
+  mutate(CP = sapply(HistPrices.yahoo.list, tail, 1)) %>% 
+  calcStopLoss(LossThreshold = 0.15, ProfitDropThreshold = 0.2)
+
+Portfolio.df[, c("Tickers", "AP", "CP", "StopLoss")]
+
+```
+
+Value of the current portfolio is `r sum(CurrentAlloc.df$Value)`, allocated as follows.
+
+```{r echo=FALSE}
+
+Portfolio.df <- Portfolio.df %>% 
+    dplyr::mutate(weight = CV / sum(CV)) %>% 
+  arrange(desc(weight))
+
+Portfolio.df[, c("Tickers", "CV", "weight")]
+
+
+```
+
+```{r}
+
+
+
+piechartplot(Portfolio.df)
+
+```
+
+
+Download fundamentals from [Yahoo Finance](https://finance.yahoo.com/) as of `r today()` and build an homogeneus indicator of each of our 5 factors.
+
+```{r message = TRUE, warning = FALSE}
+FinRatios <- getFinRatios(Portfolio.df$Tickers) %>% 
+  mutate(Date = date)
+```
+
+**Pre-condition: Liquidity: Market Cap**
+All companies in our portfolio should have a Market Cap > 1000MM (1B in Yahoo Finance convertion)
+
+```{r echo=FALSE}
+
+MarketCap.df <- getMarketCap(FinRatios) %>% 
+  addPFavgFactor(CurrentAlloc.df) %>% 
+  arrange(desc(MarketCap)) 
+
+barchartPFplot(MarketCap.df, "MarketCap")
+
+```
+
