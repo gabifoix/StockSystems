@@ -1,4 +1,8 @@
 CompanyName;tickers;country;industry;euroidx;ISIN
+Terna Rette Electrica;TRN.MI;IT;UTL;;
+Audax Renovables;ADX.MC;ES;UTL;;ES0136463017 
+Faes Farma;FAE.MC;ES;PHA;;ES0134950F36
+Solaria;SLR.MC;ES;UTL;;ES0165386014
 Stora Enso Oyj;STERV.HE;FI;MAT;;FI0009005961
 Acciona;ANA.MC;ES;CON;;ES0125220311
 Acerinox;ACX.MC;ES;MAT;;ES0132105018
@@ -211,7 +215,6 @@ Snam;SRG.MI;IT;UTL;;
 STMicroelectronics;STM.MI;IT;TECH;;
 Telecom Italia;TIT.MI;IT;COM;;
 Tenaris;TEN.MI;IT;MAT;;
-Terna;TRN.MI;IT;IND;;
 UBI Banca;UBI.MI;IT;BAN;;
 UniCredit;UCG.MI;IT;BAN;;
 Unipol;UNI.MI;IT;INS;;
@@ -323,10 +326,7 @@ BMW;BMW.DE;DE;AUT;1;
 DAIMLER;DAI.DE;DE;AUT;;
 PEUGEOT-CITROEN;UG.PA;FR;AUT;;
 CARREFOUR;CA.PA;FR;SUP;;
-ING;INGA.AS;HO;BAN;;
-SABADELL;SAB.MC;ES;BAN;;
 SIEMENS;SIE.DE;DE;TECH;;
-MELIA;MEL.MC;ES;HOT;;
 UNICAJA;UNI.MC;ES;BAN;;
 DEUTSCHEBANK;DBK.DE;DE;BAN;1;
 PHILIPS;PHIA.AS;HO;TECH;1;
@@ -360,7 +360,6 @@ Thales;HO.PA;FR;;;
 Ubisoft Entertainment SA ;UBI.PA;FR;;;
 Electricite de France S.A. ;EDF.PA;FR;;;
 Atos;ATO.PA;FR;;;
-Legrand;LR.PA;FR;;;
 Covivo;COV.PA;FR;;;
 Sodexo;SW.PA;FR;;;
 Teleperformance;TEP.PA;FR;;;
@@ -390,7 +389,6 @@ Sonae;SON.LS;PO;;;
 Navigator;NVG.LS;PO;;;
 NOS;NOS.LS;PO;;;
 Salvatore Fergamo;SFER.MI;IT;;;
-Terna;TRN.MI;IT;;;
 ;PST.MI;IT;;;
 ;UBI.MI;IT;BAN;;
 ;AZM.MI;IT;;;

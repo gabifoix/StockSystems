@@ -128,3 +128,24 @@ barchartPFplot(MarketCap.df, "MarketCap")
 
 ```
 
+** Factor 1: Quality **
+
+Quality stocks are defined as stocks that meet the following four criteria:
+
+Profitability, which includes such measures as gross profits over assets, return on equity, return on assets, and cash flows over assets.
+Growth, which is defined as stocks that exhibit high growth on the above-mentioned profitability criteria.
+Risk, which includes stocks with low market beta, volatility, and leverage.
+Payout, which includes stocks with higher payouts through dividends and/or buybacks.
+What define the quality of a company? A good compy to invest in needs to have a good balance of these 3 elements. 
+
+1. Healthy debts: A company shoud generate cash in order to repay its debt. The **Free Cash Flow to Debt** ratio is a good indicator of how quick a company pays back its debt. The lower this ratio the better.
+
+FCF2D = $\frac{Debt}{Free Cash Flow}$
+
+2. Profitability: Both ROA and return on equity (ROE) are measures of how a company utilizes its resources. Essentially, ROE only measures the return on a company’s equity, leaving out the liabilities. Thus, ROA accounts for a company’s debt and ROE does not. The more leverage and debt a company takes on, the higher ROE will be relative to ROA. 
+
+3. Payout: Companies that are committed to reward investors through dividends.
+Trailing Annual Dividend Yield
+5 Year Average Dividend Yield
+Payout Ratio 
+
