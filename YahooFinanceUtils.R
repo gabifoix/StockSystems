@@ -46,6 +46,7 @@ buildYahooFinanceURL <- function(ticker, urlsection) {
 
 # scrapeYahooFinance(buildYahooFinanceURL("MC.PA", "key-statistics"))
 scrapeYahooFinance <- function(url, time_in_seconds = 1) {
+  Sys.sleep(time_in_seconds)
   webpage <- readLines(url)
   html <- XML::htmlTreeParse(webpage, useInternalNodes = TRUE, asText = TRUE)
   tableNodes <- XML::getNodeSet(html, "//table")

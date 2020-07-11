@@ -16,7 +16,6 @@ library(lubridate)
 library(dplyr)
 library(quantmod)
 library(XML)
-
 ```
 
 
@@ -29,7 +28,7 @@ Read Companies List
 ```{r}
 date <- gsub("-", "", today())
 outputname <- paste0("FinRatiosYahoo", date, ".rds")
-CompaniesList <- read.csv("CompanyList.csv", sep = ";")
+CompaniesList <- read.csv("CompanyList.20200703.csv", sep = ";")
 
 ```
 
@@ -37,7 +36,12 @@ Read the Financial Ratios as of `r today()`
 
 ```{r message = TRUE, warning = FALSE}
 FinRatios <- getFinRatios(as.character(unique(CompaniesList$ticker)))
+
+WrongTickers <- length(unique(CompaniesList$ticker)) - length(unique(FinRatios$Ticker))
+message(paste("There are ", WrongTickers, "tickers wrong", sep = " ")
+
 ```
+
 
 Adding Timestamp, country and Industry
 ```{r}
