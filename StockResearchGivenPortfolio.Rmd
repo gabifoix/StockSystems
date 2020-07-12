@@ -136,7 +136,7 @@ Profitability, which includes such measures as gross profits over assets, return
 Growth, which is defined as stocks that exhibit high growth on the above-mentioned profitability criteria.
 Risk, which includes stocks with low market beta, volatility, and leverage.
 Payout, which includes stocks with higher payouts through dividends and/or buybacks.
-What define the quality of a company? A good compy to invest in needs to have a good balance of these 3 elements. 
+What define the quality of a company? A quality company to invest in needs to have a good balance of these 3 elements. 
 
 1. Healthy debts: A company shoud generate cash in order to repay its debt. The **Free Cash Flow to Debt** ratio is a good indicator of how quick a company pays back its debt. The lower this ratio the better.
 
