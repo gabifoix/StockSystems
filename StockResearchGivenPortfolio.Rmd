@@ -86,7 +86,7 @@ Portfolio.df[, c("Tickers", "AP", "CP", "StopLoss")]
 
 ```
 
-Value of the current portfolio is `r sum(CurrentAlloc.df$Value)`, allocated as follows.
+Value of the current portfolio is `r sum(Portfolio.df$CP)`, allocated as follows.
 
 ```{r echo=FALSE}
 
@@ -115,7 +115,7 @@ FinRatios <- getFinRatios(Portfolio.df$Tickers) %>%
   mutate(Date = date)
 ```
 
-**Pre-condition: Liquidity: Market Cap**
+**Pre-condition: Liquidity: Average Volume**
 All companies in our portfolio should have a Market Cap > 1000MM (1B in Yahoo Finance convertion)
 
 ```{r echo=FALSE}
