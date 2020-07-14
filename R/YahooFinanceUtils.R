@@ -85,6 +85,7 @@ getFinRatios <- function(tickers) {
         dplyr::mutate(Ticker = one.ticker)
     }
     FinRat <- rbind(FinRat, df)
+    saveRDS(FinRat, "FinRat.tmp.rds")
   }
   FinRat
 }
