@@ -1,0 +1,54 @@
+---
+title: "Portfolio Assessment: Performance and selling strategies"
+output:
+  html_document:
+    df_print: paged
+---
+
+A timely retreat is a victory.
+
+
+Set of libraries to use
+```{r message = FALSE, warning = FALSE}
+library(YHFinR)
+library(magrittr)
+library(lubridate)
+library(dplyr)
+library(ggplot2)
+
+source('~/GitHub/StockSystems/R/Plots.R')
+source('~/GitHub/StockSystems/R/StockResearchCore.R')
+
+```
+
+Defining our portfolio
+```{r}
+date <- gsub("-", "", today())
+Portfolio.df <- data.frame(Ticker = c("UNA.AS", "TGYM.MI", "VOW3.DE","PUM.DE",  "MC.PA", "CS.PA", "REE.MC"),
+                        nShares = c(100, 650, 50, 80, 14, 300, 425),
+                        AP = c(46, 7, 93, 55.40, 350, 16.10, 17.20),
+                        stringsAsFactors = FALSE)
+```
+
+Download daily historical data from today back to 5 years. 
+We take price adjusted by splits.
+
+```{r message = FALSE, warning = FALSE}
+HistPrices.yahoo.list <- YHFinR::getYFHistPrices(Portfolio.df$Ticker, "5y", "1wk")
+
+```
+
+Value of the current portfolio is `r sum(Portfolio.df$CP)`, allocated as follows.
+
+```{r echo=FALSE}
+
+Portfolio.df <- Portfolio.df %>% 
+  mutate(CP = sapply(HistPrices.yahoo.list, function(x) tail(x$adjclose, 1)),
+         CV = nShares * CP,
+         weight = CV / sum(CV)) %>% 
+  arrange(desc(weight))
+
+Portfolio.df[, c("Ticker", "CV", "weight")]
+
+
+```
