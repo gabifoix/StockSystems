@@ -152,13 +152,13 @@ calcStopLoss <- function(PF, LossThreshold = 0.2, ProfitDropThreshold = 0.3) {
 
 
 
-feesOptimalSpots(10000, 10, 0.01, 100)
+#feesOptimalSpots(10000, 10, 0.01, 100)
 feesOptimalSpots <- function(K, Min, PerFee, Max, MaxAssetsDiverNull = 25, MinAssets = 3) {
   MinInvest <- Min / (PerFee/100)
   max(min(floor(K / MinInvest), MaxAssetsDiverNull), MinAssets)
 }
 
-feesTotal(3, 30000, 10, 0.025, 100)
+# feesTotal(3, 30000, 10, 0.025, 100)
 feesTotal <- function(Nspots, K, Min, PerFee, Max) {
   Invest <- floor(K / Nspots)
   Nspots * min(max(Min, Invest * (PerFee/100)), Max)

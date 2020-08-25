@@ -16,8 +16,8 @@ library(lubridate)
 library(dplyr)
 library(ggplot2)
 
-source('~/GitHub/StockSystems/R/Plots.R')
-source('~/GitHub/StockSystems/R/StockResearchCore.R')
+source('R/Plots.R')
+source('R/StockResearchCore.R')
 
 ```
 
@@ -52,3 +52,56 @@ Portfolio.df[, c("Ticker", "CV", "weight")]
 
 
 ```
+
+
+** Factor 1: Quality **
+1. Healthy debts: A company shoud generate cash in order to repay its debt. The **Free Cash Flow to Debt** ratio is a good indicator of how quick a company pays back its debt. The lower this ratio the better.
+
+FCF2D = $\frac{Debt}{Free Cash Flow}$
+
+```{r}
+Financials.list <- YHFinR::getYFFinancialsBasics(Portfolio.df$Ticker)
+FCF.Debt.ROA.df <- rbind(
+  sapply(Financials.list, function(x) x$freeCashflow$raw) , 
+  sapply(Financials.list, function(x) x$totalDebt$raw),
+  sapply(Financials.list, function(x) x$returnOnAssets$raw)
+  ) %>% 
+  t() %>% 
+  set_colnames(c("FCF", "Debt", "ROA")) %>% 
+  as.data.frame() %>% 
+  mutate(Ticker = rownames(.))
+
+FCF.Debt.ROA.PF.df <- addPFavgFactor(FCF.Debt.ROA.df, Portfolio.df) %>% 
+  mutate(FCF2D = Debt / FCF)
+
+FCF2D.df <- FCF.Debt.ROA.PF.df %>% 
+  .[ , c("Ticker", "FCF2D")] %>% 
+  dplyr::arrange(desc(FCF2D)) 
+
+barchartPFplot(FCF2D.df, "FCF2D")
+
+
+```
+2. Profitability: ROA
+
+
+
+3. High Margin: We look for companies that generate free cash flow compare to its price. The **Free Cash Flow to Entreprise Value** ratio tells us how many years of cash flow would be needed to the return the 100% of the investment. Again, the lower, the better. Values bellow 1 would mean "free lunch".
+
+FCF2EV = $\frac{EV}{Free Cash Flow}$
+
+```{r}
+EV <- sapply(YHFinR::getYFKeyStatistics(Portfolio.df$Ticker), function(x) x$enterpriseValue$raw)
+FCF2EV <- EV / FCF
+
+
+Portfolio.df %>% 
+  left_join(EV)
+```
+
+ getYFKeyStatistics(Portfolio.df$)
+
+
+
+
+
