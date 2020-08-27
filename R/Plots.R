@@ -28,6 +28,7 @@ barchartPFplot <- function(df, VarName, Key = "Ticker", PFTicker = "PF") {
                            y = VarName,
                            fill= factor(ifelse(Key == PFTicker, "Highlighted", "Normal")))) + 
     geom_bar(stat = "identity") +
+    geom_text(aes(label = VarName, vjust = -0.5)) +
     scale_fill_manual(name = "Key", values=c("red","grey50")) +
     theme(legend.position = "none",
           axis.title.x = element_blank(),

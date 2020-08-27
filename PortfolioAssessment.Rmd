@@ -34,7 +34,7 @@ Download daily historical data from today back to 5 years.
 We take price adjusted by splits.
 
 ```{r message = FALSE, warning = FALSE}
-HistPrices.yahoo.list <- YHFinR::getYFHistPrices(Portfolio.df$Ticker, "5y", "1wk")
+HistPrices.yahoo.list <- YHFinR::getYFHistPrices(Portfolio.df$Ticker, "5y", "1d")
 
 ```
 
@@ -62,9 +62,9 @@ FCF2D = $\frac{Debt}{Free Cash Flow}$
 ```{r}
 Financials.list <- YHFinR::getYFFinancialsBasics(Portfolio.df$Ticker)
 FCF.Debt.ROA.df <- rbind(
-  sapply(Financials.list, function(x) x$freeCashflow$raw) , 
-  sapply(Financials.list, function(x) x$totalDebt$raw),
-  sapply(Financials.list, function(x) x$returnOnAssets$raw)
+  sapply(Financials.list, function(x) .cleaNA_Neg(x$freeCashflow$raw)) , 
+  sapply(Financials.list, function(x) .cleaNA_Neg(x$totalDebt$raw)),
+  sapply(Financials.list, function(x) .cleaNA_Neg(x$returnOnAssets$raw))
   ) %>% 
   t() %>% 
   set_colnames(c("FCF", "Debt", "ROA")) %>% 
@@ -72,36 +72,70 @@ FCF.Debt.ROA.df <- rbind(
   mutate(Ticker = rownames(.))
 
 FCF.Debt.ROA.PF.df <- addPFavgFactor(FCF.Debt.ROA.df, Portfolio.df) %>% 
-  mutate(FCF2D = Debt / FCF)
+  mutate(FCF2D = .cleaNA_Neg(Debt / FCF))
 
 FCF2D.df <- FCF.Debt.ROA.PF.df %>% 
   .[ , c("Ticker", "FCF2D")] %>% 
+  mutate(FCF2D = round(FCF2D, 2)) %>% 
   dplyr::arrange(desc(FCF2D)) 
 
 barchartPFplot(FCF2D.df, "FCF2D")
 
 
 ```
+
+
 2. Profitability: ROA
+```{r}
+ROA.df <- FCF.Debt.ROA.PF.df %>% 
+  .[ , c("Ticker", "ROA")] %>% 
+  mutate(ROA = round(ROA * 100, 2)) %>% 
+  dplyr::arrange(desc(ROA)) 
 
+barchartPFplot(ROA.df, "ROA")
 
+```
 
 3. High Margin: We look for companies that generate free cash flow compare to its price. The **Free Cash Flow to Entreprise Value** ratio tells us how many years of cash flow would be needed to the return the 100% of the investment. Again, the lower, the better. Values bellow 1 would mean "free lunch".
 
 FCF2EV = $\frac{EV}{Free Cash Flow}$
 
 ```{r}
-EV <- sapply(YHFinR::getYFKeyStatistics(Portfolio.df$Ticker), function(x) x$enterpriseValue$raw)
-FCF2EV <- EV / FCF
+EV <- sapply(YHFinR::getYFKeyStatistics(Portfolio.df$Ticker), function(x) x$enterpriseValue$raw) 
+EV.df <- EV %>% 
+  as.data.frame() %>% 
+  set_colnames(c("EV")) %>% 
+  mutate(Ticker = rownames(.)) %>% 
+  addPFavgFactor(Portfolio.df)
 
+FCF.Debt.EV.ROA.PF.df <- FCF.Debt.ROA.PF.df %>% 
+  left_join(EV.df, by = "Ticker") %>% 
+  mutate(FCF2EV = .cleaNA_Neg(EV / FCF))
 
-Portfolio.df %>% 
-  left_join(EV)
+FCF2EV.df <- FCF.Debt.EV.ROA.PF.df %>% 
+  .[ , c("Ticker", "FCF2EV")] %>% 
+  mutate(FCF2EV = round(FCF2EV, 2)) %>% 
+  dplyr::arrange(desc(FCF2EV)) 
+
+barchartPFplot(FCF2EV.df, "FCF2EV")
+
 ```
 
- getYFKeyStatistics(Portfolio.df$)
+** Factor 2: Momentum **
+
+Don't hold onto a stock simply because it is high quality. So called quality stocks have cycles too. Stan Weinstein (page 177)
+
+Generic Intermediate-Term Momentum
+Based on Gray-Vogel (page 80)
 
 
+```{r}
+STOXX50E <- YHFinR::getYFHistPrices("^STOXX50E", "5y", "1d")
+HistPrices.yahoo.list[["STOXX50E"]] <- YHFinR::getYFHistPrices("^STOXX50E", "5y", "1d")$`^STOXX50E`
+HistPrices.yahoo.xts.list <- lapply(HistPrices.yahoo.list, convertHistPr2xts)
+
+sapply(HistPrices.yahoo.xts.list, calcGenericMomentum, term = 36, noise = 1)
 
 
+```
 

@@ -1,4 +1,13 @@
 
+#convertHistPr2xts(HistPrices.yahoo.list$REE.MC)
+convertHistPr2xts <- function(df, DataCols = c("volume", "close", "adjclose"), DateCol = "Date") {
+  df$datetime <- as.POSIXct(strptime(df[, DateCol], format = "%Y-%m-%d"))
+  res <- as.xts(df[ ,DataCols], order.by = df$datetime)
+  res
+}
+
+
+
 #' Scrape Financial Ratios from Yahoo Finance
 #'
 #' @param ticker `character`

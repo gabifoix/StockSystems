@@ -1,3 +1,13 @@
+# calcInterMomentum(HistPrices.yahoo.xts.list$VOW3.DE)
+calcGenericMomentum <- function(obj.xts, colPrice = "adjclose", term = 12, noise = 1) {
+  res <- tail(cumprod(head(tail(suppressWarnings(quantmod::monthlyReturn(obj.xts[,colPrice])), term), term - noise) + 1), 1) - 1
+  as.numeric(res)
+}
+
+
+
+
+
 
 # VarCols <- c("EV", "EBITDA", "PER", "PrBk")
 # YFNamesRemap <- read.csv("MD/YFNamesRemap.csv", sep = ";") %>% 
@@ -185,6 +195,14 @@ feesTotal <- function(Nspots, K, Min, PerFee, Max) {
   cgr <- (1 + x)^(t)
   cgr 
 } 
+
+.cleaNA_Neg <- function(x, replace = 0) { 
+  x[x < 0] <- replace
+  x[is.na(x)] <- replace
+  x[is.infinite(x)] <- replace
+  x
+} 
+
 
 
 xts2df = function(x) {
