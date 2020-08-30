@@ -1,3 +1,13 @@
+
+daily2weekly <- function(obj, ColName = "adjclose") {
+  res <- xts::to.weekly(obj[, ColName] , name = ColName) 
+  colnames(res)[colnames(res) == paste(ColName, "Close", sep = ".")] <- ColName
+  res[, ColName]
+}
+
+
+
+
 # calcInterMomentum(HistPrices.yahoo.xts.list$VOW3.DE)
 calcGenericMomentum <- function(obj.xts, colPrice = "adjclose", term = 12, noise = 1) {
   res <- tail(cumprod(head(tail(suppressWarnings(quantmod::monthlyReturn(obj.xts[,colPrice])), term), term - noise) + 1), 1) - 1
