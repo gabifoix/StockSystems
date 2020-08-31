@@ -5,6 +5,23 @@ daily2weekly <- function(obj, ColName = "adjclose") {
   res[, ColName]
 }
 
+addMA <- function(obj, n = 30, ColName = "adjclose") {
+  obj$MA <- TTR::runMean(obj[ ,ColName], n = n)
+  obj
+}
+
+# obj.xts <- xts(x=1:100, order.by = Sys.Date()-1:100)
+# colnames(obj.xts) <- "MA"
+# addMASlope(obj.xts)
+addMASlope <- function(obj, maColName = "MA") {
+  obj$MA.Slope <- NA
+  rad2degree <- 180 / pi
+  MA <- as.numeric(na.omit(obj[, maColName]))
+  lenMA <- length(MA) - 1
+  posret <- tail(which(!is.na(obj[, maColName])), lenMA)
+  obj[posret, "MA.Slope"] <- sapply(seq_len(lenMA), function(i) rad2degree * atan((MA[i+1] - MA[i]) / MA[i]))
+  obj
+}
 
 
 
@@ -13,11 +30,6 @@ calcGenericMomentum <- function(obj.xts, colPrice = "adjclose", term = 12, noise
   res <- tail(cumprod(head(tail(suppressWarnings(quantmod::monthlyReturn(obj.xts[,colPrice])), term), term - noise) + 1), 1) - 1
   as.numeric(res)
 }
-
-
-
-
-
 
 # VarCols <- c("EV", "EBITDA", "PER", "PrBk")
 # YFNamesRemap <- read.csv("MD/YFNamesRemap.csv", sep = ";") %>% 

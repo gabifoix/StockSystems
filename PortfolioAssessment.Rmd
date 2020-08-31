@@ -15,9 +15,13 @@ library(magrittr)
 library(lubridate)
 library(dplyr)
 library(ggplot2)
+library(xts)
+library(quantmod)
+
 
 source('R/Plots.R')
 source('R/StockResearchCore.R')
+source('R/YahooFinanceUtils.R')
 
 ```
 
@@ -130,12 +134,41 @@ Based on Gray-Vogel (page 80)
 
 
 ```{r}
-STOXX50E <- YHFinR::getYFHistPrices("^STOXX50E", "5y", "1d")
 HistPrices.yahoo.list[["STOXX50E"]] <- YHFinR::getYFHistPrices("^STOXX50E", "5y", "1d")$`^STOXX50E`
 HistPrices.yahoo.xts.list <- lapply(HistPrices.yahoo.list, convertHistPr2xts)
 
-sapply(HistPrices.yahoo.xts.list, calcGenericMomentum, term = 36, noise = 1)
+Momentum.df <- sapply(HistPrices.yahoo.xts.list, calcGenericMomentum, term = 36, noise = 1) %>% 
+  as.data.frame() %>% 
+  set_colnames("Momentum") %>% 
+  mutate(Ticker = rownames(.),
+         Momentum = round(Momentum, 2)) %>% 
+  dplyr::arrange(desc(Momentum))
+
+
+barchartPFplot(Momentum.df, VarName = "Momentum", PFTicker = "STOXX50E")
 
 
 ```
+
+** Factor 3: Timing Signal **
+
+Sell Signal - Pr < 1% SMA 30 weeks and slope negative
+Hold Signal - No Sell
+
+
+```{r}
+# From Daily to Weekly
+HistPrices.wk.list <- sapply(HistPrices.yahoo.xts.list, daily2weekly)
+# Add SMA30 & SMA30 Slope
+HistPrices.wk.ma.list <- sapply(HistPrices.wk.list, addMA)
+HistPrices.wk.ma.list <- sapply(HistPrices.wk.ma.list, addMASlope)
+
+sapply(HistPrices.wk.ma.list, function(obj, threshold = 0.01) {
+  x <- tail(obj, 1)
+  ifelse(x$adjclose < ((1 -threshold) * x$MA) & x$MA.Slope < 0, "SELL", "HOLD")
+})
+
+```
+
+
 

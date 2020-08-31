@@ -22,7 +22,7 @@ piechartplot <- function(Alloc.df, date = today()) {
 #                     stringsAsFactors = FALSE)
 # barchartPFplot(MarketCap.df, "MarketCap", PFTicker = "PFtest")
 barchartPFplot <- function(df, VarName, Key = "Ticker", PFTicker = "PF") {
-  
+  df <- df[, c(Key, VarName)]
   df <- setNames(df, c("Key", "VarName"))
   ggplot(df, aes(x = reorder(Key, -VarName), 
                            y = VarName,
