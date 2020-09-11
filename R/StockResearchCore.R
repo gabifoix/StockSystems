@@ -134,17 +134,18 @@ rankBS <- function(FinRat.df, VarCols = c("CashSH", "D2E", "CR", "MA50")) {
 #' @return `data.frame` with the same dim as df
 #'
 #' @examples
-#'df <- data.frame(Ticker = letters[1:10],
-#'                 aa = seq(1:10),
-#'                 bb = c(0.23, 0.45, 0.56, 1.1, 0.032, 0.8, 0.7, 0.1, 0.9, 1.5))
-#'rankVariables(df, VarCols = c("aa", "bb"))
-rankVariables <- function(df, Rank.Name = "Final_rank", VarCols){
-  
+# df <- data.frame(Ticker = letters[1:10],
+#                 aa = seq(1:10),
+#                 bb = c(0.23, 0.45, 0.56, 1.1, 0.032, 0.8, 0.7, 0.1, 0.9, 1.5))
+# rankVariables(df, VarCols = c("aa", "bb"))
+rankVariables <- function(df, Rank.Name = "Final_rank", VarCols, KeepVarCols = FALSE){
   rank.df <- df %>%
     dplyr::mutate_at(VarCols, rank) %>% 
-    dplyr::mutate(Final_rank = rank(rowSums(.[, VarCols]))) %>% 
-    dplyr::select(Ticker, Final_rank)
-  colnames(rank.df) <- c("Ticker", Rank.Name)
+    dplyr::mutate(Final_rank = rank(rowSums(.[, VarCols, drop = FALSE]))) %>% 
+    dplyr::select(Ticker, Final_rank, VarCols)
+  colnames(rank.df) <- c("Ticker", Rank.Name, VarCols)
+  if (!KeepVarCols)
+    rank.df <- rank.df[, c("Ticker", Rank.Name)] 
   
   rank.df
 }

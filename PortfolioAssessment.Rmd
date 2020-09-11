@@ -5,11 +5,13 @@ output:
     df_print: paged
 ---
 
+
 A timely retreat is a victory.
 
 
-Set of libraries to use
-```{r message = FALSE, warning = FALSE}
+
+```{r echo=FALSE, message = FALSE, warning = FALSE}
+# Set of libraries to use
 library(YHFinR)
 library(magrittr)
 library(lubridate)
@@ -25,45 +27,48 @@ source('R/YahooFinanceUtils.R')
 
 ```
 
-Defining our portfolio
-```{r}
+## Our portfolio as of `r Sys.Date()`
+```{r echo=FALSE, message = FALSE, warning = FALSE}
 date <- gsub("-", "", today())
-Portfolio.df <- data.frame(Ticker = c("UNA.AS", "TGYM.MI", "VOW3.DE","PUM.DE",  "MC.PA", "CS.PA", "REE.MC"),
-                        nShares = c(100, 650, 50, 80, 14, 300, 425),
-                        AP = c(46, 7, 93, 55.40, 350, 16.10, 17.20),
+Portfolio.df <- data.frame(Ticker = c("UNA.AS", "DGV.MI", "VOW3.DE","PUM.DE",  "MC.PA", "CS.PA"),
+                        nShares = c(100, 165, 50, 80, 14, 300),
+                        AP = c(46, 30.5, 93, 55.40, 350, 16.10),
                         stringsAsFactors = FALSE)
 ```
 
-Download daily historical data from today back to 5 years. 
-We take price adjusted by splits.
 
-```{r message = FALSE, warning = FALSE}
+```{r echo=FALSE, message = FALSE, warning = FALSE}
+# Download daily historical data from today back to 5 years. 
+# We take price adjusted by splits.
 HistPrices.yahoo.list <- YHFinR::getYFHistPrices(Portfolio.df$Ticker, "5y", "1d")
 
 ```
 
-Value of the current portfolio is `r sum(Portfolio.df$CP)`, allocated as follows.
 
-```{r echo=FALSE}
-
+```{r echo=FALSE, message = FALSE, warning = FALSE}
 Portfolio.df <- Portfolio.df %>% 
   mutate(CP = sapply(HistPrices.yahoo.list, function(x) tail(x$adjclose, 1)),
          CV = nShares * CP,
          weight = CV / sum(CV)) %>% 
   arrange(desc(weight))
 
-Portfolio.df[, c("Ticker", "CV", "weight")]
-
+Portfolio.df
 
 ```
 
+The Value of the current portfolio is `r sum(Portfolio.df$CP)`, allocated as follows.
+```{r echo=FALSE, message = FALSE, warning = FALSE}
+piechartplot(Portfolio.df)
+```
 
-** Factor 1: Quality **
+
+## Factor 1: Quality
+
 1. Healthy debts: A company shoud generate cash in order to repay its debt. The **Free Cash Flow to Debt** ratio is a good indicator of how quick a company pays back its debt. The lower this ratio the better.
 
 FCF2D = $\frac{Debt}{Free Cash Flow}$
 
-```{r}
+```{r echo=FALSE, message = FALSE, warning = FALSE}
 Financials.list <- YHFinR::getYFFinancialsBasics(Portfolio.df$Ticker)
 FCF.Debt.ROA.df <- rbind(
   sapply(Financials.list, function(x) .cleaNA_Neg(x$freeCashflow$raw)) , 
@@ -79,9 +84,7 @@ FCF.Debt.ROA.PF.df <- addPFavgFactor(FCF.Debt.ROA.df, Portfolio.df) %>%
   mutate(FCF2D = .cleaNA_Neg(Debt / FCF))
 
 FCF2D.df <- FCF.Debt.ROA.PF.df %>% 
-  .[ , c("Ticker", "FCF2D")] %>% 
-  mutate(FCF2D = round(FCF2D, 2)) %>% 
-  dplyr::arrange(desc(FCF2D)) 
+  .[ , c("Ticker", "FCF2D")] 
 
 barchartPFplot(FCF2D.df, "FCF2D")
 
@@ -89,14 +92,13 @@ barchartPFplot(FCF2D.df, "FCF2D")
 ```
 
 
-2. Profitability: ROA
-```{r}
-ROA.df <- FCF.Debt.ROA.PF.df %>% 
-  .[ , c("Ticker", "ROA")] %>% 
-  mutate(ROA = round(ROA * 100, 2)) %>% 
-  dplyr::arrange(desc(ROA)) 
+2. Profitability: ROA 
 
-barchartPFplot(ROA.df, "ROA")
+```{r echo=FALSE, message = FALSE, warning = FALSE}
+ROA.df <- FCF.Debt.ROA.PF.df %>% 
+  .[ , c("Ticker", "ROA")] 
+
+barchartPFplot(ROA.df, "ROA", labelPer = TRUE)
 
 ```
 
@@ -104,7 +106,7 @@ barchartPFplot(ROA.df, "ROA")
 
 FCF2EV = $\frac{EV}{Free Cash Flow}$
 
-```{r}
+```{r echo=FALSE, message = FALSE, warning = FALSE}
 EV <- sapply(YHFinR::getYFKeyStatistics(Portfolio.df$Ticker), function(x) x$enterpriseValue$raw) 
 EV.df <- EV %>% 
   as.data.frame() %>% 
@@ -117,15 +119,13 @@ FCF.Debt.EV.ROA.PF.df <- FCF.Debt.ROA.PF.df %>%
   mutate(FCF2EV = .cleaNA_Neg(EV / FCF))
 
 FCF2EV.df <- FCF.Debt.EV.ROA.PF.df %>% 
-  .[ , c("Ticker", "FCF2EV")] %>% 
-  mutate(FCF2EV = round(FCF2EV, 2)) %>% 
-  dplyr::arrange(desc(FCF2EV)) 
+  .[ , c("Ticker", "FCF2EV")] 
 
 barchartPFplot(FCF2EV.df, "FCF2EV")
 
 ```
 
-** Factor 2: Momentum **
+## Factor 2: Momentum 
 
 Don't hold onto a stock simply because it is high quality. So called quality stocks have cycles too. Stan Weinstein (page 177)
 
@@ -133,42 +133,96 @@ Generic Intermediate-Term Momentum
 Based on Gray-Vogel (page 80)
 
 
-```{r}
+```{r echo=FALSE, message = FALSE, warning = FALSE}
 HistPrices.yahoo.list[["STOXX50E"]] <- YHFinR::getYFHistPrices("^STOXX50E", "5y", "1d")$`^STOXX50E`
 HistPrices.yahoo.xts.list <- lapply(HistPrices.yahoo.list, convertHistPr2xts)
 
 Momentum.df <- sapply(HistPrices.yahoo.xts.list, calcGenericMomentum, term = 36, noise = 1) %>% 
   as.data.frame() %>% 
   set_colnames("Momentum") %>% 
-  mutate(Ticker = rownames(.),
-         Momentum = round(Momentum, 2)) %>% 
-  dplyr::arrange(desc(Momentum))
-
+  mutate(Ticker = rownames(.))
 
 barchartPFplot(Momentum.df, VarName = "Momentum", PFTicker = "STOXX50E")
 
 
 ```
 
-** Factor 3: Timing Signal **
+##  Factor 3: Timing Signal
 
-Sell Signal - Pr < 1% SMA 30 weeks and slope negative
+Sell Signal - Pr < 1% SMA 30 weeks and slope negative (< 0.1)
 Hold Signal - No Sell
 
 
-```{r}
+```{r echo=FALSE, message = FALSE, warning = FALSE}
 # From Daily to Weekly
 HistPrices.wk.list <- sapply(HistPrices.yahoo.xts.list, daily2weekly)
 # Add SMA30 & SMA30 Slope
 HistPrices.wk.ma.list <- sapply(HistPrices.wk.list, addMA)
 HistPrices.wk.ma.list <- sapply(HistPrices.wk.ma.list, addMASlope)
 
-sapply(HistPrices.wk.ma.list, function(obj, threshold = 0.01) {
+Signal.df <- sapply(HistPrices.wk.ma.list, function(obj, thresholdMA = 0.01, thresholdSlope = -0.2) {
   x <- tail(obj, 1)
-  ifelse(x$adjclose < ((1 -threshold) * x$MA) & x$MA.Slope < 0, "SELL", "HOLD")
-})
+  ifelse(x$adjclose < ((1 -thresholdMA) * x$MA) & x$MA.Slope < thresholdSlope, "SELL", "HOLD")
+}) %>% 
+  as.data.frame %>% 
+  set_colnames("Signal") %>% 
+  mutate(Ticker = rownames(.))
 
 ```
 
+##  StopLoss for the next month 
+
+Every month, we calculate a generic the StopLoss given a "Loss Threshold"" of 15% and "ProfitDropThreshold" of 20%.
+In addition, there's an accurate StopLoss for those stocks with "hold" signal, of 5% of their MA. 
+
+
+```{r echo=FALSE, message = FALSE, warning = FALSE}
+# Accurated StopLoss
+MA.df <- sapply(HistPrices.wk.ma.list, function(obj) tail(obj$MA, 1)) %>% 
+  as.data.frame %>% 
+  set_colnames("MA") %>% 
+  mutate(Ticker = rownames(.),
+         StopLossAcc = MA * (1-0.05))
+
+StopLoss.df <- Portfolio.df %>% 
+  calcStopLoss(LossThreshold = 0.15, ProfitDropThreshold = 0.2) %>% 
+  .[ , c("Ticker", "StopLoss")] %>% 
+  left_join(MA.df, by = "Ticker") %>% 
+  mutate(StopLossFinal = pmax(StopLoss, StopLossAcc)) %>% 
+  .[ , c("Ticker", "StopLossFinal")]
+
+```
+
+
+##  Summary 
+```{r echo=FALSE, message = FALSE, warning = FALSE}
+# Quality
+QualityRank <- FCF2D.df %>% 
+  left_join(ROA.df, by = "Ticker") %>% 
+  left_join(FCF2EV.df, by = "Ticker") %>%
+  subset(Ticker != "PF") %>% 
+  mutate(FCF2D = 1/ FCF2D,
+         FCF2EV = 1 / FCF2EV) %>% 
+  rankVariables(Rank.Name = "Quality", VarCols = c("FCF2D", "ROA","FCF2EV"))
+
+# Quality
+MomentumRank <- Momentum.df %>% 
+  rankVariables(Rank.Name = "Momentum", VarCols = c("Momentum"))
+
+# All together
+FinalRank <- QualityRank %>% 
+  left_join(MomentumRank, by = "Ticker") %>% 
+  rankVariables(VarCols = c("Quality", "Momentum"), KeepVarCols = TRUE)
+
+Summary <- Portfolio.df %>% 
+  left_join(StopLoss.df, by = "Ticker") %>% 
+  left_join(Signal.df, by = "Ticker") %>% 
+  left_join(FinalRank, by = "Ticker") 
+  
+Summary[ , c("Ticker", "AP", "CP", "weight", "StopLossFinal", "Signal", "Quality", "Momentum", "Final_rank")] %>%
+  mutate(weight = round(weight, 4),
+         StopLossFinal = round(weight, 2)) %>% 
+  arrange(desc(Final_rank))
+```
 
 
