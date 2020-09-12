@@ -3,6 +3,7 @@ title: "Portfolio Assessment: Performance and selling strategies"
 output:
   html_document:
     df_print: paged
+date: "`r Sys.Date()`"    
 ---
 
 
@@ -27,7 +28,7 @@ source('R/YahooFinanceUtils.R')
 
 ```
 
-## Our portfolio as of `r Sys.Date()`
+### Our portfolio`
 ```{r echo=FALSE, message = FALSE, warning = FALSE}
 date <- gsub("-", "", today())
 Portfolio.df <- data.frame(Ticker = c("UNA.AS", "DGV.MI", "VOW3.DE","PUM.DE",  "MC.PA", "CS.PA"),
@@ -52,7 +53,7 @@ Portfolio.df <- Portfolio.df %>%
          weight = CV / sum(CV)) %>% 
   arrange(desc(weight))
 
-Portfolio.df
+knitr::kable(Portfolio.df, caption = "Portfolio")
 
 ```
 
@@ -62,7 +63,7 @@ piechartplot(Portfolio.df)
 ```
 
 
-## Factor 1: Quality
+### Factor 1: Quality
 
 1. Healthy debts: A company shoud generate cash in order to repay its debt. The **Free Cash Flow to Debt** ratio is a good indicator of how quick a company pays back its debt. The lower this ratio the better.
 
@@ -125,7 +126,7 @@ barchartPFplot(FCF2EV.df, "FCF2EV")
 
 ```
 
-## Factor 2: Momentum 
+### Factor 2: Momentum 
 
 Don't hold onto a stock simply because it is high quality. So called quality stocks have cycles too. Stan Weinstein (page 177)
 
@@ -147,7 +148,7 @@ barchartPFplot(Momentum.df, VarName = "Momentum", PFTicker = "STOXX50E")
 
 ```
 
-##  Factor 3: Timing Signal
+###  Factor 3: Timing Signal
 
 Sell Signal - Pr < 1% SMA 30 weeks and slope negative (< 0.1)
 Hold Signal - No Sell
@@ -170,7 +171,7 @@ Signal.df <- sapply(HistPrices.wk.ma.list, function(obj, thresholdMA = 0.01, thr
 
 ```
 
-##  StopLoss for the next month 
+**StopLoss for the next month**  
 
 Every month, we calculate a generic the StopLoss given a "Loss Threshold"" of 15% and "ProfitDropThreshold" of 20%.
 In addition, there's an accurate StopLoss for those stocks with "hold" signal, of 5% of their MA. 
@@ -194,7 +195,7 @@ StopLoss.df <- Portfolio.df %>%
 ```
 
 
-##  Summary 
+###  Summary 
 ```{r echo=FALSE, message = FALSE, warning = FALSE}
 # Quality
 QualityRank <- FCF2D.df %>% 
@@ -218,11 +219,14 @@ Summary <- Portfolio.df %>%
   left_join(StopLoss.df, by = "Ticker") %>% 
   left_join(Signal.df, by = "Ticker") %>% 
   left_join(FinalRank, by = "Ticker") 
-  
-Summary[ , c("Ticker", "AP", "CP", "weight", "StopLossFinal", "Signal", "Quality", "Momentum", "Final_rank")] %>%
-  mutate(weight = round(weight, 4),
-         StopLossFinal = round(weight, 2)) %>% 
-  arrange(desc(Final_rank))
+
+knitr::kable(
+  Summary[ , c("Ticker", "AP", "CP", "weight", "StopLossFinal", "Signal", "Quality", "Momentum", "Final_rank")] %>%
+    mutate(weight = round(weight, 4),
+           StopLossFinal = round(weight, 2)) %>% 
+    arrange(desc(Final_rank)) 
+  , caption = "Summary")
+
 ```
 
 
