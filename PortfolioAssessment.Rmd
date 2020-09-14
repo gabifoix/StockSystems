@@ -57,7 +57,7 @@ knitr::kable(Portfolio.df, caption = "Portfolio")
 
 ```
 
-The Value of the current portfolio is `r sum(Portfolio.df$CP)`, allocated as follows.
+The Value of the current portfolio is `r sum(Portfolio.df$CV)`, allocated as follows.
 ```{r echo=FALSE, message = FALSE, warning = FALSE}
 piechartplot(Portfolio.df)
 ```
@@ -223,7 +223,7 @@ Summary <- Portfolio.df %>%
 knitr::kable(
   Summary[ , c("Ticker", "AP", "CP", "weight", "StopLossFinal", "Signal", "Quality", "Momentum", "Final_rank")] %>%
     mutate(weight = round(weight, 4),
-           StopLossFinal = round(weight, 2)) %>% 
+           StopLossFinal = round(StopLossFinal, 2)) %>% 
     arrange(desc(Final_rank)) 
   , caption = "Summary")
 
