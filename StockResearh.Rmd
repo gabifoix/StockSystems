@@ -1,0 +1,185 @@
+---
+title: "StockResearch"
+author: "Gabriel Foix"
+output:
+  html_document:
+    df_print: paged
+date: "`r Sys.Date()`"    
+
+---
+
+Find the best stock to buy 
+
+```{r echo=FALSE, message = FALSE, warning = FALSE}
+# Set of libraries to use
+library(YHFinR)
+library(magrittr)
+library(lubridate)
+library(dplyr)
+library(ggplot2)
+library(xts)
+library(quantmod)
+
+
+source('R/Plots.R')
+source('R/StockResearchCore.R')
+source('R/YahooFinanceUtils.R')
+
+```
+
+### Define candidates
+```{r echo=FALSE, message = FALSE, warning = FALSE}
+date <- gsub("-", "", today())
+Candidates.df <- data.frame(Ticker = c("UNA.AS", "DGV.MI", "VOW3.DE","PUM.DE",  "MC.PA", "CS.PA"),
+                        stringsAsFactors = FALSE)
+```
+
+
+```{r echo=FALSE, message = FALSE, warning = FALSE}
+# Download daily historical data from today back to 5 years. 
+# We take price adjusted by splits.
+HistPrices.yahoo.list <- YHFinR::getYFHistPrices(Candidates.df$Ticker, "5y", "1d")
+
+```
+
+### Factor 1: Quality
+
+1. Healthy debts: A company shoud generate cash in order to repay its debt. The **Free Cash Flow to Debt** ratio is a good indicator of how quick a company pays back its debt. The lower this ratio the better.
+
+FCF2D = $\frac{Debt}{Free Cash Flow}$
+
+```{r echo=FALSE, message = FALSE, warning = FALSE}
+Financials.list <- YHFinR::getYFFinancialsBasics(Candidates.df$Ticker)
+FCF.Debt.ROA.df <- rbind(
+  sapply(Financials.list, function(x) .cleaNA_Neg(x$freeCashflow$raw)) , 
+  sapply(Financials.list, function(x) .cleaNA_Neg(x$totalDebt$raw)),
+  sapply(Financials.list, function(x) .cleaNA_Neg(x$returnOnAssets$raw))
+  ) %>% 
+  t() %>% 
+  set_colnames(c("FCF", "Debt", "ROA")) %>% 
+  as.data.frame() %>% 
+  mutate(Ticker = rownames(.))
+
+FCF.Debt.ROA.PF.df <- addPFavgFactor(FCF.Debt.ROA.df, Candidates.df) %>% 
+  mutate(FCF2D = .cleaNA_Neg(Debt / FCF))
+
+FCF2D.df <- FCF.Debt.ROA.PF.df %>% 
+  .[ , c("Ticker", "FCF2D")] 
+
+barchartPFplot(FCF2D.df, "FCF2D")
+
+
+```
+
+
+2. Profitability: ROA 
+
+```{r echo=FALSE, message = FALSE, warning = FALSE}
+ROA.df <- FCF.Debt.ROA.PF.df %>% 
+  .[ , c("Ticker", "ROA")] 
+
+barchartPFplot(ROA.df, "ROA", labelPer = TRUE)
+
+```
+
+3. High Margin: We look for companies that generate free cash flow compare to its price. The **Free Cash Flow to Entreprise Value** ratio tells us how many years of cash flow would be needed to the return the 100% of the investment. Again, the lower, the better. Values bellow 1 would mean "free lunch".
+
+FCF2EV = $\frac{EV}{Free Cash Flow}$
+
+```{r echo=FALSE, message = FALSE, warning = FALSE}
+EV <- sapply(YHFinR::getYFKeyStatistics(Candidates.df$Ticker), function(x) x$enterpriseValue$raw) 
+EV.df <- EV %>% 
+  as.data.frame() %>% 
+  set_colnames(c("EV")) %>% 
+  mutate(Ticker = rownames(.)) %>% 
+  addPFavgFactor(Candidates.df)
+
+FCF.Debt.EV.ROA.PF.df <- FCF.Debt.ROA.PF.df %>% 
+  left_join(EV.df, by = "Ticker") %>% 
+  mutate(FCF2EV = .cleaNA_Neg(EV / FCF))
+
+FCF2EV.df <- FCF.Debt.EV.ROA.PF.df %>% 
+  .[ , c("Ticker", "FCF2EV")] 
+
+barchartPFplot(FCF2EV.df, "FCF2EV")
+
+```
+
+### Factor 2: Momentum 
+
+Don't hold onto a stock simply because it is high quality. So called quality stocks have cycles too. Stan Weinstein (page 177)
+
+Generic Intermediate-Term Momentum
+Based on Gray-Vogel (page 80)
+
+
+```{r echo=FALSE, message = FALSE, warning = FALSE}
+HistPrices.yahoo.list[["STOXX50E"]] <- YHFinR::getYFHistPrices("^STOXX50E", "5y", "1d")$`^STOXX50E`
+HistPrices.yahoo.xts.list <- lapply(HistPrices.yahoo.list, convertHistPr2xts)
+
+Momentum.df <- sapply(HistPrices.yahoo.xts.list, calcGenericMomentum, term = 36, noise = 1) %>% 
+  as.data.frame() %>% 
+  set_colnames("Momentum") %>% 
+  mutate(Ticker = rownames(.))
+
+barchartPFplot(Momentum.df, VarName = "Momentum", PFTicker = "STOXX50E")
+
+
+```
+
+###  Factor 3: Timing Signal
+
+Sell Signal - Pr < 1% SMA 30 weeks and slope negative (< 0.1)
+Hold Signal - No Sell
+
+
+```{r echo=FALSE, message = FALSE, warning = FALSE}
+# From Daily to Weekly
+HistPrices.wk.list <- sapply(HistPrices.yahoo.xts.list, daily2weekly)
+# Add SMA30 & SMA30 Slope
+HistPrices.wk.ma.list <- sapply(HistPrices.wk.list, addMA)
+HistPrices.wk.ma.list <- sapply(HistPrices.wk.ma.list, addMASlope)
+
+Signal.df <- sapply(HistPrices.wk.ma.list, function(obj, thresholdMA = 0.01, thresholdSlope = -0.2) {
+  x <- tail(obj, 1)
+  ifelse(x$adjclose < ((1 -thresholdMA) * x$MA) & x$MA.Slope < thresholdSlope, "SELL", "HOLD")
+}) %>% 
+  as.data.frame %>% 
+  set_colnames("Signal") %>% 
+  mutate(Ticker = rownames(.))
+
+```
+
+
+###  Summary 
+```{r echo=FALSE, message = FALSE, warning = FALSE}
+# Quality
+QualityRank <- FCF2D.df %>% 
+  left_join(ROA.df, by = "Ticker") %>% 
+  left_join(FCF2EV.df, by = "Ticker") %>%
+  subset(Ticker != "PF") %>% 
+  mutate(FCF2D = 1/ FCF2D,
+         FCF2EV = 1 / FCF2EV) %>% 
+  rankVariables(Rank.Name = "Quality", VarCols = c("FCF2D", "ROA","FCF2EV"))
+
+# Quality
+MomentumRank <- Momentum.df %>% 
+  rankVariables(Rank.Name = "Momentum", VarCols = c("Momentum"))
+
+# All together
+FinalRank <- QualityRank %>% 
+  left_join(MomentumRank, by = "Ticker") %>% 
+  rankVariables(VarCols = c("Quality", "Momentum"), KeepVarCols = TRUE)
+
+Summary <- Candidates.df %>% 
+  left_join(Signal.df, by = "Ticker") %>% 
+  left_join(FinalRank, by = "Ticker") 
+
+knitr::kable(
+  Summary[ , c("Ticker", "Signal", "Quality", "Momentum", "Final_rank")] %>%
+    arrange(desc(Final_rank)) 
+  , caption = "Summary")
+
+```
+
+
