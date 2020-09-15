@@ -4,7 +4,9 @@ author: "Gabriel Foix"
 output:
   html_document:
     df_print: paged
-date: "`r Sys.Date()`"    
+date: "`r Sys.Date()`"
+params:
+  Ticker: Ticker
 
 ---
 
@@ -30,7 +32,7 @@ source('R/YahooFinanceUtils.R')
 ### Define candidates
 ```{r echo=FALSE, message = FALSE, warning = FALSE}
 date <- gsub("-", "", today())
-Candidates.df <- data.frame(Ticker = c("UNA.AS", "DGV.MI", "VOW3.DE","PUM.DE",  "MC.PA", "CS.PA"),
+Candidates.df <- data.frame(Ticker = params$Ticker,
                         stringsAsFactors = FALSE)
 ```
 
@@ -58,12 +60,13 @@ FCF.Debt.ROA.df <- rbind(
   t() %>% 
   set_colnames(c("FCF", "Debt", "ROA")) %>% 
   as.data.frame() %>% 
-  mutate(Ticker = rownames(.))
+  mutate(Ticker = rownames(.),
+         FCF2D = .cleaNA_Neg(Debt / FCF))
 
-FCF.Debt.ROA.PF.df <- addPFavgFactor(FCF.Debt.ROA.df, Candidates.df) %>% 
-  mutate(FCF2D = .cleaNA_Neg(Debt / FCF))
+# FCF.Debt.ROA.PF.df <- addPFavgFactor(FCF.Debt.ROA.df, Candidates.df) %>% 
+#   mutate(FCF2D = .cleaNA_Neg(Debt / FCF))
 
-FCF2D.df <- FCF.Debt.ROA.PF.df %>% 
+FCF2D.df <- FCF.Debt.ROA.df %>% 
   .[ , c("Ticker", "FCF2D")] 
 
 barchartPFplot(FCF2D.df, "FCF2D")
@@ -75,7 +78,7 @@ barchartPFplot(FCF2D.df, "FCF2D")
 2. Profitability: ROA 
 
 ```{r echo=FALSE, message = FALSE, warning = FALSE}
-ROA.df <- FCF.Debt.ROA.PF.df %>% 
+ROA.df <- FCF.Debt.ROA.df %>% 
   .[ , c("Ticker", "ROA")] 
 
 barchartPFplot(ROA.df, "ROA", labelPer = TRUE)
@@ -91,14 +94,13 @@ EV <- sapply(YHFinR::getYFKeyStatistics(Candidates.df$Ticker), function(x) x$ent
 EV.df <- EV %>% 
   as.data.frame() %>% 
   set_colnames(c("EV")) %>% 
-  mutate(Ticker = rownames(.)) %>% 
-  addPFavgFactor(Candidates.df)
+  mutate(Ticker = rownames(.)) 
 
-FCF.Debt.EV.ROA.PF.df <- FCF.Debt.ROA.PF.df %>% 
+FCF.Debt.EV.ROA.df <- FCF.Debt.ROA.df %>% 
   left_join(EV.df, by = "Ticker") %>% 
   mutate(FCF2EV = .cleaNA_Neg(EV / FCF))
 
-FCF2EV.df <- FCF.Debt.EV.ROA.PF.df %>% 
+FCF2EV.df <- FCF.Debt.EV.ROA.df %>% 
   .[ , c("Ticker", "FCF2EV")] 
 
 barchartPFplot(FCF2EV.df, "FCF2EV")
