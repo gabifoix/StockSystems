@@ -220,6 +220,7 @@ feesTotal <- function(Nspots, K, Min, PerFee, Max) {
 } 
 
 .cleaNA_Neg <- function(x, replace = 0) { 
+  x[is.null(x)] <- replace
   x[x < 0] <- replace
   x[is.na(x)] <- replace
   x[is.infinite(x)] <- replace

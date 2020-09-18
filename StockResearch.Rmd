@@ -12,7 +12,7 @@ params:
 
 Find the best stock to buy 
 
-```{r echo=FALSE, message = FALSE, warning = FALSE}
+```{r packages, echo=FALSE, message = FALSE, warning = FALSE}
 # Set of libraries to use
 library(YHFinR)
 library(magrittr)
@@ -30,16 +30,17 @@ source('R/YahooFinanceUtils.R')
 ```
 
 ### Define candidates
-```{r echo=FALSE, message = FALSE, warning = FALSE}
+```{r candidates, echo=FALSE, message = FALSE, warning = FALSE}
 date <- gsub("-", "", today())
 Candidates.df <- data.frame(Ticker = params$Ticker,
                         stringsAsFactors = FALSE)
+
 ```
 
 
-```{r echo=FALSE, message = FALSE, warning = FALSE}
+```{r HisPrices, echo=FALSE, message = FALSE, warning = FALSE}
 # Download daily historical data from today back to 5 years. 
-# We take price adjusted by splits.
+# We ake price adjusted by splits.
 HistPrices.yahoo.list <- YHFinR::getYFHistPrices(Candidates.df$Ticker, "5y", "1d")
 
 ```
@@ -50,8 +51,9 @@ HistPrices.yahoo.list <- YHFinR::getYFHistPrices(Candidates.df$Ticker, "5y", "1d
 
 FCF2D = $\frac{Debt}{Free Cash Flow}$
 
-```{r echo=FALSE, message = FALSE, warning = FALSE}
+```{r FCF2D, echo=FALSE, message = FALSE, warning = FALSE}
 Financials.list <- YHFinR::getYFFinancialsBasics(Candidates.df$Ticker)
+
 FCF.Debt.ROA.df <- rbind(
   sapply(Financials.list, function(x) .cleaNA_Neg(x$freeCashflow$raw)) , 
   sapply(Financials.list, function(x) .cleaNA_Neg(x$totalDebt$raw)),
@@ -77,7 +79,7 @@ barchartPFplot(FCF2D.df, "FCF2D")
 
 2. Profitability: ROA 
 
-```{r echo=FALSE, message = FALSE, warning = FALSE}
+```{r ROA, echo=FALSE, message = FALSE, warning = FALSE}
 ROA.df <- FCF.Debt.ROA.df %>% 
   .[ , c("Ticker", "ROA")] 
 
@@ -89,12 +91,16 @@ barchartPFplot(ROA.df, "ROA", labelPer = TRUE)
 
 FCF2EV = $\frac{EV}{Free Cash Flow}$
 
-```{r echo=FALSE, message = FALSE, warning = FALSE}
+```{r FCF2EV, echo=FALSE, message = FALSE, warning = FALSE}
 EV <- sapply(YHFinR::getYFKeyStatistics(Candidates.df$Ticker), function(x) x$enterpriseValue$raw) 
+browser()
+
+
 EV.df <- EV %>% 
   as.data.frame() %>% 
   set_colnames(c("EV")) %>% 
   mutate(Ticker = rownames(.)) 
+
 
 FCF.Debt.EV.ROA.df <- FCF.Debt.ROA.df %>% 
   left_join(EV.df, by = "Ticker") %>% 
@@ -115,7 +121,7 @@ Generic Intermediate-Term Momentum
 Based on Gray-Vogel (page 80)
 
 
-```{r echo=FALSE, message = FALSE, warning = FALSE}
+```{r Momentum, echo=FALSE, message = FALSE, warning = FALSE}
 HistPrices.yahoo.list[["STOXX50E"]] <- YHFinR::getYFHistPrices("^STOXX50E", "5y", "1d")$`^STOXX50E`
 HistPrices.yahoo.xts.list <- lapply(HistPrices.yahoo.list, convertHistPr2xts)
 
@@ -135,12 +141,12 @@ Sell Signal - Pr < 1% SMA 30 weeks and slope negative (< 0.1)
 Hold Signal - No Sell
 
 
-```{r echo=FALSE, message = FALSE, warning = FALSE}
+```{r Signal, echo=FALSE, message = FALSE, warning = FALSE}
 # From Daily to Weekly
-HistPrices.wk.list <- sapply(HistPrices.yahoo.xts.list, daily2weekly)
+HistPrices.wk.list <- lapply(HistPrices.yahoo.xts.list, daily2weekly)
 # Add SMA30 & SMA30 Slope
-HistPrices.wk.ma.list <- sapply(HistPrices.wk.list, addMA)
-HistPrices.wk.ma.list <- sapply(HistPrices.wk.ma.list, addMASlope)
+HistPrices.wk.ma.list <- lapply(HistPrices.wk.list, addMA)
+HistPrices.wk.ma.list <- lapply(HistPrices.wk.ma.list, addMASlope)
 
 Signal.df <- sapply(HistPrices.wk.ma.list, function(obj, thresholdMA = 0.01, thresholdSlope = -0.2) {
   x <- tail(obj, 1)
@@ -154,7 +160,7 @@ Signal.df <- sapply(HistPrices.wk.ma.list, function(obj, thresholdMA = 0.01, thr
 
 
 ###  Summary 
-```{r echo=FALSE, message = FALSE, warning = FALSE}
+```{r Summary, echo=FALSE, message = FALSE, warning = FALSE}
 # Quality
 QualityRank <- FCF2D.df %>% 
   left_join(ROA.df, by = "Ticker") %>% 
