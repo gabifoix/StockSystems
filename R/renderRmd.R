@@ -1,5 +1,6 @@
 require(rmarkdown)
 require(dplyr)
+require(YHFinR)
 
 
 rmarkdown::render('PortfolioAssessment.Rmd', 

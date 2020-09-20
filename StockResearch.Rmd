@@ -92,11 +92,14 @@ barchartPFplot(ROA.df, "ROA", labelPer = TRUE)
 FCF2EV = $\frac{EV}{Free Cash Flow}$
 
 ```{r FCF2EV, echo=FALSE, message = FALSE, warning = FALSE}
-EV <- sapply(YHFinR::getYFKeyStatistics(Candidates.df$Ticker), function(x) x$enterpriseValue$raw) 
-browser()
+#EV <- lapply(YHFinR::getYFKeyStatistics(head(Candidates.df$Ticker,9)), function(x)  ifelse (x != "NULL", x$enterpriseValue$raw, 0))
+
+EV <- sapply(YHFinR::getYFKeyStatistics(Candidates.df$Ticker), function(x) x$enterpriseValue$raw)
+#EV <- EV[sapply(EV, is.numeric)]
 
 
-EV.df <- EV %>% 
+
+EV.df <- unlist(EV[sapply(EV, is.numeric)]) %>% 
   as.data.frame() %>% 
   set_colnames(c("EV")) %>% 
   mutate(Ticker = rownames(.)) 
