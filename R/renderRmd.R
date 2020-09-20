@@ -10,16 +10,16 @@ rmarkdown::render('PortfolioAssessment.Rmd',
 
 
 
-Ticker <- read.csv("CompanyList.20200713.csv", sep = ";") %>% 
+Tickers <- read.csv("CompanyList.20200713.csv", sep = ";") %>% 
   subset(country == "HO", select = "tickers")
 
 
-SearchName <- "CAC"
+SearchName <- "HO"
 Index <- "^FCHI"
 
 Tickers<- YHFinR::getYFIndexComp(Index)$Symbol
 
 rmarkdown::render('StockResearch.Rmd', 
                   output_dir = "StockResearch",
-                  params = list(Ticker = head(unique(Tickers), 30)),
+                  params = list(Ticker = unique(Tickers$tickers)),
                   output_file = paste0('StockResearch_', SearchName, "_", gsub("-", "", Sys.Date()), '.html'))

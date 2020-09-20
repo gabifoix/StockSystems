@@ -42,6 +42,11 @@ Candidates.df <- data.frame(Ticker = params$Ticker,
 # Download daily historical data from today back to 5 years. 
 # We ake price adjusted by splits.
 HistPrices.yahoo.list <- YHFinR::getYFHistPrices(Candidates.df$Ticker, "5y", "1d")
+# Filter out NULL & hist < 1 year
+HistPrices.yahoo.list <- HistPrices.yahoo.list[!sapply(HistPrices.yahoo.list, is.null)]
+HistPrices.yahoo.list <- HistPrices.yahoo.list[sapply(HistPrices.yahoo.list, nrow) > 252]
+# After that, reduce Candidates
+Candidates.df <- Candidates.df[Candidates.df$Ticker %in% names(HistPrices.yahoo.list),, drop = FALSE]
 
 ```
 
@@ -92,12 +97,7 @@ barchartPFplot(ROA.df, "ROA", labelPer = TRUE)
 FCF2EV = $\frac{EV}{Free Cash Flow}$
 
 ```{r FCF2EV, echo=FALSE, message = FALSE, warning = FALSE}
-#EV <- lapply(YHFinR::getYFKeyStatistics(head(Candidates.df$Ticker,9)), function(x)  ifelse (x != "NULL", x$enterpriseValue$raw, 0))
-
 EV <- sapply(YHFinR::getYFKeyStatistics(Candidates.df$Ticker), function(x) x$enterpriseValue$raw)
-#EV <- EV[sapply(EV, is.numeric)]
-
-
 
 EV.df <- unlist(EV[sapply(EV, is.numeric)]) %>% 
   as.data.frame() %>% 
