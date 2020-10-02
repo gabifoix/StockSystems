@@ -7,10 +7,11 @@ output:
 date: "`r Sys.Date()`"
 params:
   Ticker: Ticker
+  Index: Index
 
 ---
 
-Find the best stock to buy 
+Buy Quality at the a good momentum. Get rid of the fishy stocks on time. That's all.
 
 ```{r packages, echo=FALSE, message = FALSE, warning = FALSE}
 # Set of libraries to use
@@ -40,11 +41,16 @@ Candidates.df <- data.frame(Ticker = params$Ticker,
 
 ```{r HisPrices, echo=FALSE, message = FALSE, warning = FALSE}
 # Download daily historical data from today back to 5 years. 
-# We ake price adjusted by splits.
+# We tUBake price adjusted by splits.
 HistPrices.yahoo.list <- YHFinR::getYFHistPrices(Candidates.df$Ticker, "5y", "1d")
 # Filter out NULL & hist < 1 year
 HistPrices.yahoo.list <- HistPrices.yahoo.list[!sapply(HistPrices.yahoo.list, is.null)]
 HistPrices.yahoo.list <- HistPrices.yahoo.list[sapply(HistPrices.yahoo.list, nrow) > 252]
+
+# Save temp in case
+remove("HistPrices.yahoo.list.tmp.rds")
+saveRDS(HistPrices.yahoo.list, "HistPrices.yahoo.list.tmp.rds")
+
 # After that, reduce Candidates
 Candidates.df <- Candidates.df[Candidates.df$Ticker %in% names(HistPrices.yahoo.list),, drop = FALSE]
 
@@ -59,6 +65,8 @@ FCF2D = $\frac{Debt}{Free Cash Flow}$
 ```{r FCF2D, echo=FALSE, message = FALSE, warning = FALSE}
 Financials.list <- YHFinR::getYFFinancialsBasics(Candidates.df$Ticker)
 
+# Possibility of Shares Outstanding to avoid EV
+
 FCF.Debt.ROA.df <- rbind(
   sapply(Financials.list, function(x) .cleaNA_Neg(x$freeCashflow$raw)) , 
   sapply(Financials.list, function(x) .cleaNA_Neg(x$totalDebt$raw)),
@@ -70,13 +78,11 @@ FCF.Debt.ROA.df <- rbind(
   mutate(Ticker = rownames(.),
          FCF2D = .cleaNA_Neg(Debt / FCF))
 
-# FCF.Debt.ROA.PF.df <- addPFavgFactor(FCF.Debt.ROA.df, Candidates.df) %>% 
-#   mutate(FCF2D = .cleaNA_Neg(Debt / FCF))
 
 FCF2D.df <- FCF.Debt.ROA.df %>% 
   .[ , c("Ticker", "FCF2D")] 
 
-barchartPFplot(FCF2D.df, "FCF2D")
+barchartPFplot(FCF2D.df, "FCF2D", theHighertheBetter = FALSE, PFequallyweigthed = TRUE)
 
 
 ```
@@ -88,7 +94,7 @@ barchartPFplot(FCF2D.df, "FCF2D")
 ROA.df <- FCF.Debt.ROA.df %>% 
   .[ , c("Ticker", "ROA")] 
 
-barchartPFplot(ROA.df, "ROA", labelPer = TRUE)
+barchartPFplot(ROA.df, "ROA", PFequallyweigthed = TRUE, labelPer = TRUE)
 
 ```
 
@@ -112,7 +118,7 @@ FCF.Debt.EV.ROA.df <- FCF.Debt.ROA.df %>%
 FCF2EV.df <- FCF.Debt.EV.ROA.df %>% 
   .[ , c("Ticker", "FCF2EV")] 
 
-barchartPFplot(FCF2EV.df, "FCF2EV")
+barchartPFplot(FCF2EV.df, "FCF2EV", theHighertheBetter = FALSE, PFequallyweigthed = TRUE)
 
 ```
 
@@ -125,7 +131,7 @@ Based on Gray-Vogel (page 80)
 
 
 ```{r Momentum, echo=FALSE, message = FALSE, warning = FALSE}
-HistPrices.yahoo.list[["STOXX50E"]] <- YHFinR::getYFHistPrices("^STOXX50E", "5y", "1d")$`^STOXX50E`
+HistPrices.yahoo.list[["Index"]] <- YHFinR::getYFHistPrices(params$Index, "5y", "1d")$Index
 HistPrices.yahoo.xts.list <- lapply(HistPrices.yahoo.list, convertHistPr2xts)
 
 Momentum.df <- sapply(HistPrices.yahoo.xts.list, calcGenericMomentum, term = 36, noise = 1) %>% 
@@ -133,15 +139,16 @@ Momentum.df <- sapply(HistPrices.yahoo.xts.list, calcGenericMomentum, term = 36,
   set_colnames("Momentum") %>% 
   mutate(Ticker = rownames(.))
 
-barchartPFplot(Momentum.df, VarName = "Momentum", PFTicker = "STOXX50E")
+barchartPFplot(Momentum.df, VarName = "Momentum", PFTicker = "Index")
 
 
 ```
 
 ###  Factor 3: Timing Signal
 
-Sell Signal - Pr < 1% SMA 30 weeks and slope negative (< 0.1)
-Hold Signal - No Sell
+Sell Signal - Pr < 1% SMA 30 weeks and slope negative (< -0.2)
+Buy Signal -  109% * SMA30 < Pr > SMA 30 and slope positive (> 0.2)
+Hold Signal - Neither Buy nor Sell
 
 
 ```{r Signal, echo=FALSE, message = FALSE, warning = FALSE}
@@ -151,9 +158,10 @@ HistPrices.wk.list <- lapply(HistPrices.yahoo.xts.list, daily2weekly)
 HistPrices.wk.ma.list <- lapply(HistPrices.wk.list, addMA)
 HistPrices.wk.ma.list <- lapply(HistPrices.wk.ma.list, addMASlope)
 
-Signal.df <- sapply(HistPrices.wk.ma.list, function(obj, thresholdMA = 0.01, thresholdSlope = -0.2) {
+Signal.df <- sapply(HistPrices.wk.ma.list, function(obj, thresholdMA_SELL = 0.01, thresholdMA_BUY = 0.09,  thresholdSlope_SELL = -0.2, thresholdSlope_BUY = 0.2) {
   x <- tail(obj, 1)
-  ifelse(x$adjclose < ((1 -thresholdMA) * x$MA) & x$MA.Slope < thresholdSlope, "SELL", "HOLD")
+  ifelse(x$adjclose < ((1 -thresholdMA_SELL) * x$MA) & x$MA.Slope < thresholdSlope_SELL, "SELL", 
+         ifelse(x$adjclose < ((1 + thresholdMA_BUY) * x$MA) & x$adjclose > x$MA & x$MA.Slope > thresholdSlope_BUY, "BUY", "HOLD"))
 }) %>% 
   as.data.frame %>% 
   set_colnames("Signal") %>% 
