@@ -1,3 +1,18 @@
+# Data sources
+
+# Euronext: Amsterdam, Brussels, Dublin, Lisbon, London, Milan, Oslo and Paris
+# https://live.euronext.com/en/products/equities/list
+
+# NYSE
+# http://eoddata.com/stocklist/NYSE/B.htm
+
+# NASDAQ
+# http://eoddata.com/stocklist/NYSE/B.htm?e=NYSE&l=B
+
+
+
+
+
 require(dplyr)
 
 .removedupli <- function(CompaniesList) {
@@ -24,7 +39,7 @@ write.csv2(CompaniesList_new2, "CompanyList.20200713.csv", row.names = FALSE)
 
 
 
-# https://live.euronext.com/en/products/equities/list 
+
 
 
 

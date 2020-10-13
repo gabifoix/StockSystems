@@ -150,8 +150,8 @@ barchartPFplot(Momentum.df, VarName = "Momentum", PFTicker = "STOXX50E")
 
 ###  Factor 3: Timing Signal
 
-Sell Signal - Pr < 1% SMA 30 weeks and slope negative (< 0.1)
-Hold Signal - No Sell
+Sell Signal - Pr < 1% SMA 30 weeks and slope negative (< 0.1)  
+Hold Signal - No Sell  
 
 
 ```{r echo=FALSE, message = FALSE, warning = FALSE}
@@ -182,15 +182,12 @@ In addition, there's an accurate StopLoss for those stocks with "hold" signal, o
 MA.df <- sapply(HistPrices.wk.ma.list, function(obj) tail(obj$MA, 1)) %>% 
   as.data.frame %>% 
   set_colnames("MA") %>% 
-  mutate(Ticker = rownames(.),
-         StopLossAcc = MA * (1-0.05))
+  mutate(Ticker = rownames(.))
 
 StopLoss.df <- Portfolio.df %>% 
-  calcStopLoss(LossThreshold = 0.15, ProfitDropThreshold = 0.2) %>% 
-  .[ , c("Ticker", "StopLoss")] %>% 
   left_join(MA.df, by = "Ticker") %>% 
-  mutate(StopLossFinal = pmax(StopLoss, StopLossAcc)) %>% 
-  .[ , c("Ticker", "StopLossFinal")]
+  calcStopLoss(LossThreshold = 0.15, ProfitDropThreshold = 0.2) %>% 
+  .[ , c("Ticker", "PFStopLoss", "PrStopLoss", "StopLoss")]
 
 ```
 
@@ -221,9 +218,9 @@ Summary <- Portfolio.df %>%
   left_join(FinalRank, by = "Ticker") 
 
 knitr::kable(
-  Summary[ , c("Ticker", "AP", "CP", "weight", "StopLossFinal", "Signal", "Quality", "Momentum", "Final_rank")] %>%
+  Summary[ , c("Ticker", "AP", "CP", "weight", "StopLoss", "Signal", "Quality", "Momentum", "Final_rank")] %>%
     mutate(weight = round(weight, 4),
-           StopLossFinal = round(StopLossFinal, 2)) %>% 
+           StopLoss = round(StopLoss, 2)) %>% 
     arrange(desc(Final_rank)) 
   , caption = "Summary")
 

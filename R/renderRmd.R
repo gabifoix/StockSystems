@@ -38,5 +38,14 @@ rmarkdown::render('StockResearch.Rmd',
 
 
 # SP500 ----
-Tickers<- YHFinR::getYFIndexComp("SP500")$Symbol
+Tickers<- YHFinR::getYFIndexComp("SP500")
+
+SearchName <- "SP500"
+rmarkdown::render('StockResearch.Rmd', 
+                  output_dir = "StockResearch",
+                  params = list(Ticker = unique(Tickers),
+                                Index = "^GSPC"),
+                  output_file = paste0('StockResearch_', SearchName, "_", gsub("-", "", Sys.Date()), '.html'))
+
+
 

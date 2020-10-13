@@ -1,3 +1,37 @@
+# New package: StockSystemsTools
+
+# HistPrices.yahoo.list <- readRDS("HistPrices.yahoo.list.tmp.rds")
+# HistPrices.yahoo.xts.list <- lapply(HistPrices.yahoo.list, convertHistPr2xts)
+# HistPrices.wk.list <- lapply(HistPrices.yahoo.xts.list, daily2weekly)
+
+#findLocalMin(HistPrices.wk.list[[6]])
+findLocalMin <- function(obj, col = "adjclose", Tspan = 5, minof = 2) {
+  Price <- obj[!is.na(obj[, col])]
+  LMrA <- rollapply(Price[, col], Tspan, function(x) which.min(x) == minof)
+  LocalMin <- Price[coredata(LMrA)]
+  LocalMin
+}
+
+# 
+# GlobalMin <- min(LocalMin$adjclose)
+# 
+# 
+# # Find local minimums
+# randomwalk <- 100 + cumsum(rnorm(364, 0.2, 1.2))
+# Dates <- seq(as.Date("2019-01-01"), length = 364, by="days")
+# Price <- xts(x = randomwalk, order.by = Dates) %>%
+#   set_colnames("Ticker")
+# Price <- HistPrices.wk.ma.list[1]
+# 
+# 
+# 
+# plot.xts(Price$adjclose)
+# abline(v=.index(Price$MA)[50], col="red")
+# abline(h=.70)
+
+
+
+# ------------------------
 
 daily2weekly <- function(obj, ColName = "adjclose") {
   res <- xts::to.weekly(obj[, ColName] , name = ColName) 
@@ -164,9 +198,10 @@ rankVariables <- function(df, Rank.Name = "Final_rank", VarCols, KeepVarCols = F
 #' PF <- data.frame(Ticker = letters[1:8],
 #' nShares = c(100, 200, 100, 10, 15, 500, 1200, 86),
 #' CP = c(50, 40, 43, 598, 256, 8, 3.656, 95),
-#' AP = c(48, 25, 38, 254, 100, 9, 4.26, 42))
+#' AP = c(48, 25, 38, 254, 100, 9, 4.26, 42),
+#' MA = c(49, 35, 44, 500, 200, 7, 3.59, 94))
 #' calcStopLoss(PF, LossThreshold = 0.15, ProfitDropThreshold = 0.25)
-calcStopLoss <- function(PF, LossThreshold = 0.2, ProfitDropThreshold = 0.3) {
+calcStopLoss <- function(PF, LossThreshold = 0.2, ProfitDropThreshold = 0.3, MAbuffer = 0.03) {
   CVPF <- sum(PF$nShares * PF$CP)
   MaxLoss <- LossThreshold / nrow(PF)
   MaxProfitDrop <- ProfitDropThreshold / nrow(PF)
@@ -175,11 +210,13 @@ calcStopLoss <- function(PF, LossThreshold = 0.2, ProfitDropThreshold = 0.3) {
     mutate(CV = nShares * CP,
            PnL = nShares * (CP - AP),
            StopLossDefAmount = CVPF * MaxLoss,
-           StopLoss = ifelse(PnL <= 0, AP - (StopLossDefAmount / nShares), 
+           PFStopLoss = ifelse(PnL <= 0, AP - (StopLossDefAmount / nShares), 
                              ifelse(PnL > 0 & PnL > StopLossDefAmount, 
                                     CP- (CVPF * MaxProfitDrop / nShares),
                                     CP- (StopLossDefAmount / nShares))),
-           LossMargin = 1- StopLoss/CP)
+           PrStopLoss = MA * (1 - MAbuffer),
+           StopLoss = pmax(PFStopLoss, PrStopLoss),
+           LossMargin = 1- PFStopLoss/CP)
   
 }
 
