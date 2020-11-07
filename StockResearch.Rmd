@@ -11,7 +11,7 @@ params:
 
 ---
 
-Buy Quality at the a good momentum. Get rid of the fishy stocks on time. That's all.
+Buy Quality at the a good momentum and get rid of the fishy stocks on time. That's all.
 
 ```{r packages, echo=FALSE, message = FALSE, warning = FALSE}
 # Set of libraries to use
@@ -41,10 +41,12 @@ Candidates.df <- data.frame(Ticker = params$Ticker,
 
 ```{r HisPrices, echo=FALSE, message = FALSE, warning = FALSE}
 # Download daily historical data from today back to 5 years. 
-# We tUBake price adjusted by splits.
+# We take price adjusted by splits.
 HistPrices.yahoo.list <- YHFinR::getYFHistPrices(Candidates.df$Ticker, "5y", "1d")
-# Filter out NULL & hist < 1 year
+
+# Filter out NULLs, NAs & hist < 1 year
 HistPrices.yahoo.list <- HistPrices.yahoo.list[!sapply(HistPrices.yahoo.list, is.null)]
+HistPrices.yahoo.list <- cleanNArows(HistPrices.yahoo.list)
 HistPrices.yahoo.list <- HistPrices.yahoo.list[sapply(HistPrices.yahoo.list, nrow) > 252]
 
 # Save temp in case
@@ -65,8 +67,11 @@ FCF2D = $\frac{Debt}{Free Cash Flow}$
 ```{r FCF2D, echo=FALSE, message = FALSE, warning = FALSE}
 Financials.list <- YHFinR::getYFFinancialsBasics(Candidates.df$Ticker)
 
-# Possibility of Shares Outstanding to avoid EV
+# Save temp in case
+remove("Financials.list.tmp.rds")
+saveRDS(Financials.list, "Financials.list.tmp.rds")
 
+# Possibility of Shares Outstanding to avoid EV
 FCF.Debt.ROA.df <- rbind(
   sapply(Financials.list, function(x) .cleaNA_Neg(x$freeCashflow$raw)) , 
   sapply(Financials.list, function(x) .cleaNA_Neg(x$totalDebt$raw)),
@@ -103,7 +108,14 @@ barchartPFplot(ROA.df, "ROA", PFequallyweigthed = TRUE, labelPer = TRUE)
 FCF2EV = $\frac{EV}{Free Cash Flow}$
 
 ```{r FCF2EV, echo=FALSE, message = FALSE, warning = FALSE}
-EV <- sapply(YHFinR::getYFKeyStatistics(Candidates.df$Ticker), function(x) x$enterpriseValue$raw)
+KeyStatistics.list <- YHFinR::getYFKeyStatistics(Candidates.df$Ticker)
+
+# Save temp in case
+remove("KeyStatistics.list.tmp.rds")
+saveRDS(KeyStatistics.list, "KeyStatistics.list.tmp.rds")
+
+
+EV <- sapply(KeyStatistics.list, function(x) x$enterpriseValue$raw)
 
 EV.df <- unlist(EV[sapply(EV, is.numeric)]) %>% 
   as.data.frame() %>% 
@@ -146,9 +158,9 @@ barchartPFplot(Momentum.df, VarName = "Momentum", PFTicker = "Index")
 
 ###  Factor 3: Timing Signal
 
-Sell Signal - Pr < 1% SMA 30 weeks and slope negative (< -0.2)
-Buy Signal -  109% * SMA30 < Pr > SMA 30 and slope positive (> 0.2)
-Hold Signal - Neither Buy nor Sell
+Sell Signal - Pr < 1% SMA 30 weeks and slope negative (< -0.2)  
+Buy Signal -  109% * SMA30 < Pr > SMA 30 and slope positive (> 0.2)  
+Hold Signal - Neither Buy nor Sell  
 
 
 ```{r Signal, echo=FALSE, message = FALSE, warning = FALSE}

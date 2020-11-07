@@ -3,32 +3,48 @@
 # HistPrices.yahoo.list <- readRDS("HistPrices.yahoo.list.tmp.rds")
 # HistPrices.yahoo.xts.list <- lapply(HistPrices.yahoo.list, convertHistPr2xts)
 # HistPrices.wk.list <- lapply(HistPrices.yahoo.xts.list, daily2weekly)
+# HistPrices.wk.ma.list <- lapply(HistPrices.wk.list, addMA)
 
-#findLocalMin(HistPrices.wk.list[[6]])
-findLocalMin <- function(obj, col = "adjclose", Tspan = 5, minof = 2) {
+#findLocalMin(HistPrices.wk.list[["GSY.TO"]])
+findLocalMin <- function(obj, col = "adjclose") {
   Price <- obj[!is.na(obj[, col])]
-  LMrA <- rollapply(Price[, col], Tspan, function(x) which.min(x) == minof)
-  LocalMin <- Price[coredata(LMrA)]
+  GlobalMin <- Price[Price == min(Price)]
+  
+  MonthlyMinPoints <- unique(xts::apply.monthly(Price, min))
+
+  # https://stackoverflow.com/questions/6836409/finding-local-maxima-and-minima
+  inflect <- function(x, threshold = 1){
+    up   <- sapply(1:threshold, function(n) c(x[-(seq(n))], rep(NA, n)))
+    down <-  sapply(-1:-threshold, function(n) c(rep(NA,abs(n)), x[-seq(length(x), length(x) - abs(n) + 1)]))
+    a    <- cbind(x,up,down)
+    list(minima = which(apply(a, 1, min) == a[,1]), maxima = which(apply(a, 1, max) == a[,1]))
+  }
+  
+  inflectPoints <- inflect(MonthlyMinPoints)
+  
+  LocalMin <- Price[Price %in% unique(c(min(Price), MonthlyMinPoints[inflectPoints$minima]))]
+  # Only min from Global min onwards
+  LocalMin <- window(LocalMin, start = date(GlobalMin), end = date(tail(obj, 1)))
   LocalMin
 }
 
-# 
-# GlobalMin <- min(LocalMin$adjclose)
-# 
-# 
-# # Find local minimums
-# randomwalk <- 100 + cumsum(rnorm(364, 0.2, 1.2))
-# Dates <- seq(as.Date("2019-01-01"), length = 364, by="days")
-# Price <- xts(x = randomwalk, order.by = Dates) %>%
-#   set_colnames("Ticker")
-# Price <- HistPrices.wk.ma.list[1]
-# 
-# 
-# 
-# plot.xts(Price$adjclose)
-# abline(v=.index(Price$MA)[50], col="red")
-# abline(h=.70)
 
+# LocalMin <- findLocalMin(HistPrices.wk.list[[70]])
+# oneStock <- HistPrices.wk.list[[70]]
+# oneStock <- addMA(oneStock)
+# plot(oneStock,
+#          ylab = "Adj Closing Value",
+#          main = "ATZ.TO")
+# points(LocalMin, col="red", pch=17, on=1)
+
+
+getMinSlope <- function(LocalMin) {
+  model <- lm(adjclose ~ seq(1:length(LocalMin)), data = LocalMin)
+  minSlope <- model$coefficients[2]
+  minSlope
+}
+
+#getMinSlope(LocalMin)
 
 
 # ------------------------
@@ -39,8 +55,14 @@ daily2weekly <- function(obj, ColName = "adjclose") {
   res[, ColName]
 }
 
-addMA <- function(obj, n = 30, ColName = "adjclose") {
-  obj$MA <- TTR::runMean(obj[ ,ColName], n = n)
+# addMA(HistPrices.wk.list[["GSY.TO"]])
+addMA <- function(obj, n = 30, ColName = "adjclose", ma = "WMA") {
+  if (ma == "SMA") {
+    obj$MA <- TTR::runMean(obj[ ,ColName], n = n)
+  }
+  if (ma == "WMA") {
+    obj$MA  <- TTR::WMA(obj[ ,ColName], n= n)
+  }
   obj
 }
 
@@ -237,6 +259,25 @@ feesTotal <- function(Nspots, K, Min, PerFee, Max) {
 
 
 # Utils ----
+
+#convertHistPr2xts(HistPrices.yahoo.list$REE.MC)
+convertHistPr2xts <- function(df, DataCols = c("volume", "close", "adjclose"), DateCol = "Date") {
+  df$datetime <- as.POSIXct(strptime(df[, DateCol], format = "%Y-%m-%d"))
+  res <- as.xts(df[ ,DataCols], order.by = df$datetime)
+  res
+}
+
+cleanNArows <- function(HistPrices.yahoo.list) {
+  #cols2check <- grep("[A-Z]", colnames(HistPrices.yahoo.list[[1]]), invert = TRUE, value = TRUE)
+  res <- lapply(HistPrices.yahoo.list, function(obj) {
+    cols2check <- grep("[A-Z]", colnames(obj), invert = TRUE, value = TRUE)
+    idx <- !apply(obj[ ,cols2check], 1, function(x) all(is.na(x)))
+    obj[idx,]
+  })
+  names(res) <- names(HistPrices.yahoo.list)
+  res
+}
+
 
 .castnclean <- function(df, VarCols) {
   res <- reshape2::dcast(df, Ticker ~ Variable, value.var = 'Value')
