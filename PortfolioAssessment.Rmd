@@ -184,7 +184,8 @@ MA.df <- sapply(HistPrices.wk.ma.list, function(obj) tail(obj$MA, 1)) %>%
   set_colnames("MA") %>% 
   mutate(Ticker = rownames(.))
 
-StopLoss.df <- Portfolio.df %>% 
+StopLoss.dfä
+<- Portfolio.df %>% 
   left_join(MA.df, by = "Ticker") %>% 
   calcStopLoss(LossThreshold = 0.15, ProfitDropThreshold = 0.2) %>% 
   .[ , c("Ticker", "PFStopLoss", "PrStopLoss", "StopLoss")]
@@ -214,7 +215,8 @@ FinalRank <- QualityRank %>%
 
 Summary <- Portfolio.df %>% 
   left_join(StopLoss.df, by = "Ticker") %>% 
-  left_join(Signal.df, by = "Ticker") %>% 
+
+  ol-{left_join(Signal.df, by = "Ticker") %>% 
   left_join(FinalRank, by = "Ticker") 
 
 knitr::kable(

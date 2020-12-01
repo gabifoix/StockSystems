@@ -8,16 +8,6 @@ rmarkdown::render('PortfolioAssessment.Rmd',
                   output_file = paste0('PortfolioReport_', gsub("-", "", Sys.Date()), '.html'))
 
 
-
-
-Tickers <- read.csv("CompanyList.20200713.csv", sep = ";") %>% 
-  subset(country == "HO", select = "tickers")
-
-
-
-Index <- "DAX"
-
-
 # DJ ----
 SearchName <- "DJ"
 Index <- "DJ"
@@ -31,14 +21,14 @@ rmarkdown::render('StockResearch.Rmd',
                   output_file = paste0('StockResearch_', SearchName, "_", gsub("-", "", Sys.Date()), '.html'))
 
 # Europe with industry informed ----
-Tickers <- read.csv("CompanyList.20200713.csv", sep = ";") %>% 
+Tickers <- read.csv("CompanyList.20200703.csv", sep = ";") %>% 
   subset(!is.na(industry), select = "tickers")
 
 SearchName <- "AllEUR"
 rmarkdown::render('StockResearch.Rmd', 
                   output_dir = "StockResearch",
                   params = list(Ticker = unique(Tickers$tickers),
-                                Index = "^DJI"),
+                                Index = "^GSPC"),
                   output_file = paste0('StockResearch_', SearchName, "_", gsub("-", "", Sys.Date()), '.html'))
 
 
