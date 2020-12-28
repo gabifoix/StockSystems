@@ -8,6 +8,7 @@ date: "`r Sys.Date()`"
 params:
   Ticker: Ticker
   Index: Index
+  dump_file: dump_file
 
 ---
 
@@ -114,14 +115,10 @@ KeyStatistics.list <- YHFinR::getYFKeyStatistics(Candidates.df$Ticker)
 remove("KeyStatistics.list.tmp.rds")
 saveRDS(KeyStatistics.list, "KeyStatistics.list.tmp.rds")
 
-
 EV <- sapply(KeyStatistics.list, function(x) x$enterpriseValue$raw)
 
 EV.df <- unlist(EV[sapply(EV, is.numeric)]) %>% 
-  as.data.frame() %>% 
-  set_colnames(c("EV")) %>% 
-  mutate(Ticker = rownames(.)) 
-
+  .SRformat(c("EV"))
 
 FCF.Debt.EV.ROA.df <- FCF.Debt.ROA.df %>% 
   left_join(EV.df, by = "Ticker") %>% 
@@ -131,6 +128,24 @@ FCF2EV.df <- FCF.Debt.EV.ROA.df %>%
   .[ , c("Ticker", "FCF2EV")] 
 
 barchartPFplot(FCF2EV.df, "FCF2EV", theHighertheBetter = FALSE, PFequallyweigthed = TRUE)
+
+```
+
+### Value touch  
+Filter out stocks with PER > 40
+
+```{r PER, echo=FALSE, message = FALSE, warning = FALSE}
+
+EPS <- sapply(KeyStatistics.list, function(x) x$trailingEps$raw)
+CP <- sapply(HistPrices.yahoo.list, function(x) tail(x$adjclose, 1))
+
+PER.df <- unlist(EPS[sapply(EPS, is.numeric)]) %>% 
+  .SRformat(c("EPS")) %>% 
+  left_join(unlist(CP[sapply(CP, is.numeric)]) %>% 
+  .SRformat(c("CP")), 
+  by = "Ticker") %>% 
+  mutate(PER = .cleanNAs(CP / EPS)) %>% 
+  .[c("Ticker", "PER")]
 
 ```
 
@@ -147,9 +162,7 @@ HistPrices.yahoo.list[["Index"]] <- YHFinR::getYFHistPrices(params$Index, "5y", 
 HistPrices.yahoo.xts.list <- lapply(HistPrices.yahoo.list, convertHistPr2xts)
 
 Momentum.df <- sapply(HistPrices.yahoo.xts.list, calcGenericMomentum, term = 36, noise = 1) %>% 
-  as.data.frame() %>% 
-  set_colnames("Momentum") %>% 
-  mutate(Ticker = rownames(.))
+  .SRformat("Momentum")
 
 barchartPFplot(Momentum.df, VarName = "Momentum", PFTicker = "Index")
 
@@ -174,10 +187,8 @@ Signal.df <- sapply(HistPrices.wk.ma.list, function(obj, thresholdMA_SELL = 0.01
   x <- tail(obj, 1)
   ifelse(x$adjclose < ((1 -thresholdMA_SELL) * x$MA) & x$MA.Slope < thresholdSlope_SELL, "SELL", 
          ifelse(x$adjclose < ((1 + thresholdMA_BUY) * x$MA) & x$adjclose > x$MA & x$MA.Slope > thresholdSlope_BUY, "BUY", "HOLD"))
-}) %>% 
-  as.data.frame %>% 
-  set_colnames("Signal") %>% 
-  mutate(Ticker = rownames(.))
+}) %>%
+  .SRformat("Signal")
 
 ```
 
@@ -193,7 +204,7 @@ QualityRank <- FCF2D.df %>%
          FCF2EV = 1 / FCF2EV) %>% 
   rankVariables(Rank.Name = "Quality", VarCols = c("FCF2D", "ROA","FCF2EV"))
 
-# Quality
+# Momentum
 MomentumRank <- Momentum.df %>% 
   rankVariables(Rank.Name = "Momentum", VarCols = c("Momentum"))
 
@@ -202,15 +213,32 @@ FinalRank <- QualityRank %>%
   left_join(MomentumRank, by = "Ticker") %>% 
   rankVariables(VarCols = c("Quality", "Momentum"), KeepVarCols = TRUE)
 
+
 Summary <- Candidates.df %>% 
   left_join(Signal.df, by = "Ticker") %>% 
-  left_join(FinalRank, by = "Ticker") 
+  left_join(FinalRank, by = "Ticker") %>% 
+  left_join(PER.df, by = "Ticker")
 
 knitr::kable(
-  Summary[ , c("Ticker", "Signal", "Quality", "Momentum", "Final_rank")] %>%
-    arrange(desc(Final_rank)) 
-  , caption = "Summary")
+  subset(Summary, PER < 40, c("Ticker", "Signal", "Quality", "Momentum", "Final_rank", "PER")) %>% 
+  arrange(desc(Final_rank)),
+  caption = "Summary")
 
 ```
 
+
+Save output in template
+```{r Report, echo=FALSE, message = FALSE, warning = FALSE}
+
+Dump <- Summary %>%
+  left_join(ROA.df, by = "Ticker") %>% 
+  left_join(FCF2EV.df, by = "Ticker") %>%
+  left_join(FCF2D.df, by = "Ticker") %>% 
+  left_join(Momentum.df %>% 
+              rename(MomentumValue = Momentum), by = "Ticker") %>% 
+  arrange(desc(Final_rank))
+
+write.csv(Dump, params$dump_file, row.names = FALSE)
+  
+```
 

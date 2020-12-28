@@ -44,10 +44,6 @@ getMinSlope <- function(LocalMin) {
   minSlope
 }
 
-#getMinSlope(LocalMin)
-
-
-# ------------------------
 
 daily2weekly <- function(obj, ColName = "adjclose") {
   res <- xts::to.weekly(obj[, ColName] , name = ColName) 
@@ -223,7 +219,7 @@ rankVariables <- function(df, Rank.Name = "Final_rank", VarCols, KeepVarCols = F
 #' AP = c(48, 25, 38, 254, 100, 9, 4.26, 42),
 #' MA = c(49, 35, 44, 500, 200, 7, 3.59, 94))
 #' calcStopLoss(PF, LossThreshold = 0.15, ProfitDropThreshold = 0.25)
-calcStopLoss <- function(PF, LossThreshold = 0.2, ProfitDropThreshold = 0.3, MAbuffer = 0.03) {
+calcStopLoss <- function(PF, LossThreshold = 0.2, ProfitDropThreshold = 0.3, MAbuffer = 0.05) {
   CVPF <- sum(PF$nShares * PF$CP)
   MaxLoss <- LossThreshold / nrow(PF)
   MaxProfitDrop <- ProfitDropThreshold / nrow(PF)
@@ -259,6 +255,14 @@ feesTotal <- function(Nspots, K, Min, PerFee, Max) {
 
 
 # Utils ----
+
+# Stock Research format
+.SRformat <- function(obj, colname){
+  obj %>% 
+    as.data.frame() %>% 
+    set_colnames(colname) %>% 
+    mutate(Ticker = rownames(.))
+}
 
 #convertHistPr2xts(HistPrices.yahoo.list$REE.MC)
 convertHistPr2xts <- function(df, DataCols = c("volume", "close", "adjclose"), DateCol = "Date") {
