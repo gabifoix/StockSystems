@@ -23,10 +23,10 @@ rmarkdown::render('StockResearch.Rmd',
                   output_file = paste0('StockResearch_', SearchName, "_", gsub("-", "", Sys.Date()), '.html'))
 
 # Europe with industry informed ----
-Tickers <- read.csv("OldFiles/CompanyList.20200703.csv", sep = ";") %>% 
-  subset(!is.na(industry) & country == "ES", select = "tickers")
+Tickers <- read.csv("CompaniesEUR.20210103.csv", sep = ";") %>% 
+  subset(country != " ", select = "tickers")
 
-SearchName <- "BE"
+SearchName <- "AllEUR"
 rmarkdown::render('StockResearch.Rmd', 
                   output_dir = "StockResearch",
                   params = list(Ticker = unique(Tickers$tickers),
@@ -41,9 +41,9 @@ Tickers<- YHFinR::getYFIndexComp("SP500")
 SearchName <- "SP500"
 rmarkdown::render('StockResearch.Rmd', 
                   output_dir = "StockResearch",
-                  params = list(Ticker = unique(Tickers)[1:40],
+                  params = list(Ticker = unique(Tickers),
                                 Index = "^GSPC",
-                                dump_file = paste0('StockResearch_', SearchName, "_", gsub("-", "", Sys.Date()), '.csv')),
+                                dump_file = paste0('StockResearch/StockResearch_', SearchName, "_", gsub("-", "", Sys.Date()), '.csv')),
                   output_file = paste0('StockResearch_', SearchName, "_", gsub("-", "", Sys.Date()), '.html'))
 
 # TSX ----

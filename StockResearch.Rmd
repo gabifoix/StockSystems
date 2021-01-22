@@ -37,25 +37,46 @@ date <- gsub("-", "", today())
 Candidates.df <- data.frame(Ticker = params$Ticker,
                         stringsAsFactors = FALSE)
 
+Candidates_Ori <- nrow(Candidates.df)
+
 ```
 
 
-```{r HisPrices, echo=FALSE, message = FALSE, warning = FALSE}
-# Download daily historical data from today back to 5 years. 
-# We take price adjusted by splits.
-HistPrices.yahoo.list <- YHFinR::getYFHistPrices(Candidates.df$Ticker, "5y", "1d")
+Download all info needed applying the following filters:  
 
-# Filter out NULLs, NAs & hist < 1 year
-HistPrices.yahoo.list <- HistPrices.yahoo.list[!sapply(HistPrices.yahoo.list, is.null)]
-HistPrices.yahoo.list <- cleanNArows(HistPrices.yahoo.list)
-HistPrices.yahoo.list <- HistPrices.yahoo.list[sapply(HistPrices.yahoo.list, nrow) > 252]
+ROA > 1%  
+FCF < 0  
+PER > 0 and PER < 40  
+History > 1 year 
 
+```{r Financials_ROAfilter, echo = FALSE, message = FALSE, warning = FALSE}
+Financials.list <- YHFinR::getYFFinancialsBasics(Candidates.df$Ticker)
 # Save temp in case
-remove("HistPrices.yahoo.list.tmp.rds")
-saveRDS(HistPrices.yahoo.list, "HistPrices.yahoo.list.tmp.rds")
+remove("Financials.list.tmp.rds")
+saveRDS(Financials.list, "Financials.list.tmp.rds")
+# Financials.list <- readRDS("Financials.list.tmp.rds")
 
-# After that, reduce Candidates
-Candidates.df <- Candidates.df[Candidates.df$Ticker %in% names(HistPrices.yahoo.list),, drop = FALSE]
+# Get ROA from Income Statement and BS when ROA is not informed.
+lenROA <- sapply(Financials.list, function(x) length(x$returnOnAssets))
+ROAnames <- names(lenROA[lenROA == 0])
+DQNetIN <- YHFinR::getYFNetIncome(ROAnames) %>% 
+  unlist()
+DQTotAsset <- YHFinR::getYFTotalAssets(ROAnames) %>% 
+  unlist()
+idx <- match(names(DQNetIN), names(DQTotAsset))
+DQROA <- DQNetIN[idx] / DQTotAsset[idx]
+
+# Insert Fall-back returnOnAssets$raw
+for (x in ROAnames) {
+ Financials.list[[x]]$returnOnAssets$raw <- as.numeric(DQROA[x])
+}
+
+# Filter out ROA <= 0.01 
+FilteredFinancials.list <- Financials.list[sapply(Financials.list, function(x) isTRUE(x$returnOnAssets$raw > 0.01))]
+
+# Reduce candidates
+Candidates.df <- Candidates.df[Candidates.df$Ticker %in% names(FilteredFinancials.list),, drop = FALSE]
+Candidates_ROA <- nrow(Candidates.df)
 
 ```
 
@@ -66,23 +87,25 @@ Candidates.df <- Candidates.df[Candidates.df$Ticker %in% names(HistPrices.yahoo.
 FCF2D = $\frac{Debt}{Free Cash Flow}$
 
 ```{r FCF2D, echo=FALSE, message = FALSE, warning = FALSE}
-Financials.list <- YHFinR::getYFFinancialsBasics(Candidates.df$Ticker)
+# Using the Current Candidates
+FilteredFinancials.list <- FilteredFinancials.list[names(FilteredFinancials.list) %in% Candidates.df$Ticker]
 
-# Save temp in case
-remove("Financials.list.tmp.rds")
-saveRDS(Financials.list, "Financials.list.tmp.rds")
+# Get FCF from CashFlow as fallback when FCF is negative or zero
+FCF <- sapply(FilteredFinancials.list, function(x) .cleaNA_Neg(x$freeCashflow$raw))
+DQFCF <- YHFinR::getYFFreeCashFlow(names(FCF[FCF <= 0])) %>% 
+  unlist()
+FCF[match(names(DQFCF), names(FCF))] <- .cleaNA_Neg(DQFCF)
 
-# Possibility of Shares Outstanding to avoid EV
 FCF.Debt.ROA.df <- rbind(
-  sapply(Financials.list, function(x) .cleaNA_Neg(x$freeCashflow$raw)) , 
-  sapply(Financials.list, function(x) .cleaNA_Neg(x$totalDebt$raw)),
-  sapply(Financials.list, function(x) .cleaNA_Neg(x$returnOnAssets$raw))
+  FCF, 
+  sapply(FilteredFinancials.list, function(x) .cleaNA_Neg(x$totalDebt$raw)),
+  sapply(FilteredFinancials.list, function(x) .cleaNA_Neg(x$returnOnAssets$raw, rplneg = 0))
   ) %>% 
   t() %>% 
   set_colnames(c("FCF", "Debt", "ROA")) %>% 
   as.data.frame() %>% 
   mutate(Ticker = rownames(.),
-         FCF2D = .cleaNA_Neg(Debt / FCF))
+         FCF2D = .cleaNA_Neg(Debt / FCF, rplneg = 99))
 
 
 FCF2D.df <- FCF.Debt.ROA.df %>% 
@@ -109,11 +132,16 @@ barchartPFplot(ROA.df, "ROA", PFequallyweigthed = TRUE, labelPer = TRUE)
 FCF2EV = $\frac{EV}{Free Cash Flow}$
 
 ```{r FCF2EV, echo=FALSE, message = FALSE, warning = FALSE}
+# Reduce Candidates by filtering FCF > 0
+Candidates.df <- Candidates.df[Candidates.df$Ticker %in% names(FCF)[FCF>0],, drop = FALSE]
+Candidates_FCF <- nrow(Candidates.df)
+
 KeyStatistics.list <- YHFinR::getYFKeyStatistics(Candidates.df$Ticker)
 
 # Save temp in case
 remove("KeyStatistics.list.tmp.rds")
 saveRDS(KeyStatistics.list, "KeyStatistics.list.tmp.rds")
+# KeyStatistics.list <- readRDS("KeyStatistics.list.tmp.rds")
 
 EV <- sapply(KeyStatistics.list, function(x) x$enterpriseValue$raw)
 
@@ -122,7 +150,7 @@ EV.df <- unlist(EV[sapply(EV, is.numeric)]) %>%
 
 FCF.Debt.EV.ROA.df <- FCF.Debt.ROA.df %>% 
   left_join(EV.df, by = "Ticker") %>% 
-  mutate(FCF2EV = .cleaNA_Neg(EV / FCF))
+  mutate(FCF2EV = .cleaNA_Neg(EV / FCF, rplneg = 99))
 
 FCF2EV.df <- FCF.Debt.EV.ROA.df %>% 
   .[ , c("Ticker", "FCF2EV")] 
@@ -131,11 +159,33 @@ barchartPFplot(FCF2EV.df, "FCF2EV", theHighertheBetter = FALSE, PFequallyweigthe
 
 ```
 
+#### Download Historical Data
+Download only stocks not filtered previously
+
+```{r HisPrices, echo=FALSE, message = FALSE, warning = FALSE}
+# Download daily historical data from today back to 5 years. 
+# We take price adjusted by splits.
+HistPrices.yahoo.list <- YHFinR::getYFHistPrices(Candidates.df$Ticker, "5y", "1d")
+
+# Filter out NULLs, NAs & hist < 1 year
+HistPrices.yahoo.list <- HistPrices.yahoo.list[!sapply(HistPrices.yahoo.list, is.null)]
+HistPrices.yahoo.list <- cleanNArows(HistPrices.yahoo.list)
+HistPrices.yahoo.list <- HistPrices.yahoo.list[sapply(HistPrices.yahoo.list, nrow) > 252]
+
+# Save temp in case
+remove("HistPrices.yahoo.list.tmp.rds")
+saveRDS(HistPrices.yahoo.list, "HistPrices.yahoo.list.tmp.rds")
+
+# After that, reduce candidates
+Candidates.df <- Candidates.df[Candidates.df$Ticker %in% names(HistPrices.yahoo.list),, drop = FALSE]
+Candidates_Hist <- nrow(Candidates.df)
+
+```
+
 ### Value touch  
 Filter out stocks with PER > 40
 
 ```{r PER, echo=FALSE, message = FALSE, warning = FALSE}
-
 EPS <- sapply(KeyStatistics.list, function(x) x$trailingEps$raw)
 CP <- sapply(HistPrices.yahoo.list, function(x) tail(x$adjclose, 1))
 
@@ -147,7 +197,25 @@ PER.df <- unlist(EPS[sapply(EPS, is.numeric)]) %>%
   mutate(PER = .cleanNAs(CP / EPS)) %>% 
   .[c("Ticker", "PER")]
 
+# Reduce Candidates after PER filter
+Candidates.df <- Candidates.df[Candidates.df$Ticker %in% subset(PER.df, PER > 0 & PER < 40)$Ticker,, drop = FALSE]
+Candidates_PER <- nrow(Candidates.df)
+
 ```
+
+
+Report Candidates
+```{r ReportCandidates, echo=FALSE, message = FALSE, warning = FALSE}
+
+FilterSummary <- data.frame(Filter = c("Initial", "ROA", "FCF", "Hist1Y", "PER"),
+                            NStocks = c(Candidates_Ori, Candidates_ROA, Candidates_FCF,  Candidates_Hist, Candidates_PER),
+                            stringsAsFactors = FALSE)
+
+knitr::kable( FilterSummary,
+              caption = "Filter Summary")
+
+```
+
 
 ### Factor 2: Momentum 
 
@@ -192,6 +260,22 @@ Signal.df <- sapply(HistPrices.wk.ma.list, function(obj, thresholdMA_SELL = 0.01
 
 ```
 
+#### Calc Market Cap  
+Using free float shares
+```{r MarketCap, echo=FALSE, message = FALSE, warning = FALSE}
+NShares <- sapply(KeyStatistics.list, function(x) x$floatShares$raw)
+
+MCap.df <- unlist(NShares[sapply(NShares, is.numeric)]) %>% 
+  .SRformat(c("NShares")) %>% 
+  left_join(unlist(CP[sapply(CP, is.numeric)]) %>% 
+  .SRformat(c("CP")), 
+  by = "Ticker") %>% 
+  mutate(MCap = .cleanNAs(CP * NShares)) %>% 
+  .[c("Ticker", "MCap")]
+
+```
+
+
 
 ###  Summary 
 ```{r Summary, echo=FALSE, message = FALSE, warning = FALSE}
@@ -214,13 +298,14 @@ FinalRank <- QualityRank %>%
   rankVariables(VarCols = c("Quality", "Momentum"), KeepVarCols = TRUE)
 
 
-Summary <- Candidates.df %>% 
+Summary <- Candidates.df %>%
   left_join(Signal.df, by = "Ticker") %>% 
   left_join(FinalRank, by = "Ticker") %>% 
-  left_join(PER.df, by = "Ticker")
+  left_join(PER.df, by = "Ticker") %>% 
+  left_join(MCap.df, by = "Ticker")
 
 knitr::kable(
-  subset(Summary, PER < 40, c("Ticker", "Signal", "Quality", "Momentum", "Final_rank", "PER")) %>% 
+  subset(Summary, PER < 40, c("Ticker", "Signal", "Quality", "Momentum", "Final_rank", "PER", "MCap")) %>% 
   arrange(desc(Final_rank)),
   caption = "Summary")
 

@@ -1,4 +1,4 @@
-require(XLConnect)
+
 require(dplyr)
 require(ggplot2)
 

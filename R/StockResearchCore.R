@@ -301,9 +301,11 @@ cleanNArows <- function(HistPrices.yahoo.list) {
   cgr 
 } 
 
-.cleaNA_Neg <- function(x, replace = 0) { 
+.cleaNA_Neg <- function(x, replace = 0, rplneg = NULL) { 
+  if(!is.null(rplneg)) {
+    x[x < 0] <- rplneg
+  }
   x[is.null(x)] <- replace
-  x[x < 0] <- replace
   x[is.na(x)] <- replace
   x[is.infinite(x)] <- replace
   x

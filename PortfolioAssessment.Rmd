@@ -3,7 +3,10 @@ title: "Portfolio Assessment: Performance and selling strategies"
 output:
   html_document:
     df_print: paged
-date: "`r Sys.Date()`"    
+date: "`r Sys.Date()`"
+params:
+  dump_file: dump_file
+
 ---
 
 
@@ -31,9 +34,9 @@ source('R/YahooFinanceUtils.R')
 ### Our portfolio`
 ```{r echo=FALSE, message = FALSE, warning = FALSE}
 date <- gsub("-", "", today())
-Portfolio.df <- data.frame(Ticker = c("UNA.AS", "DGV.MI", "VOW3.DE","PUM.DE",  "MC.PA", "CS.PA"),
-                        nShares = c(100, 165, 50, 80, 14, 300),
-                        AP = c(46, 30.5, 93, 55.40, 350, 16.10),
+Portfolio.df <- data.frame(Ticker = c("UNA.AS", "DGV.MI","PUM.DE","MC.PA", "AZO", "SPGI", "BBY"),
+                        nShares = c(100, 165, 80, 14, 5, 15, 15),
+                        AP = c(46, 30.5, 55.40, 350, 1135, 350, 107),
                         stringsAsFactors = FALSE)
 ```
 
@@ -184,8 +187,7 @@ MA.df <- sapply(HistPrices.wk.ma.list, function(obj) tail(obj$MA, 1)) %>%
   set_colnames("MA") %>% 
   mutate(Ticker = rownames(.))
 
-StopLoss.dfä
-<- Portfolio.df %>% 
+StopLoss.df <- Portfolio.df %>% 
   left_join(MA.df, by = "Ticker") %>% 
   calcStopLoss(LossThreshold = 0.15, ProfitDropThreshold = 0.2) %>% 
   .[ , c("Ticker", "PFStopLoss", "PrStopLoss", "StopLoss")]
@@ -195,6 +197,15 @@ StopLoss.dfä
 
 ###  Summary 
 ```{r echo=FALSE, message = FALSE, warning = FALSE}
+
+# Write Out info
+SummaryOut <- Portfolio.df %>% 
+  left_join(StopLoss.df, by = "Ticker") %>% 
+  left_join(Signal.df, by = "Ticker") %>% 
+  left_join(FCF.Debt.EV.ROA.PF.df, by = "Ticker")
+
+write.csv(SummaryOut, params$dump_file, row.names = FALSE)
+
 # Quality
 QualityRank <- FCF2D.df %>% 
   left_join(ROA.df, by = "Ticker") %>% 
@@ -215,8 +226,7 @@ FinalRank <- QualityRank %>%
 
 Summary <- Portfolio.df %>% 
   left_join(StopLoss.df, by = "Ticker") %>% 
-
-  ol-{left_join(Signal.df, by = "Ticker") %>% 
+  left_join(Signal.df, by = "Ticker") %>% 
   left_join(FinalRank, by = "Ticker") 
 
 knitr::kable(
