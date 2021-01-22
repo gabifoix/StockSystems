@@ -2,6 +2,13 @@
 require(dplyr)
 require(ggplot2)
 
+# Find industry and country
+Profile <- YHFinR::getYFProfile(c("UNA.AS", "BBY", "COST", "DGV.MI", "MC.PA"))
+Profile.df <- data.frame(Ticker = names(Profile),
+           country = sapply(Profile, function(x) x$country),
+           Industry = sapply(Profile, function(x) x$industry))
+
+
 # # Original step  ---- 
 # fdatafolder <- "C:\\Users\\Gabi\\Downloads\\^GSPC.csv"
 # SP500 <- read.csv(fdatafolder)
