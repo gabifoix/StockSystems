@@ -34,9 +34,9 @@ source('R/YahooFinanceUtils.R')
 ### Our portfolio`
 ```{r echo=FALSE, message = FALSE, warning = FALSE}
 date <- gsub("-", "", today())
-Portfolio.df <- data.frame(Ticker = c("UNA.AS", "DGV.MI","PUM.DE","MC.PA", "AZO", "SPGI", "BBY"),
-                        nShares = c(100, 165, 80, 14, 5, 15, 15),
-                        AP = c(46, 30.5, 55.40, 350, 1135, 350, 107),
+Portfolio.df <- data.frame(Ticker = c("UNA.AS", "DGV.MI","PUM.DE","MC.PA", "AZO", "SPGI", "BBY", "COST", "AAPL"),
+                        nShares = c(100, 165, 80, 14, 5, 15, 15, 6, 32),
+                        AP = c(46, 30.5, 55.40, 350, 1135, 350, 107, 362, 132.52),
                         stringsAsFactors = FALSE)
 ```
 
@@ -161,7 +161,7 @@ Hold Signal - No Sell
 # From Daily to Weekly
 HistPrices.wk.list <- sapply(HistPrices.yahoo.xts.list, daily2weekly)
 # Add SMA30 & SMA30 Slope
-HistPrices.wk.ma.list <- sapply(HistPrices.wk.list, addMA)
+HistPrices.wk.ma.list <- sapply(HistPrices.wk.list, function(x) addMA(x, n = min(30, nrow(x) - 1)))
 HistPrices.wk.ma.list <- sapply(HistPrices.wk.ma.list, addMASlope)
 
 Signal.df <- sapply(HistPrices.wk.ma.list, function(obj, thresholdMA = 0.01, thresholdSlope = -0.2) {
