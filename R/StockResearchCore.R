@@ -52,7 +52,7 @@ daily2weekly <- function(obj, ColName = "adjclose") {
 }
 
 # addMA(HistPrices.wk.list[["GSY.TO"]])
-addMA <- function(obj, n = 30, ColName = "adjclose", ma = "WMA") {
+addMA <- function(obj, n = 30, ColName = "adjclose", ma = "SMA") {
   if (ma == "SMA") {
     obj$MA <- TTR::runMean(obj[ ,ColName], n = n)
   }
