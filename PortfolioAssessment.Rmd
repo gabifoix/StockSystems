@@ -37,6 +37,7 @@ date <- gsub("-", "", today())
 Portfolio.df <- data.frame(Ticker = c("UNA.AS", "DGV.MI","PUM.DE","MC.PA", "AZO", "SPGI", "BBY", "COST", "AAPL"),
                         nShares = c(100, 165, 80, 14, 5, 15, 15, 6, 32),
                         AP = c(46, 30.5, 55.40, 350, 1135, 350, 107, 362, 132.52),
+                        ADate = c("2020-12-07", "2020-11-01", "2020-04-01", "2020-05-01", "2020-11-01", "2020-11-01", "2020-12-01","2021-01-01", "2021-02-01"),
                         stringsAsFactors = FALSE)
 ```
 
@@ -176,21 +177,17 @@ Signal.df <- sapply(HistPrices.wk.ma.list, function(obj, thresholdMA = 0.01, thr
 
 **StopLoss for the next month**  
 
-Every month, we calculate a generic the StopLoss given a "Loss Threshold"" of 15% and "ProfitDropThreshold" of 20%.
-In addition, there's an accurate StopLoss for those stocks with "hold" signal, of 5% of their MA. 
-
+If Profit > 20%, Trailing Stop Loss (Max - 20%)
+If Profit < 20%, Stop Loss (AP - 15%)
 
 ```{r echo=FALSE, message = FALSE, warning = FALSE}
-# Accurated StopLoss
-MA.df <- sapply(HistPrices.wk.ma.list, function(obj) tail(obj$MA, 1)) %>% 
-  as.data.frame %>% 
-  set_colnames("MA") %>% 
-  mutate(Ticker = rownames(.))
+Max.df <- sapply(Portfolio.df$Ticker, function(x) maxfromADate(x, Portfolio.df, HistPrices.wk.ma.list)) %>%
+  .SRformat("MAX")
 
 StopLoss.df <- Portfolio.df %>% 
-  left_join(MA.df, by = "Ticker") %>% 
-  calcStopLoss(LossThreshold = 0.15, ProfitDropThreshold = 0.2) %>% 
-  .[ , c("Ticker", "PFStopLoss", "PrStopLoss", "StopLoss")]
+  left_join(Max.df, by = "Ticker") %>% 
+  calcTrStopLoss(LossThreshold = 0.15, ProfitDropThreshold = 0.2) %>% 
+  .[ , c("Ticker", "StopLoss")]
 
 ```
 

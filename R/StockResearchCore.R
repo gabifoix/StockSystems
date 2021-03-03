@@ -238,7 +238,13 @@ calcStopLoss <- function(PF, LossThreshold = 0.2, ProfitDropThreshold = 0.3, MAb
   
 }
 
-
+calcTrStopLoss <- function(PF, LossThreshold = 0.15, ProfitDropThreshold = 0.2) {
+  PF %>% 
+    mutate(maxreturn = (MAX/AP) - 1,
+           StopLoss = ifelse(maxreturn > ProfitDropThreshold, 
+                             MAX*(1-ProfitDropThreshold), 
+                             AP * (1-LossThreshold)))
+}
 
 #feesOptimalSpots(10000, 10, 0.01, 100)
 feesOptimalSpots <- function(K, Min, PerFee, Max, MaxAssetsDiverNull = 25, MinAssets = 3) {
@@ -252,7 +258,14 @@ feesTotal <- function(Nspots, K, Min, PerFee, Max) {
   Nspots * min(max(Min, Invest * (PerFee/100)), Max)
 }
 
-
+# Find maximum since adquisition date
+maxfromADate <- function(one.Ticker, Portfolio, HistPrices.list) {
+  start.date <- as.POSIXct(Portfolio$ADate[Portfolio$Ticker == one.Ticker])
+  end.date <- as.POSIXct(today())
+  obj <- HistPrices.list[[one.Ticker]]
+  res <- max(obj[start.date <= index(obj) & index(obj) <= end.date]$adjclose)
+  res
+}
 
 # Utils ----
 
