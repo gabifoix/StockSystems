@@ -267,6 +267,14 @@ maxfromADate <- function(one.Ticker, Portfolio, HistPrices.list) {
   res
 }
 
+# Buying / Selling signal
+getSignal <- function(obj, thresholdMA_SELL = 0.01, thresholdMA_BUY = 0.09,  thresholdSlope_SELL = -0.2, thresholdSlope_BUY = 0.2) {
+  x <- tail(obj, 1)
+  ifelse(x$adjclose < ((1 -thresholdMA_SELL) * x$MA) & x$MA.Slope < thresholdSlope_SELL, "SELL", 
+         ifelse(x$adjclose < ((1 + thresholdMA_BUY) * x$MA) & x$adjclose > x$MA & x$MA.Slope > thresholdSlope_BUY, "BUY", "HOLD"))
+}
+
+
 # Utils ----
 
 # Stock Research format
