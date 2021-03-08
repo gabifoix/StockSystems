@@ -112,7 +112,8 @@ barchartPFplot(ROA.df, "ROA", labelPer = TRUE)
 FCF2EV = $\frac{EV}{Free Cash Flow}$
 
 ```{r echo=FALSE, message = FALSE, warning = FALSE}
-EV <- sapply(YHFinR::getYFKeyStatistics(Portfolio.df$Ticker), function(x) x$enterpriseValue$raw) 
+KeyStatistics.list <- YHFinR::getYFKeyStatistics(Portfolio.df$Ticker)
+EV <- sapply(KeyStatistics.list, function(x) x$enterpriseValue$raw)
 EV.df <- EV %>% 
   as.data.frame() %>% 
   set_colnames(c("EV")) %>% 
@@ -175,6 +176,23 @@ Signal.df <- sapply(HistPrices.wk.ma.list, function(obj, thresholdMA = 0.01, thr
 
 ```
 
+### Value touch: PER 
+```{r PER, echo=FALSE, message = FALSE, warning = FALSE}
+EPS <- sapply(KeyStatistics.list, function(x) x$trailingEps$raw)
+CP <- sapply(HistPrices.yahoo.list, function(x) tail(x$adjclose, 1))
+
+PER.df <- unlist(EPS[sapply(EPS, is.numeric)]) %>% 
+  .SRformat(c("EPS")) %>% 
+  left_join(unlist(CP[sapply(CP, is.numeric)]) %>% 
+  .SRformat(c("CP")), 
+  by = "Ticker") %>% 
+  mutate(PER = .cleanNAs(CP / EPS)) %>% 
+  .[c("Ticker", "PER")]
+
+
+```
+
+
 **StopLoss for the next month**  
 
 If Profit > 20%, Trailing Stop Loss (Max - 20%)
@@ -197,6 +215,7 @@ StopLoss.df <- Portfolio.df %>%
 
 # Write Out info
 SummaryOut <- Portfolio.df %>% 
+  left_join(PER.df, by = "Ticker") %>% 
   left_join(StopLoss.df, by = "Ticker") %>% 
   left_join(Signal.df, by = "Ticker") %>% 
   left_join(FCF.Debt.EV.ROA.PF.df, by = "Ticker")
@@ -222,12 +241,13 @@ FinalRank <- QualityRank %>%
   rankVariables(VarCols = c("Quality", "Momentum"), KeepVarCols = TRUE)
 
 Summary <- Portfolio.df %>% 
+  left_join(PER.df, by = "Ticker") %>% 
   left_join(StopLoss.df, by = "Ticker") %>% 
   left_join(Signal.df, by = "Ticker") %>% 
   left_join(FinalRank, by = "Ticker") 
 
 knitr::kable(
-  Summary[ , c("Ticker", "AP", "CP", "weight", "StopLoss", "Signal", "Quality", "Momentum", "Final_rank")] %>%
+  Summary[ , c("Ticker", "AP", "CP", "weight", "PER","StopLoss", "Signal", "Quality", "Momentum", "Final_rank")] %>%
     mutate(weight = round(weight, 4),
            StopLoss = round(StopLoss, 2)) %>% 
     arrange(desc(Final_rank)) 

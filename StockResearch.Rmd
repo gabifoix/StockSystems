@@ -37,6 +37,9 @@ date <- gsub("-", "", today())
 Candidates.df <- data.frame(Ticker = params$Ticker,
                         stringsAsFactors = FALSE)
 
+# Candidates.df <- data.frame(Ticker = c("UNA.AS", "DGV.MI","PUM.DE","MC.PA", "AZO", "SPGI", "BBY", "COST", "AAPL"),
+#                         stringsAsFactors = FALSE)
+
 Candidates_Ori <- nrow(Candidates.df)
 
 ```
@@ -73,6 +76,7 @@ for (x in ROAnames) {
 
 # Filter out ROA <= 0.01 
 FilteredFinancials.list <- Financials.list[sapply(Financials.list, function(x) isTRUE(x$returnOnAssets$raw > 0.01))]
+#FilteredFinancials.list <- Financials.list
 
 # Reduce candidates
 Candidates.df <- Candidates.df[Candidates.df$Ticker %in% names(FilteredFinancials.list),, drop = FALSE]
@@ -133,7 +137,7 @@ FCF2EV = $\frac{EV}{Free Cash Flow}$
 
 ```{r FCF2EV, echo=FALSE, message = FALSE, warning = FALSE}
 # Reduce Candidates by filtering FCF > 0
-Candidates.df <- Candidates.df[Candidates.df$Ticker %in% names(FCF)[FCF>0],, drop = FALSE]
+# Candidates.df <- Candidates.df[Candidates.df$Ticker %in% names(FCF)[FCF>0],, drop = FALSE]
 Candidates_FCF <- nrow(Candidates.df)
 
 KeyStatistics.list <- YHFinR::getYFKeyStatistics(Candidates.df$Ticker)
@@ -177,7 +181,7 @@ remove("HistPrices.yahoo.list.tmp.rds")
 saveRDS(HistPrices.yahoo.list, "HistPrices.yahoo.list.tmp.rds")
 
 # After that, reduce candidates
-Candidates.df <- Candidates.df[Candidates.df$Ticker %in% names(HistPrices.yahoo.list),, drop = FALSE]
+# Candidates.df <- Candidates.df[Candidates.df$Ticker %in% names(HistPrices.yahoo.list),, drop = FALSE]
 Candidates_Hist <- nrow(Candidates.df)
 
 ```
@@ -198,7 +202,7 @@ PER.df <- unlist(EPS[sapply(EPS, is.numeric)]) %>%
   .[c("Ticker", "PER")]
 
 # Reduce Candidates after PER filter
-Candidates.df <- Candidates.df[Candidates.df$Ticker %in% subset(PER.df, PER > 0 & PER < 40)$Ticker,, drop = FALSE]
+# Candidates.df <- Candidates.df[Candidates.df$Ticker %in% subset(PER.df, PER > 0 & PER < 40)$Ticker,, drop = FALSE]
 Candidates_PER <- nrow(Candidates.df)
 
 ```
@@ -248,15 +252,15 @@ Hold Signal - Neither Buy nor Sell
 # From Daily to Weekly
 HistPrices.wk.list <- lapply(HistPrices.yahoo.xts.list, daily2weekly)
 # Add SMA30 & SMA30 Slope
-HistPrices.wk.ma.list <- lapply(HistPrices.wk.list, addMA)
+HistPrices.wk.ma.list <- lapply(HistPrices.wk.list, function(x) addMA(x, n = min(30, nrow(x) - 1)))
 HistPrices.wk.ma.list <- lapply(HistPrices.wk.ma.list, addMASlope)
 
-Signal.df <- sapply(HistPrices.wk.ma.list, function(obj, thresholdMA_SELL = 0.01, thresholdMA_BUY = 0.09,  thresholdSlope_SELL = -0.2, thresholdSlope_BUY = 0.2) {
-  x <- tail(obj, 1)
-  ifelse(x$adjclose < ((1 -thresholdMA_SELL) * x$MA) & x$MA.Slope < thresholdSlope_SELL, "SELL", 
-         ifelse(x$adjclose < ((1 + thresholdMA_BUY) * x$MA) & x$adjclose > x$MA & x$MA.Slope > thresholdSlope_BUY, "BUY", "HOLD"))
-}) %>%
+Signal.df <- sapply(HistPrices.wk.ma.list, getSignal) %>% 
   .SRformat("Signal")
+
+Slope.df <- sapply(HistPrices.wk.ma.list, function(x) tail(x$MA.Slope, 1)) %>% 
+  .SRformat("Slope")
+
 
 ```
 
@@ -316,6 +320,7 @@ Save output in template
 ```{r Report, echo=FALSE, message = FALSE, warning = FALSE}
 
 Dump <- Summary %>%
+  left_join(Slope.df, by = "Ticker") %>% 
   left_join(ROA.df, by = "Ticker") %>% 
   left_join(FCF2EV.df, by = "Ticker") %>%
   left_join(FCF2D.df, by = "Ticker") %>% 
