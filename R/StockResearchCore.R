@@ -278,11 +278,21 @@ getSignal <- function(obj, thresholdMA_SELL = 0.01, thresholdMA_BUY = 0.09,  thr
 # Utils ----
 
 # Stock Research format
-.SRformat <- function(obj, colname){
-  obj %>% 
-    as.data.frame() %>% 
-    set_colnames(colname) %>% 
-    mutate(Ticker = rownames(.))
+.SRformat <- function(obj, colname, TickerNames = NULL){
+  if(is.null(TickerNames)) {
+    res <- obj %>% 
+      as.data.frame() %>% 
+      set_colnames(colname) %>% 
+      mutate(Ticker = rownames(.))
+    
+  } else {
+    res <- obj %>% 
+      as.data.frame() %>% 
+      set_colnames(colname) %>% 
+      mutate(Ticker = TickerNames)
+    
+  }
+  res
 }
 
 #convertHistPr2xts(HistPrices.yahoo.list$REE.MC)
