@@ -274,6 +274,103 @@ getSignal <- function(obj, thresholdMA_SELL = 0.01, thresholdMA_BUY = 0.09,  thr
          ifelse(x$adjclose < ((1 + thresholdMA_BUY) * x$MA) & x$adjclose > x$MA & x$MA.Slope > thresholdSlope_BUY, "BUY", "HOLD"))
 }
 
+extract_CF <- function(CF) {
+  res <- lapply(CF, function(x) {
+    df <- data.frame(CFOpeAct = .cleanNAs(head(x[[1]]$totalCashFromOperatingActivities$raw, 1)),
+                     CapExp = .cleanNAs(head(x[[1]]$capitalExpenditures$raw, 1)),
+                     stringsAsFactors = FALSE)
+    if (nrow(df) == 1) {
+      df$FCF = df$CFOpeAct + df$CapExp
+    } else {
+      df <- data.frame(CFOpeAct = 0,
+                       CapExp = 0,
+                       FCF = 0)
+    }
+    df
+  } )
+  bind_rows(res, .id = "Ticker")
+}
+
+extract_BS <- function(BS) {
+  res <- lapply(BS, function(x) {
+    df <- data.frame(Debt = .cleanNAs(head(x[[1]]$totalLiab$raw, 1)),
+                     Assets = .cleanNAs(head(x[[1]]$totalAssets$raw, 1)),
+                     Equity = .cleanNAs(head(x[[1]]$totalStockholderEquity$raw, 1)),
+                     Cash = .cleanNAs(head(x[[1]]$cash$raw, 1)),
+                     stringsAsFactors = FALSE)
+    if (nrow(df) != 1) {
+      df <- data.frame(Debt = 0,
+                       Assets = 0,
+                       Equity = 0,
+                       Cash = 0)
+    } 
+    df
+  } )
+  bind_rows(res, .id = "Ticker")
+}
+
+extract_IS <- function(IS) {
+  res <- lapply(IS, function(x) {
+    df <- data.frame(netIncome = .cleanNAs(head(x[[1]]$netIncome$raw, 1)),
+                     Sales = .cleanNAs(head(x[[1]]$totalRevenue$raw, 1)),
+                     stringsAsFactors = FALSE)
+    if (nrow(df) != 1) {
+      df <- data.frame(netIncome = 0,
+                       Sales = 0)
+    } 
+    df
+  } )
+  bind_rows(res, .id = "Ticker")
+}
+
+extract_KS <- function(KS) {
+  res <- lapply(KS, function(x) {
+    df <- data.frame(Shares = .cleanNAs(x$floatShares$raw),
+                     EV = .cleanNAs(x$enterpriseValue$raw, 1),
+                     stringsAsFactors = FALSE)
+    if (nrow(df) != 1) {
+      df <- data.frame(Shares = 0,
+                       EV = 0)
+    } 
+    df
+  } )
+  bind_rows(res, .id = "Ticker")
+}
+
+
+extract_HistPr <- function(HistPr) {
+  res <- lapply(HistPr, function(x) {
+    df <- data.frame(CP = .cleanNAs(tail(x$adjclose, 1)),
+                     StartP = .cleanNAs(head(x$adjclose, 1)),
+                     MinP = .cleanNAs(min(x$adjclose, na.rm = TRUE)),
+                     MaxP = .cleanNAs(max(x$adjclose, na.rm = TRUE)),
+                     Vol = .cleanNAs(mean(x$volume, na.rm = TRUE)),
+                     MA = .cleanNAs(mean(x$adjclose, na.rm = TRUE)),
+                     stringsAsFactors = FALSE)
+    if (nrow(df) == 0) {
+      df <- data.frame(CP = 0,
+                       StartP = 0,
+                       MinP = 0,
+                       MaxP = 0,
+                       Vol = 0,
+                       MA = 0)
+    }
+    df
+  } )
+  bind_rows(res, .id = "Ticker")
+}
+
+
+
+filter6m <- function(HistPr.list) {
+  idx <- sapply(HistPr.list, nrow) %>% unlist() > 252
+  HistPr.f.list <- HistPr.list[idx]
+  Pre6m <- seq(as.Date(tail(HistPr.f.list[[1]]$Date, 1)), length = 2, by = "-6 months")[2]
+  rmOld <- HistPr.f.list[[1]]$Date > Pre6m
+  HistPr.f.6m.list <- lapply(HistPr.f.list, function(x) x[rmOld, ])
+  HistPr.f.6m.list
+}
+
 
 # Utils ----
 
@@ -323,6 +420,7 @@ cleanNArows <- function(HistPrices.yahoo.list) {
 
 
 .cleanNAs  <- function(x, replace = 0) { 
+  x[is.null(x)] <- replace
   x[is.na(x)] <- replace
   x
 } 
