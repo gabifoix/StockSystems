@@ -12,15 +12,20 @@ scrapeYF(Tickers, AppendName)
 
 # EUR ----
 Tickers <- read.csv("MD/CompaniesEUR.20210103.csv", sep = ";", stringsAsFactors = FALSE) %>% 
-  subset(country == "IT", select = c("CompanyName", "tickers"))
+  subset(country != "", select = c("CompanyName", "tickers"))
 Tickers <- Tickers[!duplicated(Tickers, fromLast = TRUE),]
 colnames(Tickers) <- c("CompanyName", "Ticker")
 
-AppendName <- "IT"
-scrapeYF(Tickers, AppendName, Hist = FALSE)
+AppendName <- "EUR"
+scrapeYF(Tickers, AppendName, Hist = TRUE)
 
 
 scrapeYF <- function(Tickers, AppendName, Hist = TRUE) {
+  
+  KeyStats <- YHFinR::getYFKeyStatistics(Tickers$Ticker, block = 100, slp = 10)
+  output_file = paste0('RawData/KeyStats.list_n', length(KeyStats), "_",AppendName, "_", gsub("-", "", Sys.Date()), '.rds')
+  saveRDS(KeyStats, output_file)
+  
   BS <- getYH_qBS(Tickers$Ticker, block = 100, slp = 10)
   output_file = paste0('RawData/BS.list_n', length(BS), "_",AppendName, "_", gsub("-", "", Sys.Date()), '.rds')
   saveRDS(BS, output_file)
@@ -34,7 +39,7 @@ scrapeYF <- function(Tickers, AppendName, Hist = TRUE) {
   saveRDS(CF, output_file)
   
   if (Hist) {
-    HistPrices <- YHFinR::getYFHistPrices(Tickers$Ticker, "5y", "1d", block = 100, slp = 10)
+    HistPrices <- YHFinR::getYFHistPrices(Tickers$Ticker, "2y", "1d", block = 100, slp = 10)
     output_file = paste0('RawData/HistPr.list_n', length(HistPrices), "_",AppendName, "_", gsub("-", "", Sys.Date()), '.rds')
     saveRDS(HistPrices, output_file)
   }
