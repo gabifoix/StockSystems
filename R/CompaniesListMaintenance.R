@@ -1,6 +1,6 @@
 # Data sources
 
-# Euronext: Amsterdam, Brussels, Dublin, Lisbon, London, Milan, Oslo and Paris
+# Euronext: Amsterdam, Brussels, Dublin, Lisbon, London, Oslo and Paris
 # https://live.euronext.com/en/products/equities/list
 
 # NYSE
@@ -30,6 +30,33 @@ require(dplyr)
   
   CompaniesList_new
 }
+
+
+complete_Profile <- function(Tickers.df) {
+  
+  CompProfile <- YHFinR::getYFProfile(Tickers.df$Ticker)
+  
+  Country.df <- data.frame(Reduce(rbind, sapply(CompProfile, function(x) ifelse(is.null(x$country), "NAYF", x$country)))) %>% 
+    set_colnames(c("Country")) %>% 
+    mutate(Ticker = names(CompProfile))
+  
+  Sector.df <- data.frame(Reduce(rbind, sapply(CompProfile, function(x) ifelse(is.null(x$sector), "NAYF", x$sector)))) %>% 
+    set_colnames(c("Sector")) %>% 
+    mutate(Ticker = names(CompProfile))
+  
+  Industry.df <- data.frame(Reduce(rbind, sapply(CompProfile, function(x) ifelse(is.null(x$industry), "NAYF", x$industry)))) %>% 
+    set_colnames(c("Industry")) %>% 
+    mutate(Ticker = names(CompProfile))
+  
+  CompProfile.df <- Tickers.df %>% 
+    left_join(Country.df, by = "Ticker") %>% 
+    left_join(Sector.df, by = "Ticker") %>% 
+    left_join(Industry.df, by = "Ticker")
+  
+  CompProfile.df
+}
+
+
 
 firstNonEmpty <- function(x)  x[which(x != "" & !is.na(x))[1]]
 
@@ -80,4 +107,24 @@ CompaniesEUR_new3 <- .removedupli(CompaniesEUR_new2)
 
 # write.csv2(CompaniesEUR_new3, "CompaniesEUR.20210103.csv", row.names = FALSE)
 
+
+
+Tickers.df <- rbind( read.csv("MD/NYSE.20201010.csv", sep = ",", stringsAsFactors = FALSE),
+                     read.csv("MD/NASDAQ.20201010.csv", sep = ",", stringsAsFactors = FALSE), 
+                     read.delim("MD/AMEX.txt", header = TRUE, sep = "\t", stringsAsFactors = FALSE))  %>% 
+  dplyr::rename(Ticker = Symbol, CompanyName = Description)
+Tickers.df <- Tickers.df[!grepl("[A-Z]-[A-Z]", Tickers.df$Ticker),]
+Tickers.df <- Tickers.df[!grepl("%", Tickers.df$Ticker),]
+
+
+US <- complete_Profile(Tickers.df)
+
+write.csv2(US, "CompaniesUS.20210319.csv")
+
+CompaniesEUR <- read.csv("MD/CompaniesEUR.20210103.csv", sep = ";") %>% 
+  .[,c("CompanyName", "tickers")] %>% 
+  dplyr::rename(Ticker = tickers)
+EUR <- complete_Profile(CompaniesEUR)
+
+write.csv2(EUR, "CompaniesEUR.20210429.csv")
 

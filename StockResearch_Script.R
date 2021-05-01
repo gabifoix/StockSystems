@@ -11,18 +11,22 @@ source('R/StockResearchCore.R')
 # Config ----
 
 Ref_folder <- "Source"
-SearchName <- "US"
 
-Candidates.df <- read.csv("MD/CompaniesUS.20210319.csv", sep = ";", stringsAsFactors = FALSE) %>% 
-  subset(Sector != "NAYF" & Sector != "" ) %>% 
-  .[, c("Ticker", "CompanyName", "Country", "Sector", "Industry")] %>% 
+Candidates.df <- read.csv("MD/CompaniesUS.20210319.csv", sep = ";", stringsAsFactors = FALSE) %>%
+  subset(Sector != "NAYF" & Sector != "" ) %>%
+  .[, c("Ticker", "CompanyName", "Country", "Sector", "Industry")] %>%
   unique()
 
+# Candidates.df <- read.csv("MD/CompaniesEUR.20210429.csv", sep = ";", stringsAsFactors = FALSE) %>%
+#     subset(Sector != "NAYF" & Sector != "" ) %>%
+#     .[, c("Ticker", "CompanyName", "Country", "Sector", "Industry")] %>%
+#     unique()
+  
 
 # Import ----
 Files <- list.files(Ref_folder)
 
-
+FB.list <- readRDS(file.path(Ref_folder, grep("FinBasic.list", Files, value = TRUE)))
 KS.list <- readRDS(file.path(Ref_folder, grep("KeyStats.list", Files, value = TRUE)))
 CF.list <- readRDS(file.path(Ref_folder, grep("CF.list", Files, value = TRUE)))
 BS.list <- readRDS(file.path(Ref_folder, grep("BS.list", Files, value = TRUE)))
@@ -33,6 +37,9 @@ HistPr.list <- readRDS(file.path(Ref_folder, grep("HistPr.list", Files, value = 
 HistPr.f.6m.list <- filter6m(HistPr.list)
 PR <- extract_HistPr(HistPr.f.6m.list)
 rm(HistPr.list)
+
+FB <- extract_FB(FB.list)
+rm(FB.list)
 
 KS <- extract_KS(KS.list)
 rm(KS.list)
@@ -53,22 +60,24 @@ rm(IS.list)
 Base.df <- Candidates.df %>% 
   left_join(PR, by = "Ticker") %>% 
   left_join(KS, by = "Ticker") %>% 
+  left_join(FB, by = "Ticker") %>% 
   left_join(BS, by = "Ticker") %>% 
   left_join(CF, by = "Ticker") %>% 
   left_join(IS, by = "Ticker") %>%
   mutate(MCap = Shares * CP,
          Debts = Debt / CFOpeAct,
-         ROA = netIncome / Assets,
+         ROA = ifelse(returnOnAssets != 0, returnOnAssets, netIncome / Assets),
          FCFyield  = FCF / EV,
-         EPS = netIncome / Shares, 
+         EPS = ifelse(EPS != 0, EPS, netIncome / Shares), 
          PER = CP / EPS,
+         StartP = ifelse(StartP !=0, StartP, CP),
          Pr6m = CP / StartP,
          Signal = ifelse(CP > 0.99 * MA & CP < MA * 1.09, "BUY", "HOLD")) 
     
 # Rank
 Base.df <- Base.df %>% 
   subset(!is.na(MCap) & CP > 0 & PER > 0) %>% 
-  subset(MCap < 2000000000)
+  subset(MCap < 10000000000 & MCap > 500000000)
 
 
 MomentumRank <- Base.df %>% 
@@ -94,7 +103,7 @@ Final <- Final %>%
   arrange(desc(Final_rank))
 
 
-SearchName <- "US_m2000"
+SearchName <- "US_Medium"
 output_file <- paste0('StockResearch/StockResearch_', SearchName, "_", gsub("-", "", Sys.Date()), '.csv')
 write.csv(Final, output_file, row.names = FALSE)
 

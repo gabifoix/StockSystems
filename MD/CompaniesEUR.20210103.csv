@@ -1,1580 +1,1637 @@
-"CompanyName";"tickers";"country";"industry";"ISIN"
-"Covestro";"1COV.DE";"DE";"CHE";"DE0006062144"
-"H+R KGAA  INH. O.N.";"2HRA.DE";"DE";"Chemicals-Chemicals, Specialty";"DE000A2E4T77"
-"4BASEBIO AG  NA O.N.";"4BSB.DE";"DE";"Pharma & Healthcare-Biotechnology";"DE000A2YN801"
-"HENSOLDT AG NA O.N.";"5UH.DE";"DE";"Technology-Semiconductors";"DE000HAG0005"
-"TRATON SE   INH O.N.";"8TRA.DE";"DE";"Industrial-Heavy Machinery";"DE000TRAT0N7"
-"ALL FOR ONE GROUP NA O.N.";"A1OS.DE";"DE";"Software-IT-Services";"DE0005110001"
-"A2A";"A2A.MI";"IT";NA;NA
-"ATRESMEDIA";"A3M.MC";"ES";NA;NA
-"ACCENTRO REAL ESTATE AG  O.N.";"A4Y.DE";"DE";"Financial Services-Real Estate";"DE000A0KFKB3"
-"AMADEUS FIRE AG";"AAD.DE";"DE";"Industrial-Industrial Products & Services";"DE0005093108"
-"AUMANN AG  INH O.N.";"AAG.DE";"DE";"Industrial-Industrial Machinery";"DE000A2DAM03"
-"AHLERS AG NA O.N.";"AAH.DE";"DE";"Consumer-Clothing & Footwear";"DE0005009740"
-"Aalberts";"AALB.AS";"HO";"IND";"NL0000852564"
-"ABENGOA CL.A";"ABG.MC";"ES";NA;NA
-"AB InBev";"ABI.BR";"BE";"FOOD";"BE0974293251"
-"ABN AMRO";"ABN.AS";"HO";"BAN";"NL0011540547"
-"Accor";"AC.PA";"FR";"HOT";"FR0000120404"
-"Crédit Agricole";"ACA.PA";"FR";"BAN";"FR0000045072"
-"Accell Group";"ACCEL.AS";"HO";"SER";"NL0009767532"
-"Aspocomp Group Oyj";"ACG1V.HE";"FI";"IND";"FI0009008080"
-"Ackermans & van Haaren";"ACKB.BR";"BE";"BAN";"BE0003764785"
-"Amsterdam Commodities";"ACOMO.AS";"HO";"FOOD";"NL0000313286"
-"ACS Group";"ACS.MC";"ES";"CON";"ES0167050915"
-"ALZCHEM GROUP AG INH O.N.";"ACT.DE";"DE";"Chemicals-Chemicals, Specialty";"DE000A2YNT30"
-"A.S.CREATION TAPETEN NA";"ACWN.DE";"DE";"Consumer-Home Construction & Furnishings";"DE000A1TNNN5"
-"BET-AT-HOME.COM AG O.N.";"ACX.DE";"DE";"Retail-Retail, Internet";"DE000A0DNAY5"
-"Acerinox";"ACX.MC";"ES";"MAT";"ES0132105018"
-"Ahold Delhaize";"AD.AS";"HO";"FOOD";"NL0011794037"
-"ADLER MODEMAERKTE AG O.N.";"ADD.DE";"DE";"Consumer-Clothing & Footwear";"DE000A1H8MU2"
-"ADLER REAL ESTATE AG";"ADL.DE";"DE";"Financial Services-Real Estate";"DE0005008007"
-"Adidas";"ADS.DE";"DE";"RET";"DE000A1EWWW0"
-"ADVA OPTICAL NETWORKING SE  O.N.";"ADV.DE";"DE";"Technology-Communications Technology";"DE0005103006"
-"Audax Renovables";"ADX.MC";"ES";"UTL";"ES0136463017 "
-"Adyen";"ADYEN.AS";"HO";"SER";"NL0012969182"
-"ADOLFO DOMINGUEZ";"ADZ.MC";"ES";NA;NA
-"Aedifica";"AED.BR";"BE";"INM";"BE0003851681"
-"AEDAS HOMES";"AEDAS.MC";"ES";NA;NA
-"Aena";"AENA.MC";"ES";"AIR";"ES0105046009"
-"Air France–KLM";"AF.PA";"FR";"FLI";"FR0000031122"
-"Afarak Group Oyj";"AFAGR.HE";"FI";"MAT";"FI0009800098"
-"CARL ZEISS MEDITEC AG";"AFX.DE";"DE";"Pharma & Healthcare-Medical Technology";"DE0005313704"
-"Aegon";"AGN.AS";"HO";"INS";"NL0000303709"
-"Ageas";"AGS.BR";"BE";"INS";"BE0974264930"
-"AIRTIFICIAL INTEL STRUCT";"AI.MC";"ES";NA;NA
-"Air Liquide";"AI.PA";"FR";"CHE";"FR0000120073"
-"Airbus";"AIR.PA";"FR";"IND";"NL0000235190"
-"AIXTRON SE NA O.N.";"AIXA.DE";"DE";"Technology-Semiconductors";"DE000A0WMPJ6"
-"Arkema";"AKE.PA";"FR";"CHE";"FR0010313833"
-"Aktia Bank Abp";"AKTIA.HE";"FI";"BAN";"FI4000058870"
-"AkzoNobel";"AKZA.AS";"HO";"CHE";"NL0013267909"
-"CORPORACION FINANCIERA ALBA";"ALB.MC";"ES";NA;NA
-"Ålandsbanken Abp A";"ALBAV.HE";"FI";"BAN";"FI0009000103"
-"Ålandsbanken Abp B";"ALBBV.HE";"FI";"BAN";"FI0009001127"
-"Almirall";"ALM.MC";"ES";"PHA";NA
-"Alma Media Oyj";"ALMA.HE";"FI";"SER";"FI0009013114"
-"ALANTRA PARTNERS S.A.";"ALNT.MC";"ES";NA;NA
-"Alstom";"ALO.PA";"FR";"IND";"FR0010220475"
-"Altia Oyj";"ALTIA.HE";"FI";"RET";"FI4000292438"
-"Altri";"ALTR.LS";"PO";"IND";"PTALT0AE0002"
-"Allianz";"ALV.DE";"DE";"INS";"DE0008404005"
-"Allianz";"ALV.DE ";"DE";"INS";NA
-"Ahlstrom-Munksjö Oyj";"AM1.HE";"FI";"MAT";"FI4000048418"
-"SLM SOLUTIONS GRP AG";"AM3D.DE";"DE";"Industrial-Advanced Industrial Equipment";"DE000A111338"
-"AMPER";"AMP.MC";"ES";NA;NA
-"Amplifon";"AMP.MI";"IT";NA;NA
-"Amadeus IT Group";"AMS.MC";"ES";"TECH";"ES0109067019"
-"Acciona";"ANA.MC";"ES";"CON";"ES0125220311"
-"Andritz AG";"ANDR.VI";"AT";NA;NA
-"ATOSS SOFTWARE AG";"AOF.DE";"DE";"Software-Software";"DE0005104400"
-"Alstria office REIT-AG";"AOX.DE";"DE";"INM";"DE000A0LD2U1"
-"Aperam";"APAM.BR";"BE";"MAT";NA
-"APERAM";"APAM.MC";"ES";NA;NA
-"Apetit Oyj";"APETIT.HE";"FI";"RET";"FI0009003503"
-"APPLUS SERVICES";"APPS.MC";"ES";NA;NA
-"arGEN-X";"ARGX.BR";"BE";"HEALTH";"NL0010832176"
-"Aareal Bank AG";"ARL.DE";"DE";"BAN";"DE0005408116"
-"ARIMA BR";"ARM.MC";"ES";NA;NA
-"ARTNET AG NA O.N.";"ART.DE";"DE";"Retail -Retail, Internet ";"DE000A1K0375"
-"AKASOL AG  INH. O.N.";"ASL.DE";"DE";"Automobile-Auto Parts & Equipment";"DE000A2JNWZ9"
-"ASML Holding";"ASML.AS";"HO";"IND";"NL0010273215"
-"Aspo Oyj";"ASPO.HE";"FI";"IND";"FI0009008072"
-"ASR Nederland";"ASRNL.AS";"HO";"INS";"NL0011872643"
-"Aroundtown SA";"AT1.DE";"DE";"INM";NA
-"Atlantia";"ATL.MI";"IT";"TRANS";NA
-"Atos";"ATO.PA";"FR";"TECH";"FR0000051732"
-"Atria Oyj A";"ATRAV.HE";"FI";"RET";"FI0009006548"
-"AT & S Austria Technologie & Systemtechnik Aktiengesellschaft";"ATS.VI";"AT";NA;NA
-"AVES ONE AG O.N.";"AVES.DE";"DE";"Transportation & Logistics-Transportation Services";"DE000A168114"
-"Avantium";"AVTX.AS";"HO";"CHE";"NL0012047823"
-"AZKOYEN";"AZK.MC";"ES";NA;NA
-"Azimut";"AZM.MI";"IT";"BAN";NA
-"Metro AG";"B4B.DE";"DE";"RET";"DE000BFB0019"
-"METRO AG   VZO O.N.";"B4B3.DE";"DE";"Retail-Retail, Multiline";"DE000BFB0027"
-"BAUER AG";"B5A.DE";"DE";"Construction-Construction & Engineering";"DE0005168108"
-"BIOFRONTERA AG NA O.N.";"B8F.DE";"DE";"Pharma & Healthcare-Biotechnology";"DE0006046113"
-"BORGES";"BAIN.MC";"ES";NA;NA
-"Banco BPM";"BAMI.MI";"IT";"BAN";NA
-"Barco";"BAR.BR";"BE";"IND";"BE0974362940"
-"BASF";"BAS.DE";"DE";"CHE";"DE000BASF111"
-"Basware Oyj";"BAS1V.HE";"FI";"TECH";"FI0009008403"
-"Bayer";"BAYN.DE";"DE";"PHA";"DE000BAY0017"
-"Beter Bed";"BBED.AS";"HO";"RET";"NL0000339703"
-"BBVA";"BBVA.MC";"ES";"BAN";"ES0113211835"
-"Bechtle AG";"BC8.DE";"DE";"TECH";"DE0005158703"
-"Banco Comercial Português";"BCP.LS";"PO";"BAN";"PTBCP0AM0015"
-"BaronDeLey";"BDL.MC";"ES";"FOOD";NA
-"BERTRANDT AG O.N.";"BDT.DE";"DE";"Automobile-Auto Parts & Equipment";"DE0005232805"
-"Beiersdorf";"BEI.DE";"DE";"#N/A";"DE0005200000"
-"Beiersdorf ";"BEI.DE ";"DE";NA;NA
-"Basic-Fit";"BFIT.AS";"HO";"SER";"NL0011872650"
-"BAWAG Group AG";"BG.VI";"AT";NA;NA
-"Banca Generali";"BGN.MI";"IT";"BAN";NA
-"BioMerieux";"BIM.PA";"FR";NA;"FR0013280286"
-"Binckbank";"BINCK.AS";"HO";"BAN";NA
-"BIOTEST AG ST O.N.";"BIO.DE";"DE";"Pharma & Healthcare-Pharmatceuticals";"DE0005227201"
-"BIOSEARCH";"BIO.MC";"ES";NA;NA
-"BIOTEST AG VZ O.N.";"BIO3.DE";"DE";"Pharma & Healthcare-Pharmatceuticals";"DE0005227235"
-"Biohit Oyj B";"BIOBV.HE";"FI";"HEALTH";"FI0009005482"
-"Bittium Oyj";"BITTI.HE";"FI";"TECH";"FI0009007264"
-"BROCKHAUS CAPITAL MGMT ON";"BKHT.DE";"DE";"Technology-Information Technology";"DE000A2GSU42"
-"Bankia";"BKIA.MC";"ES";"BAN";"ES0113307062"
-"Bankinter";"BKT.MC";"ES";"BAN";"ES0113679I37"
-"BERKELEY ENERGIA";"BKY.MC";"ES";NA;NA
-NA;"BMED.MI";"IT";"BAN";NA
-"BMW";"BMW.DE";"DE";"AUT";"DE0005190003"
-"BAY.MOTOREN WERKE  VZO";"BMW3.DE";"DE";"Automobile-Automobile Manufacturers";"DE0005190037"
-"Danone";"BN.PA";"FR";"FOOD";"FR0000120644"
-"B.R.A.I.N. NA";"BNN.DE";"DE";"Chemicals-Chemicals, Specialty";"DE0005203947"
-"BNP Paribas";"BNP.PA";"FR";"BAN";"FR0000131104"
-"Brenntag AG";"BNR.DE";"DE";"CHE";"DE000A1DAHH0"
-"Lucas Bols";"BOLS.AS";"HO";"FOOD";"NL0010998878"
-"Hugo Boss";"BOSS.DE";"DE";"RET";"DE000A1PHFF7"
-"BPER Banca";"BPE.MI";"IT";"BAN";NA
-"Brembo";"BRE.MI";"IT";"AUT";NA
-"Brunel International";"BRNL.AS";"HO";"SER";"NL0010776944"
-"BASLER AG O.N.";"BSL.DE";"DE";"Industrial-Advanced Industrial Equipment";"DE0005102008"
-"BASTEI LUEBBE AG  O.N.";"BST.DE";"DE";"Media-Publishing & Printing";"DE000A1X3YY0"
-"BORUSSIA DORTMUND";"BVB.DE";"DE";"Media-Movies & Entertainment";"DE0005493092"
-"Bureau Veritas";"BVI.PA";"FR";"SER";"FR0006174348"
-"BAYWA AG   NA O.N.";"BYW.DE";"DE";"Industrial -Industrial Products & Services ";"DE0005194005"
-"BAYWA AG VINK.NA. O.N.";"BYW6.DE";"DE";"Industrial -Industrial Products & Services ";"DE0005194062"
-"Buzzi Unicem";"BZU.MI";"IT";"CON";NA
-"COM.CHARG.SOL.AG INH.O.N.";"C0M.DE";"DE";"Industrails -Advanced Industrial Equipment ";"DE000A2QDNX9"
-"Carrefour";"CA.PA";"FR";"FOOD";"FR0000120172"
-"CaixaBank";"CABK.MC";"ES";"BAN";"ES0140609019"
-"CONSTRUCCION Y AUXILIAR DE FER";"CAF.MC";"ES";NA;NA
-"CA Immobilien Anlagen AG";"CAI.VI";"AT";"INM";NA
-"CUOTAS PARTICIPATIVAS CAM";"CAM.MC";"ES";NA;NA
-"ENCAVIS AG  INH. O.N.";"CAP.DE";"DE";"Financial Services-Diversified Financial";"DE0006095003"
-"Capgemini";"CAP.PA";"FR";"TECH";"FR0000125338"
-"CapMan Oyj";"CAPMAN.HE";"FI";"BAN";"FI0009009377"
-"PROSEGUR CASH S.A.";"CASH.MC";"ES";NA;NA
-"Caverion Oyj";"CAV1V.HE";"FI";"IND";"FI4000062781"
-"GRUPO CLINICA BAVIERA";"CBAV.MC";"ES";NA;NA
-"Commerzbank AG";"CBK.DE";"DE";"BAN";"DE000CBK1001"
-"COCA-COLA EUROPEAN PARTNERS";"CCEP.MC";"ES";NA;NA
-"CODERE";"CDR.MC";"ES";NA;NA
-"CROPENERGIES AG";"CE2.DE";"DE";"Industrial-Renewable Energies";"DE000A0LAUP1"
-"CECONOMY AG  ST O.N.";"CEC.DE";"DE";"Retail-Retail, Specialty";"DE0007257503"
-"CECONOMY AG  VZO O.N.";"CEC1.DE";"DE";"Retail-Retail, Specialty";"DE0007257537"
-"CENTROTEC SE  INH O.N.";"CEV.DE";"DE";"Industrial-Industrial Products & Services";"DE0005407506"
-"CEVASA A";"CEV.MC";"ES";NA;NA
-"Cargotec Oyj";"CGCBV.HE";"FI";"IND";"FI0009013429"
-"CIE Automotive";"CIE.MC";"ES";"AUT";"ES0105630315"
-"CLEOP";"CLEO.MC";"ES";NA;NA
-"Cellnex Telecom";"CLNX.MC";"ES";"TECH";"ES0105066007"
-"CORP.EMPRES.MATERIALES CONSTR.";"CMC.MC";"ES";NA;NA
-"CNH Industrial";"CNHI.MI";"IT";"IND";NA
-"Cofinimmo";"COFB.BR";"BE";"INM";"BE0003593044"
-"CANCOM SE O.N.";"COK.DE";"DE";"Software-IT-Services";"DE0005419105"
-"Inmobiliaria Colonial";"COL.MC";"ES";"INM";"ES0139140174"
-"Colruyt";"COLR.BR";"BE";"RET";"BE0974256852"
-"Continental";"CON.DE";"DE";"#N/A";"DE0005439004"
-"Continental";"CON.DE ";"DE";"AUT";NA
-"Consti Oyj";"CONSTI.HE";"FI";"IND";"FI4000178256"
-"COMPUGROUP MED. NA O.N.";"COP.DE";"DE";"Software-Software";"DE000A288904"
-"Corticeira Amorim";"COR.LS";"PO";"FOOD";"PTCOR0AE0006"
-"Covivo";"COV.PA";"FR";NA;"FR0000064578"
-"Campari";"CPR.MI";"IT";"FOOD";NA
-"CAPSENSIXX AG  INH O.N.";"CPX.DE";"DE";"Financial Services-Diversified Financial";"DE000A2G9M17"
-"CRH";"CRG.IR";"IR";"CONS";"IE0001827041"
-"AXA";"CS.PA";"FR";"INS";"FR0000120628"
-"CENIT AG O.N.";"CSH.DE";"DE";"Software-IT-Services";"DE0005407100"
-"CREDITSHELF AG  IA O.N.";"CSQ.DE";"DE";"Financial Services-Diversified Financial";"DE000A2LQUA5"
-"Componenta Oyj";"CTH1V.HE";"FI";"IND";"FI0009010110"
-"CTT Correios de Portugal";"CTT.LS";"PO";"TRANS";"PTCTT0AM0001"
-"Citycon Oyj";"CTY1S.HE";"FI";"BAN";"FI4000369947"
-"CEWE STIFTUNG KGAA  O.N.";"CWC.DE";"DE";"Consumer-Leisure ";"DE0005403901"
-"Daimler";"DAI.DE";"DE";"#N/A";"DE0007100000"
-"DATA MODUL AG O.N.";"DAM.DE";"DE";"Technology-Electronic Components & Hardware";"DE0005498901"
-"Deutsche Börse";"DB1.DE";"DE";"#N/A";"DE0005810055"
-"Deutsche Borse AG";"DB1.DE ";"DE";NA;NA
-"DT.BETEILIG.AG   NA O.N.";"DBAN.DE";"DE";"Financial Services-Private Equity & Venture Capital";"DE000A1TNUT7"
-"DIEBOLD NIXDORF DL 1,25";"DBD.DE";"DE";"Technology-Electronic Components & Hardware";"US2536511031"
-"DEUTSCHEBANK";"DBK.DE";"DE";"BAN";"DE0005140008"
-"Deutsche EuroShop AG";"DEQ.DE";"DE";"INM";"DE0007480204"
-"DESARROLLOS ESPECIALES DE SIST";"DESA.MC";"ES";NA;NA
-"DELTICOM AG  NA O.N.";"DEX.DE";"DE";"Retail-Retail, Internet";"DE0005146807"
-"DEUTZ AG O.N.";"DEZ.DE";"DE";"Industrial-Industrial Machinery";"DE0006305006"
-"DFV DEUTSCHE FAMILIENVERSICHERUNG  O.N.";"DFV.DE";"DE";"Insurance-Insurance";"DE000A2NBVD5"
-"Vinci";"DG.PA";"FR";"CON";"FR0000125486"
-"Delivery Hero SE";"DHER.DE";"DE";"FOOD";"DE000A2E4K43"
-"DIA";"DIA.MC";"ES";NA;NA
-"Diasorin";"DIA.MI";"IT";"SUP";NA
-"Digia Oyj";"DIGIA.HE";"FI";"TECH";"FI0009007983"
-"Digitalist Group Oyj";"DIGIGR.HE";"FI";"TECH";"FI0009008007"
-"DEUTSCHE KONSUM REIT-AG";"DKG.DE";"DE";"Financial Services-Real Estate";"DE000A14KRD3"
-"DIALOG SEMICONDUCTOR PLC   LS-,10";"DLG.DE";"DE";"Technology-Semiconductors";"GB0059822006"
-"De'Longhi S.p.A ";"DLG.MI";"IT";NA;NA
-"DERMAPHARM HOLDING INH O.N.";"DMP.DE";"DE";"Pharma & Healthcare-Pharmaceuticals";"DE000A2GS5D8"
-"DEMIRE DEUTSCHE MITTELSTAND REAL ESTATE AG";"DMRE.DE";"DE";"Financial Services-Real Estate";"DE000A0XFSF0"
-"DO & CO Aktiengesellschaft";"DOC.VI";"AT";NA;NA
-"GLOBAL DOMINION ACCESS";"DOM.MC";"ES";NA;NA
-"Dovre Group Oyj";"DOV1V.HE";"FI";"IND";"FI0009008098"
-"Deutsche Post";"DPW.DE";"DE";"TRANS";"DE0005552004"
-"1&1 Drillisch";"DRI.DE";"DE";"COM";"DE0005545503"
-"Dragerwerk";"DRW3.DE";"DE";"HEALTH";"DE0005550636"
-"DRAEGERWERK ST.A.O.N.";"DRW8.DE";"DE";"Pharma & Healthcare-Medical Technology";"DE0005550602"
-"DSM";"DSM.AS";"HO";"CHE";"NL0000009827"
-"Dassault Systèmes";"DSY.PA";"FR";"TECH";"FR0000130650"
-"DeutscheTelekom";"DTE.DE";"DE";"COM";"DE0005557508"
-"Dürr AG";"DUE.DE";"DE";"AUT";"DE0005565204"
-"DEUTSCHE WOHNEN";"DWNI.DE";"DE";"INM";"DE000A0HN5C6"
-"DWS GROUP GMBH+CO.KGAA ON";"DWS.DE";"DE";"Financial Services-Diversified Financial";"DE000DWS1007"
-"ECOTEL COMMUNICATION AG";"E4C.DE";"DE";"Telecommunication-Fixed-Line Telecommunication";"DE0005854343"
-"EAB Group Oyj";"EAB.HE";"FI";"BAN";"FI4000157441"
-"AMREST HOLDINGS";"EAT.MC";"ES";NA;NA
-"EBRO FOODS";"EBRO.MC";"ES";NA;NA
-"Erste Group Bank AG";"EBS.VI";"AT";NA;NA
-"LUDW.BECK A.RATHAUSECK";"ECK.DE";"DE";"Retail-Retail, Multiline";"DE0005199905"
-"ERCROS";"ECR.MC";"ES";NA;NA
-"EPIGENOMICS AG NA O.N.";"ECX.DE";"DE";"Pharma & Healthcare-Biotechnology";"DE000A11QW50"
-"Edenred";"EDEN.PA";"FR";"BAN";"FR0010908533"
-"Edenred SA ";"EDEN.PA ";"FR";NA;NA
-"EDF";"EDF.PA";"FR";"UTL";"FR0010242511"
-"Energias de Portugal";"EDP.LS";"PO";"UTL";"PTEDP0AM0009"
-"EDP Renováveis";"EDPR.LS";"PO";"UTL";"ES0127797019"
-"EDREAMS ODIGEO";"EDR.MC";"ES";NA;NA
-"Mota-Engil";"EGL.LS";"PO";"CON";"PTMEN0AE0005"
-"Essilor International ";"EI.PA";"FR";"LUX";NA
-"EINHELL GERMANY VZO O.N.";"EIN3.DE";"DE";"Consumer-Home Construction & Furnishings";"DE0005654933"
-"EUSKALTEL";"EKT.MC";"ES";NA;NA
-"Essilor";"EL.PA";"FR";"HEALTH";"FR0000121667"
-"ELUMEO SE";"ELB.DE";"DE";"Retail-Retail, Internet";"DE000A11Q059"
-"Endesa";"ELE.MC";"ES";"UTL";"ES0130670112"
-"Elecster Oyj A";"ELEAV.HE";"FI";"IND";"FI0009900658"
-"ELMOS SEMICONDUCTOR INH O.N.";"ELG.DE";"DE";"Technology-Semiconductors";"DE0005677108"
-"Elisa Oyj";"ELISA.HE";"FI";"COM";"FI0009007884"
-"Bouygues";"EN.PA";"FR";"CON";"FR0000120503"
-"ENCE";"ENC.MC";"ES";"IND";"ES0130625512"
-"Endomines";"ENDOM.HE";"FI";"MAT";"SE0008294334"
-"Enedo Oyj";"ENEDO.HE";"FI";"IND";"FI4000415252"
-"Enel";"ENEL.MI";"IT";"UTL";NA
-"Enento Group Oyj";"ENENTO.HE";"FI";"BAN";"FI4000123195"
-"Enagás";"ENG.MC";"ES";"UTL";"ES0130960018"
-"Engie";"ENGI.PA";"FR";"UTL";"FR0010208488"
-"ENGI";"ENGI.PA ";"FR";"OIL";NA
-"Eni";"ENI.MI";"IT";"OIL";NA
-"ELECNOR";"ENO.MC";"ES";NA;NA
-"SIEMENS ENERGY AG NA O.N.";"ENR.DE";"DE";"Industrial-Industrial";"DE000ENER6Y0"
-"Faurecia";"EO.PA";"FR";"AUT";"FR0000121147"
-"E.ON";"EOAN.DE";"DE";"UTL";"DE000ENAG999"
-"E.ON";"EOAN.DE ";"DE";NA;NA
-"eQ Oyj";"EQV1V.HE";"FI";"BAN";"FI0009009617"
-"Etteplan Oyj";"ETTE.HE";"FI";"IND";"FI0009008650"
-"EURONAV";"EURN.BR";"BE";"OIL";"BE0003816338"
-"ECKERT+ZIEGLER AG O.N.";"EUZ.DE";"DE";"Pharma & Healthcare-Medical Technology";"DE0005659700"
-"CTS Eventim";"EVD.DE";"DE";"BAN";"DE0005470306"
-"Evonik Industries";"EVK.DE";"DE";"CHE";"DE000EVNK013"
-"Evli Pankki Oyj";"EVLI.HE";"FI";"BAN";"FI4000170915"
-"Evotec";"EVT.DE";"DE";"HEALTH";"DE0005664809"
-"Exel Composites Oyj";"EXL1V.HE";"FI";"IND";"FI0009007306"
-"Exor";"EXO.MI";"IT";"BAN";NA
-"GRUPO EZENTIS SA";"EZE.MC";"ES";NA;NA
-"SFC ENERGY AG";"F3C.DE";"DE";"Industrial-Renewable Energies";"DE0007568578"
-"Faes Farma";"FAE.MC";"ES";"PHA";"ES0134950F36"
-"Fagron";"FAGR.AS";"HO";"HEALTH";NA
-"FinecoBank";"FBK.MI";"IT";"BAN";NA
-"Fiat Chrysler Automobiles";"FCA.MI";"IT";"AUT";NA
-"FOMENTO DE CONSTRUCCIONES";"FCC.MC";"ES";NA;NA
-"FLUIDRA";"FDR.MC";"ES";NA;NA
-"Ferrovial";"FER.MC";"ES";"CON";"ES0118900010"
-"FORTEC ELEKTRO. O.N.";"FEV.DE";"DE";"Technology-Electronic Components & Hardware";"DE0005774103"
-"Forfarmers";"FFARM.AS";"HO";"MAT";"NL0011832811"
-"Eiffage";"FGR.PA";"FR";"CON";"FR0000130452"
-"Finnair Oyj";"FIA1S.HE";"FI";"SER";"FI0009003230"
-"Finnair Oyj Uudet 2020";"FIA1SN0120.HE";"FI";"SER";"FI4000440128"
-"Fielmann";"FIE.DE";"DE";"MAT";"DE0005772206"
-"Fresenius Medical Care";"FME.DE";"DE";"HEALTH";"DE0005785802"
-"Fresenius Medical Care  ";"FME.DE ";"DE";"HEALTH";NA
-"Freenet AG";"FNTN.DE";"DE";"COM";"DE000A0Z2ZZ5"
-"Fortum Oyj";"FORTUM.HE";"FI";"UTL";"FI0009007132"
-"Total";"FP.PA";"FR";"OIL";"FR0000120271"
-"Fuchs Petrolub SE";"FPE.DE";"DE";"CHE";"DE0005790406"
-"Fuchs Petrolub SE";"FPE3.DE";"DE";"CHE";"DE0005790430"
-"FRANCOTYP-POSTALIA HLDG";"FPH.DE";"DE";"Industrial-Industrial Machinery";"DE000FPH9000"
-"Valeo SA";"FR.PA";"FR";"AUT";"FR0013176526"
-"Fraport AG";"FRA.DE";"DE";"AIR";"DE0005773303"
-"Fresenius";"FRE.DE";"DE";"HEALTH";"DE0005785604"
-"F-Secure Oyj";"FSC1V.HE";"FI";"TECH";"FI0009801310"
-"Fiskars Oyj Abp";"FSKRS.HE";"FI";"RET";"FI0009000400"
-"FLATEXDEGIRO AG  NA O.N.";"FTK.DE";"DE";"Financial Services-Securities Brokers";"DE000FTG1111"
-"GENERALLI";"G.MI";"IT";"INS";NA
-"GEA Group";"G1A.DE";"DE";"IND";"DE0006602006"
-"Scout24 AG";"G24.DE";"DE";"SER";"DE000A12DM80"
-"Galp Energia";"GALP.LS";"PO";"OIL";"PTGAL0AM0009"
-"GENERAL DE ALQUILER DE MAQUINA";"GALQ.MC";"ES";NA;NA
-"Siemens Gamesa Renewable Energy";"GAM.MC";"ES";"IND";NA
-"Gambero Rosso SpA";"GAMB.MI";"IT";NA;NA
-"GASNATURAL";"GAS.MC";"ES";"UTL";NA
-"BILFINGER SE O.N.";"GBF.DE";"DE";"Industrial -Industrial Products & Services ";"DE0005909006"
-"GBL";"GBLB.BR";"BE";"BAN";"BE0003797140"
-"GRUPO CATALANA OCCIDENTE";"GCO.MC";"ES";NA;NA
-"GESTAMP";"GEST.MC";"ES";"AUT";NA
-"Getlink";"GET.PA";"FR";"IND";"FR0010533075"
-"Gecina";"GFC.PA";"FR";"INM";"FR0010040865"
-"GFT TECHNOLOGIES SE";"GFT.DE";"DE";"Software-IT-Services";"DE0005800601"
-"GIGASET AG O.N.";"GGS.DE";"DE";"Technology -Communications Technology ";"DE0005156004"
-"GK SOFTWARE  INH O.N.";"GKS.DE";"DE";"Software-Software";"DE0007571424"
-"Glaston Oyj Abp";"GLA1V.HE";"FI";"IND";"FI4000369657"
-"Société Générale";"GLE.PA";"FR";"BAN";"FR0000130809"
-"GRENKE AG NA O.N.";"GLJ.DE";"DE";"Financial Services-Diversified Financial ";"DE000A161N30"
-"Galapagos";"GLPG.AS";"HO";"HEALTH";"BE0003818359"
-"Galapagos";"GLPG.BR";"BE";"HEALTH";NA
-"GERATHERM O.N.";"GME.DE";"DE";"Pharma & Healthcare-Medical Technology";"DE0005495626"
-"GRAMMER AG O.N.";"GMM.DE";"DE";"Automobile-Auto Parts & Equipment";"DE0005895403"
-"GRENERGY RENOVABLES";"GRE.MC";"ES";NA;NA
-"Grifols";"GRF.MC";"ES";"PHA";"ES0171996087"
-"GRIFOLS CL.B";"GRF.P.MC";"ES";NA;NA
-"GESCO AG NA O.N.";"GSC1.DE";"DE";"Industrial-Industrial, Diversified";"DE000A1K0201"
-"GRUPO EMPRESARIAL SAN JOSE";"GSJ.MC";"ES";NA;NA
-"GATEWAY R.EST.AG O.N.";"GTY.DE";"DE";"Financial Services-Real Estate";"DE000A0JJTG7"
-"Gerresheimer";"GXI.DE";"DE";"HEALTH";"DE000A0LD6E6"
-"Grand City Properties";"GYC.DE";"DE";"INM";NA
-"HOME24 SE  INH O.N.";"H24.DE";"DE";"Retail-Retail, Internet";"DE000A14KEB5"
-"HAMBORNER REIT AG O.N.";"HAB.DE";"DE";"Financial Services-Real Estate";"DE0006013006"
-"Harvia Oyj";"HARVIA.HE";"FI";"RET";"FI4000306873"
-"HAWESKO HOLDING  INH O.N.";"HAW.DE";"DE";"Retail-Retail, Food & Drug";"DE0006042708"
-"HORNBACH HOLDING ST O.N.";"HBH.DE";"DE";"Retail-Retail, Specialty";"DE0006083405"
-"HORNBACH BAUMARKT AG O.N.";"HBM.DE";"DE";"Retail-Retail, Specialty";"DE0006084403"
-"HEIDELBERGER DRUCKMASCHINEN .O.N.";"HDD.DE";"DE";"Industrial-Industrial Machinery";"DE0007314007"
-"Hunter Douglas";"HDG.AS";"HO";"RET";"ANN4327C1220"
-"HeidelbergCement";"HEI.DE";"DE";"CON";"DE0006047004"
-"HeidelbergCement AG ";"HEI.DE ";"DE";NA;NA
-"Heineken";"HEIA.AS";"HO";"FOOD";"NL0000009165"
-"Heijmans";"HEIJM.AS";"HO";"CON";"NL0009269109"
-"HENKEL AG+CO.KGAA ST O.N.";"HEN.DE";"DE";"Consumer-Personal Products";"DE0006048408"
-"Henkel";"HEN3.DE";"DE";"IND";"DE0006048432"
-"Henkel AG & Co. KGaA ";"HEN3.DE ";"DE";NA;NA
-"HELLOFRESH SE  INH O.N.";"HFG.DE";"DE";"Retail-Retail, Internet";"DE000A161408"
-"HAMBURGER HAFEN UND LOGISTIK A-SP NA";"HHFA.DE";"DE";"Transportation & Logistics-Transportation Services";"DE000A0S8488"
-"HKScan Oyj A";"HKSAV.HE";"FI";"RET";"FI0009006308"
-"HAPAG-LLOYD AG NA O.N.";"HLAG.DE";"DE";"Transportation & Logistics-Logistics";"DE000HLAG475"
-"Hella KGaA Hueck & Co.";"HLE.DE";"DE";"AUT";"DE000A13SX22"
-"DR. HOENLE AG O.N.";"HNL.DE";"DE";"Industrial-Advanced Industrial Equipment";"DE0005157101"
-"Hannover Rück SE";"HNR1.DE";"DE";"INS";"DE0008402215"
-"Thales";"HO.PA";"FR";"IND";"FR0000121329"
-"HOLIDAYCHECK GROUP AG";"HOC.DE";"DE";"Software-Internet";"DE0005495329"
-"NEINOR HOMES";"HOME.MC";"ES";NA;NA
-"Honkarakenne Oyj B";"HONBS.HE";"FI";"RET";"FI0009900104"
-"Hochtief";"HOT.DE";"DE";"CON";"DE0006070006"
-"Huhtamäki Oyj";"HUH1V.HE";"FI";"IND";"FI0009000459"
-"HYPOPORT SE  NA O.N.";"HYQ.DE";"DE";"Financial Services-Diversified Financial";"DE0005493365"
-"IAG";"IAG.MC";"ES";"FLI";"ES0177542018"
-"Iberdrola";"IBE.MC";"ES";"UTL";"ES0144580Y14"
-"IBERPAPEL GESTION";"IBG.MC";"ES";NA;NA
-"Ibersol";"IBS.LS";"PO";"SER";"PTIBS0AM0008"
-"Incap Oyj";"ICP1V.HE";"FI";"IND";"FI0009006407"
-"ICT Group";"ICT.AS";"HO";"TECH";"NL0000359537"
-"Indra";"IDR.MC";"ES";"TECH";"ES0118594417"
-"Innofactor Plc";"IFA1V.HE";"FI";"TECH";"FI0009007637"
-"Infineon Technologies";"IFX.DE";"DE";"IND";"DE0006231004"
-"Italgas";"IG.MI";"IT";"UTL";NA
-"Innogy SE";"IGY.DE";"DE";"UTL";NA
-"IMMOFINANZ AG";"IIA.VI";"AT";"INS";NA
-"Ilkka-Yhtymä Oyj 2";"ILK2S.HE";"FI";"SER";"FI0009800205"
-"MEDIOS AG  O.N.";"ILM1.DE";"DE";"Pharma & Healthcare-Pharmatceuticals";"DE000A1MMCC8"
-"IMCD";"IMCD.AS";"HO";"CHE";"NL0010801007"
-"Ingenico";"ING.PA";"FR";"IND";NA
-"ING Group";"INGA.AS";"HO";"BAN";"NL0011821202"
-"ING Group";"INGA.BR";"BE";"BAN";NA
-"INDUS HOLDING AG";"INH.DE";"DE";"Industrial -Industrial, Diversified";"DE0006200108"
-"INSTONE REAL ESTATE GROUP O.N.";"INS.DE";"DE";"Financial Services-Real Estate";"DE000A2NBX80"
-"Investors House Oyj";"INVEST.HE";"FI";"BAN";"FI0009900559"
-"Ipsen";"IPN.PA";"FR";NA;"FR0010259150"
-"INTICA SYSTEMS AG";"IS7.DE";"DE";"Technology-Electronic Components & Hardware";"DE0005874846"
-"INTERSHOP COMMUNICATIONS INH O.N.";"ISH2.DE";"DE";"Software-Internet";"DE000A254211"
-"Intesa Sanpaolo";"ISP.MI";"IT";"BAN";NA
-"ISRA VISION O.N.";"ISR.DE";"DE";"Software-Software";"DE0005488100"
-"INMOBILIARIA DEL SUR";"ISUR.MC";"ES";NA;NA
-"Inditex";"ITX.MC";"ES";"RET";"ES0148396007"
-"KAP AG  INH O.N.";"IUR.DE";"DE";"Financial Services-Diversified Financial";"DE0006208408"
-"IVU TRAFFIC TECHN.AG O.N.";"IVU.DE";"DE";"Software-IT-Services";"DE0007448508"
-"INVISION AG";"IVX.DE";"DE";"Software-Software";"DE0005859698"
-"INIT INNOVATION O.N.";"IXX.DE";"DE";"Technology-Electronic Components & Hardware";"DE0005759807"
-"DEUTSCHE INDUSTRIE REIT-AG INH O.N.";"JB7.DE";"DE";"Financial Services-Real Estate";"DE000A2G9LL1"
-"JENOPTIK AG  NA O.N.";"JEN.DE";"DE";"Industrial-Advanced Industrial Equipment";"DE000A2NB601"
-"Jerónimo Martins";"JMT.LS";"PO";"RET";"PTJMT0AE0001"
-"JOST WERKE AG INH.   O.N.";"JST.DE";"DE";"Automobile-Auto Parts & Equipment";"DE000JST4000"
-"Jungheinrich Aktiengesellschaft";"JUN3.DE";"DE";"Industrial-Industrial Machinery";"DE0006219934"
-"Juventus Football Club";"JUVE.MI";"IT";NA;NA
-"Kas Bank";"KA.AS";"HO";"BAN";NA
-"Kamux Oyj";"KAMUX.HE";"FI";"SER";"FI4000206750"
-"KBC";"KBC.BR";"BE";"BAN";"BE0003565737"
-"KBC Group NV ";"KBC.BR ";"BE";NA;NA
-"Knorr-Bremse ";"KBX.DE";"DE";"AUT";"DE000KBX1006"
-"KLOECKNER + CO SE NA O.N.";"KCO.DE";"DE";"Industrial-Industrial Products & Services";"DE000KC01000"
-"Konecranes Oyj";"KCR.HE";"FI";"IND";"FI0009005870"
-"Kiadis";"KDS.AS";"HO";"HEALTH";"NL0011323407"
-"Kesla Oyj A";"KELAS.HE";"FI";"IND";"FI0009900237"
-"Kemira Oyj";"KEMIRA.HE";"FI";"MAT";"FI0009004824"
-"Kendrion";"KENDR.AS";"HO";"IND";"NL0000852531"
-"Kering";"KER.PA";"FR";"RET";"FR0000121485"
-"Kesko Oyj A";"KESKOA.HE";"FI";"SER";"FI0009007900"
-"Kesko Oyj B";"KESKOB.HE";"FI";"SER";"FI0009000202"
-"KION Group";"KGX.DE";"DE";"MAT";"DE000KGX8881"
-"Natixis";"KN.PA";"FR";"BAN";"FR0000120685"
-"KONE Oyj";"KNEBV.HE";"FI";"IND";"FI0009013403"
-"Kojamo Oyj";"KOJAMO.HE";"FI";"BAN";"FI4000312251"
-"KPN";"KPN.AS";"HO";"COM";"NL0000009082"
-"KRONES AG O.N.";"KRN.DE";"DE";"Industrial-Industrial Machinery";"DE0006335003"
-"Kingspan Group";"KRX.IR";"IR";"CONS";"IE0004927939"
-"Kerry Group";"KRZ.IR";"IR";"FOOD";"IE0004906560"
-"KPS AG NA O.N.";"KSC.DE";"DE";"Software-IT-Services ";"DE000A1A6V48"
-"Keskisuomalainen Oyj A";"KSLAV.HE";"FI";"SER";"FI0009007546"
-"KNAUS TABBERT AG NA O.N.";"KTA.DE";"DE";"Automobile-Automobile Manufacturers";"DE000A2YN504"
-"Kapsch TrafficCom";"KTCG.VI";"AT";"TECH";NA
-"KUKA AG";"KU2.DE";"DE";"Industrial-Industrial Machinery";"DE0006204407"
-"VolkerWessels";"KVW.AS";"HO";"CON";NA
-"KWS SAAT KGAA  INH O.N.";"KWS.DE";"DE";"Industrial-Industrial Products & Services";"DE0007074007"
-"Lassila & Tikanoja Oyj";"LAT1V.HE";"FI";"IND";"FI0009010854"
-"LIBERBANK";"LBK.MC";"ES";NA;NA
-"Leonardo";"LDO.MI";"IT";"IND";NA
-"LEG Immobilien";"LEG.DE";"DE";"INM";"DE000LEG1110"
-"Lehto Group Oyj";"LEHTO.HE";"FI";"IND";"FI4000081138"
-"LEIFHEIT AG O.N.";"LEI.DE";"DE";"Consumer-Household Appliances & Housewares";"DE0006464506"
-"LEONI AG NA O.N.";"LEO.DE";"DE";"Automobile-Auto Parts & Equipment";"DE0005408884"
-"LINGOTES";"LGT.MC";"ES";"IND";NA
-"LUFTHANSA AG VNA O.N.";"LHA.DE";"DE";"Transportation & Logistics-Airlines";"DE0008232125"
-"Lufthansa ";"LHA.DE ";"DE";"FLI";NA
-"Klépierre";"LI.PA";"FR";"INM";"FR0000121964"
-"Linde";"LIN.DE";"DE";"IND";NA
-"Lindle";"LIN.DE ";"DE";"INS";NA
-"SIXT LEASING O.N.";"LNSX.DE";"DE";"Financial Services-Diversified Financial";"DE000A0DPRE6"
-"Lenzing Aktiengesellschaft";"LNZ.VI";"AT";NA;NA
-"Compañía de Distribución Integral Logista Holdings";"LOG.MC";"ES";"TRANS";NA
-"DEAG DEUTSCHE ENTERTAINMENT AG O.N.";"LOUD.DE";"DE";"Media-Movies & Entertainment";"DE000A0Z23G6"
-"LPKF LASER+ELECTRONICS";"LPK.DE";"DE";"Industrial-Advanced Industrial Equipment";"DE0006450000"
-"Legrand";"LR.PA";"FR";"IND";"FR0010307819"
-"LAR ESPANA REAL ESTATE SOCIMI";"LRE.MC";"ES";NA;NA
-"Lanxess AG";"LXS.DE";"DE";"CHE";"DE0005470405"
-"MANZ AG";"M5Z.DE";"DE";"Industrial-Advanced Industrial Equipment";"DE000A0JQ5U3"
-"Mapfre";"MAP.MC";"ES";"INS";"ES0124244E34"
-"Martela Oyj A";"MARAS.HE";"FI";"RET";"FI0009900385"
-"Mediobanca";"MB.MI";"IT";"BAN";NA
-"MBB SE O.N.";"MBB.DE";"DE";"Industrial-Industrial, Diversified";"DE000A0ETBQ4"
-"LVMH";"MC.PA";"FR";"RET";"FR0000121014"
-"MIQUEL Y COSTAS MIQUEL";"MCM.MC";"ES";NA;NA
-"DURO FELGUERA";"MDF.MC";"ES";NA;NA
-"MEDIGENE AG NA O.N.";"MDG1.DE";"DE";"Pharma & Healthcare-Biotechnology";"DE000A1X3W00"
-"MEDICLIN AG";"MED.DE";"DE";"Pharma & Healthcare-Health Care";"DE0006595101"
-"Meliá Hotels";"MEL.MC";"ES";"HOT";"ES0176252718"
-"Metro AG";"MEO.VI";"AT";"SUP";NA
-"Metsä Board Oyj A";"METSA.HE";"FI";"MAT";"FI0009000640"
-"Metsä Board Oyj B";"METSB.HE";"FI";"MAT";"FI0009000665"
-"Michelin";"ML.PA";"FR";"AUT";"FR0000121261"
-"MLP SE  INH. O.N.";"MLP.DE";"DE";"Financial Services-Diversified Financial";"DE0006569908"
-"Mayr-Melnhof Karton AG";"MMK.VI";"AT";NA;NA
-"Marimekko Oyj";"MMO1V.HE";"FI";"RET";"FI0009007660"
-"Metso Outotec Oyj";"MOCORP.HE";"FI";"IND";"FI0009014575"
-"Moncler";"MONC.MI";"IT";"RET";NA
-"MorphoSys";"MOR.DE";"DE";"HEALTH";"DE0006632003"
-"Merck";"MRK.DE";"DE";"PHA";"DE0006599905"
-"Merk";"MRK.DE ";"DE";"PHA";NA
-"Merlin Properties";"MRL.MC";"ES";"INM";"ES0105025003"
-"ArcelorMittal";"MT.AS";"FR";"MAT";NA
-"ArcelorMittal";"MT.AS";"HO";"MAT";"LU1598757687"
-"MONTEBALITO";"MTB.MC";"ES";NA;NA
-"ArcelorMittal";"MTS.MC";"ES";"MAT";"LU1598757687"
-"MTU";"MTX.DE";"DE";"IND";"DE000A0D9PT0"
-"Musti Group Oyj";"MUSTI.HE";"FI";"SER";"FI4000410758"
-"Munich Re";"MUV2.DE";"DE";"INS";"DE0008430026"
-"MunichRe";"MUV2.DE ";"DE";"INS";NA
-"METROVACESA";"MVC.MC";"ES";NA;NA
-"MVV ENERGIE AG NA O.N.";"MVV1.DE";"DE";"Utilities-Multi-Utilities";"DE000A0H52F5"
-"MAX AUTOMATION SE NA O.N.";"MXHN.DE";"DE";"Industrial-Industrial, Diversified";"DE000A2DA588"
-"MASTERFLEX O.N.";"MZX.DE";"DE";"Industrial-Industrial Products & Services";"DE0005492938"
-"Novabase";"NBA.LS";"PO";"TECH";"PTNBA0AM0006"
-"Nordea Bank Abp";"NDA-FI.HE";"FI";"BAN";"FI4000297767"
-"Aurubis AG";"NDA.DE";"DE";"MAT";"DE0006766504"
-"NORDEX SE O.N.";"NDX1.DE";"DE";"Industrial-Renewable Energies";"DE000A0D6554"
-"NICOLAS CORREA";"NEA.MC";"ES";NA;NA
-"Nedap";"NEDAP.AS";"HO";"IND";"NL0000371243"
-"Neles Oyj";"NELES.HE";"FI";"IND";"FI4000440664"
-"Nemetschek";"NEM.DE";"DE";"SER";"DE0006452907"
-"Neo Industrial Oyj";"NEO1V.HE";"FI";"IND";"FI0009800296"
-"Neste Oyj";"NESTE.HE";"FI";"OIL";"FI0009013296"
-"NFON AG  INH O.N.";"NFN.DE";"DE";"Telecommunication-Wireless Telecommunication";"DE000A0N4N52"
-"NH HOTELES";"NHH.MC";"ES";NA;NA
-"Nixu Oyj";"NIXU.HE";"FI";"TECH";"FI0009008387"
-"Nurminen Logistics Oyj";"NLG1V.HE";"FI";"IND";"FI0009900187"
-"NN Group";"NN.AS";"HO";"INS";"NL0010773842"
-"NN";"NN.AS ";"HO";NA;NA
-"Norma Group";"NOEJ.DE";"DE";"SER";"DE000A1H8BV3"
-"NoHo Partners Oyj";"NOHO.HE";"FI";"SER";"FI4000064332"
-"Nokia Oyj";"NOKIA.HE";"FI";"TECH";"FI0009000681"
-"NOS";"NOS.LS";"PO";"MED";"PTZON0AM0006"
-"NSI NV";"NSI.AS";"HO";"RET";"NL0012365084"
-"Audi";"NSU.DE";"DE";"AUT";NA
-"Naturgy";"NTGY.MC";"ES";"UTL";"ES0116870314"
-"NATURHOUSE HEALTH";"NTH.MC";"ES";NA;NA
-"The Navigator Company";"NVG.LS";"PO";"MAT";"PTPTI0AM0006"
-"NEW WORK SE  NA O.N.";"NWO.DE";"DE";"Software-Internet";"DE000NWRK013"
-"NUEVA EXPRESION TEXTIL SA";"NXT.MC";"ES";NA;NA
-"NEXUS AG O.N.";"NXU.DE";"DE";"Software-Software";"DE0005220909"
-"NYESA VALORES CORPORACION";"NYE.MC";"ES";NA;NA
-"Telefónica Germany";"O2D.DE";"DE";"COM";"DE000A1J5RX9"
-"OVB HOLDING AG";"O4B.DE";"DE";"Financial Services-Diversified Financial";"DE0006286560"
-"OHB SE   O.N.";"OHB.DE";"DE";"Technology-Communications Technology";"DE0005936124"
-"OBRASCON HUARTE LAIN SA";"OHL.MC";"ES";NA;NA
-"Oriola Oyj A";"OKDAV.HE";"FI";"HEALTH";"FI0009014344"
-"Oriola Oyj B";"OKDBV.HE";"FI";"HEALTH";"FI0009014351"
-"DEOLEO SA";"OLE.MC";"ES";NA;NA
-"Olvi Oyj A";"OLVAS.HE";"FI";"RET";"FI0009900401"
-"Oma Säästöpankki Oyj";"OMASP.HE";"FI";"BAN";"FI4000306733"
-"OMV Aktiengesellschaft";"OMV.VI";"AT";NA;NA
-"Optomed Oyj";"OPTOMED.HE";"FI";"HEALTH";"FI4000410881"
-"L'Oréal";"OR.PA";"FR";"RET";"FR0000120321"
-"Orange";"ORA.PA";"FR";"COM";"FR0000133308"
-"Ordina";"ORDI.AS";"HO";"TECH";"NL0000440584"
-"Orion Oyj A";"ORNAV.HE";"FI";"HEALTH";"FI0009014369"
-"Orion Oyj B";"ORNBV.HE";"FI";"HEALTH";"FI0009014377"
-"ORYZON GENOMICS";"ORY.MC";"ES";NA;NA
-"USU SOFTWARE AG";"OSP2.DE";"DE";"Software-Software";"DE000A0BVU28"
-"Osram";"OSR.DE";"DE";"IND";"DE000LED4000"
-"Outokumpu Oyj";"OUT1V.HE";"FI";"MAT";"FI0009002422"
-"Ovaro Kiinteistösijoitus Oyj";"OVARO.HE";"FI";"BAN";"FI4000349113"
-"PAION O.N";"PA8.DE";"DE";"Pharma & Healthcare-Biotechnology";"DE000A0B65S3"
-"PORSCHE ";"PAH3.DE";"DE";"AUT";NA
-"PATRIZIA AG NA ON";"PAT.DE";"DE";"Financial Services-Real Estate";"DE000PAT1AG3"
-"Deutsche Pfandbriefbank AG";"PBB.DE";"DE";"MED";"DE0008019001"
-"PROCREDIT HOLDING AG NA EO 5";"PCZ.DE";"DE";"Banks-Credit Banks";"DE0006223407"
-"PFEIFFER VACUUM TECH.O.N.";"PFV.DE";"DE";"Industrial-Advanced Industrial Equipment";"DE0006916604"
-"PARAGON KGAA  INH O.N.";"PGN.DE";"DE";"Automobile-Auto Parts & Equipment";"DE0005558696"
-"Pharming Group";"PHARM.AS";"HO";"HEALTH";"NL0010391025"
-"PHILIPS";"PHIA.AS";"HO";"TECH";"NL0000009538"
-"Pharma Mar";"PHM.MC";"ES";"PHA";NA
-"Pharol";"PHR.LS";"PO";"COM";"PTPTC0AM0009"
-"Pihlajalinna Oyj";"PIHLIS.HE";"FI";"HEALTH";"FI4000092556"
-"Pirelli";"PIRC.MI";"IT";"AUT";NA
-"Panostaja Oyj";"PNA1V.HE";"FI";"BAN";"FI0009800379"
-"PNE AG  NA O.N.";"PNE3.DE";"DE";"Industrial-Renewable Energies";"DE000A0JBPG2"
-"Compagnie Plastic Omnium SA ";"POM.PA";"FR";"AUT";"FR0000124570"
-"Ponsse Oyj 1";"PON1V.HE";"FI";"IND";"FI0009005078"
-"Osterreichische Post AG";"POST.VI";"AT";NA;NA
-"PRIM";"PRM.MC";"ES";NA;NA
-"Proximus";"PROX.BR";"BE";"COM";"BE0003810273"
-"PROMOTORA DE INFORMAC. CL.A";"PRS.MC";"ES";NA;NA
-"Prysmian";"PRY.MI";"IT";"IND";NA
-"PSI SOFTWARE AG NA O.N.";"PSAN.DE";"DE";"Software-Software";"DE000A0Z1JH9"
-"PHARMASGP HOLDING SE O.N.";"PSG.DE";"DE";"Pharma & Healthcare-Pharmaceuticals";"DE000A2P4LJ5"
-"PROSEGUR COMPANIA DE SEGURIDAD";"PSG.MC";"ES";NA;NA
-"ProSiebenSat.1 Media";"PSM.DE";"DE";"MED";"DE000PSM7770"
-"Poste italiane";"PST.MI";"IT";"TRANS";NA
-"Publicis";"PUB.PA";"FR";"MED";"FR0000130577"
-"Puma SE";"PUM.DE";"DE";"RET";"DE0006969603"
-"PUMA";"PUM.DE ";"DE";NA;NA
-"PunaMusta Media Oyj";"PUMU.HE";"FI";"SER";"FI0009900468"
-"PESCANOVA";"PVA.MC";"ES";NA;NA
-"PROGRESS-WERK OBERKIRCH. O.N.";"PWO.DE";"DE";"Automobile-Auto Parts & Equipment";"DE0006968001"
-"QUABIT INMOBILIARIA";"QBT.MC";"ES";NA;NA
-"Qiagen";"QIA.DE";"DE";"HEALTH";NA
-"QPR Software Oyj";"QPR1V.HE";"FI";"TECH";"FI0009008668"
-"Q.BEYOND AG NA O.N.";"QSC.DE";"DE";"Technology-Communications Technology";"DE0005137004"
-"Qt Group Oyj";"QTCOM.HE";"FI";"TECH";"FI4000198031"
-"RENTA 4 BANCO";"R4.MC";"ES";NA;NA
-"RATIONAL AG";"RAA.DE";"DE";"Industrial-Industrial Products & Services ";"DE0007010803"
-"Ferrari";"RACE.MI";"IT";"AUT";NA
-"Raisio Oyj Vaihto-osake";"RAIVV.HE";"FI";"RET";"FI0009002943"
-"Randstad";"RAND.AS";"HO";"SER";"NL0000379121"
-"Rapala VMC Oyj";"RAP1V.HE";"FI";"RET";"FI0009007355"
-"Raute Oyj A";"RAUTE.HE";"FI";"IND";"FI0009004741"
-"Raiffeisen Bank International AG";"RBI.VI";"AT";NA;NA
-"Teleperformance";"RCF.PA";"FR";"SER";NA
-"Royal Dutch Shell";"RDSA.AS";"HO";"OIL";"GB00B03MLX29"
-"Recordati";"REC.MI";"IT";"HEALH";NA
-"Red Eléctrica de España";"REE.MC";"ES";"UTL";"ES0173093024"
-"Revenio Group Oyj";"REG1V.HE";"FI";"HEALTH";"FI0009010912"
-"RELX";"REN.AS";"HO";"MED";"GB00B2B0DG97"
-"RENTA CORPORACION REAL ESTATE";"REN.MC";"ES";NA;NA
-"Redes Energéticas Nacionais";"RENE.LS";"PO";"UTL";"PTREL0AM0008"
-"Repsol";"REP.MC";"ES";"OIL";"ES0173516115"
-"RHOEN-KLINIKUM O.N.";"RHK.DE";"DE";"Pharma & Healthcare-Health Care";"DE0007042301"
-"Rheinmetall";"RHM.DE";"DE";"MAT";"DE0007030009"
-"Pernod Ricard";"RI.PA";"FR";"FOOD";"FR0000120693"
-"RIB SOFTWARE SE  NA EO 1";"RIB.DE";"DE";"Software-Software";"DE000A0Z2XN6"
-"BODEGAS RIOJANAS";"RIO.MC";"ES";NA;NA
-"LABORATORIOS REIG JOFRE";"RJF.MC";"ES";NA;NA
-"Rocket Internet";"RKET.DE";"DE";"TECH";NA
-"REALIA";"RLIA.MC";"ES";"INM";NA
-"RENO DE MEDICI";"RM.MI";"IT";"MAT";NA
-"Hermès";"RMS.PA";"FR";"RET";"FR0000052292"
-"Renault";"RNA.PA";"FR";"AUT";NA
-"Renault";"RNO.PA";"FR";"AUT";"FR0000131906"
-"Robit Oyj";"ROBIT.HE";"FI";"IND";"FI4000150016"
-"Laboratorios Rovi";"ROVI.MC";"ES";"PHA";NA
-"Rovio Entertainment Oyj";"ROVIO.HE";"FI";"RET";"FI4000266804"
-"RTL Group";"RRTL.DE";"DE";"MED";NA
-"R. STAHL AG NA O.N.";"RSL2.DE";"DE";"Industrial-Industrial Products & Services";"DE000A1PHBB5"
-"Rubis";"RUI.PA";"FR";"UTL";"FR0013269123"
-"RWE";"RWE.DE";"DE";"UTL";"DE0007037129"
-"SMT SCHARF AG";"S4A.DE";"DE";"Industrial-Heavy Machinery";"DE0005751986"
-"SMA SOLAR TECHNOL.AG";"S92.DE";"DE";"Industrial-Renewable Energies";"DE000A0DJ6J9"
-"STEMMER IMAGING AG INH ON";"S9I.DE";"DE";"Software-IT-Services";"DE000A2G9MZ9"
-"Sanoma Oyj";"SAA1V.HE";"FI";"SER";"FI0009007694"
-"Banco Sabadell";"SAB.MC";"ES";"BAN";"ES0113860A34"
-"Safran";"SAF.PA";"FR";"AIR";"FR0000073272"
-"Saga Furs Oyj C";"SAGCV.HE";"FI";"RET";"FI0009800551"
-"Sampo Oyj A";"SAMPO.HE";"FI";"BAN";"FI0009003305"
-"Banco Santander";"SAN.MC";"ES";"BAN";"ES0113900J37"
-"Sanofi";"SAN.PA";"FR";"PHA";"FR0000120578"
-"SAP";"SAP.DE";"DE";"TECH";"DE0007164600"
-"Savencia";"SAVE.PA ";"FR";"FOOD";NA
-"STROEER SE + CO. KGAA";"SAX.DE";"DE";"Media-Advertising";"DE0007493991"
-"Schoeller-Bleckmann Oilfield Equipment Aktiengesellschaft";"SBO.VI";"AT";NA;NA
-"STRATEC SE  NA O.N.";"SBS.DE";"DE";"Pharma & Healthcare-Medical Technology";"DE000STRA555"
-"Scanfil Oyj";"SCANFL.HE";"FI";"IND";"FI4000029905"
-"Scor";"SCR.PA";"FR";"INS";"FR0010411983"
-"Sacyr";"SCYR.MC";"ES";"CONS";NA
-"K+S AG";"SDF.DE";"DE";"MAT";"DE000KSAG888"
-"Semapa";"SEM.LS";"PO";"MAT";"PTSEM0AM0004"
-"SES";"SESG.PA";"FR";"COM";"LU0088087324"
-"Suez Environnement";"SEV.PA";"FR";"UTL";"FR0010613471"
-"Salvatore Ferragamo";"SFER.MI";"IT";"RET";NA
-"SGL CARBON SE O.N.";"SGL.DE";"DE";"Chemicals-Chemicals, Specialty";"DE0007235301"
-"Saint-Gobain";"SGO.PA";"FR";"IND";"FR0000125007"
-"Siemens Gamesa";"SGRE.MC";"ES";"IND";"ES0143416115"
-"Schaeffler AG";"SHA.DE";"DE";"AUT";"DE000SHA0159"
-"SNP SCHNEIDER-NEUREITHER O.N.";"SHF.DE";"DE";"Software-IT-Services";"DE0007203705"
-"Siemens Healthineers";"SHL.DE";"DE";"HEALTH";"DE000SHL1006"
-"Siemens";"SIE.DE";"DE";"IND";"DE0007236101"
-"Sievi Capital Oyj";"SIEVI.HE";"FI";"BAN";"FI0009008924"
-"SIF Holding";"SIFG.AS";"HO";"IND";"NL0011660485"
-"Siili Solutions Oyj";"SIILI.HE";"FI";"TECH";"FI4000043435"
-"FIRST SENSOR AG O.N.";"SIS.DE";"DE";"Technology-Semiconductors";"DE0007201907"
-"SIXT SE ST O.N.";"SIX2.DE";"DE";"Transportation & Logistics-Transportation Services";"DE0007231326"
-"SIXT SE VZO O.N.";"SIX3.DE";"DE";"Transportation & Logistics-Transportation Services";"DE0007231334"
-"SERVICEWARE SE  INH O.N.";"SJJ.DE";"DE";"Software-Software";"DE000A2G8X31"
-"KOENIG + BAUER AG ST O.N.";"SKB.DE";"DE";"Industrial-Industrial Machinery";"DE0007193500"
-"Solaria";"SLR.MC";"ES";"UTL";"ES0165386014"
-"SCHALTBAU HOLDING NA O.N";"SLT.DE";"DE";"Industrial-Industrial Machinery";"DE000A2NBTL2"
-"SUESS MICROTEC SE NA O.N.";"SMHN.DE";"DE";"Technology-Semiconductors";"DE000A1K0235"
-"SINGULUS TECHNOL. EO 1";"SNG.DE";"DE";"Industrial-Advanced Industrial Equipment";"DE000A1681X5"
-"Steinhoff International Holdings N.V.";"SNH.DE";"DE";NA;NA
-"Sofina";"SOF.BR";"BE";"BAN";"BE0003717312"
-"SOLTEC POWER HOLDINGS";"SOL.MC";"ES";NA;NA
-"Solvay";"SOLB.BR";"BE";"CHE";"BE0003470755"
-"Solteq Oyj";"SOLTEQ.HE";"FI";"TECH";"FI0009007991"
-"Sonae";"SON.LS";"PO";"RET";"PTSON0AM0001"
-"Sonae Capital";"SONC.LS";"PO";"BAN";NA
-"Soprano Oyj";"SOPRA.HE";"FI";"TECH";"FI0009012793"
-"Sotkamo Silver AB";"SOSI1.HE";"FI";"MAT";"SE0001057910"
-"Software AG";"SOW.DE";"DE";"TECH";"DE000A2GS401"
-"S IMMO AG";"SPI.VI";"AT";NA;NA
-"SOLARPACK CORP BR";"SPK.MC";"ES";NA;NA
-"Saipem";"SPM.MI";"IT";"IND";NA
-"Axel Springer SE";"SPR.DE";"DE";"MED";NA
-"SERVICE POINT SOLUTIONS";"SPS.MC";"ES";NA;NA
-"Snam";"SRG.MI";"IT";"UTL";NA
-"Sartorius AG";"SRT.DE";"DE";"#N/A";"DE0007165607"
-"SARTORIUS AG VZO O.N.";"SRT3.DE";"DE";"Pharma & Healthcare -Biotechnology";"DE0007165631"
-"SRV Yhtiöt Oyj";"SRV1V.HE";"FI";"IND";"FI0009015309"
-"SSAB A";"SSABAH.HE";"FI";"MAT";"SE0000171100"
-"SSAB B";"SSABBH.HE";"FI";"MAT";"SE0000120669"
-"SSH Communications Security";"SSH1V.HE";"FI";"TECH";"FI0009008270"
-"Stockmann Oyj Abp A";"STCAS.HE";"FI";"SER";"FI0009000236"
-"Stockmann Oyj Abp B";"STCBV.HE";"FI";"SER";"FI0009000251"
-"Stora Enso Oyj A";"STEAV.HE";"FI";"MAT";"FI0009005953"
-"Stora Enso Oyj";"STERV.HE";"FI";"MAT";"FI0009005961"
-"STMicroelectronics";"STM.MI";"IT";"TECH";NA
-"STMicroelectronics";"STM.PA";"FR";"IND";"NL0000226223"
-"Schneider Electric";"SU.PA";"FR";"IND";"FR0000121972"
-"SURTECO GROUP SE INH O.N.";"SUR.DE";"DE";"Basic Resources-Forest & Paper Products";"DE0005176903"
-"Suominen Oyj";"SUY1V.HE";"FI";"RET";"FI0009010862"
-"Sodexo";"SW.PA";"FR";"FOOD";"FR0000121220"
-"Symrise";"SY1.DE";"DE";"#N/A";"DE000SYM9999"
-"SOFTING AG O.N.";"SYT.DE";"DE";"Software-IT- Services";"DE0005178008"
-"SYZYGY AG O.N.";"SYZ.DE";"DE";"Software-IT-Services";"DE0005104806"
-"Salzgitter AG";"SZG.DE";"DE";"MAT";"DE0006202005"
-"Sudzucker AG";"SZU.DE";"DE";"Food & Beverages-Food";"DE0007297004"
-"Taaleri Oyj";"TAALA.HE";"FI";"BAN";"FI4000062195"
-"AS Tallink Grupp FDR";"TALLINK.HE";"FI";"IND";"FI4000349378"
-"TELE COLUMBUS AG NA O.N.";"TC1.DE";"DE";"Media-Broadcasting";"DE000TCAG172"
-"Telefónica";"TEF.MC";"ES";"COM";"ES0178430E18"
-"TAG";"TEG.DE";"DE";"INM";"DE0008303504"
-"Telia Company";"TELIA1.HE";"FI";"COM";"SE0000667925"
-"Tecnotree Oyj";"TEM1V.HE";"FI";"TECH";"FI0009010227"
-"Tenaris";"TEN.MI";"IT";"MAT";NA
-"Teleperformance";"TEP.PA";"FR";NA;"FR0000051807"
-"11 88 0 SOLUTIONS AG";"TGT.DE";"DE";"Telecommunication-Telecommunication Services";"DE0005118806"
-"Technogym";"TGYM.MI";"IT";"RET";NA
-"TietoEVRY Oyj";"TIETO.HE";"FI";"TECH";"FI0009000277"
-"Tikkurila Oyj";"TIK1V.HE";"FI";"IND";"FI4000008719"
-"ZEAL NETWORK SE NA O.N.";"TIMA.DE";"DE";"Retail-Retail, Internet";"DE000ZEAL241"
-"Telecom Italia";"TIT.MI";"IT";"COM";NA
-"ThyssenKrupp";"TKA.DE";"DE";"IND";"DE0007500001"
-"Telekom Austria AG";"TKA.VI";"AT";"COM";NA
-"Tarkett S.A";"TKTT.PA";"FR";NA;"FR0004188670"
-"Just Eat Takeaway";"TKWY.AS";"HO";"SER";"NL0012015705"
-"Mediaset España";"TL5.MC";"ES";"MED";"ES0152503035"
-"TALGO";"TLGO.MC";"ES";NA;NA
-"TELES AG INFORMATIONSTECHNOLOGIEN ON";"TLIK.DE";"DE";"Software-Internet";"DE000A289B07"
-"Teleste Oyj";"TLT1V.HE";"FI";"TECH";"FI0009007728"
-"TALANX AG NA O.N.";"TLX.DE";"DE";"Insurance-Re-Insurance";"DE000TLX1005"
-"TEAMVIEWER AG  INH O.N.";"TMV.DE";"DE";"Software-Software";"DE000A2YN900"
-"Telenet Group";"TNET.BR";"BE";"MED";"BE0003826436"
-"Talenom Oyj";"TNOM.HE";"FI";"IND";"FI4000153580"
-"Tokmanni Group Oyj";"TOKMAN.HE";"FI";"SER";"FI4000197934"
-"PVA TEPLA AG O.N.";"TPE.DE";"DE";"Industrial -Advanced Industrial Equipment ";"DE0007461006"
-"Técnicas Reunidas";"TRE.MC";"ES";"IND";"ES0178165017"
-"TUBOSREUNIDORS";"TRG.MC";"ES";"IND";NA
-"Trainers´ House Oyj";"TRH1V.HE";"FI";"TECH";"FI4000390885"
-"Terna Rette Electrica";"TRN.MI";"IT";"UTL";NA
-"Terveystalo Oyj";"TTALO.HE";"FI";"HEALTH";"FI4000252127"
-"TAKKT AG O.N.";"TTK.DE";"DE";"Retail-Retail, Catalog";"DE0007446007"
-"TECHNOTRANS SE NA O.N.";"TTR1.DE";"DE";"Industrial-Advanced Industrial Equipment";"DE000A0XYGA7"
-"Tubacex";"TUB.MC";"ES";"IND";NA
-"Tulikivi Oyj A";"TULAV.HE";"FI";"IND";"FI0009900583"
-"Nokian Renkaat Oyj";"TYRES.HE";"FI";"RET";"FI0009005318"
-"UBI Banca";"UBI.MI";"IT";"BAN";NA
-"Ubisoft";"UBI.PA";"FR";"SER";"FR0000054470"
-"URBAS GRUPO FINANCIERO";"UBS.MC";"ES";NA;NA
-"UCB";"UCB.BR";"BE";"HEALTH";"BE0003739530"
-"UniCredit";"UCG.MI";"IT";"BAN";NA
-"PSA";"UG.PA";"FR";"AUT";"FR0000121501"
-"UNITED LABELS O.N.";"ULC.DE";"DE";"Retail-Retail, Specialty";"DE0005489561"
-"Umicore";"UMI.BR";"BE";"CHE";"BE0974320526"
-"Uniper SE";"UN01.DE";"DE";"UTL";"DE000UNSE018"
-"UNILEVER";"UNA.AS";"HO";"FOOD";"GB00B10RZP78"
-"UNICAJA";"UNI.MC";"ES";"BAN";NA
-"Unipol";"UNI.MI";"IT";"INS";NA
-"United Bankers Oyj";"UNIAV.HE";"FI";"BAN";"FI4000081427"
-"UPM-Kymmene Oyj";"UPM.HE";"FI";"MAT";"FI0009005987"
-"Uponor Oyj";"UPONOR.HE";"FI";"IND";"FI0009002158"
-"UNIQA Insurance Group AG";"UQA.VI";"AT";NA;NA
-"Unibail-Rodamco-Westfield";"URW.AS";"FR";"INM";NA
-"Unibail-Rodamco-Westfield";"URW.AS";"HO";"RET";"FR0013326246"
-"UnipolSai";"US.MI";"IT";"INS";NA
-"United Internet";"UTDI.DE";"DE";"COM";"DE0005089031"
-"Plc Uutechnic Group Oyj";"UUTEC.HE";"FI";"IND";"FI0009900708"
-"3U HOLDING AG";"UUU.DE";"DE";"Industrial-Industrial Products & Services";"DE0005167902"
-"VITA 34 AG NA O.N.";"V3V.DE";"DE";"Pharma & Healthcare-Healthcare";"DE000A0BL849"
-"VISCOM AG O.N.";"V6C.DE";"DE";"Industrial-Advanced Industrial Equipment";"DE0007846867"
-"Vaisala Oyj A";"VAIAS.HE";"FI";"IND";"FI0009900682"
-"Valmet Oyj";"VALMT.HE";"FI";"IND";"FI4000074984"
-"Valoe Oyj";"VALOE.HE";"FI";"IND";"FI0009006951"
-"VARTA AG O.N.";"VAR1.DE";"DE";"Industrial-Advanced Industrial Equipment";"DE000A0TGJ55"
-"Vastned";"VASTN.AS";"HO";"RET";"NL0000288918"
-"VERBIO VER.BIOENERGIE  ON";"VBK.DE";"DE";"Industrial-Renewable Energies";"DE000A0JL9W6"
-"VOLTABOX AG  INH. O.N.";"VBX.DE";"DE";"Industrial-Advanced Industrial Equipment";"DE000A2E4LE9"
-"VERTICE TRESCIENTOS SESENTA";"VER.MC";"ES";NA;NA
-"VERBUND AG";"VER.VI";"AT";NA;NA
-"Verkkokauppa.com Oyj";"VERK.HE";"FI";"SER";"FI4000049812"
-"VILLEROY + BOCH AG VZ";"VIB3.DE";"DE";"Consumer-Household Appliances & Housewares";"DE0007657231"
-"VIDRALA";"VID.MC";"ES";NA;NA
-"Veolia";"VIE.PA";"FR";"UTL";"FR0000124141"
-"Vienna Insurance Group AG";"VIG.VI";"AT";NA;NA
-"Viking Line Abp";"VIK1V.HE";"FI";"SER";"FI0009005250"
-"Viscofan";"VIS.MC";"ES";"FOOD";"ES0184262212"
-"Vivendi";"VIV.PA";"FR";"MED";"FR0000127771"
-"V Lanschot Kempen";"VLK.AS";"HO";"BAN";"NL0000302636"
-"Vonovia";"VNA.DE";"DE";"INM";"DE000A1ML7J1"
-"VOCENTO";"VOC.MC";"ES";NA;NA
-"Voestalpine AG";"VOE.VI";"AT";NA;NA
-"VOSSLOH AG O.N.";"VOS.DE";"DE";"Industrial-Industrial Products & Services";"DE0007667107"
-"VOLKSWAGEN AG ST O.N.";"VOW.DE";"DE";"Automobile-Automobile Manufacturers";"DE0007664005"
-"Volkswagen Group";"VOW3.DE";"DE";"AUT";"DE0007664039"
-"Vopak";"VPK.AS";"HO";"TRANS";"NL0009432491"
-"VA-Q-TEC AG NA O.N.";"VQT.DE";"DE";"Industrial-Containers & Packaging";"DE0006636681"
-"4SC AG";"VSC.DE";"DE";"Pharma & Healthcare-Biotechnology";"DE000A14KL72"
-"WACKER NEUSON SE NA O.N.";"WAC.DE";"DE";"Industrial-Industrial Machinery";"DE000WACK012"
-"Siltronic";"WAF.DE";"DE";"#N/A";"DE000WAF3001"
-"Wacker Chemie";"WCH.DE";"DE";"CHE";"DE000WCH8881"
-"Wirecard";"WDI.DE";"DE";"TECH";NA
-"WINDELN.DE SE  INH O.N.";"WDL.DE";"DE";"Retail-Retail, Internet";"DE000WNDL201"
-"WDP";"WDP.BR";"BE";"INM";"BE0974349814"
-"Wessanen";"WES.AS";"HO";"FOOD";NA
-"WESTWING GROUP  INH. O.N.";"WEW.DE";"DE";"Retail-Retail, Internet";"DE000A2N4H07"
-"Wienerberger AG";"WIE.VI";"AT";NA;NA
-"Wolters Kluwer";"WKL.AS";"HO";"MED";"NL0000395903"
-"HEIDELBERG PHARMA AG O.N.";"WL6.DE";"DE";"Pharma & Healthcare-Biotechnology";"DE000A11QVV0"
-"Worldline";"WLN.PA";"FR";"TECH";"FR0011981968"
-"Wärtsilä Oyj Abp";"WRT1V.HE";"FI";"IND";"FI0009003727"
-"WASHTEC AG O.N.";"WSU.DE";"DE";"Industrial-Industrial Machinery";"DE0007507501"
-"Wulff-Yhtiöt Oyj";"WUF1V.HE";"FI";"IND";"FI0009008452"
-"WUESTENROT+WUERTTEMBERGISCHE AG O.N.";"WUW.DE";"DE";"Banks-Mortgage Banks";"DE0008051004"
-"Yleiselektroniikka Oyj";"YEINT.HE";"FI";"IND";"FI0009900724"
-"YIT Oyj";"YIT.HE";"FI";"IND";"FI0009800643"
-"YOC AG O.N.";"YOC.DE";"DE";"Telecommunication-Telecommunication Services";"DE0005932735"
-"SECUNET SECURITY AG O.N.";"YSN.DE";"DE";"Software-IT-Services";"DE0007276503"
-"ZUMTOBEL";"ZAG.VI ";"AT";"IND";NA
-"Zalando SE";"ZAL.DE";"DE";"RET";"DE000ZAL1111"
-"ELRINGKLINGER AG NA O.N.";"ZIL2.DE";"DE";"Automobile-Auto Parts & Equipment";"DE0007856023"
-"ZOOPLUS AG";"ZO1.DE";"DE";"Retail-Retail, Internet";"DE0005111702"
-"Zardoya Otis";"ZOT.MC";"ES";"IND";NA
-"1000MERCIS";"ALMIL.PA";"FR";NA;"FR0010285965"
-"2CRSI";"2CRSI.PA";"FR";NA;"FR0013341781"
-"2MX ORGANIC";"2MX.PA";"FR";NA;"FR0014000T90"
-"2MX ORGANIC BS";"2MXBS.PA";"FR";NA;"FR0014000TB2"
-"A.S.T. GROUPE";"ASP.PA";"FR";NA;"FR0000076887"
-"AB SCIENCE";"AB.PA";"FR";NA;"FR0010557264"
-"ABBEY PLC";"DOY.IR";"IR";NA;"IE0000020408"
-"ABC ARBITRAGE";"ABCA.PA";"FR";NA;"FR0004040608"
-"ABEO";"ABEO.PA";"FR";NA;"FR0013185857"
-"ABIONYX PHARMA";"ABNX.PA";"FR";NA;"FR0012616852"
-"ABIVAX";"ABVX.PA";"FR";NA;"FR0012333284"
-"ABO GROUP";"ABO.BR";"BE";NA;"BE0974278104"
-"ACACIA PHARMA";"ACPH.BR";"BE";NA;"GB00BYWF9Y76"
-"ACANTHE DEV.";"ACAN.PA";"FR";NA;"FR0000064602"
-"ACCENTIS";"ACCB.BR";"BE";NA;"BE0003696102"
-"ACCSYS";"AXS.AS";"HO";NA;"GB00BQQFX454"
-"ACHETER-LOUER.FR";"ALALO.PA";"FR";NA;"FR0010493510"
-"ACTEOS";"EOS.PA";"FR";NA;"FR0000076861"
-"ACTIA GROUP";"ATI.PA";"FR";NA;"FR0000076655"
-"ACTIPLAY (GROUPE)";"ALACT.PA";"FR";NA;"FR0011038348"
-"ADA";"ALADA.PA";"FR";NA;"FR0000053076"
-"ADC SIIC";"ALDV.PA";"FR";NA;"BE0974269012"
-"ADEUNIS";"ALARF.PA";"FR";NA;"FR0013284627"
-"ADL PARTNER";"ALP.PA";"FR";NA;"FR0000062978"
-"ADOCIA";"ADOC.PA";"FR";NA;"FR0011184241"
-"ADOMOS";"ALADO.PA";"FR";NA;"FR0013247244"
-"ADP";"ADP.PA";"FR";NA;"FR0010340141"
-"ADTHINK";"ALADM.PA";"FR";NA;"FR0010457531"
-"ADUX";"ADUX.PA";"FR";NA;"FR0012821890"
-"ADVENIS";"ADV.PA";"FR";NA;"FR0004152874"
-"ADVICENNE";"ADVIC.PA";"FR";NA;"FR0013296746"
-"ADVINI";"ADVI.PA";"FR";NA;"FR0000053043"
-"AGFA-GEVAERT";"AGFB.BR";"BE";NA;"BE0003755692"
-"AGRIPOWER";"ALAGP.PA";"FR";NA;"FR0013452281"
-"AGROGENERATION";"ALAGR.PA";"FR";NA;"FR0010641449"
-"AIB GROUP PLC";"A5G.IR";"IR";NA;"IE00BF0L3536"
-"AJAX";"AJAX.AS";"HO";NA;"NL0000018034"
-"AKKA TECHNOLOGIES";"AKA.PA";"FR";NA;"FR0004180537"
-"AKWEL";"AKW.PA";"FR";NA;"FR0000053027"
-"ALBIOMA";"ABIO.PA";"FR";NA;"FR0000060402"
-"ALCHIMIE";"ALCHI.PA";"FR";NA;"FR0014000JX7"
-"ALD";"ALD.PA";"FR";NA;"FR0013258662"
-"ALES GROUPE";"ALPHY.PA";"FR";NA;"FR0000054652"
-"ALFEN";"ALFEN.AS";"HO";NA;"NL0012817175"
-"ALPES (COMPAGNIE)";"CDA.PA";"FR";NA;"FR0000053324"
-"ALPHA MOS";"ALM.PA";"FR";NA;"FR0013421286"
-"ALTAMIR";"LTA.PA";"FR";NA;"FR0000053837"
-"ALTAREA";"ALTA.PA";"FR";NA;"FR0000033219"
-"ALTEN";"ATE.PA";"FR";NA;"FR0000071946"
-"ALTICE EUROPE B";"ATCB.AS";"HO";NA;"NL0011333760"
-"ALTICE EUROPE N.V.";"ATC.AS";"HO";NA;"NL0011333752"
-"ALTUR INVEST.";"ALTUR.PA";"FR";NA;"FR0010395681"
-"ALUMEXX N.V.";"ALX.AS";"HO";NA;"NL0012194724"
-"AMG";"AMG.AS";"HO";NA;"NL0000888691"
-"AMOEBA";"ALMIB.PA";"FR";NA;"FR0011051598"
-"AMPLITUDE SURGICAL";"AMPLI.PA";"FR";NA;"FR0012789667"
-"AMUNDI";"AMUN.PA";"FR";NA;"FR0004125920"
-"AND INTERNATIONAL";"AND.AS";"HO";NA;"NL0000430106"
-"ANEVIA";"ALANV.PA";"FR";NA;"FR0011910652"
-"ANTARES CERT";"ANT.BR";"BE";NA;"BE0003676872"
-"APERAM";"APAM.AS";"HO";NA;"LU0569974404"
-"APPLEGREEN PLC";"APGN.IR";"IR";NA;"IE00BXC8D038"
-"AQUILA";"ALAQU.PA";"FR";NA;"FR0010340711"
-"ARCADIS";"ARCAD.AS";"HO";NA;"NL0006237562"
-"ARCHOS";"ALJXR.PA";"FR";NA;"FR0000182479"
-"ARCURE";"ALCUR.PA";"FR";NA;"FR0013398997"
-"ARGAN";"ARG.PA";"FR";NA;"FR0010481960"
-"ARTEFACT";"ALATF.PA";"FR";NA;"FR0000079683"
-"ARTMARKET COM";"PRC.PA";"FR";NA;"FR0000074783"
-"ARYZTA AG";"YZA.IR";"IR";NA;"CH0043238366"
-"ASCENCIO";"ASC.BR";"BE";NA;"BE0003856730"
-"ASIT";"ASIT.BR";"BE";NA;"BE0974289218"
-"ASM INTERNATIONAL";"ASM.AS";"HO";NA;"NL0000334118"
-"ASSYSTEM";"ASY.PA";"FR";NA;"FR0000074148"
-"ATARI";"ATA.PA";"FR";NA;"FR0010478248"
-"ATEME";"ATEME.PA";"FR";NA;"FR0011992700"
-"ATENOR";"ATEB.BR";"BE";NA;"BE0003837540"
-"ATRIUM EUR REALEST";"ATRS.AS";"HO";NA;"JE00B3DCF752"
-"AUBAY";"AUB.PA";"FR";NA;"FR0000063737"
-"AUDIOVALLEY";"ALAVY.PA";"FR";NA;"BE0974334667"
-"AUGROS COSMETICS";"AUGR.PA";"FR";NA;"FR0000061780"
-"AUPLATA MINING GR";"ALAMG.PA";"FR";NA;"FR0013410370"
-"AUREA";"AURE.PA";"FR";NA;"FR0000039232"
-"AURES TECHNOLOGIES";"AURS.PA";"FR";NA;"FR0013183589"
-"AVENIR TELECOM";"AVT.PA";"FR";NA;"FR0013529815"
-"AXWAY SOFTWARE";"AXW.PA";"FR";NA;"FR0011040500"
-"B&S Group";"BSGR.AS";"HO";NA;"LU1789205884"
-"BAIKOWSKI";"ALBKK.PA";"FR";NA;"FR0013384369"
-"BAINS MER MONACO";"BAIN.PA";"FR";NA;"MC0000031187"
-"BALTA GROUP";"BALTA.BR";"BE";NA;"BE0974314461"
-"BALYO";"BALYO.PA";"FR";NA;"FR0013258399"
-"BAM GROEP KON";"BAMNB.AS";"HO";NA;"NL0000337319"
-"BANIMMO A";"BANI.BR";"BE";NA;"BE0003870871"
-"BANK OF IR NC PREF";"DD7E.IR";"IR";NA;"IE0000730790"
-"BANK OF IRELAND GP";"BIRG.IR";"IR";NA;"IE00BD1RP616"
-"BARBARA BUI";"BUI.PA";"FR";NA;"FR0000062788"
-"BASILIX CERT";"BAS.BR";"BE";NA;"BE0003674851"
-"BASSAC";"BASS.PA";"FR";NA;"FR0004023208"
-"BASTIDE LE CONFORT";"BLC.PA";"FR";NA;"FR0000035370"
-"BE SEMICONDUCTOR";"BESI.AS";"HO";NA;"NL0012866412"
-"BEAULIEU-AV. CERT";"BEAB.BR";"BE";NA;"BE0003661726"
-"BEFIMMO";"BEFB.BR";"BE";NA;"BE0003678894"
-"BEKAERT";"BEKB.BR";"BE";NA;"BE0974258874"
-"BELRECA";"BELR.BR";"BE";NA;"BE0020575115"
-"BELUGA";"BELU.BR";"BE";NA;"BE0003723377"
-"BENETEAU";"BEN.PA";"FR";NA;"FR0000035164"
-"BENFICA";"SLBEN.LS";"PO";NA;"PTSLB0AM0010"
-"BIC";"BB.PA";"FR";NA;"FR0000120966"
-"BIGBEN INTERACTIVE";"BIG.PA";"FR";NA;"FR0000074072"
-"BILENDI";"ALBLD.PA";"FR";NA;"FR0004174233"
-"BIO-UV GROUP";"ALTUV.PA";"FR";NA;"FR0013345493"
-"BIOCARTIS";"BCART.BR";"BE";NA;"BE0974281132"
-"BIOCORP";"ALCOR.PA";"FR";NA;"FR0012788065"
-"BIOPHYTIS";"ALBPS.PA";"FR";NA;"FR0012816825"
-"BIOPHYTIS BSA";"BPSBS.PA";"FR";NA;"FR0013507290"
-"BIOSYNEX";"ALBIO.PA";"FR";NA;"FR0011005933"
-"BIOSYNEX BSAR";"BIOBS.PA";"FR";NA;"FR0013517380"
-"BLUELINEA";"ALBLU.PA";"FR";NA;"FR0011041011"
-"BLUELINEA BSA J";"BLUBS.PA";"FR";NA;"FR0013480969"
-"BOIRON";"BOI.PA";"FR";NA;"FR0000061129"
-"BOLLORE";"BOL.PA";"FR";NA;"FR0000039299"
-"BONDUELLE";"BON.PA";"FR";NA;"FR0000063935"
-"BONE THERAPEUTICS";"BOTHE.BR";"BE";NA;"BE0974280126"
-"BOOSTHEAT";"BOOST.PA";"FR";NA;"FR0011814938"
-"BOSKALIS WESTMIN";"BOKA.AS";"HO";NA;"NL0000852580"
-"BOURSE DIRECT";"BSD.PA";"FR";NA;"FR0000074254"
-"BOUSSARD GAVAUDAN";"BGHL.AS";"HO";NA;"GG00B1FQG453"
-"BPOST";"BPOST.BR";"BE";NA;"BE0974268972"
-"BREDERODE";"BREB.BR";"BE";NA;"LU1068091351"
-"BRILL KON";"BRILL.AS";"HO";NA;"NL0000442523"
-"CABASSE GROUP";"ALCG.PA";"FR";NA;"FR0013530102"
-"CAIRN HOMES PLC";"C5H.IR";"IR";NA;"IE00BWY4ZF18"
-"CAMPINE";"CAMB.BR";"BE";NA;"BE0003825420"
-"CANDELA INVEST";"CAND.BR";"BE";NA;"BE0974298300"
-"CAPELLI";"CAPLI.PA";"FR";NA;"FR0012969095"
-"CARBIOS";"ALCRB.PA";"FR";NA;"FR0011648716"
-"CARE PROPERTY INV.";"CPINV.BR";"BE";NA;"BE0974273055"
-"CARMAT";"ALCAR.PA";"FR";NA;"FR0010907956"
-"CARMILA";"CARM.PA";"FR";NA;"FR0010828137"
-"CASINO GUICHARD";"CO.PA";"FR";NA;"FR0000125585"
-"CAST";"CAS.PA";"FR";NA;"FR0000072894"
-"CATANA GROUP";"CATG.PA";"FR";NA;"FR0010193052"
-"CATERING INTL SCES";"CTRG.PA";"FR";NA;"FR0000064446"
-"CATERPILLAR INC";"CATR.PA";"FR";NA;"US1491231015"
-"CBO TERRITORIA";"CBOT.PA";"FR";NA;"FR0010193979"
-"CEGEDIM";"CGM.PA";"FR";NA;"FR0000053506"
-"CEGEREAL";"CGR.PA";"FR";NA;"FR0010309096"
-"CELLECTIS";"ALCLS.PA";"FR";NA;"FR0010425595"
-"CELYAD ONCOLOGY";"CYAD.BR";"BE";NA;"BE0974260896"
-"CENERGY";"CENER.BR";"BE";NA;"BE0974303357"
-"CERINNOV GROUP";"ALPCV.PA";"FR";NA;"FR0013178712"
-"CESAR";"ALCES.PA";"FR";NA;"FR0013297165"
-"CFE";"CFEB.BR";"BE";NA;"BE0003883031"
-"CFI";"CFI.PA";"FR";NA;"FR0000037475"
-"CGG";"CGG.PA";"FR";NA;"FR0013181864"
-"CGG BSA 1";"CGGBS.PA";"FR";NA;"FR0013309614"
-"CGG BSA 2";"CGGBT.PA";"FR";NA;"FR0013309622"
-"CHARGEURS";"CRI.PA";"FR";NA;"FR0000130692"
-"CHRISTIAN DIOR";"CDI.PA";"FR";NA;"FR0000130403"
-"CIBOX BS";"CIBBS.PA";"FR";NA;"FR00140003K4"
-"CIBOX INTER A CTIV";"CIB.PA";"FR";NA;"FR0000054322"
-"CIE BOIS SAUVAGE";"COMB.BR";"BE";NA;"BE0003592038"
-"CLARANOVA";"CLA.PA";"FR";NA;"FR0013426004"
-"CLASQUIN";"ALCLA.PA";"FR";NA;"FR0004152882"
-"CM.COM";"CMCOM.AS";"HO";NA;"NL0012747059"
-"CNIM GROUP";"COM.PA";"FR";NA;"FR0000053399"
-"CNOVA";"CNV.PA";"FR";NA;"NL0010949392"
-"CNP ASSURANCES";"CNP.PA";"FR";NA;"FR0000120222"
-"COCA-COLA EUROPEAN";"CCEP.AS";"HO";NA;"GB00BDCPN049"
-"COFACE";"COFA.PA";"FR";NA;"FR0010667147"
-"COFINA,SGPS";"CFN.LS";"PO";NA;"PTCFN0AE0003"
-"COGELEC";"ALLEC.PA";"FR";NA;"FR0013335742"
-"COGRA";"ALCOG.PA";"FR";NA;"FR0011071570"
-"COHERIS";"COH.PA";"FR";NA;"FR0004031763"
-"COIL";"ALCOI.PA";"FR";NA;"BE0160342011"
-"CORBION";"CRBN.AS";"HO";NA;"NL0010583399"
-"CORE LABORATORIES";"CLB.AS";"HO";NA;"NL0000200384"
-"COVIVIO HOTELS";"COVH.PA";"FR";NA;"FR0000060303"
-"CPL RESOURCES PLC.";"DQ5.IR";"IR";NA;"IE0007214426"
-"CRCAM ALP.PROV.CCI";"CRAP.PA";"FR";NA;"FR0000044323"
-"CRCAM BRIE PIC2CCI";"CRBP2.PA";"FR";NA;"FR0010483768"
-"CRCAM LANGUED CCI";"CRLA.PA";"FR";NA;"FR0010461053"
-"CRCAM LOIRE HTE L.";"CRLO.PA";"FR";NA;"FR0000045239"
-"CRCAM NORD CCI";"CNF.PA";"FR";NA;"FR0000185514"
-"CRCAM NORM.SEINE";"CCN.PA";"FR";NA;"FR0000044364"
-"CRCAM PARIS ET IDF";"CAF.PA";"FR";NA;"FR0000045528"
-"CRCAM SUD R.A.CCI";"CRSU.PA";"FR";NA;"FR0000045346"
-"CRESCENT";"OPTI.BR";"BE";NA;"BE0003836534"
-"CROSSJECT";"ALCJ.PA";"FR";NA;"FR0011716265"
-"CROSSWOOD";"CROS.PA";"FR";NA;"FR0000050395"
-"CS GROUP.";"SX.PA";"FR";NA;"FR0007317813"
-"CTAC";"CTAC.AS";"HO";NA;"NL0000345577"
-"CYBERGUN";"ALCYB.PA";"FR";NA;"FR0013505583"
-"CYBERGUN BSA 2";"CYBBT.PA";"FR";NA;"FR0013340817"
-"CYBERGUN BSA K1";"CYBK1.PA";"FR";NA;"FR0013507977"
-"CYBERGUN BSA K2A";"CYBKA.PA";"FR";NA;"FR0013507985"
-"CYBERGUN BSA K2B";"CYBKB.PA";"FR";NA;"FR0013508009"
-"D'IETEREN";"DIE.BR";"BE";NA;"BE0974259880"
-"D.L.S.I.";"ALDLS.PA";"FR";NA;"FR0010404368"
-"DALATA HOTEL GP.";"DHG.IR";"IR";NA;"IE00BJMZDW83"
-"DALET";"DLT.PA";"FR";NA;"FR0011026749"
-"DAMARTEX";"ALDAR.PA";"FR";NA;"FR0000185423"
-"DASSAULT AVIATION";"AM.PA";"FR";NA;"FR0000121725"
-"DATALEX PLC";"DLE.IR";"IR";NA;"IE0000527006"
-"DBT";"ALDBT.PA";"FR";NA;"FR0013066750"
-"DBV TECHNOLOGIES";"DBV.PA";"FR";NA;"FR0010417345"
-"DECEUNINCK";"DECB.BR";"BE";NA;"BE0003789063"
-"DEINOVE";"ALDEI.PA";"FR";NA;"FR0010879056"
-"DELFINGEN";"ALDEL.PA";"FR";NA;"FR0000054132"
-"DELTA DRONE";"ALDR.PA";"FR";NA;"FR0011522168"
-"DELTA DRONE BSA Y";"ALDBY.PA";"FR";NA;"FR0013400991"
-"DELTA PLUS GROUP";"DLTA.PA";"FR";NA;"FR0013283108"
-"DERICHEBOURG";"DBG.PA";"FR";NA;"FR0000053381"
-"DEVOTEAM";"DVT.PA";"FR";NA;"FR0000073793"
-"DGB GROUP N.V.";"DGB.AS";"HO";NA;"NL0009169515"
-"DIAGEO";"DGE.PA";"FR";NA;"GB0002374006"
-"DIAGNOSTIC MEDICAL";"DGM.PA";"FR";NA;"FR0012202497"
-"DNXCORP";"ALDNX.PA";"FR";NA;"FR0010436584"
-"DOLFINES";"ALDOL.PA";"FR";NA;"FR0010377127"
-"DONEGAL INVESTMENT";"DQ7A.IR";"IR";NA;"IE00BLRPQQ22"
-"DONTNOD";"ALDNE.PA";"FR";NA;"FR0013331212"
-"DPA GROUP";"DPA.AS";"HO";NA;"NL0009197771"
-"DRONE VOLT";"ALDRV.PA";"FR";NA;"FR0013088606"
-"DSC2";"DSC2.AS";"HO";NA;"NL00150000S7"
-"DUTCH STAR C W11";"DSCW1.AS";"HO";NA;"NL00150000T5"
-"DUTCH STAR C W12";"DSCW2.AS";"HO";NA;"NL00150000U3"
-"DUTCH STAR C W13";"DSCW3.AS";"HO";NA;"NL00150000V1"
-"EASE2PAY NV";"EAS2P.AS";"HO";NA;"NL0000345627"
-"EASYVISTA";"ALEZV.PA";"FR";NA;"FR0010246322"
-"ECA";"ECASA.PA";"FR";NA;"FR0010099515"
-"ECOMIAM";"ALECO.PA";"FR";NA;"FR0013534617"
-"ECONOCOM GROUP";"ECONB.BR";"BE";NA;"BE0974313455"
-"ECOSLOPS";"ALESA.PA";"FR";NA;"FR0011490648"
-"EDILIZIACROBATICA";"ALEAC.PA";"FR";NA;"IT0005351504"
-"EGIDE";"GID.PA";"FR";NA;"FR0000072373"
-"EKINOPS";"EKI.PA";"FR";NA;"FR0011466069"
-"ELEC.STRASBOURG";"ELEC.PA";"FR";NA;"FR0000031023"
-"ELECT. MADAGASCAR";"EEM.PA";"FR";NA;"FR0000035719"
-"ELIA GROUP";"ELI.BR";"BE";NA;"BE0003822393"
-"ELIOR GROUP";"ELIOR.PA";"FR";NA;"FR0011950732"
-"ELIS";"ELIS.PA";"FR";NA;"FR0012435121"
-"EMOVA GROUP";"ALEMV.PA";"FR";NA;"FR0013356755"
-"ENCRES DUBUIT";"ALDUB.PA";"FR";NA;"FR0004030708"
-"ENENSYS";"ALNN6.PA";"FR";NA;"FR0013330792"
-"ENERGISME";"ALNRG.PA";"FR";NA;"FR0013399359"
-"ENERTIME";"ALENE.PA";"FR";NA;"FR0011915339"
-"ENGIE EPS";"EPS.PA";"FR";NA;"FR0012650166"
-"ENTREPARTICULIERS";"ALENT.PA";"FR";NA;"FR0010424697"
-"ENVEA";"ALTEV.PA";"FR";NA;"FR0010278762"
-"ENVIPCO";"ENVI.AS";"HO";NA;"NL0009901610"
-"EO2";"ALEO2.PA";"FR";NA;"FR0010465534"
-"EOS IMAGING";"EOSI.PA";"FR";NA;"FR0011191766"
-"ERAMET";"ERA.PA";"FR";NA;"FR0000131757"
-"ERYTECH PHARMA";"ERYP.PA";"FR";NA;"FR0011471135"
-"ESI GROUP";"ESI.PA";"FR";NA;"FR0004110310"
-"ESKER";"ALESK.PA";"FR";NA;"FR0000035818"
-"ESPERITE";"ESP.AS";"HO";NA;"NL0009272137"
-"ESSO";"ES.PA";"FR";NA;"FR0000120669"
-"ESTORIL SOL N";"ESON.LS";"PO";NA;"PTESO0AM0000"
-"EURAZEO";"RF.PA";"FR";NA;"FR0000121121"
-"EURO RESSOURCES";"EUR.PA";"FR";NA;"FR0000054678"
-"EUROBIO-SCIENTIFIC";"ALERS.PA";"FR";NA;"FR0013240934"
-"EUROCASTLE INVEST.";"ECT.AS";"HO";NA;"GB00B94QM994"
-"EUROCOMMERCIAL";"ECMPA.AS";"HO";NA;"NL0000288876"
-"EUROFINS SCIENT.";"ERF.PA";"FR";NA;"FR0014000MR3"
-"EUROGERM";"ALGEM.PA";"FR";NA;"FR0010452474"
-"EUROMEDIS GROUPE";"ALEMG.PA";"FR";NA;"FR0000075343"
-"EURONEXT";"ENX.PA";"FR";NA;"NL0006294274"
-"EUROPACORP";"ECP.PA";"FR";NA;"FR0010490920"
-"EUROPCAR MOBILITY";"EUCAR.PA";"FR";NA;"FR0012789949"
-"EUROPLASMA";"ALEUP.PA";"FR";NA;"FR0013514114"
-"EUROPLASMA BSC";"EURBU.PA";"FR";NA;"FR0013294089"
-"EUTELSAT COMMUNIC.";"ETL.PA";"FR";NA;"FR0010221234"
-"EVADIX";"ALEVA.BR";"BE";NA;"BE0003840577"
-"EVS BROADC.EQUIPM.";"EVS.BR";"BE";NA;"BE0003820371"
-"EXEL INDUSTRIES";"EXE.PA";"FR";NA;"FR0004527638"
-"EXMAR";"EXM.BR";"BE";NA;"BE0003808251"
-"FACEPHI";"ALPHI.PA";"FR";NA;"ES0105029005"
-"FAGRON";"FAGR.BR";"BE";NA;"BE0003874915"
-"FASHION B AIR";"ALFBA.PA";"FR";NA;"FR0004034593"
-"FASTNED";"FAST.AS";"HO";NA;"NL0013654809"
-"FBD HOLDINGS PLC";"EG7.IR";"IR";NA;"IE0003290289"
-"FDJ";"FDJ.PA";"FR";NA;"FR0013451333"
-"FERMENTALG";"FALG.PA";"FR";NA;"FR0011271600"
-"FFP";"FFP.PA";"FR";NA;"FR0000064784"
-"FIGEAC AERO";"FGA.PA";"FR";NA;"FR0011665280"
-"FIN.ETANG BERRE PF";"EBPF.PA";"FR";NA;"FR0000062507"
-"FINANCIERE MARJOS";"FINM.PA";"FR";NA;"FR0000060824"
-"FINATIS";"FNTS.PA";"FR";NA;"FR0000035123"
-"FLEURY MICHON";"ALFLE.PA";"FR";NA;"FR0000074759"
-"FLEXDEAL";"FLEXD.LS";"PO";NA;"PTFXD0AM0018"
-"FLORIDIENNE";"FLOB.BR";"BE";NA;"BE0003215143"
-"FLOW TRADERS";"FLOW.AS";"HO";NA;"NL0011279492"
-"FLUTTER ENTERTAIN";"FLTR.IR";"IR";NA;"IE00BWT6H894"
-"FLUXYS BELGIUM D";"FLUX.BR";"BE";NA;"BE0974265945"
-"FNAC DARTY";"FNAC.PA";"FR";NA;"FR0011476928"
-"FNG NV";"FNG.BR";"BE";NA;"BE0974332646"
-"FOCUS HOME INT";"ALFOC.PA";"FR";NA;"FR0012419307"
-"FONC. PARIS NORD";"FPN.PA";"FR";NA;"FR0011277391"
-"FONCIERE 7 INVEST";"LEBL.PA";"FR";NA;"FR0000065930"
-"FONCIERE ATLAND";"FATL.PA";"FR";NA;"FR0013455482"
-"FONCIERE EURIS";"EURS.PA";"FR";NA;"FR0000038499"
-"FONCIERE LYONNAISE";"FLY.PA";"FR";NA;"FR0000033409"
-"FONCIERE VOLTA";"SPEL.PA";"FR";NA;"FR0000053944"
-"FOUNTAIN";"FOU.BR";"BE";NA;"BE0003752665"
-"FOUNTAINE PAJOT";"ALFPC.PA";"FR";NA;"FR0010485268"
-"FRANCAISE ENERGIE";"LFDE.PA";"FR";NA;"FR0013030152"
-"FREELANCE.COM";"ALFRE.PA";"FR";NA;"FR0004187367"
-"FUGRO";"FUR.AS";"HO";NA;"NL00150004A7"
-"FUT.CLUBE PORTO";"FCP.LS";"PO";NA;"PTFCP0AM0008"
-"GASCOGNE";"ALBI.PA";"FR";NA;"FR0000124414"
-"GAUMONT";"GAM.PA";"FR";NA;"FR0000034894"
-"GAUSSIN";"ALGAU.PA";"FR";NA;"FR0013495298"
-"GEA GRENOBL.ELECT.";"GEA.PA";"FR";NA;"FR0000053035"
-"GECI INTL";"GECP.PA";"FR";NA;"FR0000079634"
-"GECI INTL BSAR A";"GECBT.PA";"FR";NA;"FR0013266764"
-"GENERAL ELECTRIC";"GNE.PA";"FR";NA;"US3696041033"
-"GENERIX GROUP";"GENX.PA";"FR";NA;"FR0010501692"
-"GENEURO";"GNRO.PA";"FR";NA;"CH0308403085"
-"GENFIT";"GNFT.PA";"FR";NA;"FR0004163111"
-"GENK LOGIST. CERT";"GENK.BR";"BE";NA;"BE0003740546"
-"GENKYOTEX";"GKTX.PA";"FR";NA;"FR0013399474"
-"GENOMIC VISION";"GV.PA";"FR";NA;"FR0011799907"
-"GENOWAY";"ALGEN.PA";"FR";NA;"FR0004053510"
-"GENSIGHT BIOLOGICS";"SIGHT.PA";"FR";NA;"FR0013183985"
-"GIMV";"GIMB.BR";"BE";NA;"BE0003699130"
-"GL EVENTS";"GLO.PA";"FR";NA;"FR0000066672"
-"GLANBIA PLC";"GL9.IR";"IR";NA;"IE0000669501"
-"GLENVEAGH PROP.PLC";"GVR.IR";"IR";NA;"IE00BD6JX574"
-"GLINTT";"GLINT.LS";"PO";NA;"PTPAD0AM0007"
-"GLOBAL BIOENERGIES";"ALGBE.PA";"FR";NA;"FR0011052257"
-"GLOBAL ECOPOWER";"ALGEP.PA";"FR";NA;"FR0011289198"
-"GLOBAL GRAPHICS";"GLOG.BR";"BE";NA;"GB00BYN5BY03"
-"GOLD BY GOLD";"ALGLD.PA";"FR";NA;"FR0011208693"
-"GPE PAROT (AUTO)";"ALPAR.PA";"FR";NA;"FR0013204070"
-"GRAINES VOLTZ";"GRVO.PA";"FR";NA;"FR0000065971"
-"GRANDVISION";"GVNV.AS";"HO";NA;"NL0010937066"
-"GREAT WESTERN MIN.";"8GW.IR";"IR";NA;"IE00B1FR8863"
-"GREENCOAT REN.";"GRP.IR";"IR";NA;"IE00BF2NR112"
-"GREENYARD";"GREEN.BR";"BE";NA;"BE0003765790"
-"GROUPE CRIT";"CEN.PA";"FR";NA;"FR0000036675"
-"GROUPE FLO";"FLO.PA";"FR";NA;"FR0004076891"
-"GROUPE GORGE";"GOE.PA";"FR";NA;"FR0000062671"
-"GROUPE GUILLIN";"ALGIL.PA";"FR";NA;"FR0012819381"
-"GROUPE JAJ";"GJAJ.PA";"FR";NA;"FR0004010338"
-"GROUPE LDLC";"ALLDL.PA";"FR";NA;"FR0000075442"
-"GROUPE OPEN";"OPN.PA";"FR";NA;"FR0004050300"
-"GROUPE PARTOUCHE";"PARP.PA";"FR";NA;"FR0012612646"
-"GROUPE SFPI";"SFPI.PA";"FR";NA;"FR0004155000"
-"GROUPE TERA";"ALGTR.PA";"FR";NA;"FR0013429404"
-"GT BIOPHARMA INC";"GTBP.PA";"FR";NA;"US36254L1008"
-"GTT";"GTT.PA";"FR";NA;"FR0011726835"
-"GUERBET";"GBT.PA";"FR";NA;"FR0000032526"
-"GUILLEMOT";"GUI.PA";"FR";NA;"FR0000066722"
-"H2O INNOVATION INC";"ALHEO.PA";"FR";NA;"CA4433003064"
-"HAL TRUST";"HAL.AS";"HO";NA;"BMG455841020"
-"HAMON";"HAMO.BR";"BE";NA;"BE0974352842"
-"HAULOTTE GROUP";"PIG.PA";"FR";NA;"FR0000066755"
-"HEINEKEN HOLDING";"HEIO.AS";"HO";NA;"NL0000008977"
-"HERIGE";"ALHRG.PA";"FR";NA;"FR0000066540"
-"HEXAOM";"HEXA.PA";"FR";NA;"FR0004159473"
-"HF";"HF.PA";"FR";NA;"FR0000038531"
-"HIBERNIA REIT PLC";"HBRN.IR";"IR";NA;"IE00BGHQ1986"
-"HIGH CO";"HCO.PA";"FR";NA;"FR0000054231"
-"HIOLLE INDUSTRIES";"ALHIO.PA";"FR";NA;"FR0000077562"
-"HIPAY GROUP";"HIPAY.PA";"FR";NA;"FR0012821916"
-"HITECHPROS";"ALHIT.PA";"FR";NA;"FR0010396309"
-"HOFFMANN";"ALHGR.PA";"FR";NA;"FR0013451044"
-"HOLLAND COLOURS";"HOLCO.AS";"HO";NA;"NL0000440311"
-"HOME INVEST BE.";"HOMI.BR";"BE";NA;"BE0003760742"
-"HOPSCOTCH GROUPE";"HOP.PA";"FR";NA;"FR0000065278"
-"HOSTELWORLD GROUP";"HSW.IR";"IR";NA;"GB00BYYN4225"
-"HOTELS DE PARIS";"HDP.PA";"FR";NA;"FR0004165801"
-"HUNTER DOUGLAS";"HUNDP.AS";"HO";NA;"ANN4327C1303"
-"HYBRIGENICS";"ALHYG.PA";"FR";NA;"FR0004153930"
-"HYDRATEC";"HYDRA.AS";"HO";NA;"NL0009391242"
-"HYLORIS";"HYL.BR";"BE";NA;"BE0974363955"
-"I.CERAM";"ALICR.PA";"FR";NA;"FR0011511971"
-"IBA";"IBAB.BR";"BE";NA;"BE0003766806"
-"ICADE";"ICAD.PA";"FR";NA;"FR0000035081"
-"ID LOGISTICS GROUP";"IDL.PA";"FR";NA;"FR0010929125"
-"IDI";"IDIP.PA";"FR";NA;"FR0000051393"
-"IDSUD";"ALIDS.PA";"FR";NA;"FR0000062184"
-"IEP INVEST";"IEP.BR";"BE";NA;"BE0003748622"
-"IEX GROUP NV";"IEX.AS";"HO";NA;"NL0010556726"
-"ILIAD";"ILD.PA";"FR";NA;"FR0004035913"
-"IMERYS";"NK.PA";"FR";NA;"FR0000120859"
-"IMMERSION";"ALIMR.PA";"FR";NA;"FR0013060100"
-"IMMOB.DASSAULT";"IMDA.PA";"FR";NA;"FR0000033243"
-"IMMOBEL";"IMMO.BR";"BE";NA;"BE0003599108"
-"IMMUPHARMA";"ALIMM.BR";"BE";NA;"GB0033711010"
-"IMPLANET";"ALIMP.PA";"FR";NA;"FR0013470168"
-"IMPRESA,SGPS";"IPR.LS";"PO";NA;"PTIPR0AM0000"
-"INAPA-INV.P.GESTAO";"INA.LS";"PO";NA;"PTINA0AP0008"
-"INCLUSIO SA/NV";"INCLU.BR";"BE";NA;"BE0974374069"
-"INFOTEL";"INF.PA";"FR";NA;"FR0000071797"
-"INNATE PHARMA";"IPH.PA";"FR";NA;"FR0010331421"
-"INNELEC MULTIMEDIA";"INN.PA";"FR";NA;"FR0000064297"
-"INTEGRAGEN";"ALINT.PA";"FR";NA;"FR0010908723"
-"INTERPARFUMS";"ITP.PA";"FR";NA;"FR0004024222"
-"INTERTRUST";"INTER.AS";"HO";NA;"NL0010937058"
-"INTERVEST OFF-WARE";"INTO.BR";"BE";NA;"BE0003746600"
-"INTRASENSE";"ALINS.PA";"FR";NA;"FR0011179886"
-"INVENTIVA";"IVA.PA";"FR";NA;"FR0013233012"
-"INVIBES ADVERTSING";"ALINV.PA";"FR";NA;"BE0974299316"
-"IPSOS";"IPS.PA";"FR";NA;"FR0000073298"
-"IRISH CONT. GP.";"IR5B.IR";"IR";NA;"IE00BLP58571"
-"IRISH RES. PROP.";"IRES.IR";"IR";NA;"IE00BJ34P519"
-"IT LINK";"ALITL.PA";"FR";NA;"FR0000072597"
-"ITESOFT";"ITE.PA";"FR";NA;"FR0004026151"
-"JACQUES BOGART";"JBOG.PA";"FR";NA;"FR0012872141"
-"JACQUET METALS";"JCQ.PA";"FR";NA;"FR0000033904"
-"JC DECAUX SA.";"DEC.PA";"FR";NA;"FR0000077919"
-"JDE PEET'S";"JDEP.AS";"HO";NA;"NL0014332678"
-"JENSEN-GROUP";"JEN.BR";"BE";NA;"BE0003858751"
-"KALRAY";"ALKAL.PA";"FR";NA;"FR0010722819"
-"KAUFMAN ET BROAD";"KOF.PA";"FR";NA;"FR0004007813"
-"KBC ANCORA";"KBCA.BR";"BE";NA;"BE0003867844"
-"KENMARE RESOURCES";"KMR.IR";"IR";NA;"IE00BDC5DG00"
-"KERLINK";"ALKLK.PA";"FR";NA;"FR0013156007"
-"KEYRUS";"KEY.PA";"FR";NA;"FR0004029411"
-"KEYWARE TECH.";"KEYW.BR";"BE";NA;"BE0003880979"
-"KINEPOLIS GROUP";"KIN.BR";"BE";NA;"BE0974274061"
-"KKO INTERNATIONAL";"ALKKO.PA";"FR";NA;"FR0013374667"
-"KLIMVEST";"ALSIM.PA";"FR";NA;"GB00B19RTX44"
-"KORIAN";"KORI.PA";"FR";NA;"FR0010386334"
-"LACROIX SA";"LACR.PA";"FR";NA;"FR0000066607"
-"LAFARGEHOLCIM LTD";"LHN.PA";"FR";NA;"CH0012214059"
-"LAGARDERE S.C.A.";"MMB.PA";"FR";NA;"FR0000130213"
-"LANSON-BCC";"ALLAN.PA";"FR";NA;"FR0004027068"
-"LATECOERE";"LAT.PA";"FR";NA;"FR0000032278"
-"LAURENT-PERRIER";"LPE.PA";"FR";NA;"FR0006864484"
-"LAVIDE HOLDING";"LVIDE.AS";"HO";NA;"NL0010545679"
-"LDC";"LOUP.PA";"FR";NA;"FR0013204336"
-"LE TANNEUR";"ALTAN.PA";"FR";NA;"FR0000075673"
-"LEASINVEST";"LEAS.BR";"BE";NA;"BE0003770840"
-"LEBON";"LBON.PA";"FR";NA;"FR0000121295"
-"LECTRA";"LSS.PA";"FR";NA;"FR0000065484"
-"LEXIBOOK LINGUIST.";"ALLEX.PA";"FR";NA;"FR0000033599"
-"LINEDATA SERVICES";"LIN.PA";"FR";NA;"FR0004156297"
-"LISGRAFICA";"LIG.LS";"PO";NA;"PTLIG0AE0002"
-"LISI";"FII.PA";"FR";NA;"FR0000050353"
-"LLEIDA";"ALLLN.PA";"FR";NA;"ES0105089009"
-"LNA SANTE";"LNA.PA";"FR";NA;"FR0004170017"
-"LOGIC INSTRUMENT";"ALLOG.PA";"FR";NA;"FR0000044943"
-"LUCIBEL";"ALUCI.PA";"FR";NA;"FR0011884378"
-"LUCIBEL BS";"LUCBS.PA";"FR";NA;"FR0013525953"
-"LUMIBIRD";"LBIRD.PA";"FR";NA;"FR0000038242"
-"LYSOGENE";"LYS.PA";"FR";NA;"FR0013233475"
-"M.R.M";"MRM.PA";"FR";NA;"FR0000060196"
-"M2I";"ALMII.PA";"FR";NA;"FR0013270626"
-"MADVERTISE";"ALMNG.PA";"FR";NA;"FR0010812230"
-"MAISONS DU MONDE";"MDM.PA";"FR";NA;"FR0013153541"
-"MAKHEIA GROUP";"ALMAK.PA";"FR";NA;"FR0000072993"
-"MAKHEIA GROUP BSA";"MAKBS.PA";"FR";NA;"FR0013525557"
-"MALIN CORP. PLC";"MLC.IR";"IR";NA;"IE00BVGC3741"
-"MANITOU BF";"MTU.PA";"FR";NA;"FR0000038606"
-"MANUTAN INTL";"MAN.PA";"FR";NA;"FR0000032302"
-"MARE NOSTRUM";"ALMAR.PA";"FR";NA;"FR0013400835"
-"MAREL";"MAREL.AS";"HO";NA;"IS0000000388"
-"MAROC TELECOM";"IAM.PA";"FR";NA;"MA0000011488"
-"MARTIFER";"MAR.LS";"PO";NA;"PTMFR0AM0003"
-"MASTRAD";"ALMAS.PA";"FR";NA;"FR0004155687"
-"MAUNA KEA TECH";"MKEA.PA";"FR";NA;"FR0010609263"
-"MAUREL ET PROM";"MAU.PA";"FR";NA;"FR0000051070"
-"MBWS";"MBWS.PA";"FR";NA;"FR0000060873"
-"MBWS BSA 2022";"MBWBT.PA";"FR";NA;"FR0013404944"
-"MBWS BSAR 2023";"MBWSZ.PA";"FR";NA;"FR0013066313"
-"MCPHY ENERGY";"MCPHY.PA";"FR";NA;"FR0011742329"
-"MDXHEALTH";"MDXH.BR";"BE";NA;"BE0003844611"
-"MECELEC COMPOSITES";"ALMEC.PA";"FR";NA;"FR0000061244"
-"MEDIA 6";"EDI.PA";"FR";NA;"FR0000064404"
-"MEDIA MAKER";"ALKER.PA";"FR";NA;"IT0005380438"
-"MEDIANTECHNOLOGIES";"ALMDT.PA";"FR";NA;"FR0011049824"
-"MEDINCELL";"MEDCL.PA";"FR";NA;"FR0004065605"
-"MELEXIS";"MELE.BR";"BE";NA;"BE0165385973"
-"MEMSCAP REGPT";"MEMS.PA";"FR";NA;"FR0010298620"
-"MERCIALYS";"MERY.PA";"FR";NA;"FR0010241638"
-"MERCK AND CO INC";"MRK.PA";"FR";NA;"US58933Y1055"
-"MERSEN";"MRN.PA";"FR";NA;"FR0000039620"
-"METABOLIC EX BSA21";"METBS.PA";"FR";NA;"FR0013483534"
-"METABOLIC EXPLORER";"METEX.PA";"FR";NA;"FR0004177046"
-"METHANOR";"ALMET.PA";"FR";NA;"FR0011217710"
-"METROPOLE TV";"MMT.PA";"FR";NA;"FR0000053225"
-"MG INTERNATIONAL";"ALMGI.PA";"FR";NA;"FR0010204453"
-"MGI DIGITAL GRAPHI";"ALMDG.PA";"FR";NA;"FR0010353888"
-"MICROPOLE";"MUN.PA";"FR";NA;"FR0000077570"
-"MICROWAVE VISION";"ALMIC.PA";"FR";NA;"FR0004058949"
-"MILIBOO";"ALMLB.PA";"FR";NA;"FR0013053535"
-"MINCON GROUP PLC";"MIO.IR";"IR";NA;"IE00BD64C665"
-"MINT";"ALBUD.PA";"FR";NA;"FR0004172450"
-"MINT BS";"BUDBS.PA";"FR";NA;"FR0013307329"
-"MITHRA";"MITRA.BR";"BE";NA;"BE0974283153"
-"MKB Nedsense";"NEDSE.AS";"HO";NA;"NL0009312842"
-"MND";"ALMND.PA";"FR";NA;"FR0011584549"
-"MONTEA C.V.A.";"MONT.BR";"BE";NA;"BE0003853703"
-"MOREFIELD GROUP";"MORE.AS";"HO";NA;"CWN814651014"
-"MOULINVEST";"ALMOU.PA";"FR";NA;"FR0011033083"
-"MR BRICOLAGE";"ALMRB.PA";"FR";NA;"FR0004034320"
-"MUNIC";"ALMUN.PA";"FR";NA;"FR0013462231"
-"MYBEST GROUP";"ALMBG.PA";"FR";NA;"IT0005119109"
-"NACON";"NACON.PA";"FR";NA;"FR0013482791"
-"NANOBIOTIX";"NANO.PA";"FR";NA;"FR0011341205"
-"NAVYA";"NAVYA.PA";"FR";NA;"FR0013018041"
-"NEOEN";"NEOEN.PA";"FR";NA;"FR0011675362"
-"NEOLIFE";"ALNLF.PA";"FR";NA;"FR0011636083"
-"NEOLIFE BS";"NLFBS.PA";"FR";NA;"FR0013282936"
-"NEOVACS";"ALNEV.PA";"FR";NA;"FR0004032746"
-"NEPI ROCKCASTLE";"NRP.AS";"HO";NA;"IM00BDD7WV31"
-"NETGEM";"NTG.PA";"FR";NA;"FR0004154060"
-"NEURONES";"NRO.PA";"FR";NA;"FR0004050250"
-"NEW SOURCES ENERGY";"NSE.AS";"HO";NA;"NL0009822014"
-"NEWAYS ELECTRONICS";"NEWAY.AS";"HO";NA;"NL0000440618"
-"NEXANS";"NEX.PA";"FR";NA;"FR0000044448"
-"NEXITY";"NXI.PA";"FR";NA;"FR0010112524"
-"NEXTEDIA";"ALNXT.PA";"FR";NA;"FR0004171346"
-"NIBC HOLDING";"NIBC.AS";"HO";NA;"NL0012756316"
-"NICOX";"COX.PA";"FR";NA;"FR0013018124"
-"NOKIA";"NOKIA.PA";"FR";NA;"FI0009000681"
-"NOVACYT";"ALNOV.PA";"FR";NA;"FR0010397232"
-"NOVISOURCE";"NOVI.AS";"HO";NA;"NL0010696704"
-"NOXXON";"ALNOX.PA";"FR";NA;"NL0012044762"
-"NR21 DS";"N21DS.PA";"FR";NA;"FR0014000VN3"
-"NRJ GROUP";"NRG.PA";"FR";NA;"FR0000121691"
-"NSE";"ALNSE.PA";"FR";NA;"FR0004065639"
-"NYRSTAR";"NYR.BR";"BE";NA;"BE0974294267"
-"NYXOAH";"NYXH.BR";"BE";NA;"BE0974358906"
-"O2I";"ALODI.PA";"FR";NA;"FR0010231860"
-"O2I BSA";"O2IBS.PA";"FR";NA;"FR0013268042"
-"O2I BSA 2";"ODBS2.PA";"FR";NA;"FR0013381431"
-"OBER";"ALOBR.PA";"FR";NA;"FR0010330613"
-"OCI";"OCI.AS";"HO";NA;"NL0010558797"
-"OENEO";"SBT.PA";"FR";NA;"FR0000052680"
-"OL GROUPE";"OLG.PA";"FR";NA;"FR0010428771"
-"ONCODESIGN";"ALONC.PA";"FR";NA;"FR0011766229"
-"ONTEX GROUP";"ONTEX.BR";"BE";NA;"BE0974276082"
-"ONXEO";"ALONX.PA";"FR";NA;"FR0010095596"
-"OPEN ORPHAN PLC";"ORPH.IR";"IR";NA;"GB00B9275X97"
-"ORANGE BELGIUM";"OBEL.BR";"BE";NA;"BE0003735496"
-"ORANJEWOUD A";"ORANW.AS";"HO";NA;"NL0000370419"
-"ORAPI";"ORAP.PA";"FR";NA;"FR0000075392"
-"ORAPI BSA";"ORAPB.PA";"FR";NA;"FR0013522216"
-"ORCHESTRA-PREMAMAN";"KAZI.PA";"FR";NA;"FR0013190410"
-"ORDISSIMO";"ALORD.PA";"FR";NA;"FR0013318052"
-"OREGE";"OREGE.PA";"FR";NA;"FR0010609206"
-"OREY ANTUNES ESC.";"ORE.LS";"PO";NA;"PTORE0AM0002"
-"ORIGIN ENT. PLC";"OIZ.IR";"IR";NA;"IE00B1WV4493"
-"ORMONDE MINING PLC";"ORQ1.IR";"IR";NA;"IE00BF0MZF04"
-"ORPEA";"ORP.PA";"FR";NA;"FR0000184798"
-"OSE IMMUNO";"OSE.PA";"FR";NA;"FR0012127173"
-"OSMOZIS";"ALOSM.PA";"FR";NA;"FR0013231180"
-"OVOCA BIO PLC";"OVXA.IR";"IR";NA;"IE00B4XVDC01"
-"OXURION";"OXUR.BR";"BE";NA;"BE0003846632"
-"PARAGON ID";"PID.PA";"FR";NA;"FR0013318813"
-"PAREF";"PAR.PA";"FR";NA;"FR0010263202"
-"PARROT";"PARRO.PA";"FR";NA;"FR0004038263"
-"PARROT BSA 1";"PABSA.PA";"FR";NA;"FR0013054269"
-"PARROT BSA 2";"PABSB.PA";"FR";NA;"FR0013054335"
-"PASSAT";"PSAT.PA";"FR";NA;"FR0000038465"
-"PATRIMOINE ET COMM";"PAT.PA";"FR";NA;"FR0011027135"
-"PATRIS";"ALPTR.LS";"PO";NA;"PTPRS0AM0009"
-"PAULIC MEUNERIE";"ALPAU.PA";"FR";NA;"FR0013479730"
-"PAYTON PLANAR";"PAY.BR";"BE";NA;"IL0010830391"
-"PCAS";"PCA.PA";"FR";NA;"FR0000053514"
-"PERM. TSB GP. HOLD";"IL0A.IR";"IR";NA;"IE00BWB8X525"
-"PERRIER (GERARD)";"PERR.PA";"FR";NA;"FR0000061459"
-"PETRONEFT RES.";"P8ET.IR";"IR";NA;"IE00B0Q82B24"
-"PHARMAGEST INTER.";"PHA.PA";"FR";NA;"FR0012882389"
-"PHARMASIMPLE";"ALPHS.PA";"FR";NA;"BE0974302342"
-"PHARNEXT";"ALPHA.PA";"FR";NA;"FR0011191287"
-"PICANOL";"PIC.BR";"BE";NA;"BE0003807246"
-"PIERRE VACANCES";"VAC.PA";"FR";NA;"FR0000073041"
-"PISCINES DESJOYAUX";"ALPDX.PA";"FR";NA;"FR0000061608"
-"PIXIUM VISION";"ALPIX.PA";"FR";NA;"FR0011950641"
-"PLANET MEDIA";"ALPLA.PA";"FR";NA;"FR0010211037"
-"PLANT ADVANCED";"ALPAT.PA";"FR";NA;"FR0010785790"
-"PLAST.VAL LOIRE";"PVL.PA";"FR";NA;"FR0013252186"
-"PORCELEYNE FLES";"PORF.AS";"HO";NA;"NL0000378669"
-"POSTNL";"PNL.AS";"HO";NA;"NL0009739416"
-"POUJOULAT";"ALPJT.PA";"FR";NA;"FR0000066441"
-"POULAILLON";"ALPOU.PA";"FR";NA;"FR0013015583"
-"POXEL";"POXEL.PA";"FR";NA;"FR0012432516"
-"PREDILIFE";"ALPRE.PA";"FR";NA;"FR0010169920"
-"PRISMAFLEX INTL";"ALPRI.PA";"FR";NA;"FR0004044600"
-"PROACTIS SA";"PROAC.PA";"FR";NA;"FR0004052561"
-"PRODWARE";"ALPRO.PA";"FR";NA;"FR0010313486"
-"PRODWAYS";"PWG.PA";"FR";NA;"FR0012613610"
-"PROLOGUE";"PROL.PA";"FR";NA;"FR0010380626"
-"PROLOGUE BSA";"PROBT.PA";"FR";NA;"FR0013398617"
-"PROLOGUE BSAA2021";"PRBS2.PA";"FR";NA;"FR0011994326"
-"PROSUS";"PRX.AS";"HO";NA;"NL0013654783"
-"PROVIDENCE RES.";"PZQA.IR";"IR";NA;"IE00B66B5T26"
-"PSB INDUSTRIES";"PSB.PA";"FR";NA;"FR0000060329"
-"PUBLICIS BSA";"PUBBS.PA";"FR";NA;"FR0000312928"
-"QRF";"QRF.BR";"BE";NA;"BE0974272040"
-"QUADIENT";"QDT.PA";"FR";NA;"FR0000120560"
-"QUANTUM GENOMICS";"ALQGC.PA";"FR";NA;"FR0011648971"
-"QUESTFOR GR-PRICAF";"QFG.BR";"BE";NA;"BE0003730448"
-"QWAMPLIFY";"ALQWA.PA";"FR";NA;"FR0010889386"
-"RALLYE";"RAL.PA";"FR";NA;"FR0000060618"
-"RAMADA";"RAM.LS";"PO";NA;"PTFRV0AE0004"
-"REALITES";"ALREA.PA";"FR";NA;"FR0011858190"
-"RECTICEL";"REC.BR";"BE";NA;"BE0003656676"
-"RECYLEX S.A.";"RX.PA";"FR";NA;"FR0000120388"
-"REDITUS,SGPS";"RED.LS";"PO";NA;"PTRED0AP0010"
-"REINET INVESTMENTS";"REINA.AS";"HO";NA;"LU0383812293"
-"REMY COINTREAU";"RCO.PA";"FR";NA;"FR0000130395"
-"RENEWI";"RWI.AS";"HO";NA;"GB0007995243"
-"RESILUX";"RES.BR";"BE";NA;"BE0003707214"
-"RETAIL ESTATES";"RET.BR";"BE";NA;"BE0003720340"
-"REWORLD MEDIA";"ALREW.PA";"FR";NA;"FR0010820274"
-"REXEL";"RXL.PA";"FR";NA;"FR0010451203"
-"RIBER";"ALRIB.PA";"FR";NA;"FR0000075954"
-"ROBERTET";"RBT.PA";"FR";NA;"FR0000039091"
-"ROCHE BOBOIS";"RBO.PA";"FR";NA;"FR0013344173"
-"ROCTOOL";"ALROC.PA";"FR";NA;"FR0010523167"
-"ROCTOOL BSA 2020";"ROCBS.PA";"FR";NA;"FR0013477585"
-"ROODMICROTEC";"ROOD.AS";"HO";NA;"NL0000440477"
-"ROTHSCHILD & CO";"ROTH.PA";"FR";NA;"FR0000031684"
-"ROUGIER S.A.";"ALRGR.PA";"FR";NA;"FR0000037640"
-"ROULARTA";"ROU.BR";"BE";NA;"BE0003741551"
-"ROYAL DUTCH SHELLB";"RDSB.AS";"HO";NA;"GB00B03MM408"
-"RYANAIR HOLD. PLC";"RY4C.IR";"IR";NA;"IE00BYTBXV33"
-"S.E.B.";"SK.PA";"FR";NA;"FR0000121709"
-"SAFE ORTHOPAEDICS";"ALSAF.PA";"FR";NA;"FR0013467123"
-"SAFWOOD";"ALWOO.PA";"FR";NA;"IT0004013725"
-"SAMSE";"SAMS.PA";"FR";NA;"FR0000060071"
-"SARTORIUS STED BIO";"DIM.PA";"FR";NA;"FR0013154002"
-"SAVENCIA";"SAVE.PA";"FR";NA;"FR0000120107"
-"SBM OFFSHORE";"SBMO.AS";"HO";NA;"NL0000360618"
-"SCBSM";"CBSM.PA";"FR";NA;"FR0006239109"
-"SCHLUMBERGER";"SLB.PA";"FR";NA;"AN8068571086"
-"SECHE ENVIRONNEM.";"SCHP.PA";"FR";NA;"FR0000039109"
-"SEIF SPA";"ALSEI.PA";"FR";NA;"IT0005353484"
-"SELCODIS";"SLCO.PA";"FR";NA;"FR0000065492"
-"SENSORION";"ALSEN.PA";"FR";NA;"FR0012596468"
-"SEQUANA MEDICAL";"SEQUA.BR";"BE";NA;"BE0974340722"
-"SERGEFERRARI GROUP";"SEFER.PA";"FR";NA;"FR0011950682"
-"SES IMAGOTAG";"SESL.PA";"FR";NA;"FR0010282822"
-"SHOWROOMPRIVE";"SRP.PA";"FR";NA;"FR0013006558"
-"SHURGARD";"SHUR.BR";"BE";NA;"LU1883301340"
-"SIDETRADE";"ALBFR.PA";"FR";NA;"FR0010202606"
-"SIGNAUX GIROD";"GIRO.PA";"FR";NA;"FR0000060790"
-"SIGNIFY NV";"LIGHT.AS";"HO";NA;"NL0011821392"
-"SII";"SII.PA";"FR";NA;"FR0000074122"
-"SIOEN";"SIOE.BR";"BE";NA;"BE0003743573"
-"SIPEF";"SIP.BR";"BE";NA;"BE0003898187"
-"SLIGRO FOOD GROUP";"SLIGR.AS";"HO";NA;"NL0000817179"
-"SMARTPHOTO GROUP";"SMAR.BR";"BE";NA;"BE0974323553"
-"SMCP";"SMCP.PA";"FR";NA;"FR0013214145"
-"SMTPC";"SMTPC.PA";"FR";NA;"FR0004016699"
-"SMURFIT KAPPA GP";"SK3.IR";"IR";NA;"IE00B1RR8406"
-"SNOWWORLD";"SNOW.AS";"HO";NA;"NL0010627865"
-"SOC FRANC CASINOS";"SFCA.PA";"FR";NA;"FR0010209809"
-"SODITECH";"SEC.PA";"FR";NA;"FR0000078321"
-"SOFRAGI";"SOFR.PA";"FR";NA;"FR0000030140"
-"SOFTIMAT";"SOFT.BR";"BE";NA;"BE0003773877"
-"SOGECLAIR";"SOG.PA";"FR";NA;"FR0000065864"
-"SOITEC";"SOI.PA";"FR";NA;"FR0013227113"
-"SOLOCAL GROUP";"LOCAL.PA";"FR";NA;"FR00140006O9"
-"SOLUTIONS 30 SE";"S30.PA";"FR";NA;"FR0013379484"
-"SOMFY SA";"SO.PA";"FR";NA;"FR0013199916"
-"SONAE IND.SGPS";"SONI.LS";"PO";NA;"PTS3P0AM0025"
-"SONAECOM,SGPS";"SNC.LS";"PO";NA;"PTSNC0AM0006"
-"SOPRA STERIA GROUP";"SOP.PA";"FR";NA;"FR0000050809"
-"SPIE";"SPIE.PA";"FR";NA;"FR0012757854"
-"SPINEGUARD";"ALSGD.PA";"FR";NA;"FR0011464452"
-"SPINEWAY";"ALSPW.PA";"FR";NA;"FR0011398874"
-"SPORTING";"SCP.LS";"PO";NA;"PTSCP0AM0001"
-"SQLI";"SQI.PA";"FR";NA;"FR0011289040"
-"ST DUPONT";"DPT.PA";"FR";NA;"FR0000054199"
-"STEF";"STF.PA";"FR";NA;"FR0000064271"
-"STENTYS";"STNT.PA";"FR";NA;"FR0010949404"
-"STERN GROEP";"STRN.AS";"HO";NA;"NL0000336303"
-"STRADIM ESPAC.FIN";"ALSAS.PA";"FR";NA;"FR0000074775"
-"STREAMWIDE";"ALSTW.PA";"FR";NA;"FR0010528059"
-"SUPERSONIC IMAGINE";"ALSSI.PA";"FR";NA;"FR0010526814"
-"SWORD GROUP";"SWP.PA";"FR";NA;"FR0004180578"
-"SYNERGIE";"SDG.PA";"FR";NA;"FR0000032658"
-"TAYNINH";"TAYN.PA";"FR";NA;"FR0000063307"
-"TECH BSA 2024";"TECBS.PA";"FR";NA;"FR0013526225"
-"TECHNICOLOR";"TCH.PA";"FR";NA;"FR0013505062"
-"TECHNIPFMC";"FTI.PA";"FR";NA;"GB00BDSFG982"
-"TEIXEIRA DUARTE";"TDSA.LS";"PO";NA;"PTTD10AM0000"
-"TELEVERBIER";"TVRB.PA";"FR";NA;"CH0008175645"
-"TER BEKE";"TERB.BR";"BE";NA;"BE0003573814"
-"TESSENDERLO";"TESB.BR";"BE";NA;"BE0003555639"
-"TESSI";"TES.PA";"FR";NA;"FR0004529147"
-"TEXAF";"TEXF.BR";"BE";NA;"BE0974263924"
-"TF1";"TFI.PA";"FR";NA;"FR0000054900"
-"TFF GROUP";"TFF.PA";"FR";NA;"FR0013295789"
-"THE BLOCKCHAIN GP";"ALTBG.PA";"FR";NA;"FR0011053636"
-"THERACLION";"ALTHE.PA";"FR";NA;"FR0010120402"
-"THERADIAG";"ALTER.PA";"FR";NA;"FR0004197747"
-"THERANEXUS";"ALTHX.PA";"FR";NA;"FR0013286259"
-"THERMADOR GROUPE";"THEP.PA";"FR";NA;"FR0013333432"
-"TIE KINETIX";"TIE.AS";"HO";NA;"NL0010389508"
-"TIKEHAU CAPITAL";"TKO.PA";"FR";NA;"FR0013230612"
-"TINC";"TINC.BR";"BE";NA;"BE0974282148"
-"TITAN CEMENT";"TITC.BR";"BE";NA;"BE0974338700"
-"TIVOLY";"TVLY.PA";"FR";NA;"FR0000060949"
-"TKH GROUP";"TWEKA.AS";"HO";NA;"NL0000852523"
-"TOMTOM";"TOM2.AS";"HO";NA;"NL0013332471"
-"TOOLUX SANDING";"ALTLX.PA";"FR";NA;"LU0394945660"
-"TOTAL GABON";"EC.PA";"FR";NA;"GA0000121459"
-"TOTAL PRODUCE PLC";"T7O.IR";"IR";NA;"IE00B1HDWM43"
-"TOUAX";"TOUP.PA";"FR";NA;"FR0000033003"
-"TOUR EIFFEL";"EIFF.PA";"FR";NA;"FR0000036816"
-"TOYOTA CAETANO";"SCT.LS";"PO";NA;"PTSCT0AP0018"
-"TRANSGENE";"TNG.PA";"FR";NA;"FR0005175080"
-"TRIGANO";"TRI.PA";"FR";NA;"FR0005691656"
-"TRILOGIQ";"ALTRI.PA";"FR";NA;"FR0010397901"
-"TTI";"ALTTI.PA";"FR";NA;"FR0010383877"
-"TUBIZE-FIN";"TUB.BR";"BE";NA;"BE0003823409"
-"TULLOW OIL PLC";"TQW.IR";"IR";NA;"GB0001500809"
-"TXCOM";"ALTXC.PA";"FR";NA;"FR0010654087"
-"U10 CORP";"ALU10.PA";"FR";NA;"FR0000079147"
-"UMANIS";"ALUMS.PA";"FR";NA;"FR0013263878"
-"UNIFIEDPOST GROUP";"UPG.BR";"BE";NA;"BE0974371032"
-"UNION FIN.FRANCE";"UFF.PA";"FR";NA;"FR0000034548"
-"UNION TECH.INFOR.";"FPG.PA";"FR";NA;"FR0000074197"
-"UNIPHAR PLC";"UPR.IR";"IR";NA;"IE00BJ5FQX74"
-"UV GERMI";"ALUVI.PA";"FR";NA;"FR0011898584"
-"VAA VISTA ALEGRE";"VAF.LS";"PO";NA;"PTVAA0AM0019"
-"VALBIOTIS";"ALVAL.PA";"FR";NA;"FR0013254851"
-"VALLOUREC";"VK.PA";"FR";NA;"FR0013506730"
-"VALNEVA";"VLA.PA";"FR";NA;"FR0004056851"
-"VALUE8";"VALUE.AS";"HO";NA;"NL0010661864"
-"VAN DE VELDE";"VAN.BR";"BE";NA;"BE0003839561"
-"VASTNED RETAIL BEL";"VASTB.BR";"BE";NA;"BE0003754687"
-"VENTE UNIQUE.COM";"ALVU.PA";"FR";NA;"FR0010766667"
-"VEON";"VEON.AS";"HO";NA;"BMG9349W1038"
-"VERALLIA";"VRLA.PA";"FR";NA;"FR0013447729"
-"VERGNET";"ALVER.PA";"FR";NA;"FR0004155240"
-"VERIMATRIX";"VMX.PA";"FR";NA;"FR0010291245"
-"VETOQUINOL";"VETO.PA";"FR";NA;"FR0004186856"
-"VGP";"VGP.BR";"BE";NA;"BE0003878957"
-"VICAT";"VCT.PA";"FR";NA;"FR0000031775"
-"VIDELIO";"VDLO.PA";"FR";NA;"FR0000066680"
-"VIEL ET COMPAGNIE";"VIL.PA";"FR";NA;"FR0000050049"
-"VILMORIN & CIE";"RIN.PA";"FR";NA;"FR0000052516"
-"VIOHALCO";"VIO.BR";"BE";NA;"BE0974271034"
-"VIRBAC";"VIRP.PA";"FR";NA;"FR0000031577"
-"VISIATIV";"ALVIV.PA";"FR";NA;"FR0004029478"
-"VISIODENT";"SDT.PA";"FR";NA;"FR0000065765"
-"VISIOMED BSA2018-1";"VMGBS.PA";"FR";NA;"FR0013322724"
-"VISIOMED GROUP";"ALVMG.PA";"FR";NA;"FR0013481835"
-"VIVORYON";"VVY.AS";"HO";NA;"DE0007921835"
-"VOGO";"ALVGO.PA";"FR";NA;"FR0011532225"
-"VOLTA FINANCE";"VTA.AS";"HO";NA;"GG00B1GHHH78"
-"VOLTALIA";"VLTSA.PA";"FR";NA;"FR0011995588"
-"VOLUNTIS";"VTX.PA";"FR";NA;"FR0004183960"
-"VOYAGEURS DU MONDE";"ALVDM.PA";"FR";NA;"FR0004045847"
-"VR EDUCATION HOLD.";"6VR.IR";"IR";NA;"IE00BG0HDR01"
-"VRANKEN-POMMERY";"VRAP.PA";"FR";NA;"FR0000062796"
-"WALLIX";"ALLIX.PA";"FR";NA;"FR0010131409"
-"WAREHOUSES";"WEB.BR";"BE";NA;"BE0003734481"
-"WAVESTONE";"WAVE.PA";"FR";NA;"FR0013357621"
-"WE.CONNECT";"ALWEC.PA";"FR";NA;"FR0013079092"
-"WEDIA";"ALWED.PA";"FR";NA;"FR0010688440"
-"WENDEL";"MF.PA";"FR";NA;"FR0000121204"
-"WERELDHAVE";"WHA.AS";"HO";NA;"NL0000289213"
-"WERELDHAVE BELGIUM";"WEHB.BR";"BE";NA;"BE0003724383"
-"WINFARM";"ALWF.PA";"FR";NA;"FR0014000P11"
-"WITBE";"ALWIT.PA";"FR";NA;"FR0013143872"
-"WOL. EXTENS. CERT";"WOLE.BR";"BE";NA;"BE0003600112"
-"X-FAB";"XFAB.PA";"FR";NA;"BE0974310428"
-"XILAM ANIMATION";"XIL.PA";"FR";NA;"FR0004034072"
-"XIOR";"XIOR.BR";"BE";NA;"BE0974288202"
-"YATRA";"YATRA.AS";"HO";NA;"JE00B1FBT077"
-"YEW GROVE REIT PLC";"YEW.IR";"IR";NA;"IE00BDT5KP12"
-"YMAGIS BSA";"MAGBS.PA";"FR";NA;"FR0013484466"
-"ZCI LIMITED";"CV.PA";"FR";NA;"BMG9887P1068"
-"ZENITEL";"ZENT.BR";"BE";NA;"BE0974311434"
+CompanyName;tickers;country;industry;ISIN
+Covestro;1COV.DE;DE;CHE;DE0006062144
+H+R KGAA  INH. O.N.;2HRA.DE;DE;Chemicals-Chemicals, Specialty;DE000A2E4T77
+4BASEBIO AG  NA O.N.;4BSB.DE;DE;Pharma & Healthcare-Biotechnology;DE000A2YN801
+HENSOLDT AG NA O.N.;5UH.DE;DE;Technology-Semiconductors;DE000HAG0005
+TRATON SE   INH O.N.;8TRA.DE;DE;Industrial-Heavy Machinery;DE000TRAT0N7
+ALL FOR ONE GROUP NA O.N.;A1OS.DE;DE;Software-IT-Services;DE0005110001
+A2A;A2A.MI;IT;NA;NA
+ATRESMEDIA;A3M.MC;ES;NA;NA
+ACCENTRO REAL ESTATE AG  O.N.;A4Y.DE;DE;Financial Services-Real Estate;DE000A0KFKB3
+AMADEUS FIRE AG;AAD.DE;DE;Industrial-Industrial Products & Services;DE0005093108
+AUMANN AG  INH O.N.;AAG.DE;DE;Industrial-Industrial Machinery;DE000A2DAM03
+AHLERS AG NA O.N.;AAH.DE;DE;Consumer-Clothing & Footwear;DE0005009740
+Aalberts;AALB.AS;HO;IND;NL0000852564
+ABENGOA CL.A;ABG.MC;ES;NA;NA
+AB InBev;ABI.BR;BE;FOOD;BE0974293251
+ABN AMRO;ABN.AS;HO;BAN;NL0011540547
+Accor;AC.PA;FR;HOT;FR0000120404
+Crédit Agricole;ACA.PA;FR;BAN;FR0000045072
+Accell Group;ACCEL.AS;HO;SER;NL0009767532
+Aspocomp Group Oyj;ACG1V.HE;FI;IND;FI0009008080
+Ackermans & van Haaren;ACKB.BR;BE;BAN;BE0003764785
+Amsterdam Commodities;ACOMO.AS;HO;FOOD;NL0000313286
+ACS Group;ACS.MC;ES;CON;ES0167050915
+ALZCHEM GROUP AG INH O.N.;ACT.DE;DE;Chemicals-Chemicals, Specialty;DE000A2YNT30
+A.S.CREATION TAPETEN NA;ACWN.DE;DE;Consumer-Home Construction & Furnishings;DE000A1TNNN5
+BET-AT-HOME.COM AG O.N.;ACX.DE;DE;Retail-Retail, Internet;DE000A0DNAY5
+Acerinox;ACX.MC;ES;MAT;ES0132105018
+Ahold Delhaize;AD.AS;HO;FOOD;NL0011794037
+ADLER MODEMAERKTE AG O.N.;ADD.DE;DE;Consumer-Clothing & Footwear;DE000A1H8MU2
+ADLER REAL ESTATE AG;ADL.DE;DE;Financial Services-Real Estate;DE0005008007
+Adidas;ADS.DE;DE;RET;DE000A1EWWW0
+ADVA OPTICAL NETWORKING SE  O.N.;ADV.DE;DE;Technology-Communications Technology;DE0005103006
+Audax Renovables;ADX.MC;ES;UTL;ES0136463017 
+Adyen;ADYEN.AS;HO;SER;NL0012969182
+ADOLFO DOMINGUEZ;ADZ.MC;ES;NA;NA
+Aedifica;AED.BR;BE;INM;BE0003851681
+AEDAS HOMES;AEDAS.MC;ES;NA;NA
+Aena;AENA.MC;ES;AIR;ES0105046009
+Air France–KLM;AF.PA;FR;FLI;FR0000031122
+Afarak Group Oyj;AFAGR.HE;FI;MAT;FI0009800098
+CARL ZEISS MEDITEC AG;AFX.DE;DE;Pharma & Healthcare-Medical Technology;DE0005313704
+Aegon;AGN.AS;HO;INS;NL0000303709
+Ageas;AGS.BR;BE;INS;BE0974264930
+AIRTIFICIAL INTEL STRUCT;AI.MC;ES;NA;NA
+Air Liquide;AI.PA;FR;CHE;FR0000120073
+Airbus;AIR.PA;FR;IND;NL0000235190
+AIXTRON SE NA O.N.;AIXA.DE;DE;Technology-Semiconductors;DE000A0WMPJ6
+Arkema;AKE.PA;FR;CHE;FR0010313833
+Aktia Bank Abp;AKTIA.HE;FI;BAN;FI4000058870
+AkzoNobel;AKZA.AS;HO;CHE;NL0013267909
+CORPORACION FINANCIERA ALBA;ALB.MC;ES;NA;NA
+Ålandsbanken Abp A;ALBAV.HE;FI;BAN;FI0009000103
+Ålandsbanken Abp B;ALBBV.HE;FI;BAN;FI0009001127
+Almirall;ALM.MC;ES;PHA;NA
+Alma Media Oyj;ALMA.HE;FI;SER;FI0009013114
+ALANTRA PARTNERS S.A.;ALNT.MC;ES;NA;NA
+Alstom;ALO.PA;FR;IND;FR0010220475
+Altia Oyj;ALTIA.HE;FI;RET;FI4000292438
+Altri;ALTR.LS;PO;IND;PTALT0AE0002
+Allianz;ALV.DE;DE;INS;DE0008404005
+Allianz;ALV.DE ;DE;INS;NA
+Ahlstrom-Munksjö Oyj;AM1.HE;FI;MAT;FI4000048418
+SLM SOLUTIONS GRP AG;AM3D.DE;DE;Industrial-Advanced Industrial Equipment;DE000A111338
+AMPER;AMP.MC;ES;NA;NA
+Amplifon;AMP.MI;IT;NA;NA
+Amadeus IT Group;AMS.MC;ES;TECH;ES0109067019
+Acciona;ANA.MC;ES;CON;ES0125220311
+Andritz AG;ANDR.VI;AT;NA;NA
+ATOSS SOFTWARE AG;AOF.DE;DE;Software-Software;DE0005104400
+Alstria office REIT-AG;AOX.DE;DE;INM;DE000A0LD2U1
+Aperam;APAM.BR;BE;MAT;NA
+APERAM;APAM.MC;ES;NA;NA
+Apetit Oyj;APETIT.HE;FI;RET;FI0009003503
+APPLUS SERVICES;APPS.MC;ES;NA;NA
+arGEN-X;ARGX.BR;BE;HEALTH;NL0010832176
+Aareal Bank AG;ARL.DE;DE;BAN;DE0005408116
+ARIMA BR;ARM.MC;ES;NA;NA
+ARTNET AG NA O.N.;ART.DE;DE;Retail -Retail, Internet ;DE000A1K0375
+AKASOL AG  INH. O.N.;ASL.DE;DE;Automobile-Auto Parts & Equipment;DE000A2JNWZ9
+ASML Holding;ASML.AS;HO;IND;NL0010273215
+Aspo Oyj;ASPO.HE;FI;IND;FI0009008072
+ASR Nederland;ASRNL.AS;HO;INS;NL0011872643
+Aroundtown SA;AT1.DE;DE;INM;NA
+Atlantia;ATL.MI;IT;TRANS;NA
+Atos;ATO.PA;FR;TECH;FR0000051732
+Atria Oyj A;ATRAV.HE;FI;RET;FI0009006548
+AT & S Austria Technologie & Systemtechnik Aktiengesellschaft;ATS.VI;AT;NA;NA
+AVES ONE AG O.N.;AVES.DE;DE;Transportation & Logistics-Transportation Services;DE000A168114
+Avantium;AVTX.AS;HO;CHE;NL0012047823
+AZKOYEN;AZK.MC;ES;NA;NA
+Azimut;AZM.MI;IT;BAN;NA
+Metro AG;B4B.DE;DE;RET;DE000BFB0019
+METRO AG   VZO O.N.;B4B3.DE;DE;Retail-Retail, Multiline;DE000BFB0027
+BAUER AG;B5A.DE;DE;Construction-Construction & Engineering;DE0005168108
+BIOFRONTERA AG NA O.N.;B8F.DE;DE;Pharma & Healthcare-Biotechnology;DE0006046113
+BORGES;BAIN.MC;ES;NA;NA
+Banco BPM;BAMI.MI;IT;BAN;NA
+Barco;BAR.BR;BE;IND;BE0974362940
+BASF;BAS.DE;DE;CHE;DE000BASF111
+Basware Oyj;BAS1V.HE;FI;TECH;FI0009008403
+Bayer;BAYN.DE;DE;PHA;DE000BAY0017
+Beter Bed;BBED.AS;HO;RET;NL0000339703
+BBVA;BBVA.MC;ES;BAN;ES0113211835
+Bechtle AG;BC8.DE;DE;TECH;DE0005158703
+Banco Comercial Português;BCP.LS;PO;BAN;PTBCP0AM0015
+BaronDeLey;BDL.MC;ES;FOOD;NA
+BERTRANDT AG O.N.;BDT.DE;DE;Automobile-Auto Parts & Equipment;DE0005232805
+Beiersdorf;BEI.DE;DE;#N/A;DE0005200000
+Beiersdorf ;BEI.DE ;DE;NA;NA
+Basic-Fit;BFIT.AS;HO;SER;NL0011872650
+BAWAG Group AG;BG.VI;AT;NA;NA
+Banca Generali;BGN.MI;IT;BAN;NA
+BioMerieux;BIM.PA;FR;NA;FR0013280286
+Binckbank;BINCK.AS;HO;BAN;NA
+BIOTEST AG ST O.N.;BIO.DE;DE;Pharma & Healthcare-Pharmatceuticals;DE0005227201
+BIOSEARCH;BIO.MC;ES;NA;NA
+BIOTEST AG VZ O.N.;BIO3.DE;DE;Pharma & Healthcare-Pharmatceuticals;DE0005227235
+Biohit Oyj B;BIOBV.HE;FI;HEALTH;FI0009005482
+Bittium Oyj;BITTI.HE;FI;TECH;FI0009007264
+BROCKHAUS CAPITAL MGMT ON;BKHT.DE;DE;Technology-Information Technology;DE000A2GSU42
+Bankia;BKIA.MC;ES;BAN;ES0113307062
+Bankinter;BKT.MC;ES;BAN;ES0113679I37
+BERKELEY ENERGIA;BKY.MC;ES;NA;NA
+NA;BMED.MI;IT;BAN;NA
+BMW;BMW.DE;DE;AUT;DE0005190003
+BAY.MOTOREN WERKE  VZO;BMW3.DE;DE;Automobile-Automobile Manufacturers;DE0005190037
+Danone;BN.PA;FR;FOOD;FR0000120644
+B.R.A.I.N. NA;BNN.DE;DE;Chemicals-Chemicals, Specialty;DE0005203947
+BNP Paribas;BNP.PA;FR;BAN;FR0000131104
+Brenntag AG;BNR.DE;DE;CHE;DE000A1DAHH0
+Lucas Bols;BOLS.AS;HO;FOOD;NL0010998878
+Hugo Boss;BOSS.DE;DE;RET;DE000A1PHFF7
+BPER Banca;BPE.MI;IT;BAN;NA
+Brembo;BRE.MI;IT;AUT;NA
+Brunel International;BRNL.AS;HO;SER;NL0010776944
+BASLER AG O.N.;BSL.DE;DE;Industrial-Advanced Industrial Equipment;DE0005102008
+BASTEI LUEBBE AG  O.N.;BST.DE;DE;Media-Publishing & Printing;DE000A1X3YY0
+BORUSSIA DORTMUND;BVB.DE;DE;Media-Movies & Entertainment;DE0005493092
+Bureau Veritas;BVI.PA;FR;SER;FR0006174348
+BAYWA AG   NA O.N.;BYW.DE;DE;Industrial -Industrial Products & Services ;DE0005194005
+BAYWA AG VINK.NA. O.N.;BYW6.DE;DE;Industrial -Industrial Products & Services ;DE0005194062
+Buzzi Unicem;BZU.MI;IT;CON;NA
+COM.CHARG.SOL.AG INH.O.N.;C0M.DE;DE;Industrails -Advanced Industrial Equipment ;DE000A2QDNX9
+Carrefour;CA.PA;FR;FOOD;FR0000120172
+CaixaBank;CABK.MC;ES;BAN;ES0140609019
+CONSTRUCCION Y AUXILIAR DE FER;CAF.MC;ES;NA;NA
+CA Immobilien Anlagen AG;CAI.VI;AT;INM;NA
+CUOTAS PARTICIPATIVAS CAM;CAM.MC;ES;NA;NA
+ENCAVIS AG  INH. O.N.;CAP.DE;DE;Financial Services-Diversified Financial;DE0006095003
+Capgemini;CAP.PA;FR;TECH;FR0000125338
+CapMan Oyj;CAPMAN.HE;FI;BAN;FI0009009377
+PROSEGUR CASH S.A.;CASH.MC;ES;NA;NA
+Caverion Oyj;CAV1V.HE;FI;IND;FI4000062781
+GRUPO CLINICA BAVIERA;CBAV.MC;ES;NA;NA
+Commerzbank AG;CBK.DE;DE;BAN;DE000CBK1001
+COCA-COLA EUROPEAN PARTNERS;CCEP.MC;ES;NA;NA
+CODERE;CDR.MC;ES;NA;NA
+CROPENERGIES AG;CE2.DE;DE;Industrial-Renewable Energies;DE000A0LAUP1
+CECONOMY AG  ST O.N.;CEC.DE;DE;Retail-Retail, Specialty;DE0007257503
+CECONOMY AG  VZO O.N.;CEC1.DE;DE;Retail-Retail, Specialty;DE0007257537
+CENTROTEC SE  INH O.N.;CEV.DE;DE;Industrial-Industrial Products & Services;DE0005407506
+CEVASA A;CEV.MC;ES;NA;NA
+Cargotec Oyj;CGCBV.HE;FI;IND;FI0009013429
+CIE Automotive;CIE.MC;ES;AUT;ES0105630315
+CLEOP;CLEO.MC;ES;NA;NA
+Cellnex Telecom;CLNX.MC;ES;TECH;ES0105066007
+CORP.EMPRES.MATERIALES CONSTR.;CMC.MC;ES;NA;NA
+CNH Industrial;CNHI.MI;IT;IND;NA
+Cofinimmo;COFB.BR;BE;INM;BE0003593044
+CANCOM SE O.N.;COK.DE;DE;Software-IT-Services;DE0005419105
+Inmobiliaria Colonial;COL.MC;ES;INM;ES0139140174
+Colruyt;COLR.BR;BE;RET;BE0974256852
+Continental;CON.DE;DE;#N/A;DE0005439004
+Continental;CON.DE ;DE;AUT;NA
+Consti Oyj;CONSTI.HE;FI;IND;FI4000178256
+COMPUGROUP MED. NA O.N.;COP.DE;DE;Software-Software;DE000A288904
+Corticeira Amorim;COR.LS;PO;FOOD;PTCOR0AE0006
+Covivo;COV.PA;FR;NA;FR0000064578
+Campari;CPR.MI;IT;FOOD;NA
+CAPSENSIXX AG  INH O.N.;CPX.DE;DE;Financial Services-Diversified Financial;DE000A2G9M17
+CRH;CRG.IR;IR;CONS;IE0001827041
+AXA;CS.PA;FR;INS;FR0000120628
+CENIT AG O.N.;CSH.DE;DE;Software-IT-Services;DE0005407100
+CREDITSHELF AG  IA O.N.;CSQ.DE;DE;Financial Services-Diversified Financial;DE000A2LQUA5
+Componenta Oyj;CTH1V.HE;FI;IND;FI0009010110
+CTT Correios de Portugal;CTT.LS;PO;TRANS;PTCTT0AM0001
+Citycon Oyj;CTY1S.HE;FI;BAN;FI4000369947
+CEWE STIFTUNG KGAA  O.N.;CWC.DE;DE;Consumer-Leisure ;DE0005403901
+Daimler;DAI.DE;DE;#N/A;DE0007100000
+DATA MODUL AG O.N.;DAM.DE;DE;Technology-Electronic Components & Hardware;DE0005498901
+Deutsche Börse;DB1.DE;DE;#N/A;DE0005810055
+Deutsche Borse AG;DB1.DE ;DE;NA;NA
+DT.BETEILIG.AG   NA O.N.;DBAN.DE;DE;Financial Services-Private Equity & Venture Capital;DE000A1TNUT7
+DIEBOLD NIXDORF DL 1,25;DBD.DE;DE;Technology-Electronic Components & Hardware;US2536511031
+DEUTSCHEBANK;DBK.DE;DE;BAN;DE0005140008
+Deutsche EuroShop AG;DEQ.DE;DE;INM;DE0007480204
+DESARROLLOS ESPECIALES DE SIST;DESA.MC;ES;NA;NA
+DELTICOM AG  NA O.N.;DEX.DE;DE;Retail-Retail, Internet;DE0005146807
+DEUTZ AG O.N.;DEZ.DE;DE;Industrial-Industrial Machinery;DE0006305006
+DFV DEUTSCHE FAMILIENVERSICHERUNG  O.N.;DFV.DE;DE;Insurance-Insurance;DE000A2NBVD5
+Vinci;DG.PA;FR;CON;FR0000125486
+Delivery Hero SE;DHER.DE;DE;FOOD;DE000A2E4K43
+DIA;DIA.MC;ES;NA;NA
+Diasorin;DIA.MI;IT;SUP;NA
+Digia Oyj;DIGIA.HE;FI;TECH;FI0009007983
+Digitalist Group Oyj;DIGIGR.HE;FI;TECH;FI0009008007
+DEUTSCHE KONSUM REIT-AG;DKG.DE;DE;Financial Services-Real Estate;DE000A14KRD3
+DIALOG SEMICONDUCTOR PLC   LS-,10;DLG.DE;DE;Technology-Semiconductors;GB0059822006
+De'Longhi S.p.A ;DLG.MI;IT;NA;NA
+DERMAPHARM HOLDING INH O.N.;DMP.DE;DE;Pharma & Healthcare-Pharmaceuticals;DE000A2GS5D8
+DEMIRE DEUTSCHE MITTELSTAND REAL ESTATE AG;DMRE.DE;DE;Financial Services-Real Estate;DE000A0XFSF0
+DO & CO Aktiengesellschaft;DOC.VI;AT;NA;NA
+GLOBAL DOMINION ACCESS;DOM.MC;ES;NA;NA
+Dovre Group Oyj;DOV1V.HE;FI;IND;FI0009008098
+Deutsche Post;DPW.DE;DE;TRANS;DE0005552004
+1&1 Drillisch;DRI.DE;DE;COM;DE0005545503
+Dragerwerk;DRW3.DE;DE;HEALTH;DE0005550636
+DRAEGERWERK ST.A.O.N.;DRW8.DE;DE;Pharma & Healthcare-Medical Technology;DE0005550602
+DSM;DSM.AS;HO;CHE;NL0000009827
+Dassault Systèmes;DSY.PA;FR;TECH;FR0000130650
+DeutscheTelekom;DTE.DE;DE;COM;DE0005557508
+Dürr AG;DUE.DE;DE;AUT;DE0005565204
+DEUTSCHE WOHNEN;DWNI.DE;DE;INM;DE000A0HN5C6
+DWS GROUP GMBH+CO.KGAA ON;DWS.DE;DE;Financial Services-Diversified Financial;DE000DWS1007
+ECOTEL COMMUNICATION AG;E4C.DE;DE;Telecommunication-Fixed-Line Telecommunication;DE0005854343
+EAB Group Oyj;EAB.HE;FI;BAN;FI4000157441
+AMREST HOLDINGS;EAT.MC;ES;NA;NA
+EBRO FOODS;EBRO.MC;ES;NA;NA
+Erste Group Bank AG;EBS.VI;AT;NA;NA
+LUDW.BECK A.RATHAUSECK;ECK.DE;DE;Retail-Retail, Multiline;DE0005199905
+ERCROS;ECR.MC;ES;NA;NA
+EPIGENOMICS AG NA O.N.;ECX.DE;DE;Pharma & Healthcare-Biotechnology;DE000A11QW50
+Edenred;EDEN.PA;FR;BAN;FR0010908533
+Edenred SA ;EDEN.PA ;FR;NA;NA
+EDF;EDF.PA;FR;UTL;FR0010242511
+Energias de Portugal;EDP.LS;PO;UTL;PTEDP0AM0009
+EDP Renováveis;EDPR.LS;PO;UTL;ES0127797019
+EDREAMS ODIGEO;EDR.MC;ES;NA;NA
+Mota-Engil;EGL.LS;PO;CON;PTMEN0AE0005
+Essilor International ;EI.PA;FR;LUX;NA
+EINHELL GERMANY VZO O.N.;EIN3.DE;DE;Consumer-Home Construction & Furnishings;DE0005654933
+EUSKALTEL;EKT.MC;ES;NA;NA
+Essilor;EL.PA;FR;HEALTH;FR0000121667
+ELUMEO SE;ELB.DE;DE;Retail-Retail, Internet;DE000A11Q059
+Endesa;ELE.MC;ES;UTL;ES0130670112
+Elecster Oyj A;ELEAV.HE;FI;IND;FI0009900658
+ELMOS SEMICONDUCTOR INH O.N.;ELG.DE;DE;Technology-Semiconductors;DE0005677108
+Elisa Oyj;ELISA.HE;FI;COM;FI0009007884
+Bouygues;EN.PA;FR;CON;FR0000120503
+ENCE;ENC.MC;ES;IND;ES0130625512
+Endomines;ENDOM.HE;FI;MAT;SE0008294334
+Enedo Oyj;ENEDO.HE;FI;IND;FI4000415252
+Enel;ENEL.MI;IT;UTL;NA
+Enento Group Oyj;ENENTO.HE;FI;BAN;FI4000123195
+Enagás;ENG.MC;ES;UTL;ES0130960018
+Engie;ENGI.PA;FR;UTL;FR0010208488
+ENGI;ENGI.PA ;FR;OIL;NA
+Eni;ENI.MI;IT;OIL;NA
+ELECNOR;ENO.MC;ES;NA;NA
+SIEMENS ENERGY AG NA O.N.;ENR.DE;DE;Industrial-Industrial;DE000ENER6Y0
+Faurecia;EO.PA;FR;AUT;FR0000121147
+E.ON;EOAN.DE;DE;UTL;DE000ENAG999
+E.ON;EOAN.DE ;DE;NA;NA
+eQ Oyj;EQV1V.HE;FI;BAN;FI0009009617
+Etteplan Oyj;ETTE.HE;FI;IND;FI0009008650
+EURONAV;EURN.BR;BE;OIL;BE0003816338
+ECKERT+ZIEGLER AG O.N.;EUZ.DE;DE;Pharma & Healthcare-Medical Technology;DE0005659700
+CTS Eventim;EVD.DE;DE;BAN;DE0005470306
+Evonik Industries;EVK.DE;DE;CHE;DE000EVNK013
+Evli Pankki Oyj;EVLI.HE;FI;BAN;FI4000170915
+Evotec;EVT.DE;DE;HEALTH;DE0005664809
+Exel Composites Oyj;EXL1V.HE;FI;IND;FI0009007306
+Exor;EXO.MI;IT;BAN;NA
+GRUPO EZENTIS SA;EZE.MC;ES;NA;NA
+SFC ENERGY AG;F3C.DE;DE;Industrial-Renewable Energies;DE0007568578
+Faes Farma;FAE.MC;ES;PHA;ES0134950F36
+Fagron;FAGR.AS;HO;HEALTH;NA
+FinecoBank;FBK.MI;IT;BAN;NA
+Fiat Chrysler Automobiles;FCA.MI;IT;AUT;NA
+FOMENTO DE CONSTRUCCIONES;FCC.MC;ES;NA;NA
+FLUIDRA;FDR.MC;ES;NA;NA
+Ferrovial;FER.MC;ES;CON;ES0118900010
+FORTEC ELEKTRO. O.N.;FEV.DE;DE;Technology-Electronic Components & Hardware;DE0005774103
+Forfarmers;FFARM.AS;HO;MAT;NL0011832811
+Eiffage;FGR.PA;FR;CON;FR0000130452
+Finnair Oyj;FIA1S.HE;FI;SER;FI0009003230
+Finnair Oyj Uudet 2020;FIA1SN0120.HE;FI;SER;FI4000440128
+Fielmann;FIE.DE;DE;MAT;DE0005772206
+Fresenius Medical Care;FME.DE;DE;HEALTH;DE0005785802
+Fresenius Medical Care  ;FME.DE ;DE;HEALTH;NA
+Freenet AG;FNTN.DE;DE;COM;DE000A0Z2ZZ5
+Fortum Oyj;FORTUM.HE;FI;UTL;FI0009007132
+Total;FP.PA;FR;OIL;FR0000120271
+Fuchs Petrolub SE;FPE.DE;DE;CHE;DE0005790406
+Fuchs Petrolub SE;FPE3.DE;DE;CHE;DE0005790430
+FRANCOTYP-POSTALIA HLDG;FPH.DE;DE;Industrial-Industrial Machinery;DE000FPH9000
+Valeo SA;FR.PA;FR;AUT;FR0013176526
+Fraport AG;FRA.DE;DE;AIR;DE0005773303
+Fresenius;FRE.DE;DE;HEALTH;DE0005785604
+F-Secure Oyj;FSC1V.HE;FI;TECH;FI0009801310
+Fiskars Oyj Abp;FSKRS.HE;FI;RET;FI0009000400
+FLATEXDEGIRO AG  NA O.N.;FTK.DE;DE;Financial Services-Securities Brokers;DE000FTG1111
+GENERALLI;G.MI;IT;INS;NA
+GEA Group;G1A.DE;DE;IND;DE0006602006
+Scout24 AG;G24.DE;DE;SER;DE000A12DM80
+Galp Energia;GALP.LS;PO;OIL;PTGAL0AM0009
+GENERAL DE ALQUILER DE MAQUINA;GALQ.MC;ES;NA;NA
+Siemens Gamesa Renewable Energy;GAM.MC;ES;IND;NA
+Gambero Rosso SpA;GAMB.MI;IT;NA;NA
+GASNATURAL;GAS.MC;ES;UTL;NA
+BILFINGER SE O.N.;GBF.DE;DE;Industrial -Industrial Products & Services ;DE0005909006
+GBL;GBLB.BR;BE;BAN;BE0003797140
+GRUPO CATALANA OCCIDENTE;GCO.MC;ES;NA;NA
+GESTAMP;GEST.MC;ES;AUT;NA
+Getlink;GET.PA;FR;IND;FR0010533075
+Gecina;GFC.PA;FR;INM;FR0010040865
+GFT TECHNOLOGIES SE;GFT.DE;DE;Software-IT-Services;DE0005800601
+GIGASET AG O.N.;GGS.DE;DE;Technology -Communications Technology ;DE0005156004
+GK SOFTWARE  INH O.N.;GKS.DE;DE;Software-Software;DE0007571424
+Glaston Oyj Abp;GLA1V.HE;FI;IND;FI4000369657
+Société Générale;GLE.PA;FR;BAN;FR0000130809
+GRENKE AG NA O.N.;GLJ.DE;DE;Financial Services-Diversified Financial ;DE000A161N30
+Galapagos;GLPG.AS;HO;HEALTH;BE0003818359
+Galapagos;GLPG.BR;BE;HEALTH;NA
+GERATHERM O.N.;GME.DE;DE;Pharma & Healthcare-Medical Technology;DE0005495626
+GRAMMER AG O.N.;GMM.DE;DE;Automobile-Auto Parts & Equipment;DE0005895403
+GRENERGY RENOVABLES;GRE.MC;ES;NA;NA
+Grifols;GRF.MC;ES;PHA;ES0171996087
+GRIFOLS CL.B;GRF.P.MC;ES;NA;NA
+GESCO AG NA O.N.;GSC1.DE;DE;Industrial-Industrial, Diversified;DE000A1K0201
+GRUPO EMPRESARIAL SAN JOSE;GSJ.MC;ES;NA;NA
+GATEWAY R.EST.AG O.N.;GTY.DE;DE;Financial Services-Real Estate;DE000A0JJTG7
+Gerresheimer;GXI.DE;DE;HEALTH;DE000A0LD6E6
+Grand City Properties;GYC.DE;DE;INM;NA
+HOME24 SE  INH O.N.;H24.DE;DE;Retail-Retail, Internet;DE000A14KEB5
+HAMBORNER REIT AG O.N.;HAB.DE;DE;Financial Services-Real Estate;DE0006013006
+Harvia Oyj;HARVIA.HE;FI;RET;FI4000306873
+HAWESKO HOLDING  INH O.N.;HAW.DE;DE;Retail-Retail, Food & Drug;DE0006042708
+HORNBACH HOLDING ST O.N.;HBH.DE;DE;Retail-Retail, Specialty;DE0006083405
+HORNBACH BAUMARKT AG O.N.;HBM.DE;DE;Retail-Retail, Specialty;DE0006084403
+HEIDELBERGER DRUCKMASCHINEN .O.N.;HDD.DE;DE;Industrial-Industrial Machinery;DE0007314007
+Hunter Douglas;HDG.AS;HO;RET;ANN4327C1220
+HeidelbergCement;HEI.DE;DE;CON;DE0006047004
+HeidelbergCement AG ;HEI.DE ;DE;NA;NA
+Heineken;HEIA.AS;HO;FOOD;NL0000009165
+Heijmans;HEIJM.AS;HO;CON;NL0009269109
+HENKEL AG+CO.KGAA ST O.N.;HEN.DE;DE;Consumer-Personal Products;DE0006048408
+Henkel;HEN3.DE;DE;IND;DE0006048432
+Henkel AG & Co. KGaA ;HEN3.DE ;DE;NA;NA
+HELLOFRESH SE  INH O.N.;HFG.DE;DE;Retail-Retail, Internet;DE000A161408
+HAMBURGER HAFEN UND LOGISTIK A-SP NA;HHFA.DE;DE;Transportation & Logistics-Transportation Services;DE000A0S8488
+HKScan Oyj A;HKSAV.HE;FI;RET;FI0009006308
+HAPAG-LLOYD AG NA O.N.;HLAG.DE;DE;Transportation & Logistics-Logistics;DE000HLAG475
+Hella KGaA Hueck & Co.;HLE.DE;DE;AUT;DE000A13SX22
+DR. HOENLE AG O.N.;HNL.DE;DE;Industrial-Advanced Industrial Equipment;DE0005157101
+Hannover Rück SE;HNR1.DE;DE;INS;DE0008402215
+Thales;HO.PA;FR;IND;FR0000121329
+HOLIDAYCHECK GROUP AG;HOC.DE;DE;Software-Internet;DE0005495329
+NEINOR HOMES;HOME.MC;ES;NA;NA
+Honkarakenne Oyj B;HONBS.HE;FI;RET;FI0009900104
+Hochtief;HOT.DE;DE;CON;DE0006070006
+Huhtamäki Oyj;HUH1V.HE;FI;IND;FI0009000459
+HYPOPORT SE  NA O.N.;HYQ.DE;DE;Financial Services-Diversified Financial;DE0005493365
+IAG;IAG.MC;ES;FLI;ES0177542018
+Iberdrola;IBE.MC;ES;UTL;ES0144580Y14
+IBERPAPEL GESTION;IBG.MC;ES;NA;NA
+Ibersol;IBS.LS;PO;SER;PTIBS0AM0008
+Incap Oyj;ICP1V.HE;FI;IND;FI0009006407
+ICT Group;ICT.AS;HO;TECH;NL0000359537
+Indra;IDR.MC;ES;TECH;ES0118594417
+Innofactor Plc;IFA1V.HE;FI;TECH;FI0009007637
+Infineon Technologies;IFX.DE;DE;IND;DE0006231004
+Italgas;IG.MI;IT;UTL;NA
+Innogy SE;IGY.DE;DE;UTL;NA
+IMMOFINANZ AG;IIA.VI;AT;INS;NA
+Ilkka-Yhtymä Oyj 2;ILK2S.HE;FI;SER;FI0009800205
+MEDIOS AG  O.N.;ILM1.DE;DE;Pharma & Healthcare-Pharmatceuticals;DE000A1MMCC8
+IMCD;IMCD.AS;HO;CHE;NL0010801007
+Ingenico;ING.PA;FR;IND;NA
+ING Group;INGA.AS;HO;BAN;NL0011821202
+ING Group;INGA.BR;BE;BAN;NA
+INDUS HOLDING AG;INH.DE;DE;Industrial -Industrial, Diversified;DE0006200108
+INSTONE REAL ESTATE GROUP O.N.;INS.DE;DE;Financial Services-Real Estate;DE000A2NBX80
+Investors House Oyj;INVEST.HE;FI;BAN;FI0009900559
+Ipsen;IPN.PA;FR;NA;FR0010259150
+INTICA SYSTEMS AG;IS7.DE;DE;Technology-Electronic Components & Hardware;DE0005874846
+INTERSHOP COMMUNICATIONS INH O.N.;ISH2.DE;DE;Software-Internet;DE000A254211
+Intesa Sanpaolo;ISP.MI;IT;BAN;NA
+ISRA VISION O.N.;ISR.DE;DE;Software-Software;DE0005488100
+INMOBILIARIA DEL SUR;ISUR.MC;ES;NA;NA
+Inditex;ITX.MC;ES;RET;ES0148396007
+KAP AG  INH O.N.;IUR.DE;DE;Financial Services-Diversified Financial;DE0006208408
+IVU TRAFFIC TECHN.AG O.N.;IVU.DE;DE;Software-IT-Services;DE0007448508
+INVISION AG;IVX.DE;DE;Software-Software;DE0005859698
+INIT INNOVATION O.N.;IXX.DE;DE;Technology-Electronic Components & Hardware;DE0005759807
+DEUTSCHE INDUSTRIE REIT-AG INH O.N.;JB7.DE;DE;Financial Services-Real Estate;DE000A2G9LL1
+JENOPTIK AG  NA O.N.;JEN.DE;DE;Industrial-Advanced Industrial Equipment;DE000A2NB601
+Jerónimo Martins;JMT.LS;PO;RET;PTJMT0AE0001
+JOST WERKE AG INH.   O.N.;JST.DE;DE;Automobile-Auto Parts & Equipment;DE000JST4000
+Jungheinrich Aktiengesellschaft;JUN3.DE;DE;Industrial-Industrial Machinery;DE0006219934
+Juventus Football Club;JUVE.MI;IT;NA;NA
+Kas Bank;KA.AS;HO;BAN;NA
+Kamux Oyj;KAMUX.HE;FI;SER;FI4000206750
+KBC;KBC.BR;BE;BAN;BE0003565737
+KBC Group NV ;KBC.BR ;BE;NA;NA
+Knorr-Bremse ;KBX.DE;DE;AUT;DE000KBX1006
+KLOECKNER + CO SE NA O.N.;KCO.DE;DE;Industrial-Industrial Products & Services;DE000KC01000
+Konecranes Oyj;KCR.HE;FI;IND;FI0009005870
+Kiadis;KDS.AS;HO;HEALTH;NL0011323407
+Kesla Oyj A;KELAS.HE;FI;IND;FI0009900237
+Kemira Oyj;KEMIRA.HE;FI;MAT;FI0009004824
+Kendrion;KENDR.AS;HO;IND;NL0000852531
+Kering;KER.PA;FR;RET;FR0000121485
+Kesko Oyj A;KESKOA.HE;FI;SER;FI0009007900
+Kesko Oyj B;KESKOB.HE;FI;SER;FI0009000202
+KION Group;KGX.DE;DE;MAT;DE000KGX8881
+Natixis;KN.PA;FR;BAN;FR0000120685
+KONE Oyj;KNEBV.HE;FI;IND;FI0009013403
+Kojamo Oyj;KOJAMO.HE;FI;BAN;FI4000312251
+KPN;KPN.AS;HO;COM;NL0000009082
+KRONES AG O.N.;KRN.DE;DE;Industrial-Industrial Machinery;DE0006335003
+Kingspan Group;KRX.IR;IR;CONS;IE0004927939
+Kerry Group;KRZ.IR;IR;FOOD;IE0004906560
+KPS AG NA O.N.;KSC.DE;DE;Software-IT-Services ;DE000A1A6V48
+Keskisuomalainen Oyj A;KSLAV.HE;FI;SER;FI0009007546
+KNAUS TABBERT AG NA O.N.;KTA.DE;DE;Automobile-Automobile Manufacturers;DE000A2YN504
+Kapsch TrafficCom;KTCG.VI;AT;TECH;NA
+KUKA AG;KU2.DE;DE;Industrial-Industrial Machinery;DE0006204407
+VolkerWessels;KVW.AS;HO;CON;NA
+KWS SAAT KGAA  INH O.N.;KWS.DE;DE;Industrial-Industrial Products & Services;DE0007074007
+Lassila & Tikanoja Oyj;LAT1V.HE;FI;IND;FI0009010854
+LIBERBANK;LBK.MC;ES;NA;NA
+Leonardo;LDO.MI;IT;IND;NA
+LEG Immobilien;LEG.DE;DE;INM;DE000LEG1110
+Lehto Group Oyj;LEHTO.HE;FI;IND;FI4000081138
+LEIFHEIT AG O.N.;LEI.DE;DE;Consumer-Household Appliances & Housewares;DE0006464506
+LEONI AG NA O.N.;LEO.DE;DE;Automobile-Auto Parts & Equipment;DE0005408884
+LINGOTES;LGT.MC;ES;IND;NA
+LUFTHANSA AG VNA O.N.;LHA.DE;DE;Transportation & Logistics-Airlines;DE0008232125
+Lufthansa ;LHA.DE ;DE;FLI;NA
+Klépierre;LI.PA;FR;INM;FR0000121964
+Linde;LIN.DE;DE;IND;NA
+Lindle;LIN.DE ;DE;INS;NA
+SIXT LEASING O.N.;LNSX.DE;DE;Financial Services-Diversified Financial;DE000A0DPRE6
+Lenzing Aktiengesellschaft;LNZ.VI;AT;NA;NA
+Compañía de Distribución Integral Logista Holdings;LOG.MC;ES;TRANS;NA
+DEAG DEUTSCHE ENTERTAINMENT AG O.N.;LOUD.DE;DE;Media-Movies & Entertainment;DE000A0Z23G6
+LPKF LASER+ELECTRONICS;LPK.DE;DE;Industrial-Advanced Industrial Equipment;DE0006450000
+Legrand;LR.PA;FR;IND;FR0010307819
+LAR ESPANA REAL ESTATE SOCIMI;LRE.MC;ES;NA;NA
+Lanxess AG;LXS.DE;DE;CHE;DE0005470405
+MANZ AG;M5Z.DE;DE;Industrial-Advanced Industrial Equipment;DE000A0JQ5U3
+Mapfre;MAP.MC;ES;INS;ES0124244E34
+Martela Oyj A;MARAS.HE;FI;RET;FI0009900385
+Mediobanca;MB.MI;IT;BAN;NA
+MBB SE O.N.;MBB.DE;DE;Industrial-Industrial, Diversified;DE000A0ETBQ4
+LVMH;MC.PA;FR;RET;FR0000121014
+MIQUEL Y COSTAS MIQUEL;MCM.MC;ES;NA;NA
+DURO FELGUERA;MDF.MC;ES;NA;NA
+MEDIGENE AG NA O.N.;MDG1.DE;DE;Pharma & Healthcare-Biotechnology;DE000A1X3W00
+MEDICLIN AG;MED.DE;DE;Pharma & Healthcare-Health Care;DE0006595101
+Meliá Hotels;MEL.MC;ES;HOT;ES0176252718
+Metro AG;MEO.VI;AT;SUP;NA
+Metsä Board Oyj A;METSA.HE;FI;MAT;FI0009000640
+Metsä Board Oyj B;METSB.HE;FI;MAT;FI0009000665
+Michelin;ML.PA;FR;AUT;FR0000121261
+MLP SE  INH. O.N.;MLP.DE;DE;Financial Services-Diversified Financial;DE0006569908
+Mayr-Melnhof Karton AG;MMK.VI;AT;NA;NA
+Marimekko Oyj;MMO1V.HE;FI;RET;FI0009007660
+Metso Outotec Oyj;MOCORP.HE;FI;IND;FI0009014575
+Moncler;MONC.MI;IT;RET;NA
+MorphoSys;MOR.DE;DE;HEALTH;DE0006632003
+Merck;MRK.DE;DE;PHA;DE0006599905
+Merk;MRK.DE ;DE;PHA;NA
+Merlin Properties;MRL.MC;ES;INM;ES0105025003
+ArcelorMittal;MT.AS;FR;MAT;NA
+ArcelorMittal;MT.AS;HO;MAT;LU1598757687
+MONTEBALITO;MTB.MC;ES;NA;NA
+ArcelorMittal;MTS.MC;ES;MAT;LU1598757687
+MTU;MTX.DE;DE;IND;DE000A0D9PT0
+Musti Group Oyj;MUSTI.HE;FI;SER;FI4000410758
+Munich Re;MUV2.DE;DE;INS;DE0008430026
+MunichRe;MUV2.DE ;DE;INS;NA
+METROVACESA;MVC.MC;ES;NA;NA
+MVV ENERGIE AG NA O.N.;MVV1.DE;DE;Utilities-Multi-Utilities;DE000A0H52F5
+MAX AUTOMATION SE NA O.N.;MXHN.DE;DE;Industrial-Industrial, Diversified;DE000A2DA588
+MASTERFLEX O.N.;MZX.DE;DE;Industrial-Industrial Products & Services;DE0005492938
+Novabase;NBA.LS;PO;TECH;PTNBA0AM0006
+Nordea Bank Abp;NDA-FI.HE;FI;BAN;FI4000297767
+Aurubis AG;NDA.DE;DE;MAT;DE0006766504
+NORDEX SE O.N.;NDX1.DE;DE;Industrial-Renewable Energies;DE000A0D6554
+NICOLAS CORREA;NEA.MC;ES;NA;NA
+Nedap;NEDAP.AS;HO;IND;NL0000371243
+Neles Oyj;NELES.HE;FI;IND;FI4000440664
+Nemetschek;NEM.DE;DE;SER;DE0006452907
+Neo Industrial Oyj;NEO1V.HE;FI;IND;FI0009800296
+Neste Oyj;NESTE.HE;FI;OIL;FI0009013296
+NFON AG  INH O.N.;NFN.DE;DE;Telecommunication-Wireless Telecommunication;DE000A0N4N52
+NH HOTELES;NHH.MC;ES;NA;NA
+Nixu Oyj;NIXU.HE;FI;TECH;FI0009008387
+Nurminen Logistics Oyj;NLG1V.HE;FI;IND;FI0009900187
+NN Group;NN.AS;HO;INS;NL0010773842
+NN;NN.AS ;HO;NA;NA
+Norma Group;NOEJ.DE;DE;SER;DE000A1H8BV3
+NoHo Partners Oyj;NOHO.HE;FI;SER;FI4000064332
+Nokia Oyj;NOKIA.HE;FI;TECH;FI0009000681
+NOS;NOS.LS;PO;MED;PTZON0AM0006
+NSI NV;NSI.AS;HO;RET;NL0012365084
+Audi;NSU.DE;DE;AUT;NA
+Naturgy;NTGY.MC;ES;UTL;ES0116870314
+NATURHOUSE HEALTH;NTH.MC;ES;NA;NA
+The Navigator Company;NVG.LS;PO;MAT;PTPTI0AM0006
+NEW WORK SE  NA O.N.;NWO.DE;DE;Software-Internet;DE000NWRK013
+NUEVA EXPRESION TEXTIL SA;NXT.MC;ES;NA;NA
+NEXUS AG O.N.;NXU.DE;DE;Software-Software;DE0005220909
+NYESA VALORES CORPORACION;NYE.MC;ES;NA;NA
+Telefónica Germany;O2D.DE;DE;COM;DE000A1J5RX9
+OVB HOLDING AG;O4B.DE;DE;Financial Services-Diversified Financial;DE0006286560
+OHB SE   O.N.;OHB.DE;DE;Technology-Communications Technology;DE0005936124
+OBRASCON HUARTE LAIN SA;OHL.MC;ES;NA;NA
+Oriola Oyj A;OKDAV.HE;FI;HEALTH;FI0009014344
+Oriola Oyj B;OKDBV.HE;FI;HEALTH;FI0009014351
+DEOLEO SA;OLE.MC;ES;NA;NA
+Olvi Oyj A;OLVAS.HE;FI;RET;FI0009900401
+Oma Säästöpankki Oyj;OMASP.HE;FI;BAN;FI4000306733
+OMV Aktiengesellschaft;OMV.VI;AT;NA;NA
+Optomed Oyj;OPTOMED.HE;FI;HEALTH;FI4000410881
+L'Oréal;OR.PA;FR;RET;FR0000120321
+Orange;ORA.PA;FR;COM;FR0000133308
+Ordina;ORDI.AS;HO;TECH;NL0000440584
+Orion Oyj A;ORNAV.HE;FI;HEALTH;FI0009014369
+Orion Oyj B;ORNBV.HE;FI;HEALTH;FI0009014377
+ORYZON GENOMICS;ORY.MC;ES;NA;NA
+USU SOFTWARE AG;OSP2.DE;DE;Software-Software;DE000A0BVU28
+Osram;OSR.DE;DE;IND;DE000LED4000
+Outokumpu Oyj;OUT1V.HE;FI;MAT;FI0009002422
+Ovaro Kiinteistösijoitus Oyj;OVARO.HE;FI;BAN;FI4000349113
+PAION O.N;PA8.DE;DE;Pharma & Healthcare-Biotechnology;DE000A0B65S3
+PORSCHE ;PAH3.DE;DE;AUT;NA
+PATRIZIA AG NA ON;PAT.DE;DE;Financial Services-Real Estate;DE000PAT1AG3
+Deutsche Pfandbriefbank AG;PBB.DE;DE;MED;DE0008019001
+PROCREDIT HOLDING AG NA EO 5;PCZ.DE;DE;Banks-Credit Banks;DE0006223407
+PFEIFFER VACUUM TECH.O.N.;PFV.DE;DE;Industrial-Advanced Industrial Equipment;DE0006916604
+PARAGON KGAA  INH O.N.;PGN.DE;DE;Automobile-Auto Parts & Equipment;DE0005558696
+Pharming Group;PHARM.AS;HO;HEALTH;NL0010391025
+PHILIPS;PHIA.AS;HO;TECH;NL0000009538
+Pharma Mar;PHM.MC;ES;PHA;NA
+Pharol;PHR.LS;PO;COM;PTPTC0AM0009
+Pihlajalinna Oyj;PIHLIS.HE;FI;HEALTH;FI4000092556
+Pirelli;PIRC.MI;IT;AUT;NA
+Panostaja Oyj;PNA1V.HE;FI;BAN;FI0009800379
+PNE AG  NA O.N.;PNE3.DE;DE;Industrial-Renewable Energies;DE000A0JBPG2
+Compagnie Plastic Omnium SA ;POM.PA;FR;AUT;FR0000124570
+Ponsse Oyj 1;PON1V.HE;FI;IND;FI0009005078
+Osterreichische Post AG;POST.VI;AT;NA;NA
+PRIM;PRM.MC;ES;NA;NA
+Proximus;PROX.BR;BE;COM;BE0003810273
+PROMOTORA DE INFORMAC. CL.A;PRS.MC;ES;NA;NA
+Prysmian;PRY.MI;IT;IND;NA
+PSI SOFTWARE AG NA O.N.;PSAN.DE;DE;Software-Software;DE000A0Z1JH9
+PHARMASGP HOLDING SE O.N.;PSG.DE;DE;Pharma & Healthcare-Pharmaceuticals;DE000A2P4LJ5
+PROSEGUR COMPANIA DE SEGURIDAD;PSG.MC;ES;NA;NA
+ProSiebenSat.1 Media;PSM.DE;DE;MED;DE000PSM7770
+Poste italiane;PST.MI;IT;TRANS;NA
+Publicis;PUB.PA;FR;MED;FR0000130577
+Puma SE;PUM.DE;DE;RET;DE0006969603
+PUMA;PUM.DE ;DE;NA;NA
+PunaMusta Media Oyj;PUMU.HE;FI;SER;FI0009900468
+PESCANOVA;PVA.MC;ES;NA;NA
+PROGRESS-WERK OBERKIRCH. O.N.;PWO.DE;DE;Automobile-Auto Parts & Equipment;DE0006968001
+QUABIT INMOBILIARIA;QBT.MC;ES;NA;NA
+Qiagen;QIA.DE;DE;HEALTH;NA
+QPR Software Oyj;QPR1V.HE;FI;TECH;FI0009008668
+Q.BEYOND AG NA O.N.;QSC.DE;DE;Technology-Communications Technology;DE0005137004
+Qt Group Oyj;QTCOM.HE;FI;TECH;FI4000198031
+RENTA 4 BANCO;R4.MC;ES;NA;NA
+RATIONAL AG;RAA.DE;DE;Industrial-Industrial Products & Services ;DE0007010803
+Ferrari;RACE.MI;IT;AUT;NA
+Raisio Oyj Vaihto-osake;RAIVV.HE;FI;RET;FI0009002943
+Randstad;RAND.AS;HO;SER;NL0000379121
+Rapala VMC Oyj;RAP1V.HE;FI;RET;FI0009007355
+Raute Oyj A;RAUTE.HE;FI;IND;FI0009004741
+Raiffeisen Bank International AG;RBI.VI;AT;NA;NA
+Teleperformance;RCF.PA;FR;SER;NA
+Royal Dutch Shell;RDSA.AS;HO;OIL;GB00B03MLX29
+Recordati;REC.MI;IT;HEALH;NA
+Red Eléctrica de España;REE.MC;ES;UTL;ES0173093024
+Revenio Group Oyj;REG1V.HE;FI;HEALTH;FI0009010912
+RELX;REN.AS;HO;MED;GB00B2B0DG97
+RENTA CORPORACION REAL ESTATE;REN.MC;ES;NA;NA
+Redes Energéticas Nacionais;RENE.LS;PO;UTL;PTREL0AM0008
+Repsol;REP.MC;ES;OIL;ES0173516115
+RHOEN-KLINIKUM O.N.;RHK.DE;DE;Pharma & Healthcare-Health Care;DE0007042301
+Rheinmetall;RHM.DE;DE;MAT;DE0007030009
+Pernod Ricard;RI.PA;FR;FOOD;FR0000120693
+RIB SOFTWARE SE  NA EO 1;RIB.DE;DE;Software-Software;DE000A0Z2XN6
+BODEGAS RIOJANAS;RIO.MC;ES;NA;NA
+LABORATORIOS REIG JOFRE;RJF.MC;ES;NA;NA
+Rocket Internet;RKET.DE;DE;TECH;NA
+REALIA;RLIA.MC;ES;INM;NA
+RENO DE MEDICI;RM.MI;IT;MAT;NA
+Hermès;RMS.PA;FR;RET;FR0000052292
+Renault;RNA.PA;FR;AUT;NA
+Renault;RNO.PA;FR;AUT;FR0000131906
+Robit Oyj;ROBIT.HE;FI;IND;FI4000150016
+Laboratorios Rovi;ROVI.MC;ES;PHA;NA
+Rovio Entertainment Oyj;ROVIO.HE;FI;RET;FI4000266804
+RTL Group;RRTL.DE;DE;MED;NA
+R. STAHL AG NA O.N.;RSL2.DE;DE;Industrial-Industrial Products & Services;DE000A1PHBB5
+Rubis;RUI.PA;FR;UTL;FR0013269123
+RWE;RWE.DE;DE;UTL;DE0007037129
+SMT SCHARF AG;S4A.DE;DE;Industrial-Heavy Machinery;DE0005751986
+SMA SOLAR TECHNOL.AG;S92.DE;DE;Industrial-Renewable Energies;DE000A0DJ6J9
+STEMMER IMAGING AG INH ON;S9I.DE;DE;Software-IT-Services;DE000A2G9MZ9
+Sanoma Oyj;SAA1V.HE;FI;SER;FI0009007694
+Banco Sabadell;SAB.MC;ES;BAN;ES0113860A34
+Safran;SAF.PA;FR;AIR;FR0000073272
+Saga Furs Oyj C;SAGCV.HE;FI;RET;FI0009800551
+Sampo Oyj A;SAMPO.HE;FI;BAN;FI0009003305
+Banco Santander;SAN.MC;ES;BAN;ES0113900J37
+Sanofi;SAN.PA;FR;PHA;FR0000120578
+SAP;SAP.DE;DE;TECH;DE0007164600
+Savencia;SAVE.PA ;FR;FOOD;NA
+STROEER SE + CO. KGAA;SAX.DE;DE;Media-Advertising;DE0007493991
+Schoeller-Bleckmann Oilfield Equipment Aktiengesellschaft;SBO.VI;AT;NA;NA
+STRATEC SE  NA O.N.;SBS.DE;DE;Pharma & Healthcare-Medical Technology;DE000STRA555
+Scanfil Oyj;SCANFL.HE;FI;IND;FI4000029905
+Scor;SCR.PA;FR;INS;FR0010411983
+Sacyr;SCYR.MC;ES;CONS;NA
+K+S AG;SDF.DE;DE;MAT;DE000KSAG888
+Semapa;SEM.LS;PO;MAT;PTSEM0AM0004
+SES;SESG.PA;FR;COM;LU0088087324
+Suez Environnement;SEV.PA;FR;UTL;FR0010613471
+Salvatore Ferragamo;SFER.MI;IT;RET;NA
+SGL CARBON SE O.N.;SGL.DE;DE;Chemicals-Chemicals, Specialty;DE0007235301
+Saint-Gobain;SGO.PA;FR;IND;FR0000125007
+Siemens Gamesa;SGRE.MC;ES;IND;ES0143416115
+Schaeffler AG;SHA.DE;DE;AUT;DE000SHA0159
+SNP SCHNEIDER-NEUREITHER O.N.;SHF.DE;DE;Software-IT-Services;DE0007203705
+Siemens Healthineers;SHL.DE;DE;HEALTH;DE000SHL1006
+Siemens;SIE.DE;DE;IND;DE0007236101
+Sievi Capital Oyj;SIEVI.HE;FI;BAN;FI0009008924
+SIF Holding;SIFG.AS;HO;IND;NL0011660485
+Siili Solutions Oyj;SIILI.HE;FI;TECH;FI4000043435
+FIRST SENSOR AG O.N.;SIS.DE;DE;Technology-Semiconductors;DE0007201907
+SIXT SE ST O.N.;SIX2.DE;DE;Transportation & Logistics-Transportation Services;DE0007231326
+SIXT SE VZO O.N.;SIX3.DE;DE;Transportation & Logistics-Transportation Services;DE0007231334
+SERVICEWARE SE  INH O.N.;SJJ.DE;DE;Software-Software;DE000A2G8X31
+KOENIG + BAUER AG ST O.N.;SKB.DE;DE;Industrial-Industrial Machinery;DE0007193500
+Solaria;SLR.MC;ES;UTL;ES0165386014
+SCHALTBAU HOLDING NA O.N;SLT.DE;DE;Industrial-Industrial Machinery;DE000A2NBTL2
+SUESS MICROTEC SE NA O.N.;SMHN.DE;DE;Technology-Semiconductors;DE000A1K0235
+SINGULUS TECHNOL. EO 1;SNG.DE;DE;Industrial-Advanced Industrial Equipment;DE000A1681X5
+Steinhoff International Holdings N.V.;SNH.DE;DE;NA;NA
+Sofina;SOF.BR;BE;BAN;BE0003717312
+SOLTEC POWER HOLDINGS;SOL.MC;ES;NA;NA
+Solvay;SOLB.BR;BE;CHE;BE0003470755
+Solteq Oyj;SOLTEQ.HE;FI;TECH;FI0009007991
+Sonae;SON.LS;PO;RET;PTSON0AM0001
+Sonae Capital;SONC.LS;PO;BAN;NA
+Soprano Oyj;SOPRA.HE;FI;TECH;FI0009012793
+Sotkamo Silver AB;SOSI1.HE;FI;MAT;SE0001057910
+Software AG;SOW.DE;DE;TECH;DE000A2GS401
+S IMMO AG;SPI.VI;AT;NA;NA
+SOLARPACK CORP BR;SPK.MC;ES;NA;NA
+Saipem;SPM.MI;IT;IND;NA
+Axel Springer SE;SPR.DE;DE;MED;NA
+SERVICE POINT SOLUTIONS;SPS.MC;ES;NA;NA
+Snam;SRG.MI;IT;UTL;NA
+Sartorius AG;SRT.DE;DE;#N/A;DE0007165607
+SARTORIUS AG VZO O.N.;SRT3.DE;DE;Pharma & Healthcare -Biotechnology;DE0007165631
+SRV Yhtiöt Oyj;SRV1V.HE;FI;IND;FI0009015309
+SSAB A;SSABAH.HE;FI;MAT;SE0000171100
+SSAB B;SSABBH.HE;FI;MAT;SE0000120669
+SSH Communications Security;SSH1V.HE;FI;TECH;FI0009008270
+Stockmann Oyj Abp A;STCAS.HE;FI;SER;FI0009000236
+Stockmann Oyj Abp B;STCBV.HE;FI;SER;FI0009000251
+Stora Enso Oyj A;STEAV.HE;FI;MAT;FI0009005953
+Stora Enso Oyj;STERV.HE;FI;MAT;FI0009005961
+STMicroelectronics;STM.MI;IT;TECH;NA
+STMicroelectronics;STM.PA;FR;IND;NL0000226223
+Schneider Electric;SU.PA;FR;IND;FR0000121972
+SURTECO GROUP SE INH O.N.;SUR.DE;DE;Basic Resources-Forest & Paper Products;DE0005176903
+Suominen Oyj;SUY1V.HE;FI;RET;FI0009010862
+Sodexo;SW.PA;FR;FOOD;FR0000121220
+Symrise;SY1.DE;DE;#N/A;DE000SYM9999
+SOFTING AG O.N.;SYT.DE;DE;Software-IT- Services;DE0005178008
+SYZYGY AG O.N.;SYZ.DE;DE;Software-IT-Services;DE0005104806
+Salzgitter AG;SZG.DE;DE;MAT;DE0006202005
+Sudzucker AG;SZU.DE;DE;Food & Beverages-Food;DE0007297004
+Taaleri Oyj;TAALA.HE;FI;BAN;FI4000062195
+AS Tallink Grupp FDR;TALLINK.HE;FI;IND;FI4000349378
+TELE COLUMBUS AG NA O.N.;TC1.DE;DE;Media-Broadcasting;DE000TCAG172
+Telefónica;TEF.MC;ES;COM;ES0178430E18
+TAG;TEG.DE;DE;INM;DE0008303504
+Telia Company;TELIA1.HE;FI;COM;SE0000667925
+Tecnotree Oyj;TEM1V.HE;FI;TECH;FI0009010227
+Tenaris;TEN.MI;IT;MAT;NA
+Teleperformance;TEP.PA;FR;NA;FR0000051807
+11 88 0 SOLUTIONS AG;TGT.DE;DE;Telecommunication-Telecommunication Services;DE0005118806
+Technogym;TGYM.MI;IT;RET;NA
+TietoEVRY Oyj;TIETO.HE;FI;TECH;FI0009000277
+Tikkurila Oyj;TIK1V.HE;FI;IND;FI4000008719
+ZEAL NETWORK SE NA O.N.;TIMA.DE;DE;Retail-Retail, Internet;DE000ZEAL241
+Telecom Italia;TIT.MI;IT;COM;NA
+ThyssenKrupp;TKA.DE;DE;IND;DE0007500001
+Telekom Austria AG;TKA.VI;AT;COM;NA
+Tarkett S.A;TKTT.PA;FR;NA;FR0004188670
+Just Eat Takeaway;TKWY.AS;HO;SER;NL0012015705
+Mediaset España;TL5.MC;ES;MED;ES0152503035
+TALGO;TLGO.MC;ES;NA;NA
+TELES AG INFORMATIONSTECHNOLOGIEN ON;TLIK.DE;DE;Software-Internet;DE000A289B07
+Teleste Oyj;TLT1V.HE;FI;TECH;FI0009007728
+TALANX AG NA O.N.;TLX.DE;DE;Insurance-Re-Insurance;DE000TLX1005
+TEAMVIEWER AG  INH O.N.;TMV.DE;DE;Software-Software;DE000A2YN900
+Telenet Group;TNET.BR;BE;MED;BE0003826436
+Talenom Oyj;TNOM.HE;FI;IND;FI4000153580
+Tokmanni Group Oyj;TOKMAN.HE;FI;SER;FI4000197934
+PVA TEPLA AG O.N.;TPE.DE;DE;Industrial -Advanced Industrial Equipment ;DE0007461006
+Técnicas Reunidas;TRE.MC;ES;IND;ES0178165017
+TUBOSREUNIDORS;TRG.MC;ES;IND;NA
+Trainers´ House Oyj;TRH1V.HE;FI;TECH;FI4000390885
+Terna Rette Electrica;TRN.MI;IT;UTL;NA
+Terveystalo Oyj;TTALO.HE;FI;HEALTH;FI4000252127
+TAKKT AG O.N.;TTK.DE;DE;Retail-Retail, Catalog;DE0007446007
+TECHNOTRANS SE NA O.N.;TTR1.DE;DE;Industrial-Advanced Industrial Equipment;DE000A0XYGA7
+Tubacex;TUB.MC;ES;IND;NA
+Tulikivi Oyj A;TULAV.HE;FI;IND;FI0009900583
+Nokian Renkaat Oyj;TYRES.HE;FI;RET;FI0009005318
+UBI Banca;UBI.MI;IT;BAN;NA
+Ubisoft;UBI.PA;FR;SER;FR0000054470
+URBAS GRUPO FINANCIERO;UBS.MC;ES;NA;NA
+UCB;UCB.BR;BE;HEALTH;BE0003739530
+UniCredit;UCG.MI;IT;BAN;NA
+PSA;UG.PA;FR;AUT;FR0000121501
+UNITED LABELS O.N.;ULC.DE;DE;Retail-Retail, Specialty;DE0005489561
+Umicore;UMI.BR;BE;CHE;BE0974320526
+Uniper SE;UN01.DE;DE;UTL;DE000UNSE018
+UNILEVER;UNA.AS;HO;FOOD;GB00B10RZP78
+UNICAJA;UNI.MC;ES;BAN;NA
+Unipol;UNI.MI;IT;INS;NA
+United Bankers Oyj;UNIAV.HE;FI;BAN;FI4000081427
+UPM-Kymmene Oyj;UPM.HE;FI;MAT;FI0009005987
+Uponor Oyj;UPONOR.HE;FI;IND;FI0009002158
+UNIQA Insurance Group AG;UQA.VI;AT;NA;NA
+Unibail-Rodamco-Westfield;URW.AS;FR;INM;NA
+Unibail-Rodamco-Westfield;URW.AS;HO;RET;FR0013326246
+UnipolSai;US.MI;IT;INS;NA
+United Internet;UTDI.DE;DE;COM;DE0005089031
+Plc Uutechnic Group Oyj;UUTEC.HE;FI;IND;FI0009900708
+3U HOLDING AG;UUU.DE;DE;Industrial-Industrial Products & Services;DE0005167902
+VITA 34 AG NA O.N.;V3V.DE;DE;Pharma & Healthcare-Healthcare;DE000A0BL849
+VISCOM AG O.N.;V6C.DE;DE;Industrial-Advanced Industrial Equipment;DE0007846867
+Vaisala Oyj A;VAIAS.HE;FI;IND;FI0009900682
+Valmet Oyj;VALMT.HE;FI;IND;FI4000074984
+Valoe Oyj;VALOE.HE;FI;IND;FI0009006951
+VARTA AG O.N.;VAR1.DE;DE;Industrial-Advanced Industrial Equipment;DE000A0TGJ55
+Vastned;VASTN.AS;HO;RET;NL0000288918
+VERBIO VER.BIOENERGIE  ON;VBK.DE;DE;Industrial-Renewable Energies;DE000A0JL9W6
+VOLTABOX AG  INH. O.N.;VBX.DE;DE;Industrial-Advanced Industrial Equipment;DE000A2E4LE9
+VERTICE TRESCIENTOS SESENTA;VER.MC;ES;NA;NA
+VERBUND AG;VER.VI;AT;NA;NA
+Verkkokauppa.com Oyj;VERK.HE;FI;SER;FI4000049812
+VILLEROY + BOCH AG VZ;VIB3.DE;DE;Consumer-Household Appliances & Housewares;DE0007657231
+VIDRALA;VID.MC;ES;NA;NA
+Veolia;VIE.PA;FR;UTL;FR0000124141
+Vienna Insurance Group AG;VIG.VI;AT;NA;NA
+Viking Line Abp;VIK1V.HE;FI;SER;FI0009005250
+Viscofan;VIS.MC;ES;FOOD;ES0184262212
+Vivendi;VIV.PA;FR;MED;FR0000127771
+V Lanschot Kempen;VLK.AS;HO;BAN;NL0000302636
+Vonovia;VNA.DE;DE;INM;DE000A1ML7J1
+VOCENTO;VOC.MC;ES;NA;NA
+Voestalpine AG;VOE.VI;AT;NA;NA
+VOSSLOH AG O.N.;VOS.DE;DE;Industrial-Industrial Products & Services;DE0007667107
+VOLKSWAGEN AG ST O.N.;VOW.DE;DE;Automobile-Automobile Manufacturers;DE0007664005
+Volkswagen Group;VOW3.DE;DE;AUT;DE0007664039
+Vopak;VPK.AS;HO;TRANS;NL0009432491
+VA-Q-TEC AG NA O.N.;VQT.DE;DE;Industrial-Containers & Packaging;DE0006636681
+4SC AG;VSC.DE;DE;Pharma & Healthcare-Biotechnology;DE000A14KL72
+WACKER NEUSON SE NA O.N.;WAC.DE;DE;Industrial-Industrial Machinery;DE000WACK012
+Siltronic;WAF.DE;DE;#N/A;DE000WAF3001
+Wacker Chemie;WCH.DE;DE;CHE;DE000WCH8881
+Wirecard;WDI.DE;DE;TECH;NA
+WINDELN.DE SE  INH O.N.;WDL.DE;DE;Retail-Retail, Internet;DE000WNDL201
+WDP;WDP.BR;BE;INM;BE0974349814
+Wessanen;WES.AS;HO;FOOD;NA
+WESTWING GROUP  INH. O.N.;WEW.DE;DE;Retail-Retail, Internet;DE000A2N4H07
+Wienerberger AG;WIE.VI;AT;NA;NA
+Wolters Kluwer;WKL.AS;HO;MED;NL0000395903
+HEIDELBERG PHARMA AG O.N.;WL6.DE;DE;Pharma & Healthcare-Biotechnology;DE000A11QVV0
+Worldline;WLN.PA;FR;TECH;FR0011981968
+Wärtsilä Oyj Abp;WRT1V.HE;FI;IND;FI0009003727
+WASHTEC AG O.N.;WSU.DE;DE;Industrial-Industrial Machinery;DE0007507501
+Wulff-Yhtiöt Oyj;WUF1V.HE;FI;IND;FI0009008452
+WUESTENROT+WUERTTEMBERGISCHE AG O.N.;WUW.DE;DE;Banks-Mortgage Banks;DE0008051004
+Yleiselektroniikka Oyj;YEINT.HE;FI;IND;FI0009900724
+YIT Oyj;YIT.HE;FI;IND;FI0009800643
+YOC AG O.N.;YOC.DE;DE;Telecommunication-Telecommunication Services;DE0005932735
+SECUNET SECURITY AG O.N.;YSN.DE;DE;Software-IT-Services;DE0007276503
+ZUMTOBEL;ZAG.VI ;AT;IND;NA
+Zalando SE;ZAL.DE;DE;RET;DE000ZAL1111
+ELRINGKLINGER AG NA O.N.;ZIL2.DE;DE;Automobile-Auto Parts & Equipment;DE0007856023
+ZOOPLUS AG;ZO1.DE;DE;Retail-Retail, Internet;DE0005111702
+Zardoya Otis;ZOT.MC;ES;IND;NA
+1000MERCIS;ALMIL.PA;FR;NA;FR0010285965
+2CRSI;2CRSI.PA;FR;NA;FR0013341781
+2MX ORGANIC;2MX.PA;FR;NA;FR0014000T90
+2MX ORGANIC BS;2MXBS.PA;FR;NA;FR0014000TB2
+A.S.T. GROUPE;ASP.PA;FR;NA;FR0000076887
+AB SCIENCE;AB.PA;FR;NA;FR0010557264
+ABBEY PLC;DOY.IR;IR;NA;IE0000020408
+ABC ARBITRAGE;ABCA.PA;FR;NA;FR0004040608
+ABEO;ABEO.PA;FR;NA;FR0013185857
+ABIONYX PHARMA;ABNX.PA;FR;NA;FR0012616852
+ABIVAX;ABVX.PA;FR;NA;FR0012333284
+ABO GROUP;ABO.BR;BE;NA;BE0974278104
+ACACIA PHARMA;ACPH.BR;BE;NA;GB00BYWF9Y76
+ACANTHE DEV.;ACAN.PA;FR;NA;FR0000064602
+ACCENTIS;ACCB.BR;BE;NA;BE0003696102
+ACCSYS;AXS.AS;HO;NA;GB00BQQFX454
+ACHETER-LOUER.FR;ALALO.PA;FR;NA;FR0010493510
+ACTEOS;EOS.PA;FR;NA;FR0000076861
+ACTIA GROUP;ATI.PA;FR;NA;FR0000076655
+ACTIPLAY (GROUPE);ALACT.PA;FR;NA;FR0011038348
+ADA;ALADA.PA;FR;NA;FR0000053076
+ADC SIIC;ALDV.PA;FR;NA;BE0974269012
+ADEUNIS;ALARF.PA;FR;NA;FR0013284627
+ADL PARTNER;ALP.PA;FR;NA;FR0000062978
+ADOCIA;ADOC.PA;FR;NA;FR0011184241
+ADOMOS;ALADO.PA;FR;NA;FR0013247244
+ADP;ADP.PA;FR;NA;FR0010340141
+ADTHINK;ALADM.PA;FR;NA;FR0010457531
+ADUX;ADUX.PA;FR;NA;FR0012821890
+ADVENIS;ADV.PA;FR;NA;FR0004152874
+ADVICENNE;ADVIC.PA;FR;NA;FR0013296746
+ADVINI;ADVI.PA;FR;NA;FR0000053043
+AGFA-GEVAERT;AGFB.BR;BE;NA;BE0003755692
+AGRIPOWER;ALAGP.PA;FR;NA;FR0013452281
+AGROGENERATION;ALAGR.PA;FR;NA;FR0010641449
+AIB GROUP PLC;A5G.IR;IR;NA;IE00BF0L3536
+AJAX;AJAX.AS;HO;NA;NL0000018034
+AKKA TECHNOLOGIES;AKA.PA;FR;NA;FR0004180537
+AKWEL;AKW.PA;FR;NA;FR0000053027
+ALBIOMA;ABIO.PA;FR;NA;FR0000060402
+ALCHIMIE;ALCHI.PA;FR;NA;FR0014000JX7
+ALD;ALD.PA;FR;NA;FR0013258662
+ALES GROUPE;ALPHY.PA;FR;NA;FR0000054652
+ALFEN;ALFEN.AS;HO;NA;NL0012817175
+ALPES (COMPAGNIE);CDA.PA;FR;NA;FR0000053324
+ALPHA MOS;ALM.PA;FR;NA;FR0013421286
+ALTAMIR;LTA.PA;FR;NA;FR0000053837
+ALTAREA;ALTA.PA;FR;NA;FR0000033219
+ALTEN;ATE.PA;FR;NA;FR0000071946
+ALTICE EUROPE B;ATCB.AS;HO;NA;NL0011333760
+ALTICE EUROPE N.V.;ATC.AS;HO;NA;NL0011333752
+ALTUR INVEST.;ALTUR.PA;FR;NA;FR0010395681
+ALUMEXX N.V.;ALX.AS;HO;NA;NL0012194724
+AMG;AMG.AS;HO;NA;NL0000888691
+AMOEBA;ALMIB.PA;FR;NA;FR0011051598
+AMPLITUDE SURGICAL;AMPLI.PA;FR;NA;FR0012789667
+AMUNDI;AMUN.PA;FR;NA;FR0004125920
+AND INTERNATIONAL;AND.AS;HO;NA;NL0000430106
+ANEVIA;ALANV.PA;FR;NA;FR0011910652
+ANTARES CERT;ANT.BR;BE;NA;BE0003676872
+APERAM;APAM.AS;HO;NA;LU0569974404
+APPLEGREEN PLC;APGN.IR;IR;NA;IE00BXC8D038
+AQUILA;ALAQU.PA;FR;NA;FR0010340711
+ARCADIS;ARCAD.AS;HO;NA;NL0006237562
+ARCHOS;ALJXR.PA;FR;NA;FR0000182479
+ARCURE;ALCUR.PA;FR;NA;FR0013398997
+ARGAN;ARG.PA;FR;NA;FR0010481960
+ARTEFACT;ALATF.PA;FR;NA;FR0000079683
+ARTMARKET COM;PRC.PA;FR;NA;FR0000074783
+ARYZTA AG;YZA.IR;IR;NA;CH0043238366
+ASCENCIO;ASC.BR;BE;NA;BE0003856730
+ASIT;ASIT.BR;BE;NA;BE0974289218
+ASM INTERNATIONAL;ASM.AS;HO;NA;NL0000334118
+ASSYSTEM;ASY.PA;FR;NA;FR0000074148
+ATARI;ATA.PA;FR;NA;FR0010478248
+ATEME;ATEME.PA;FR;NA;FR0011992700
+ATENOR;ATEB.BR;BE;NA;BE0003837540
+ATRIUM EUR REALEST;ATRS.AS;HO;NA;JE00B3DCF752
+AUBAY;AUB.PA;FR;NA;FR0000063737
+AUDIOVALLEY;ALAVY.PA;FR;NA;BE0974334667
+AUGROS COSMETICS;AUGR.PA;FR;NA;FR0000061780
+AUPLATA MINING GR;ALAMG.PA;FR;NA;FR0013410370
+AUREA;AURE.PA;FR;NA;FR0000039232
+AURES TECHNOLOGIES;AURS.PA;FR;NA;FR0013183589
+AVENIR TELECOM;AVT.PA;FR;NA;FR0013529815
+AXWAY SOFTWARE;AXW.PA;FR;NA;FR0011040500
+B&S Group;BSGR.AS;HO;NA;LU1789205884
+BAIKOWSKI;ALBKK.PA;FR;NA;FR0013384369
+BAINS MER MONACO;BAIN.PA;FR;NA;MC0000031187
+BALTA GROUP;BALTA.BR;BE;NA;BE0974314461
+BALYO;BALYO.PA;FR;NA;FR0013258399
+BAM GROEP KON;BAMNB.AS;HO;NA;NL0000337319
+BANIMMO A;BANI.BR;BE;NA;BE0003870871
+BANK OF IR NC PREF;DD7E.IR;IR;NA;IE0000730790
+BANK OF IRELAND GP;BIRG.IR;IR;NA;IE00BD1RP616
+BARBARA BUI;BUI.PA;FR;NA;FR0000062788
+BASILIX CERT;BAS.BR;BE;NA;BE0003674851
+BASSAC;BASS.PA;FR;NA;FR0004023208
+BASTIDE LE CONFORT;BLC.PA;FR;NA;FR0000035370
+BE SEMICONDUCTOR;BESI.AS;HO;NA;NL0012866412
+BEAULIEU-AV. CERT;BEAB.BR;BE;NA;BE0003661726
+BEFIMMO;BEFB.BR;BE;NA;BE0003678894
+BEKAERT;BEKB.BR;BE;NA;BE0974258874
+BELRECA;BELR.BR;BE;NA;BE0020575115
+BELUGA;BELU.BR;BE;NA;BE0003723377
+BENETEAU;BEN.PA;FR;NA;FR0000035164
+BENFICA;SLBEN.LS;PO;NA;PTSLB0AM0010
+BIC;BB.PA;FR;NA;FR0000120966
+BIGBEN INTERACTIVE;BIG.PA;FR;NA;FR0000074072
+BILENDI;ALBLD.PA;FR;NA;FR0004174233
+BIO-UV GROUP;ALTUV.PA;FR;NA;FR0013345493
+BIOCARTIS;BCART.BR;BE;NA;BE0974281132
+BIOCORP;ALCOR.PA;FR;NA;FR0012788065
+BIOPHYTIS;ALBPS.PA;FR;NA;FR0012816825
+BIOPHYTIS BSA;BPSBS.PA;FR;NA;FR0013507290
+BIOSYNEX;ALBIO.PA;FR;NA;FR0011005933
+BIOSYNEX BSAR;BIOBS.PA;FR;NA;FR0013517380
+BLUELINEA;ALBLU.PA;FR;NA;FR0011041011
+BLUELINEA BSA J;BLUBS.PA;FR;NA;FR0013480969
+BOIRON;BOI.PA;FR;NA;FR0000061129
+BOLLORE;BOL.PA;FR;NA;FR0000039299
+BONDUELLE;BON.PA;FR;NA;FR0000063935
+BONE THERAPEUTICS;BOTHE.BR;BE;NA;BE0974280126
+BOOSTHEAT;BOOST.PA;FR;NA;FR0011814938
+BOSKALIS WESTMIN;BOKA.AS;HO;NA;NL0000852580
+BOURSE DIRECT;BSD.PA;FR;NA;FR0000074254
+BOUSSARD GAVAUDAN;BGHL.AS;HO;NA;GG00B1FQG453
+BPOST;BPOST.BR;BE;NA;BE0974268972
+BREDERODE;BREB.BR;BE;NA;LU1068091351
+BRILL KON;BRILL.AS;HO;NA;NL0000442523
+CABASSE GROUP;ALCG.PA;FR;NA;FR0013530102
+CAIRN HOMES PLC;C5H.IR;IR;NA;IE00BWY4ZF18
+CAMPINE;CAMB.BR;BE;NA;BE0003825420
+CANDELA INVEST;CAND.BR;BE;NA;BE0974298300
+CAPELLI;CAPLI.PA;FR;NA;FR0012969095
+CARBIOS;ALCRB.PA;FR;NA;FR0011648716
+CARE PROPERTY INV.;CPINV.BR;BE;NA;BE0974273055
+CARMAT;ALCAR.PA;FR;NA;FR0010907956
+CARMILA;CARM.PA;FR;NA;FR0010828137
+CASINO GUICHARD;CO.PA;FR;NA;FR0000125585
+CAST;CAS.PA;FR;NA;FR0000072894
+CATANA GROUP;CATG.PA;FR;NA;FR0010193052
+CATERING INTL SCES;CTRG.PA;FR;NA;FR0000064446
+CATERPILLAR INC;CATR.PA;FR;NA;US1491231015
+CBO TERRITORIA;CBOT.PA;FR;NA;FR0010193979
+CEGEDIM;CGM.PA;FR;NA;FR0000053506
+CEGEREAL;CGR.PA;FR;NA;FR0010309096
+CELLECTIS;ALCLS.PA;FR;NA;FR0010425595
+CELYAD ONCOLOGY;CYAD.BR;BE;NA;BE0974260896
+CENERGY;CENER.BR;BE;NA;BE0974303357
+CERINNOV GROUP;ALPCV.PA;FR;NA;FR0013178712
+CESAR;ALCES.PA;FR;NA;FR0013297165
+CFE;CFEB.BR;BE;NA;BE0003883031
+CFI;CFI.PA;FR;NA;FR0000037475
+CGG;CGG.PA;FR;NA;FR0013181864
+CGG BSA 1;CGGBS.PA;FR;NA;FR0013309614
+CGG BSA 2;CGGBT.PA;FR;NA;FR0013309622
+CHARGEURS;CRI.PA;FR;NA;FR0000130692
+CHRISTIAN DIOR;CDI.PA;FR;NA;FR0000130403
+CIBOX BS;CIBBS.PA;FR;NA;FR00140003K4
+CIBOX INTER A CTIV;CIB.PA;FR;NA;FR0000054322
+CIE BOIS SAUVAGE;COMB.BR;BE;NA;BE0003592038
+CLARANOVA;CLA.PA;FR;NA;FR0013426004
+CLASQUIN;ALCLA.PA;FR;NA;FR0004152882
+CM.COM;CMCOM.AS;HO;NA;NL0012747059
+CNIM GROUP;COM.PA;FR;NA;FR0000053399
+CNOVA;CNV.PA;FR;NA;NL0010949392
+CNP ASSURANCES;CNP.PA;FR;NA;FR0000120222
+COCA-COLA EUROPEAN;CCEP.AS;HO;NA;GB00BDCPN049
+COFACE;COFA.PA;FR;NA;FR0010667147
+COFINA,SGPS;CFN.LS;PO;NA;PTCFN0AE0003
+COGELEC;ALLEC.PA;FR;NA;FR0013335742
+COGRA;ALCOG.PA;FR;NA;FR0011071570
+COHERIS;COH.PA;FR;NA;FR0004031763
+COIL;ALCOI.PA;FR;NA;BE0160342011
+CORBION;CRBN.AS;HO;NA;NL0010583399
+CORE LABORATORIES;CLB.AS;HO;NA;NL0000200384
+COVIVIO HOTELS;COVH.PA;FR;NA;FR0000060303
+CPL RESOURCES PLC.;DQ5.IR;IR;NA;IE0007214426
+CRCAM ALP.PROV.CCI;CRAP.PA;FR;NA;FR0000044323
+CRCAM BRIE PIC2CCI;CRBP2.PA;FR;NA;FR0010483768
+CRCAM LANGUED CCI;CRLA.PA;FR;NA;FR0010461053
+CRCAM LOIRE HTE L.;CRLO.PA;FR;NA;FR0000045239
+CRCAM NORD CCI;CNF.PA;FR;NA;FR0000185514
+CRCAM NORM.SEINE;CCN.PA;FR;NA;FR0000044364
+CRCAM PARIS ET IDF;CAF.PA;FR;NA;FR0000045528
+CRCAM SUD R.A.CCI;CRSU.PA;FR;NA;FR0000045346
+CRESCENT;OPTI.BR;BE;NA;BE0003836534
+CROSSJECT;ALCJ.PA;FR;NA;FR0011716265
+CROSSWOOD;CROS.PA;FR;NA;FR0000050395
+CS GROUP.;SX.PA;FR;NA;FR0007317813
+CTAC;CTAC.AS;HO;NA;NL0000345577
+CYBERGUN;ALCYB.PA;FR;NA;FR0013505583
+CYBERGUN BSA 2;CYBBT.PA;FR;NA;FR0013340817
+CYBERGUN BSA K1;CYBK1.PA;FR;NA;FR0013507977
+CYBERGUN BSA K2A;CYBKA.PA;FR;NA;FR0013507985
+CYBERGUN BSA K2B;CYBKB.PA;FR;NA;FR0013508009
+D'IETEREN;DIE.BR;BE;NA;BE0974259880
+D.L.S.I.;ALDLS.PA;FR;NA;FR0010404368
+DALATA HOTEL GP.;DHG.IR;IR;NA;IE00BJMZDW83
+DALET;DLT.PA;FR;NA;FR0011026749
+DAMARTEX;ALDAR.PA;FR;NA;FR0000185423
+DASSAULT AVIATION;AM.PA;FR;NA;FR0000121725
+DATALEX PLC;DLE.IR;IR;NA;IE0000527006
+DBT;ALDBT.PA;FR;NA;FR0013066750
+DBV TECHNOLOGIES;DBV.PA;FR;NA;FR0010417345
+DECEUNINCK;DECB.BR;BE;NA;BE0003789063
+DEINOVE;ALDEI.PA;FR;NA;FR0010879056
+DELFINGEN;ALDEL.PA;FR;NA;FR0000054132
+DELTA DRONE;ALDR.PA;FR;NA;FR0011522168
+DELTA DRONE BSA Y;ALDBY.PA;FR;NA;FR0013400991
+DELTA PLUS GROUP;DLTA.PA;FR;NA;FR0013283108
+DERICHEBOURG;DBG.PA;FR;NA;FR0000053381
+DEVOTEAM;DVT.PA;FR;NA;FR0000073793
+DGB GROUP N.V.;DGB.AS;HO;NA;NL0009169515
+DIAGEO;DGE.PA;FR;NA;GB0002374006
+DIAGNOSTIC MEDICAL;DGM.PA;FR;NA;FR0012202497
+DNXCORP;ALDNX.PA;FR;NA;FR0010436584
+DOLFINES;ALDOL.PA;FR;NA;FR0010377127
+DONEGAL INVESTMENT;DQ7A.IR;IR;NA;IE00BLRPQQ22
+DONTNOD;ALDNE.PA;FR;NA;FR0013331212
+DPA GROUP;DPA.AS;HO;NA;NL0009197771
+DRONE VOLT;ALDRV.PA;FR;NA;FR0013088606
+DSC2;DSC2.AS;HO;NA;NL00150000S7
+DUTCH STAR C W11;DSCW1.AS;HO;NA;NL00150000T5
+DUTCH STAR C W12;DSCW2.AS;HO;NA;NL00150000U3
+DUTCH STAR C W13;DSCW3.AS;HO;NA;NL00150000V1
+EASE2PAY NV;EAS2P.AS;HO;NA;NL0000345627
+EASYVISTA;ALEZV.PA;FR;NA;FR0010246322
+ECA;ECASA.PA;FR;NA;FR0010099515
+ECOMIAM;ALECO.PA;FR;NA;FR0013534617
+ECONOCOM GROUP;ECONB.BR;BE;NA;BE0974313455
+ECOSLOPS;ALESA.PA;FR;NA;FR0011490648
+EDILIZIACROBATICA;ALEAC.PA;FR;NA;IT0005351504
+EGIDE;GID.PA;FR;NA;FR0000072373
+EKINOPS;EKI.PA;FR;NA;FR0011466069
+ELEC.STRASBOURG;ELEC.PA;FR;NA;FR0000031023
+ELECT. MADAGASCAR;EEM.PA;FR;NA;FR0000035719
+ELIA GROUP;ELI.BR;BE;NA;BE0003822393
+ELIOR GROUP;ELIOR.PA;FR;NA;FR0011950732
+ELIS;ELIS.PA;FR;NA;FR0012435121
+EMOVA GROUP;ALEMV.PA;FR;NA;FR0013356755
+ENCRES DUBUIT;ALDUB.PA;FR;NA;FR0004030708
+ENENSYS;ALNN6.PA;FR;NA;FR0013330792
+ENERGISME;ALNRG.PA;FR;NA;FR0013399359
+ENERTIME;ALENE.PA;FR;NA;FR0011915339
+ENGIE EPS;EPS.PA;FR;NA;FR0012650166
+ENTREPARTICULIERS;ALENT.PA;FR;NA;FR0010424697
+ENVEA;ALTEV.PA;FR;NA;FR0010278762
+ENVIPCO;ENVI.AS;HO;NA;NL0009901610
+EO2;ALEO2.PA;FR;NA;FR0010465534
+EOS IMAGING;EOSI.PA;FR;NA;FR0011191766
+ERAMET;ERA.PA;FR;NA;FR0000131757
+ERYTECH PHARMA;ERYP.PA;FR;NA;FR0011471135
+ESI GROUP;ESI.PA;FR;NA;FR0004110310
+ESKER;ALESK.PA;FR;NA;FR0000035818
+ESPERITE;ESP.AS;HO;NA;NL0009272137
+ESSO;ES.PA;FR;NA;FR0000120669
+ESTORIL SOL N;ESON.LS;PO;NA;PTESO0AM0000
+EURAZEO;RF.PA;FR;NA;FR0000121121
+EURO RESSOURCES;EUR.PA;FR;NA;FR0000054678
+EUROBIO-SCIENTIFIC;ALERS.PA;FR;NA;FR0013240934
+EUROCASTLE INVEST.;ECT.AS;HO;NA;GB00B94QM994
+EUROCOMMERCIAL;ECMPA.AS;HO;NA;NL0000288876
+EUROFINS SCIENT.;ERF.PA;FR;NA;FR0014000MR3
+EUROGERM;ALGEM.PA;FR;NA;FR0010452474
+EUROMEDIS GROUPE;ALEMG.PA;FR;NA;FR0000075343
+EURONEXT;ENX.PA;FR;NA;NL0006294274
+EUROPACORP;ECP.PA;FR;NA;FR0010490920
+EUROPCAR MOBILITY;EUCAR.PA;FR;NA;FR0012789949
+EUROPLASMA;ALEUP.PA;FR;NA;FR0013514114
+EUROPLASMA BSC;EURBU.PA;FR;NA;FR0013294089
+EUTELSAT COMMUNIC.;ETL.PA;FR;NA;FR0010221234
+EVADIX;ALEVA.BR;BE;NA;BE0003840577
+EVS BROADC.EQUIPM.;EVS.BR;BE;NA;BE0003820371
+EXEL INDUSTRIES;EXE.PA;FR;NA;FR0004527638
+EXMAR;EXM.BR;BE;NA;BE0003808251
+FACEPHI;ALPHI.PA;FR;NA;ES0105029005
+FAGRON;FAGR.BR;BE;NA;BE0003874915
+FASHION B AIR;ALFBA.PA;FR;NA;FR0004034593
+FASTNED;FAST.AS;HO;NA;NL0013654809
+FBD HOLDINGS PLC;EG7.IR;IR;NA;IE0003290289
+FDJ;FDJ.PA;FR;NA;FR0013451333
+FERMENTALG;FALG.PA;FR;NA;FR0011271600
+FFP;FFP.PA;FR;NA;FR0000064784
+FIGEAC AERO;FGA.PA;FR;NA;FR0011665280
+FIN.ETANG BERRE PF;EBPF.PA;FR;NA;FR0000062507
+FINANCIERE MARJOS;FINM.PA;FR;NA;FR0000060824
+FINATIS;FNTS.PA;FR;NA;FR0000035123
+FLEURY MICHON;ALFLE.PA;FR;NA;FR0000074759
+FLEXDEAL;FLEXD.LS;PO;NA;PTFXD0AM0018
+FLORIDIENNE;FLOB.BR;BE;NA;BE0003215143
+FLOW TRADERS;FLOW.AS;HO;NA;NL0011279492
+FLUTTER ENTERTAIN;FLTR.IR;IR;NA;IE00BWT6H894
+FLUXYS BELGIUM D;FLUX.BR;BE;NA;BE0974265945
+FNAC DARTY;FNAC.PA;FR;NA;FR0011476928
+FNG NV;FNG.BR;BE;NA;BE0974332646
+FOCUS HOME INT;ALFOC.PA;FR;NA;FR0012419307
+FONC. PARIS NORD;FPN.PA;FR;NA;FR0011277391
+FONCIERE 7 INVEST;LEBL.PA;FR;NA;FR0000065930
+FONCIERE ATLAND;FATL.PA;FR;NA;FR0013455482
+FONCIERE EURIS;EURS.PA;FR;NA;FR0000038499
+FONCIERE LYONNAISE;FLY.PA;FR;NA;FR0000033409
+FONCIERE VOLTA;SPEL.PA;FR;NA;FR0000053944
+FOUNTAIN;FOU.BR;BE;NA;BE0003752665
+FOUNTAINE PAJOT;ALFPC.PA;FR;NA;FR0010485268
+FRANCAISE ENERGIE;LFDE.PA;FR;NA;FR0013030152
+FREELANCE.COM;ALFRE.PA;FR;NA;FR0004187367
+FUGRO;FUR.AS;HO;NA;NL00150004A7
+FUT.CLUBE PORTO;FCP.LS;PO;NA;PTFCP0AM0008
+GASCOGNE;ALBI.PA;FR;NA;FR0000124414
+GAUMONT;GAM.PA;FR;NA;FR0000034894
+GAUSSIN;ALGAU.PA;FR;NA;FR0013495298
+GEA GRENOBL.ELECT.;GEA.PA;FR;NA;FR0000053035
+GECI INTL;GECP.PA;FR;NA;FR0000079634
+GECI INTL BSAR A;GECBT.PA;FR;NA;FR0013266764
+GENERAL ELECTRIC;GNE.PA;FR;NA;US3696041033
+GENERIX GROUP;GENX.PA;FR;NA;FR0010501692
+GENEURO;GNRO.PA;FR;NA;CH0308403085
+GENFIT;GNFT.PA;FR;NA;FR0004163111
+GENK LOGIST. CERT;GENK.BR;BE;NA;BE0003740546
+GENKYOTEX;GKTX.PA;FR;NA;FR0013399474
+GENOMIC VISION;GV.PA;FR;NA;FR0011799907
+GENOWAY;ALGEN.PA;FR;NA;FR0004053510
+GENSIGHT BIOLOGICS;SIGHT.PA;FR;NA;FR0013183985
+GIMV;GIMB.BR;BE;NA;BE0003699130
+GL EVENTS;GLO.PA;FR;NA;FR0000066672
+GLANBIA PLC;GL9.IR;IR;NA;IE0000669501
+GLENVEAGH PROP.PLC;GVR.IR;IR;NA;IE00BD6JX574
+GLINTT;GLINT.LS;PO;NA;PTPAD0AM0007
+GLOBAL BIOENERGIES;ALGBE.PA;FR;NA;FR0011052257
+GLOBAL ECOPOWER;ALGEP.PA;FR;NA;FR0011289198
+GLOBAL GRAPHICS;GLOG.BR;BE;NA;GB00BYN5BY03
+GOLD BY GOLD;ALGLD.PA;FR;NA;FR0011208693
+GPE PAROT (AUTO);ALPAR.PA;FR;NA;FR0013204070
+GRAINES VOLTZ;GRVO.PA;FR;NA;FR0000065971
+GRANDVISION;GVNV.AS;HO;NA;NL0010937066
+GREAT WESTERN MIN.;8GW.IR;IR;NA;IE00B1FR8863
+GREENCOAT REN.;GRP.IR;IR;NA;IE00BF2NR112
+GREENYARD;GREEN.BR;BE;NA;BE0003765790
+GROUPE CRIT;CEN.PA;FR;NA;FR0000036675
+GROUPE FLO;FLO.PA;FR;NA;FR0004076891
+GROUPE GORGE;GOE.PA;FR;NA;FR0000062671
+GROUPE GUILLIN;ALGIL.PA;FR;NA;FR0012819381
+GROUPE JAJ;GJAJ.PA;FR;NA;FR0004010338
+GROUPE LDLC;ALLDL.PA;FR;NA;FR0000075442
+GROUPE OPEN;OPN.PA;FR;NA;FR0004050300
+GROUPE PARTOUCHE;PARP.PA;FR;NA;FR0012612646
+GROUPE SFPI;SFPI.PA;FR;NA;FR0004155000
+GROUPE TERA;ALGTR.PA;FR;NA;FR0013429404
+GT BIOPHARMA INC;GTBP.PA;FR;NA;US36254L1008
+GTT;GTT.PA;FR;NA;FR0011726835
+GUERBET;GBT.PA;FR;NA;FR0000032526
+GUILLEMOT;GUI.PA;FR;NA;FR0000066722
+H2O INNOVATION INC;ALHEO.PA;FR;NA;CA4433003064
+HAL TRUST;HAL.AS;HO;NA;BMG455841020
+HAMON;HAMO.BR;BE;NA;BE0974352842
+HAULOTTE GROUP;PIG.PA;FR;NA;FR0000066755
+HEINEKEN HOLDING;HEIO.AS;HO;NA;NL0000008977
+HERIGE;ALHRG.PA;FR;NA;FR0000066540
+HEXAOM;HEXA.PA;FR;NA;FR0004159473
+HF;HF.PA;FR;NA;FR0000038531
+HIBERNIA REIT PLC;HBRN.IR;IR;NA;IE00BGHQ1986
+HIGH CO;HCO.PA;FR;NA;FR0000054231
+HIOLLE INDUSTRIES;ALHIO.PA;FR;NA;FR0000077562
+HIPAY GROUP;HIPAY.PA;FR;NA;FR0012821916
+HITECHPROS;ALHIT.PA;FR;NA;FR0010396309
+HOFFMANN;ALHGR.PA;FR;NA;FR0013451044
+HOLLAND COLOURS;HOLCO.AS;HO;NA;NL0000440311
+HOME INVEST BE.;HOMI.BR;BE;NA;BE0003760742
+HOPSCOTCH GROUPE;HOP.PA;FR;NA;FR0000065278
+HOSTELWORLD GROUP;HSW.IR;IR;NA;GB00BYYN4225
+HOTELS DE PARIS;HDP.PA;FR;NA;FR0004165801
+HUNTER DOUGLAS;HUNDP.AS;HO;NA;ANN4327C1303
+HYBRIGENICS;ALHYG.PA;FR;NA;FR0004153930
+HYDRATEC;HYDRA.AS;HO;NA;NL0009391242
+HYLORIS;HYL.BR;BE;NA;BE0974363955
+I.CERAM;ALICR.PA;FR;NA;FR0011511971
+IBA;IBAB.BR;BE;NA;BE0003766806
+ICADE;ICAD.PA;FR;NA;FR0000035081
+ID LOGISTICS GROUP;IDL.PA;FR;NA;FR0010929125
+IDI;IDIP.PA;FR;NA;FR0000051393
+IDSUD;ALIDS.PA;FR;NA;FR0000062184
+IEP INVEST;IEP.BR;BE;NA;BE0003748622
+IEX GROUP NV;IEX.AS;HO;NA;NL0010556726
+ILIAD;ILD.PA;FR;NA;FR0004035913
+IMERYS;NK.PA;FR;NA;FR0000120859
+IMMERSION;ALIMR.PA;FR;NA;FR0013060100
+IMMOB.DASSAULT;IMDA.PA;FR;NA;FR0000033243
+IMMOBEL;IMMO.BR;BE;NA;BE0003599108
+IMMUPHARMA;ALIMM.BR;BE;NA;GB0033711010
+IMPLANET;ALIMP.PA;FR;NA;FR0013470168
+IMPRESA,SGPS;IPR.LS;PO;NA;PTIPR0AM0000
+INAPA-INV.P.GESTAO;INA.LS;PO;NA;PTINA0AP0008
+INCLUSIO SA/NV;INCLU.BR;BE;NA;BE0974374069
+INFOTEL;INF.PA;FR;NA;FR0000071797
+INNATE PHARMA;IPH.PA;FR;NA;FR0010331421
+INNELEC MULTIMEDIA;INN.PA;FR;NA;FR0000064297
+INTEGRAGEN;ALINT.PA;FR;NA;FR0010908723
+INTERPARFUMS;ITP.PA;FR;NA;FR0004024222
+INTERTRUST;INTER.AS;HO;NA;NL0010937058
+INTERVEST OFF-WARE;INTO.BR;BE;NA;BE0003746600
+INTRASENSE;ALINS.PA;FR;NA;FR0011179886
+INVENTIVA;IVA.PA;FR;NA;FR0013233012
+INVIBES ADVERTSING;ALINV.PA;FR;NA;BE0974299316
+IPSOS;IPS.PA;FR;NA;FR0000073298
+IRISH CONT. GP.;IR5B.IR;IR;NA;IE00BLP58571
+IRISH RES. PROP.;IRES.IR;IR;NA;IE00BJ34P519
+IT LINK;ALITL.PA;FR;NA;FR0000072597
+ITESOFT;ITE.PA;FR;NA;FR0004026151
+JACQUES BOGART;JBOG.PA;FR;NA;FR0012872141
+JACQUET METALS;JCQ.PA;FR;NA;FR0000033904
+JC DECAUX SA.;DEC.PA;FR;NA;FR0000077919
+JDE PEET'S;JDEP.AS;HO;NA;NL0014332678
+JENSEN-GROUP;JEN.BR;BE;NA;BE0003858751
+KALRAY;ALKAL.PA;FR;NA;FR0010722819
+KAUFMAN ET BROAD;KOF.PA;FR;NA;FR0004007813
+KBC ANCORA;KBCA.BR;BE;NA;BE0003867844
+KENMARE RESOURCES;KMR.IR;IR;NA;IE00BDC5DG00
+KERLINK;ALKLK.PA;FR;NA;FR0013156007
+KEYRUS;KEY.PA;FR;NA;FR0004029411
+KEYWARE TECH.;KEYW.BR;BE;NA;BE0003880979
+KINEPOLIS GROUP;KIN.BR;BE;NA;BE0974274061
+KKO INTERNATIONAL;ALKKO.PA;FR;NA;FR0013374667
+KLIMVEST;ALSIM.PA;FR;NA;GB00B19RTX44
+KORIAN;KORI.PA;FR;NA;FR0010386334
+LACROIX SA;LACR.PA;FR;NA;FR0000066607
+LAFARGEHOLCIM LTD;LHN.PA;FR;NA;CH0012214059
+LAGARDERE S.C.A.;MMB.PA;FR;NA;FR0000130213
+LANSON-BCC;ALLAN.PA;FR;NA;FR0004027068
+LATECOERE;LAT.PA;FR;NA;FR0000032278
+LAURENT-PERRIER;LPE.PA;FR;NA;FR0006864484
+LAVIDE HOLDING;LVIDE.AS;HO;NA;NL0010545679
+LDC;LOUP.PA;FR;NA;FR0013204336
+LE TANNEUR;ALTAN.PA;FR;NA;FR0000075673
+LEASINVEST;LEAS.BR;BE;NA;BE0003770840
+LEBON;LBON.PA;FR;NA;FR0000121295
+LECTRA;LSS.PA;FR;NA;FR0000065484
+LEXIBOOK LINGUIST.;ALLEX.PA;FR;NA;FR0000033599
+LINEDATA SERVICES;LIN.PA;FR;NA;FR0004156297
+LISGRAFICA;LIG.LS;PO;NA;PTLIG0AE0002
+LISI;FII.PA;FR;NA;FR0000050353
+LLEIDA;ALLLN.PA;FR;NA;ES0105089009
+LNA SANTE;LNA.PA;FR;NA;FR0004170017
+LOGIC INSTRUMENT;ALLOG.PA;FR;NA;FR0000044943
+LUCIBEL;ALUCI.PA;FR;NA;FR0011884378
+LUCIBEL BS;LUCBS.PA;FR;NA;FR0013525953
+LUMIBIRD;LBIRD.PA;FR;NA;FR0000038242
+LYSOGENE;LYS.PA;FR;NA;FR0013233475
+M.R.M;MRM.PA;FR;NA;FR0000060196
+M2I;ALMII.PA;FR;NA;FR0013270626
+MADVERTISE;ALMNG.PA;FR;NA;FR0010812230
+MAISONS DU MONDE;MDM.PA;FR;NA;FR0013153541
+MAKHEIA GROUP;ALMAK.PA;FR;NA;FR0000072993
+MAKHEIA GROUP BSA;MAKBS.PA;FR;NA;FR0013525557
+MALIN CORP. PLC;MLC.IR;IR;NA;IE00BVGC3741
+MANITOU BF;MTU.PA;FR;NA;FR0000038606
+MANUTAN INTL;MAN.PA;FR;NA;FR0000032302
+MARE NOSTRUM;ALMAR.PA;FR;NA;FR0013400835
+MAREL;MAREL.AS;HO;NA;IS0000000388
+MAROC TELECOM;IAM.PA;FR;NA;MA0000011488
+MARTIFER;MAR.LS;PO;NA;PTMFR0AM0003
+MASTRAD;ALMAS.PA;FR;NA;FR0004155687
+MAUNA KEA TECH;MKEA.PA;FR;NA;FR0010609263
+MAUREL ET PROM;MAU.PA;FR;NA;FR0000051070
+MBWS;MBWS.PA;FR;NA;FR0000060873
+MBWS BSA 2022;MBWBT.PA;FR;NA;FR0013404944
+MBWS BSAR 2023;MBWSZ.PA;FR;NA;FR0013066313
+MCPHY ENERGY;MCPHY.PA;FR;NA;FR0011742329
+MDXHEALTH;MDXH.BR;BE;NA;BE0003844611
+MECELEC COMPOSITES;ALMEC.PA;FR;NA;FR0000061244
+MEDIA 6;EDI.PA;FR;NA;FR0000064404
+MEDIA MAKER;ALKER.PA;FR;NA;IT0005380438
+MEDIANTECHNOLOGIES;ALMDT.PA;FR;NA;FR0011049824
+MEDINCELL;MEDCL.PA;FR;NA;FR0004065605
+MELEXIS;MELE.BR;BE;NA;BE0165385973
+MEMSCAP REGPT;MEMS.PA;FR;NA;FR0010298620
+MERCIALYS;MERY.PA;FR;NA;FR0010241638
+MERCK AND CO INC;MRK.PA;FR;NA;US58933Y1055
+MERSEN;MRN.PA;FR;NA;FR0000039620
+METABOLIC EX BSA21;METBS.PA;FR;NA;FR0013483534
+METABOLIC EXPLORER;METEX.PA;FR;NA;FR0004177046
+METHANOR;ALMET.PA;FR;NA;FR0011217710
+METROPOLE TV;MMT.PA;FR;NA;FR0000053225
+MG INTERNATIONAL;ALMGI.PA;FR;NA;FR0010204453
+MGI DIGITAL GRAPHI;ALMDG.PA;FR;NA;FR0010353888
+MICROPOLE;MUN.PA;FR;NA;FR0000077570
+MICROWAVE VISION;ALMIC.PA;FR;NA;FR0004058949
+MILIBOO;ALMLB.PA;FR;NA;FR0013053535
+MINCON GROUP PLC;MIO.IR;IR;NA;IE00BD64C665
+MINT;ALBUD.PA;FR;NA;FR0004172450
+MINT BS;BUDBS.PA;FR;NA;FR0013307329
+MITHRA;MITRA.BR;BE;NA;BE0974283153
+MKB Nedsense;NEDSE.AS;HO;NA;NL0009312842
+MND;ALMND.PA;FR;NA;FR0011584549
+MONTEA C.V.A.;MONT.BR;BE;NA;BE0003853703
+MOREFIELD GROUP;MORE.AS;HO;NA;CWN814651014
+MOULINVEST;ALMOU.PA;FR;NA;FR0011033083
+MR BRICOLAGE;ALMRB.PA;FR;NA;FR0004034320
+MUNIC;ALMUN.PA;FR;NA;FR0013462231
+MYBEST GROUP;ALMBG.PA;FR;NA;IT0005119109
+NACON;NACON.PA;FR;NA;FR0013482791
+NANOBIOTIX;NANO.PA;FR;NA;FR0011341205
+NAVYA;NAVYA.PA;FR;NA;FR0013018041
+NEOEN;NEOEN.PA;FR;NA;FR0011675362
+NEOLIFE;ALNLF.PA;FR;NA;FR0011636083
+NEOLIFE BS;NLFBS.PA;FR;NA;FR0013282936
+NEOVACS;ALNEV.PA;FR;NA;FR0004032746
+NEPI ROCKCASTLE;NRP.AS;HO;NA;IM00BDD7WV31
+NETGEM;NTG.PA;FR;NA;FR0004154060
+NEURONES;NRO.PA;FR;NA;FR0004050250
+NEW SOURCES ENERGY;NSE.AS;HO;NA;NL0009822014
+NEWAYS ELECTRONICS;NEWAY.AS;HO;NA;NL0000440618
+NEXANS;NEX.PA;FR;NA;FR0000044448
+NEXITY;NXI.PA;FR;NA;FR0010112524
+NEXTEDIA;ALNXT.PA;FR;NA;FR0004171346
+NIBC HOLDING;NIBC.AS;HO;NA;NL0012756316
+NICOX;COX.PA;FR;NA;FR0013018124
+NOKIA;NOKIA.PA;FR;NA;FI0009000681
+NOVACYT;ALNOV.PA;FR;NA;FR0010397232
+NOVISOURCE;NOVI.AS;HO;NA;NL0010696704
+NOXXON;ALNOX.PA;FR;NA;NL0012044762
+NR21 DS;N21DS.PA;FR;NA;FR0014000VN3
+NRJ GROUP;NRG.PA;FR;NA;FR0000121691
+NSE;ALNSE.PA;FR;NA;FR0004065639
+NYRSTAR;NYR.BR;BE;NA;BE0974294267
+NYXOAH;NYXH.BR;BE;NA;BE0974358906
+O2I;ALODI.PA;FR;NA;FR0010231860
+O2I BSA;O2IBS.PA;FR;NA;FR0013268042
+O2I BSA 2;ODBS2.PA;FR;NA;FR0013381431
+OBER;ALOBR.PA;FR;NA;FR0010330613
+OCI;OCI.AS;HO;NA;NL0010558797
+OENEO;SBT.PA;FR;NA;FR0000052680
+OL GROUPE;OLG.PA;FR;NA;FR0010428771
+ONCODESIGN;ALONC.PA;FR;NA;FR0011766229
+ONTEX GROUP;ONTEX.BR;BE;NA;BE0974276082
+ONXEO;ALONX.PA;FR;NA;FR0010095596
+OPEN ORPHAN PLC;ORPH.IR;IR;NA;GB00B9275X97
+ORANGE BELGIUM;OBEL.BR;BE;NA;BE0003735496
+ORANJEWOUD A;ORANW.AS;HO;NA;NL0000370419
+ORAPI;ORAP.PA;FR;NA;FR0000075392
+ORAPI BSA;ORAPB.PA;FR;NA;FR0013522216
+ORCHESTRA-PREMAMAN;KAZI.PA;FR;NA;FR0013190410
+ORDISSIMO;ALORD.PA;FR;NA;FR0013318052
+OREGE;OREGE.PA;FR;NA;FR0010609206
+OREY ANTUNES ESC.;ORE.LS;PO;NA;PTORE0AM0002
+ORIGIN ENT. PLC;OIZ.IR;IR;NA;IE00B1WV4493
+ORMONDE MINING PLC;ORQ1.IR;IR;NA;IE00BF0MZF04
+ORPEA;ORP.PA;FR;NA;FR0000184798
+OSE IMMUNO;OSE.PA;FR;NA;FR0012127173
+OSMOZIS;ALOSM.PA;FR;NA;FR0013231180
+OVOCA BIO PLC;OVXA.IR;IR;NA;IE00B4XVDC01
+OXURION;OXUR.BR;BE;NA;BE0003846632
+PARAGON ID;PID.PA;FR;NA;FR0013318813
+PAREF;PAR.PA;FR;NA;FR0010263202
+PARROT;PARRO.PA;FR;NA;FR0004038263
+PARROT BSA 1;PABSA.PA;FR;NA;FR0013054269
+PARROT BSA 2;PABSB.PA;FR;NA;FR0013054335
+PASSAT;PSAT.PA;FR;NA;FR0000038465
+PATRIMOINE ET COMM;PAT.PA;FR;NA;FR0011027135
+PATRIS;ALPTR.LS;PO;NA;PTPRS0AM0009
+PAULIC MEUNERIE;ALPAU.PA;FR;NA;FR0013479730
+PAYTON PLANAR;PAY.BR;BE;NA;IL0010830391
+PCAS;PCA.PA;FR;NA;FR0000053514
+PERM. TSB GP. HOLD;IL0A.IR;IR;NA;IE00BWB8X525
+PERRIER (GERARD);PERR.PA;FR;NA;FR0000061459
+PETRONEFT RES.;P8ET.IR;IR;NA;IE00B0Q82B24
+PHARMAGEST INTER.;PHA.PA;FR;NA;FR0012882389
+PHARMASIMPLE;ALPHS.PA;FR;NA;BE0974302342
+PHARNEXT;ALPHA.PA;FR;NA;FR0011191287
+PICANOL;PIC.BR;BE;NA;BE0003807246
+PIERRE VACANCES;VAC.PA;FR;NA;FR0000073041
+PISCINES DESJOYAUX;ALPDX.PA;FR;NA;FR0000061608
+PIXIUM VISION;ALPIX.PA;FR;NA;FR0011950641
+PLANET MEDIA;ALPLA.PA;FR;NA;FR0010211037
+PLANT ADVANCED;ALPAT.PA;FR;NA;FR0010785790
+PLAST.VAL LOIRE;PVL.PA;FR;NA;FR0013252186
+PORCELEYNE FLES;PORF.AS;HO;NA;NL0000378669
+POSTNL;PNL.AS;HO;NA;NL0009739416
+POUJOULAT;ALPJT.PA;FR;NA;FR0000066441
+POULAILLON;ALPOU.PA;FR;NA;FR0013015583
+POXEL;POXEL.PA;FR;NA;FR0012432516
+PREDILIFE;ALPRE.PA;FR;NA;FR0010169920
+PRISMAFLEX INTL;ALPRI.PA;FR;NA;FR0004044600
+PROACTIS SA;PROAC.PA;FR;NA;FR0004052561
+PRODWARE;ALPRO.PA;FR;NA;FR0010313486
+PRODWAYS;PWG.PA;FR;NA;FR0012613610
+PROLOGUE;PROL.PA;FR;NA;FR0010380626
+PROLOGUE BSA;PROBT.PA;FR;NA;FR0013398617
+PROLOGUE BSAA2021;PRBS2.PA;FR;NA;FR0011994326
+PROSUS;PRX.AS;HO;NA;NL0013654783
+PROVIDENCE RES.;PZQA.IR;IR;NA;IE00B66B5T26
+PSB INDUSTRIES;PSB.PA;FR;NA;FR0000060329
+PUBLICIS BSA;PUBBS.PA;FR;NA;FR0000312928
+QRF;QRF.BR;BE;NA;BE0974272040
+QUADIENT;QDT.PA;FR;NA;FR0000120560
+QUANTUM GENOMICS;ALQGC.PA;FR;NA;FR0011648971
+QUESTFOR GR-PRICAF;QFG.BR;BE;NA;BE0003730448
+QWAMPLIFY;ALQWA.PA;FR;NA;FR0010889386
+RALLYE;RAL.PA;FR;NA;FR0000060618
+RAMADA;RAM.LS;PO;NA;PTFRV0AE0004
+REALITES;ALREA.PA;FR;NA;FR0011858190
+RECTICEL;REC.BR;BE;NA;BE0003656676
+RECYLEX S.A.;RX.PA;FR;NA;FR0000120388
+REDITUS,SGPS;RED.LS;PO;NA;PTRED0AP0010
+REINET INVESTMENTS;REINA.AS;HO;NA;LU0383812293
+REMY COINTREAU;RCO.PA;FR;NA;FR0000130395
+RENEWI;RWI.AS;HO;NA;GB0007995243
+RESILUX;RES.BR;BE;NA;BE0003707214
+RETAIL ESTATES;RET.BR;BE;NA;BE0003720340
+REWORLD MEDIA;ALREW.PA;FR;NA;FR0010820274
+REXEL;RXL.PA;FR;NA;FR0010451203
+RIBER;ALRIB.PA;FR;NA;FR0000075954
+ROBERTET;RBT.PA;FR;NA;FR0000039091
+ROCHE BOBOIS;RBO.PA;FR;NA;FR0013344173
+ROCTOOL;ALROC.PA;FR;NA;FR0010523167
+ROCTOOL BSA 2020;ROCBS.PA;FR;NA;FR0013477585
+ROODMICROTEC;ROOD.AS;HO;NA;NL0000440477
+ROTHSCHILD & CO;ROTH.PA;FR;NA;FR0000031684
+ROUGIER S.A.;ALRGR.PA;FR;NA;FR0000037640
+ROULARTA;ROU.BR;BE;NA;BE0003741551
+ROYAL DUTCH SHELLB;RDSB.AS;HO;NA;GB00B03MM408
+RYANAIR HOLD. PLC;RY4C.IR;IR;NA;IE00BYTBXV33
+S.E.B.;SK.PA;FR;NA;FR0000121709
+SAFE ORTHOPAEDICS;ALSAF.PA;FR;NA;FR0013467123
+SAFWOOD;ALWOO.PA;FR;NA;IT0004013725
+SAMSE;SAMS.PA;FR;NA;FR0000060071
+SARTORIUS STED BIO;DIM.PA;FR;NA;FR0013154002
+SAVENCIA;SAVE.PA;FR;NA;FR0000120107
+SBM OFFSHORE;SBMO.AS;HO;NA;NL0000360618
+SCBSM;CBSM.PA;FR;NA;FR0006239109
+SCHLUMBERGER;SLB.PA;FR;NA;AN8068571086
+SECHE ENVIRONNEM.;SCHP.PA;FR;NA;FR0000039109
+SEIF SPA;ALSEI.PA;FR;NA;IT0005353484
+SELCODIS;SLCO.PA;FR;NA;FR0000065492
+SENSORION;ALSEN.PA;FR;NA;FR0012596468
+SEQUANA MEDICAL;SEQUA.BR;BE;NA;BE0974340722
+SERGEFERRARI GROUP;SEFER.PA;FR;NA;FR0011950682
+SES IMAGOTAG;SESL.PA;FR;NA;FR0010282822
+SHOWROOMPRIVE;SRP.PA;FR;NA;FR0013006558
+SHURGARD;SHUR.BR;BE;NA;LU1883301340
+SIDETRADE;ALBFR.PA;FR;NA;FR0010202606
+SIGNAUX GIROD;GIRO.PA;FR;NA;FR0000060790
+SIGNIFY NV;LIGHT.AS;HO;NA;NL0011821392
+SII;SII.PA;FR;NA;FR0000074122
+SIOEN;SIOE.BR;BE;NA;BE0003743573
+SIPEF;SIP.BR;BE;NA;BE0003898187
+SLIGRO FOOD GROUP;SLIGR.AS;HO;NA;NL0000817179
+SMARTPHOTO GROUP;SMAR.BR;BE;NA;BE0974323553
+SMCP;SMCP.PA;FR;NA;FR0013214145
+SMTPC;SMTPC.PA;FR;NA;FR0004016699
+SMURFIT KAPPA GP;SK3.IR;IR;NA;IE00B1RR8406
+SNOWWORLD;SNOW.AS;HO;NA;NL0010627865
+SOC FRANC CASINOS;SFCA.PA;FR;NA;FR0010209809
+SODITECH;SEC.PA;FR;NA;FR0000078321
+SOFRAGI;SOFR.PA;FR;NA;FR0000030140
+SOFTIMAT;SOFT.BR;BE;NA;BE0003773877
+SOGECLAIR;SOG.PA;FR;NA;FR0000065864
+SOITEC;SOI.PA;FR;NA;FR0013227113
+SOLOCAL GROUP;LOCAL.PA;FR;NA;FR00140006O9
+SOLUTIONS 30 SE;S30.PA;FR;NA;FR0013379484
+SOMFY SA;SO.PA;FR;NA;FR0013199916
+SONAE IND.SGPS;SONI.LS;PO;NA;PTS3P0AM0025
+SONAECOM,SGPS;SNC.LS;PO;NA;PTSNC0AM0006
+SOPRA STERIA GROUP;SOP.PA;FR;NA;FR0000050809
+SPIE;SPIE.PA;FR;NA;FR0012757854
+SPINEGUARD;ALSGD.PA;FR;NA;FR0011464452
+SPINEWAY;ALSPW.PA;FR;NA;FR0011398874
+SPORTING;SCP.LS;PO;NA;PTSCP0AM0001
+SQLI;SQI.PA;FR;NA;FR0011289040
+ST DUPONT;DPT.PA;FR;NA;FR0000054199
+STEF;STF.PA;FR;NA;FR0000064271
+STENTYS;STNT.PA;FR;NA;FR0010949404
+STERN GROEP;STRN.AS;HO;NA;NL0000336303
+STRADIM ESPAC.FIN;ALSAS.PA;FR;NA;FR0000074775
+STREAMWIDE;ALSTW.PA;FR;NA;FR0010528059
+SUPERSONIC IMAGINE;ALSSI.PA;FR;NA;FR0010526814
+SWORD GROUP;SWP.PA;FR;NA;FR0004180578
+SYNERGIE;SDG.PA;FR;NA;FR0000032658
+TAYNINH;TAYN.PA;FR;NA;FR0000063307
+TECH BSA 2024;TECBS.PA;FR;NA;FR0013526225
+TECHNICOLOR;TCH.PA;FR;NA;FR0013505062
+TECHNIPFMC;FTI.PA;FR;NA;GB00BDSFG982
+TEIXEIRA DUARTE;TDSA.LS;PO;NA;PTTD10AM0000
+TELEVERBIER;TVRB.PA;FR;NA;CH0008175645
+TER BEKE;TERB.BR;BE;NA;BE0003573814
+TESSENDERLO;TESB.BR;BE;NA;BE0003555639
+TESSI;TES.PA;FR;NA;FR0004529147
+TEXAF;TEXF.BR;BE;NA;BE0974263924
+TF1;TFI.PA;FR;NA;FR0000054900
+TFF GROUP;TFF.PA;FR;NA;FR0013295789
+THE BLOCKCHAIN GP;ALTBG.PA;FR;NA;FR0011053636
+THERACLION;ALTHE.PA;FR;NA;FR0010120402
+THERADIAG;ALTER.PA;FR;NA;FR0004197747
+THERANEXUS;ALTHX.PA;FR;NA;FR0013286259
+THERMADOR GROUPE;THEP.PA;FR;NA;FR0013333432
+TIE KINETIX;TIE.AS;HO;NA;NL0010389508
+TIKEHAU CAPITAL;TKO.PA;FR;NA;FR0013230612
+TINC;TINC.BR;BE;NA;BE0974282148
+TITAN CEMENT;TITC.BR;BE;NA;BE0974338700
+TIVOLY;TVLY.PA;FR;NA;FR0000060949
+TKH GROUP;TWEKA.AS;HO;NA;NL0000852523
+TOMTOM;TOM2.AS;HO;NA;NL0013332471
+TOOLUX SANDING;ALTLX.PA;FR;NA;LU0394945660
+TOTAL GABON;EC.PA;FR;NA;GA0000121459
+TOTAL PRODUCE PLC;T7O.IR;IR;NA;IE00B1HDWM43
+TOUAX;TOUP.PA;FR;NA;FR0000033003
+TOUR EIFFEL;EIFF.PA;FR;NA;FR0000036816
+TOYOTA CAETANO;SCT.LS;PO;NA;PTSCT0AP0018
+TRANSGENE;TNG.PA;FR;NA;FR0005175080
+TRIGANO;TRI.PA;FR;NA;FR0005691656
+TRILOGIQ;ALTRI.PA;FR;NA;FR0010397901
+TTI;ALTTI.PA;FR;NA;FR0010383877
+TUBIZE-FIN;TUB.BR;BE;NA;BE0003823409
+TULLOW OIL PLC;TQW.IR;IR;NA;GB0001500809
+TXCOM;ALTXC.PA;FR;NA;FR0010654087
+U10 CORP;ALU10.PA;FR;NA;FR0000079147
+UMANIS;ALUMS.PA;FR;NA;FR0013263878
+UNIFIEDPOST GROUP;UPG.BR;BE;NA;BE0974371032
+UNION FIN.FRANCE;UFF.PA;FR;NA;FR0000034548
+UNION TECH.INFOR.;FPG.PA;FR;NA;FR0000074197
+UNIPHAR PLC;UPR.IR;IR;NA;IE00BJ5FQX74
+UV GERMI;ALUVI.PA;FR;NA;FR0011898584
+VAA VISTA ALEGRE;VAF.LS;PO;NA;PTVAA0AM0019
+VALBIOTIS;ALVAL.PA;FR;NA;FR0013254851
+VALLOUREC;VK.PA;FR;NA;FR0013506730
+VALNEVA;VLA.PA;FR;NA;FR0004056851
+VALUE8;VALUE.AS;HO;NA;NL0010661864
+VAN DE VELDE;VAN.BR;BE;NA;BE0003839561
+VASTNED RETAIL BEL;VASTB.BR;BE;NA;BE0003754687
+VENTE UNIQUE.COM;ALVU.PA;FR;NA;FR0010766667
+VEON;VEON.AS;HO;NA;BMG9349W1038
+VERALLIA;VRLA.PA;FR;NA;FR0013447729
+VERGNET;ALVER.PA;FR;NA;FR0004155240
+VERIMATRIX;VMX.PA;FR;NA;FR0010291245
+VETOQUINOL;VETO.PA;FR;NA;FR0004186856
+VGP;VGP.BR;BE;NA;BE0003878957
+VICAT;VCT.PA;FR;NA;FR0000031775
+VIDELIO;VDLO.PA;FR;NA;FR0000066680
+VIEL ET COMPAGNIE;VIL.PA;FR;NA;FR0000050049
+VILMORIN & CIE;RIN.PA;FR;NA;FR0000052516
+VIOHALCO;VIO.BR;BE;NA;BE0974271034
+VIRBAC;VIRP.PA;FR;NA;FR0000031577
+VISIATIV;ALVIV.PA;FR;NA;FR0004029478
+VISIODENT;SDT.PA;FR;NA;FR0000065765
+VISIOMED BSA2018-1;VMGBS.PA;FR;NA;FR0013322724
+VISIOMED GROUP;ALVMG.PA;FR;NA;FR0013481835
+VIVORYON;VVY.AS;HO;NA;DE0007921835
+VOGO;ALVGO.PA;FR;NA;FR0011532225
+VOLTA FINANCE;VTA.AS;HO;NA;GG00B1GHHH78
+VOLTALIA;VLTSA.PA;FR;NA;FR0011995588
+VOLUNTIS;VTX.PA;FR;NA;FR0004183960
+VOYAGEURS DU MONDE;ALVDM.PA;FR;NA;FR0004045847
+VR EDUCATION HOLD.;6VR.IR;IR;NA;IE00BG0HDR01
+VRANKEN-POMMERY;VRAP.PA;FR;NA;FR0000062796
+WALLIX;ALLIX.PA;FR;NA;FR0010131409
+WAREHOUSES;WEB.BR;BE;NA;BE0003734481
+WAVESTONE;WAVE.PA;FR;NA;FR0013357621
+WE.CONNECT;ALWEC.PA;FR;NA;FR0013079092
+WEDIA;ALWED.PA;FR;NA;FR0010688440
+WENDEL;MF.PA;FR;NA;FR0000121204
+WERELDHAVE;WHA.AS;HO;NA;NL0000289213
+WERELDHAVE BELGIUM;WEHB.BR;BE;NA;BE0003724383
+WINFARM;ALWF.PA;FR;NA;FR0014000P11
+WITBE;ALWIT.PA;FR;NA;FR0013143872
+WOL. EXTENS. CERT;WOLE.BR;BE;NA;BE0003600112
+X-FAB;XFAB.PA;FR;NA;BE0974310428
+XILAM ANIMATION;XIL.PA;FR;NA;FR0004034072
+XIOR;XIOR.BR;BE;NA;BE0974288202
+YATRA;YATRA.AS;HO;NA;JE00B1FBT077
+YEW GROVE REIT PLC;YEW.IR;IR;NA;IE00BDT5KP12
+YMAGIS BSA;MAGBS.PA;FR;NA;FR0013484466
+ZCI LIMITED;CV.PA;FR;NA;BMG9887P1068
+ZENITEL;ZENT.BR;BE;NA;BE0974311434
+Arco Vara;ARC1T.TL ;EE;;EE3100034653
+Tallinna Kaubamaja Grupp;TKM1T.TL;EE;;EE0000001105
+Silvano Fashion Group;SFG1T.TL;EE;;EE3100001751
+Trigon Property Development;TPD1T.TL;EE;;EE3100003443
+Harju Elekter;HAE1T.TL;EE;;EE3100004250
+Tallink Grupp;TAL1T.TL;EE;;EE3100004466
+Pro Kapital Grupp;PKG1T.TL;EE;;EE3100006040
+Coop Pank;CPA1T.TL;EE;;EE3100007857
+Ekspress Grupp;EEG1T.TL;EE;;EE3100016965
+Tallinna Sadam;TSM1T.TL;EE;;EE3100021635
+Tallinna Vesi;TVEAT.TL;EE;;EE3100026436
+Nordecon;NCN1T.TL;EE;;EE3100039496
+LHV Group;LHV1T.TL;EE;;EE3100073644
+Nordic Fibreboard;SKN1T.TL;EE;;EE3100092503
+Merko Ehitus;MRK1T.TL;EE;;EE3100098328
+PRFoods;PRF1T.TL;EE;;EE3100101031
+EfTEN Real Estate Fund III sh.;EFT1T.TL;EE;;EE3100127242
+Baltika;BLT1T.TL;EE;;EE3100145616
+Rokiskio Suris;RSU1L.VS;LT;;LT0000100372
+Linas;LNS1L.VS;LT;;LT0000100661
+Panevezio Statybos Trestas;PTR1L.VS;LT;;LT0000101446
+Grigeo;GRG1L.VS;LT;;LT0000102030
+Siauliu Bankas;SAB1L.VS;LT;;LT0000102253
+Invalda INVL;IVL1L.VS;LT;;LT0000102279
+Apranga;APG1L.VS;LT;;LT0000102337
+Vilniaus Baldai;VBL1L.VS;LT;;LT0000104267
+Snaige;SNG1L.VS;LT;;LT0000109274
+Utenos Trikotazas;UTR1L.VS;LT;;LT0000109324
+Klaipedos Nafta;KNF1L.VS;LT;;LT0000111650
+Pieno Zvaigzdes;PZV1L.VS;LT;;LT0000111676
+Ignitis Grupe;IGN1L.VS;LT;;LT0000115768
+Zemaitijos Pienas;ZMP1L.VS;LT;;LT0000121865
+Kauno Energija;KNR1L.VS;LT;;LT0000123010
+Telia Lietuva;TEL1L.VS;LT;;LT0000123911
+INVL Baltic Real Estate;INR1L.VS;LT;;LT0000127151
+AUGA group;AUG1L.VS;LT;;LT0000127466
+Vilkyskiu Pienine;VLP1L.VS;LT;;LT0000127508
+Linas Agro Group;LNA1L.VS;LT;;LT0000128092
+LITGRID;LGD1L.VS;LT;;LT0000128415
+Amber Grid;AMG1L.VS;LT;;LT0000128696
+INVL Baltic Farmland;INL1L.VS;LT;;LT0000128753
+INVL Technology;INC1L.VS;LT;;LT0000128860
+Novaturas;NTU1L.VS;LT;;LT0000131872
+Ditton pievadkezu rupnica;DPK1R.RG;LV;;LV0000100212
+Rigas kugu buvetava;RKB1R.RG;LV;;LV0000100378
+Kurzemes atslega 1;KA11R.RG;LV;;LV0000100402
+Valmieras stikla skiedra;VSS1R.RG;LV;;LV0000100485
+Olainfarm;OLF1R.RG;LV;;LV0000100501
+Siguldas CMAS;SCM1R.RG;LV;;LV0000100600
+Latvijas Juras medicinas centr;LJM1R.RG;LV;;LV0000100741
+Latvijas balzams;BAL1R.RG;LV;;LV0000100808
+Rigas autoelektr.rupnica;RAR1R.RG;LV;;LV0000100881
+Latvijas Gaze;GZE1R.RG;LV;;LV0000100899
+VEF;VEF1R.RG;LV;;LV0000101079
+SAF Tehnika;SAF1R.RG;LV;;LV0000101129
+HansaMatrix;HMX1R.RG;LV;;LV0000101590
+PATA Saldus;SMA1R.RG;LV;;LV0000101681

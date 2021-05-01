@@ -324,18 +324,52 @@ extract_IS <- function(IS) {
 }
 
 extract_KS <- function(KS) {
-  res <- lapply(KS, function(x) {
-    df <- data.frame(Shares = .cleanNAs(x$floatShares$raw),
-                     EV = .cleanNAs(x$enterpriseValue$raw, 1),
-                     stringsAsFactors = FALSE)
-    if (nrow(df) != 1) {
+  # SBO.VI
+   res <- lapply(KS, function(x) {
+    # message(xn)
+    # x = KS[xn]
+    if (all(c("floatShares", "enterpriseValue", "trailingEps") %in% names(x)) &
+        c("raw" %in% colnames(x[1,1]))) {
+      df <- data.frame(Shares = .cleanNAs(x$floatShares$raw),
+                       EV = .cleanNAs(x$enterpriseValue$raw, 1),
+                       EPS = .cleanNAs(x$trailingEps$raw),
+                       stringsAsFactors = FALSE)
+    } else {
+    # df <- data.frame(Shares = .cleanNAs(x$floatShares$raw),
+    #                  EV = .cleanNAs(x$enterpriseValue$raw, 1),
+    #                  EPS = .cleanNAs(x$trailingEps$raw),
+    #                  stringsAsFactors = FALSE)
+    # if (nrow(df) != 1) {
       df <- data.frame(Shares = 0,
+                       EPS = 0,
                        EV = 0)
     } 
     df
   } )
   bind_rows(res, .id = "Ticker")
 }
+
+extract_FB <- function(FB) {
+  res <- lapply(FB, function(x) {
+    if (all(c("ebitda", "returnOnAssets", "returnOnEquity", "freeCashflow") %in% names(x)) &
+        c("raw" %in% colnames(x[1,1]))) {
+      df <- data.frame(ebitda = .cleanNAs(x$ebitda$raw),
+                       returnOnAssets = .cleanNAs(x$returnOnAssets$raw),
+                       returnOnEquity = .cleanNAs(x$returnOnEquity$raw),
+                       freeCashflow = .cleanNAs(x$freeCashflow$raw),
+                       stringsAsFactors = FALSE)
+      
+    } else {
+      df <- data.frame(ebitda = 0,
+                       returnOnAssets = 0,
+                       returnOnEquity = 0,
+                       freeCashflow = 0)
+    } 
+    df
+  } )
+  bind_rows(res, .id = "Ticker")
+}
+
 
 
 extract_HistPr <- function(HistPr) {
@@ -364,11 +398,13 @@ extract_HistPr <- function(HistPr) {
 
 filter6m <- function(HistPr.list) {
   idx <- sapply(HistPr.list, nrow) %>% unlist() > 252
-  HistPr.f.list <- HistPr.list[idx]
+  idx2 <- unlist(lapply(HistPr.list, ncol)) == 4
+  idx3 <- unlist(lapply(HistPr.list, function(x) all(c("adjclose", "Date") %in% colnames(x))))
+  HistPr.f.list <- HistPr.list[idx3]
   Pre6m <- seq(as.Date(tail(HistPr.f.list[[1]]$Date, 1)), length = 2, by = "-6 months")[2]
   rmOld <- HistPr.f.list[[1]]$Date > Pre6m
-  HistPr.f.6m.list <- lapply(HistPr.f.list, function(x) x[rmOld, ])
-  HistPr.f.6m.list
+  HistPr.f.6m.list <- lapply(HistPr.f.list, function(x) {x <- x[rmOld, ]} )
+  HistPr.f.6m.list <- lapply(HistPr.f.6m.list, function(x) {x <- subset(x, adjclose > 0)})
 }
 
 
