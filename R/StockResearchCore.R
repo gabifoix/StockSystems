@@ -351,7 +351,13 @@ extract_KS <- function(KS) {
 
 extract_FB <- function(FB) {
   res <- lapply(FB, function(x) {
-    if (all(c("ebitda", "returnOnAssets", "returnOnEquity", "freeCashflow") %in% names(x)) &
+    # x = FB$GWW
+    # if (length(x) ==  0) {
+    #   
+    # }
+    
+    if (length(x) ==  21 && 
+        all(c("ebitda", "returnOnAssets", "returnOnEquity", "freeCashflow") %in% names(x)) &&
         c("raw" %in% colnames(x[1,1]))) {
       df <- data.frame(ebitda = .cleanNAs(x$ebitda$raw),
                        returnOnAssets = .cleanNAs(x$returnOnAssets$raw),
@@ -410,6 +416,17 @@ filter6m <- function(HistPr.list) {
 
 # Utils ----
 
+# RQM assessment DF format
+RQMDFformat <- function(one.HistPr, one.asset, datelabel){
+  DF <- xts2df(one.HistPr) %>% 
+    set_colnames(c("Date", "Vol", "Pr", "AdjPr")) %>% 
+    mutate(Ticker = AdjPr / AdjPr[1]) %>% 
+    .[, c("Date", "Ticker")] %>% 
+    set_colnames(c("Date", paste(one.asset, datelabel, sep = "_")))
+  DF
+}
+
+
 # Stock Research format
 .SRformat <- function(obj, colname, TickerNames = NULL){
   if(is.null(TickerNames)) {
@@ -432,7 +449,6 @@ filter6m <- function(HistPr.list) {
 convertHistPr2xts <- function(df, DataCols = c("volume", "close", "adjclose"), DateCol = "Date") {
   df$datetime <- as.POSIXct(strptime(df[, DateCol], format = "%Y-%m-%d"))
   res <- as.xts(df[ ,DataCols], order.by = df$datetime)
-  res
 }
 
 cleanNArows <- function(HistPrices.yahoo.list) {
