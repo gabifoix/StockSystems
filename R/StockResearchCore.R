@@ -324,7 +324,7 @@ extract_IS <- function(IS) {
 }
 
 extract_KS <- function(KS) {
-  # SBO.VI
+  
    res <- lapply(KS, function(x) {
     # message(xn)
     # x = KS[xn]

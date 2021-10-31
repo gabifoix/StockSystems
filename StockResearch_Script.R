@@ -21,7 +21,7 @@ Candidates.df <- read.csv("MD/CompaniesUS.20210319.csv", sep = ";", stringsAsFac
 #     subset(Sector != "NAYF" & Sector != "" ) %>%
 #     .[, c("Ticker", "CompanyName", "Country", "Sector", "Industry")] %>%
 #     unique()
-#   
+
 
 # Import ----
 Files <- list.files(Ref_folder)
@@ -85,10 +85,10 @@ BaseFull.df <- Candidates.df %>%
 # 500000000 –  10000000000
 
 # Rank
-SearchName <- "US_Large"
+SearchName <- "US_Big"
 Base.df <- BaseFull.df %>% 
   subset(!is.na(MCap) & CP > 0 & PER > 0) %>% 
-  subset(MCap > 10000000000 )
+  subset( MCap > 10000000000)
 
 
 MomentumRank <- Base.df %>% 
